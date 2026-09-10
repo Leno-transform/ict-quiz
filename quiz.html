@@ -1,0 +1,1360 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>刷题练习 · 本地离线版</title>
+<style>
+  :root{
+    --bg:#f2f5fb;
+    --card:#ffffff;
+    --text:#1e2430;
+    --muted:#6d778c;
+    --line:#e4e8f2;
+    --brand:#3b6ef6;
+    --brand-dark:#2c57ca;
+    --brand-soft:#eef3ff;
+    --green:#128a5b;
+    --green-bg:#e8f8f0;
+    --green-line:#8fd9b8;
+    --red:#cf3a37;
+    --red-bg:#fdedec;
+    --red-line:#f0a9a6;
+    --radius:14px;
+    --shadow:0 10px 30px rgba(28,44,88,.08);
+  }
+  *{box-sizing:border-box}
+  [hidden]{display:none !important}
+  html,body{margin:0;padding:0}
+  body{
+    background:linear-gradient(180deg,#eef3ff 0%,var(--bg) 260px,var(--bg) 100%);
+    color:var(--text);
+    font-family:system-ui,-apple-system,"Segoe UI","Microsoft YaHei","PingFang SC","Hiragino Sans GB",sans-serif;
+    font-size:16px;
+    line-height:1.6;
+    min-height:100vh;
+    -webkit-font-smoothing:antialiased;
+  }
+  .app{max-width:880px;margin:0 auto;padding:22px 16px 70px}
+  .btn{
+    font:inherit;font-size:15px;font-weight:600;
+    padding:9px 18px;border-radius:10px;border:1px solid transparent;
+    cursor:pointer;transition:.15s ease;white-space:nowrap;
+  }
+  .btn:focus-visible{outline:3px solid rgba(59,110,246,.35);outline-offset:2px}
+  .btn.primary{background:var(--brand);color:#fff;box-shadow:0 6px 16px rgba(59,110,246,.28)}
+  .btn.primary:hover{background:var(--brand-dark)}
+  .btn.ghost{background:#fff;color:var(--text);border-color:var(--line)}
+  .btn.ghost:hover{border-color:#c8d2e6;background:#fafbff}
+  .btn.danger{color:var(--red)}
+  .btn.danger:hover{border-color:var(--red-line);background:var(--red-bg)}
+  .btn[disabled]{opacity:.45;cursor:not-allowed;box-shadow:none}
+
+  /* ---------- 顶栏 ---------- */
+  .topbar{display:flex;align-items:center;gap:14px;flex-wrap:wrap;margin-bottom:18px}
+  .brand{display:flex;align-items:center;gap:12px;min-width:0}
+  .logo{
+    flex:0 0 42px;height:42px;border-radius:12px;display:grid;place-items:center;
+    background:linear-gradient(135deg,var(--brand),#7a5bf0);color:#fff;
+    font-size:19px;font-weight:700;box-shadow:0 6px 16px rgba(59,110,246,.3);
+  }
+  .brand h1{font-size:19px;margin:0;letter-spacing:.3px}
+  .brand .sub{margin:1px 0 0;font-size:13px;color:var(--muted)}
+  .topbar .actions{margin-left:auto;display:flex;gap:10px}
+
+  .banner{
+    background:#fff8e6;border:1px solid #f2dca4;color:#8a6412;
+    padding:10px 14px;border-radius:12px;font-size:14px;margin-bottom:14px;
+  }
+
+  /* ---------- 状态条 ---------- */
+  .statusbar{
+    display:flex;align-items:center;gap:12px;flex-wrap:wrap;
+    background:#fff;border:1px solid var(--line);border-radius:var(--radius);
+    padding:12px 16px;margin-bottom:16px;box-shadow:var(--shadow);
+  }
+  .chip{
+    font-size:14px;font-weight:600;color:var(--text);
+    background:var(--brand-soft);border-radius:999px;padding:5px 13px;white-space:nowrap;
+  }
+  .chip.plain{background:#f2f4fa;color:var(--muted);font-weight:500}
+  .progress-track{
+    flex:1 1 140px;min-width:110px;height:9px;background:#e9edf7;border-radius:999px;overflow:hidden;
+  }
+  .progress-bar{
+    height:100%;width:0;border-radius:999px;
+    background:linear-gradient(90deg,#3b6ef6,#7a5bf0);
+    transition:width .3s ease;
+  }
+
+  /* ---------- 卡片 ---------- */
+  .card{
+    background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
+    padding:22px 22px 18px;box-shadow:var(--shadow);margin-bottom:16px;
+  }
+  .qmeta{margin:0 0 8px;font-size:13px;color:var(--muted);font-weight:600;letter-spacing:.4px}
+  .question{margin:0 0 18px;font-size:19px;line-height:1.55;font-weight:650}
+
+  .options{list-style:none;margin:0;padding:0;display:grid;gap:10px}
+  .opt{
+    display:flex;align-items:flex-start;gap:12px;width:100%;text-align:left;
+    font:inherit;font-size:16px;line-height:1.5;color:inherit;
+    padding:13px 15px;border:1px solid var(--line);background:#fff;
+    border-radius:12px;cursor:pointer;transition:.15s ease;
+  }
+  .opt:hover:not(.locked){border-color:var(--brand);background:#f8faff;transform:translateY(-1px)}
+  .opt.picked{border-color:var(--brand);background:var(--brand-soft);box-shadow:inset 0 0 0 1px var(--brand)}
+  .opt.picked .key{background:var(--brand);color:#fff}
+  .opt.picked .opt-text{font-weight:600}
+  .opt .key{
+    flex:0 0 26px;height:26px;border-radius:50%;background:#eef1f8;color:var(--muted);
+    display:grid;place-items:center;font-size:13px;font-weight:700;margin-top:1px;
+  }
+  .opt .opt-text{flex:1 1 auto;min-width:0}
+  .opt .mark{margin-left:auto;font-size:13px;font-weight:700;white-space:nowrap;padding-left:10px}
+  .opt.locked{cursor:default}
+  .opt.correct{border-color:var(--green-line);background:var(--green-bg)}
+  .opt.correct .key{background:var(--green);color:#fff}
+  .opt.correct .mark{color:var(--green)}
+  .opt.wrong{border-color:var(--red-line);background:var(--red-bg)}
+  .opt.wrong .key{background:var(--red);color:#fff}
+  .opt.wrong .mark{color:var(--red)}
+
+  .explain{
+    margin-top:16px;border:1px solid var(--line);border-left:4px solid var(--brand);
+    border-radius:12px;background:#fbfcff;padding:14px 16px;
+    animation:pop .18s ease;
+  }
+  @keyframes pop{from{opacity:0;transform:translateY(4px)}to{opacity:1;transform:none}}
+  .explain-head{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:8px}
+  .verdict{font-weight:700;font-size:15px}
+  .verdict.ok{color:var(--green)}
+  .verdict.no{color:var(--red)}
+  .correct-answer{font-size:14px;color:var(--muted);font-weight:600}
+  .explain-body h3{margin:0 0 4px;font-size:13px;color:var(--muted);letter-spacing:.4px;font-weight:700}
+  .explain-body p{margin:0;font-size:15px;color:#2c3444;white-space:pre-wrap}
+
+  .footer-row{display:flex;align-items:center;gap:14px;flex-wrap:wrap;margin-top:18px}
+  .hint{font-size:13px;color:var(--muted)}
+  .footer-row .btn{margin-left:auto}
+
+  /* ---------- 结果页 ---------- */
+  .result-title{margin:0 0 16px;font-size:20px}
+  .stat-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-bottom:18px}
+  .stat{background:#f7f9ff;border:1px solid var(--line);border-radius:12px;padding:14px 12px;text-align:center}
+  .stat .v{font-size:23px;font-weight:750;line-height:1.2}
+  .stat .k{font-size:13px;color:var(--muted);margin-top:2px}
+  .stat.good .v{color:var(--green)}
+  .stat.bad .v{color:var(--red)}
+  .result-actions{display:flex;gap:12px;flex-wrap:wrap}
+  .wrong-title{margin:0 0 4px;font-size:17px}
+  .wrong-sub{margin:0 0 14px;font-size:13px;color:var(--muted)}
+  .wrong-item{border:1px solid var(--line);border-radius:12px;padding:14px 16px;margin-bottom:12px;background:#fff}
+  .wrong-item .wi-q{font-weight:650;margin-bottom:8px;display:flex;gap:9px;align-items:baseline}
+  .wi-idx{
+    flex:0 0 auto;font-size:12px;font-weight:700;color:var(--brand);
+    background:var(--brand-soft);border-radius:6px;padding:2px 8px;
+  }
+  .wi-row{font-size:14px;margin:3px 0}
+  .wi-row .label{color:var(--muted)}
+  .wi-row .bad{color:var(--red);font-weight:600}
+  .wi-row .good{color:var(--green);font-weight:600}
+  .wi-exp{margin-top:9px;padding-top:9px;border-top:1px dashed var(--line);font-size:14px;color:#3a4356;white-space:pre-wrap}
+  .wi-exp .label{color:var(--muted);font-weight:600}
+  .empty-note{color:var(--muted);font-size:15px;padding:6px 0}
+
+  /* ---------- 模态框 ---------- */
+  .overlay{
+    position:fixed;inset:0;background:rgba(20,28,48,.42);
+    display:flex;align-items:center;justify-content:center;padding:18px;z-index:60;
+    animation:fade .15s ease;
+  }
+  @keyframes fade{from{opacity:0}to{opacity:1}}
+  .modal{
+    background:#fff;border-radius:16px;width:100%;max-width:460px;
+    box-shadow:0 24px 60px rgba(15,25,55,.28);display:flex;flex-direction:column;
+    max-height:92vh;
+  }
+  .modal.wide{max-width:660px}
+  .modal-head{display:flex;align-items:center;gap:10px;padding:16px 18px;border-bottom:1px solid var(--line)}
+  .modal-head h3{margin:0;font-size:17px}
+  .icon-btn{
+    margin-left:auto;border:none;background:transparent;font-size:22px;line-height:1;
+    color:var(--muted);cursor:pointer;padding:2px 6px;border-radius:8px;
+  }
+  .icon-btn:hover{background:#f1f4fb;color:var(--text)}
+  .modal-body{padding:18px;overflow:auto}
+  .modal-body .muted{color:var(--muted);font-size:14px;margin:0 0 12px}
+  .modal-body .pre{white-space:pre-line;margin:0;font-size:15px}
+  .modal-foot{display:flex;gap:10px;justify-content:flex-end;padding:14px 18px;border-top:1px solid var(--line);flex-wrap:wrap}
+
+  .import-wrap.dragging{outline:2px dashed var(--brand);outline-offset:6px;border-radius:12px}
+  .file-row{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:12px}
+  .file-row input[type=file]{font:inherit;font-size:14px;max-width:100%}
+  .import-wrap textarea{
+    width:100%;min-height:190px;resize:vertical;font-family:ui-monospace,Consolas,"Courier New",monospace;
+    font-size:13px;line-height:1.55;padding:12px;border:1px solid var(--line);border-radius:12px;
+    background:#fbfcff;color:#26303f;
+  }
+  .import-wrap textarea:focus{outline:none;border-color:var(--brand);background:#fff}
+  .err-box{
+    margin-top:12px;border:1px solid var(--red-line);background:var(--red-bg);color:#8f2724;
+    border-radius:12px;padding:12px 14px;font-size:14px;
+  }
+  .err-box strong{display:block;margin-bottom:6px;color:var(--red)}
+  .err-box ul{margin:0;padding-left:20px}
+  .err-box li{margin:2px 0}
+  .ok-box{
+    margin-top:12px;border:1px solid var(--green-line);background:var(--green-bg);color:#0c6244;
+    border-radius:12px;padding:12px 14px;font-size:14px;
+  }
+
+  /* ---------- toast ---------- */
+  #toastRoot{position:fixed;left:50%;bottom:26px;transform:translateX(-50%);z-index:90;display:flex;flex-direction:column;gap:8px;align-items:center}
+  .toast{
+    background:rgba(24,32,52,.93);color:#fff;padding:10px 18px;border-radius:999px;
+    font-size:14px;box-shadow:0 10px 26px rgba(15,25,55,.3);animation:pop .18s ease;max-width:88vw;text-align:center;
+  }
+
+  @media (max-width:620px){
+    .app{padding:16px 12px 60px}
+    .stat-grid{grid-template-columns:repeat(2,1fr)}
+    .topbar .actions{width:100%;margin-left:0}
+    .topbar .actions .btn{flex:1}
+    .question{font-size:17px}
+    .card{padding:18px 15px 15px}
+    .hint{display:none}
+  }
+</style>
+</head>
+<body>
+<div class="app">
+
+  <header class="topbar">
+    <div class="brand">
+      <span class="logo">题</span>
+      <div>
+        <h1>刷题练习</h1>
+        <p class="sub" id="bankInfo">内置示例题库 · 20 题</p>
+      </div>
+    </div>
+    <div class="actions">
+      <button type="button" class="btn ghost" id="btnImport">导入题库</button>
+      <button type="button" class="btn ghost danger" id="btnRestart">重新开始</button>
+    </div>
+  </header>
+
+  <div class="banner" id="storageBanner" hidden>
+    当前环境无法使用本地存储（可能是隐私模式或浏览器限制），本次进度不会被保存。
+  </div>
+
+  <!-- ================= 答题视图 ================= -->
+  <section id="quizView">
+    <div class="statusbar">
+      <span class="chip" id="statIndex">第 1 / 20 题</span>
+      <div class="progress-track" role="progressbar" aria-label="答题进度"><div class="progress-bar" id="progressBar"></div></div>
+      <span class="chip plain" id="statAcc">正确率 —</span>
+      <span class="chip plain" id="statTime">用时 00:00</span>
+    </div>
+
+    <main class="card">
+      <p class="qmeta" id="qMeta">单选题 · 第 1 / 20 题</p>
+      <h2 class="question" id="questionText"></h2>
+      <ul class="options" id="optionsList"></ul>
+
+      <div class="explain" id="explainBox" hidden>
+        <div class="explain-head">
+          <span class="verdict" id="verdict"></span>
+          <span class="correct-answer" id="correctAnswerText"></span>
+        </div>
+        <div class="explain-body">
+          <h3>解析</h3>
+          <p id="explainText"></p>
+        </div>
+      </div>
+
+      <div class="footer-row">
+        <span class="hint" id="hintText">快捷键：1-4 选择选项 · Enter / → 下一题</span>
+        <button type="button" class="btn primary" id="btnConfirm" hidden>确认答案</button>
+        <button type="button" class="btn primary" id="btnNext" hidden>下一题</button>
+      </div>
+    </main>
+  </section>
+
+  <!-- ================= 结果视图 ================= -->
+  <section id="resultView" hidden>
+    <div class="card">
+      <h2 class="result-title">练习结果</h2>
+      <div class="stat-grid" id="resStats"></div>
+      <div class="result-actions">
+        <button type="button" class="btn primary" id="btnRedoWrong">只重做错题</button>
+        <button type="button" class="btn ghost" id="btnRestart2">重新开始</button>
+      </div>
+    </div>
+    <div class="card">
+      <h3 class="wrong-title" id="wrongTitle">错题列表</h3>
+      <p class="wrong-sub" id="wrongSub"></p>
+      <div class="wrong-list" id="wrongList"></div>
+    </div>
+  </section>
+
+</div>
+<div id="modalRoot"></div>
+<div id="toastRoot"></div>
+
+<script>
+(function () {
+  'use strict';
+
+  /* =========================================================
+     题库：以后整体替换这个数组即可（结构：question / options / answer / explanation）
+     answer 为正确选项的数组下标，0 表示 A。
+     ========================================================= */
+  const QUESTIONS = [
+    {
+      id: 1,
+      question: '在计算机中，1 KB 等于多少字节（Byte）？',
+      options: ['1000 字节', '1024 字节', '512 字节', '2048 字节'],
+      answer: 1,
+      explanation: '计算机内部使用二进制，存储容量按 2 的幂换算：1 KB = 2¹⁰ B = 1024 B，1 MB = 1024 KB，1 GB = 1024 MB。选 1000 字节是十进制近似值，硬盘、U 盘厂商常用它标注容量，所以标称 1 TB 的硬盘在系统里只显示约 931 GB；512 字节是 1 KB 的一半，2048 字节是它的两倍，都不是换算关系。'
+    },
+    {
+      id: 2,
+      question: '计算机中负责运算并控制各部件协调工作的核心部件是？',
+      options: ['内存', '硬盘', '中央处理器（CPU）', '显示器'],
+      answer: 2,
+      explanation: 'CPU（Central Processing Unit，中央处理器）由运算器和控制器组成：运算器负责算术运算与逻辑运算，控制器负责取指令、译码并发出控制信号，因此被称为计算机的“大脑”。内存只是临时存放正在运行的程序和数据，硬盘用于长期存储，显示器属于输出设备，三者都不承担运算与控制职能。'
+    },
+    {
+      id: 3,
+      question: '下列存储器中，断电后所存数据会全部丢失的是？',
+      options: ['硬盘', 'U 盘', '光盘', '内存（RAM）'],
+      answer: 3,
+      explanation: '内存（RAM，随机存取存储器）属于易失性存储器，靠持续供电维持数据，一旦断电内容立即丢失，这也是编辑文档要随时保存的原因。硬盘、U 盘、光盘都是非易失性外存，断电后数据依然保留，可以长期存放文件。'
+    },
+    {
+      id: 4,
+      question: '二进制数 1011 转换为十进制数是多少？',
+      options: ['9', '11', '13', '15'],
+      answer: 1,
+      explanation: '按权展开求和：1×2³ + 0×2² + 1×2¹ + 1×2⁰ = 8 + 0 + 2 + 1 = 11。干扰项都是算错某一位权值的结果：9 对应二进制 1001，13 对应 1101，15 对应 1111。'
+    },
+    {
+      id: 5,
+      question: '十进制数 255 转换为二进制数是多少？',
+      options: ['11111111', '10000000', '11110000', '10101010'],
+      answer: 0,
+      explanation: '255 = 256 − 1 = 2⁸ − 1，所以 8 位二进制全部为 1，即 11111111。10000000 是 128，11110000 是 240，10101010 是 170。这个数在计算机常识中很常见：一个字节能表示的最大无符号整数就是 255。'
+    },
+    {
+      id: 6,
+      question: '1 个字节（Byte）等于多少个二进制位（bit）？',
+      options: ['4 位', '16 位', '32 位', '8 位'],
+      answer: 3,
+      explanation: '位（bit）是计算机中最小的数据单位，只能取 0 或 1；字节（Byte）是最基本的存储单位，1 Byte = 8 bit。4 位称为半个字节，16 位和 32 位分别是 2 个和 4 个字节，多用来描述字长或颜色深度。'
+    },
+    {
+      id: 7,
+      question: '下列设备中，属于输入设备的是？',
+      options: ['显示器', '打印机', '键盘', '音箱'],
+      answer: 2,
+      explanation: '输入设备的作用是把外界信息送入计算机，常见的有键盘、鼠标、扫描仪、麦克风、摄像头等。显示器、打印机、音箱都是把计算机的处理结果呈现给人，属于输出设备。'
+    },
+    {
+      id: 8,
+      question: '操作系统（如 Windows、Linux）属于哪一类软件？',
+      options: ['应用软件', '系统软件', '杀毒软件', '办公软件'],
+      answer: 1,
+      explanation: '软件分为系统软件和应用软件两大类。操作系统是最核心的系统软件，负责管理 CPU、内存、磁盘等硬件资源，并为其他程序提供运行环境。应用软件（WPS、浏览器、杀毒软件、办公软件等）面向具体任务，必须运行在操作系统之上，所以后三个选项都属于应用软件的范畴，不能与操作系统并列。'
+    },
+    {
+      id: 9,
+      question: '在 Windows 中，复制所选内容的快捷键是？',
+      options: ['Ctrl + V', 'Ctrl + X', 'Ctrl + Z', 'Ctrl + C'],
+      answer: 3,
+      explanation: 'Ctrl + C 是 Copy（复制），把选中内容送入剪贴板且保留原内容；Ctrl + V 是粘贴；Ctrl + X 是剪切，复制后删除原内容；Ctrl + Z 是撤销。这四个键经常一起考，注意区分“复制”与“剪切”。'
+    },
+    {
+      id: 10,
+      question: '在 Windows 中，撤销上一步操作的快捷键是？',
+      options: ['Ctrl + Y', 'Ctrl + Z', 'Ctrl + A', 'Ctrl + S'],
+      answer: 1,
+      explanation: 'Ctrl + Z 是撤销（Undo），可回退最近一次编辑；Ctrl + Y 是恢复（Redo），用于取消刚才的撤销；Ctrl + A 是全选；Ctrl + S 是保存。记忆法：Z 与 Y 在键盘上相邻，Z 撤一步、Y 再回来。'
+    },
+    {
+      id: 11,
+      question: '在 Windows 中，关闭当前活动窗口（或程序）的快捷键是？',
+      options: ['Alt + F4', 'Ctrl + F4', 'Alt + Tab', 'Ctrl + W'],
+      answer: 0,
+      explanation: 'Alt + F4 关闭当前活动窗口或结束当前程序，在桌面上按下则弹出关机对话框。Ctrl + W 通常只关闭当前文档或浏览器标签页；Ctrl + F4 关闭多文档程序中的当前子窗口；Alt + Tab 用于在已打开的窗口之间切换。'
+    },
+    {
+      id: 12,
+      question: '一个 IPv4 地址由多少位二进制数组成？',
+      options: ['16 位', '64 位', '128 位', '32 位'],
+      answer: 3,
+      explanation: 'IPv4 地址长 32 位，通常写成 4 段十进制数，每段 8 位、取值 0~255，例如 192.168.1.1。IPv6 地址为 128 位，正是为了解决 IPv4 地址枯竭问题；16 位和 64 位都不是 IP 地址的长度。'
+    },
+    {
+      id: 13,
+      question: '在域名 www.example.com 中，顶级域名（TLD）是？',
+      options: ['www', 'example', 'com', 'http'],
+      answer: 2,
+      explanation: '域名从右向左层级依次降低：最右边的 com 是顶级域名，表示商业机构；example 是二级域名，代表机构名称；www 是主机名，通常指向网站的服务器。http 是浏览器自动补全的协议名，不属于域名的一部分。'
+    },
+    {
+      id: 14,
+      question: 'HTTP 协议默认使用的端口号是？',
+      options: ['21', '25', '80', '443'],
+      answer: 2,
+      explanation: 'HTTP 默认端口是 80，HTTPS 默认端口是 443。21 是 FTP 的控制端口，25 是 SMTP（发送邮件）端口。浏览 http:// 网站时默认连接 80 端口，所以地址中一般不必写出端口号。'
+    },
+    {
+      id: 15,
+      question: 'HTML 的中文全称是什么？',
+      options: ['超文本标记语言', '超级链接语言', '高级文本语言', '超媒体传输语言'],
+      answer: 0,
+      explanation: 'HTML 是 HyperText Markup Language 的缩写，即超文本标记语言，用一对对标签描述网页的结构与内容。“超文本”指文本中可以包含指向其他文档的链接。其余三个名称都是杜撰的干扰项，并不存在这样的标准名称。'
+    },
+    {
+      id: 16,
+      question: '在 Excel 中，用于对选定区域求和的函数是？',
+      options: ['AVERAGE', 'COUNT', 'MAX', 'SUM'],
+      answer: 3,
+      explanation: 'SUM 是求和函数，写法如 =SUM(A1:A10)；AVERAGE 求平均值；COUNT 统计区域中数字单元格的个数；MAX 求最大值。它们是 Excel 中最常用的几个统计函数，注意区分“求和”与“计数”。'
+    },
+    {
+      id: 17,
+      question: '计算机病毒的本质是？',
+      options: ['一种细菌', '一段具有破坏性、可自我复制的程序代码', '一种硬件故障', '一种网络传输设备'],
+      answer: 1,
+      explanation: '计算机病毒是人为编写的、具有破坏性和传染性的程序代码，通常寄生在文件或引导区中，通过自我复制传播，被触发后可能破坏数据甚至改写硬件固件。它既不是生物细菌，也不是硬件故障或网络设备，所以要用杀毒软件并保持病毒库更新。'
+    },
+    {
+      id: 18,
+      question: '电子邮件地址 user@example.com 中，“@”符号的作用是？',
+      options: ['分隔用户名与域名', '表示该邮件已加密', '表示邮件带有附件', '表示邮箱地址区分大小写'],
+      answer: 0,
+      explanation: '电子邮件地址由“用户名@域名”两部分组成，@（读作 at）用来分隔二者，含义是“某域名下的某个用户”，一个地址中有且只有一个 @。它与加密、附件、大小写都没有关系。'
+    },
+    {
+      id: 19,
+      question: '下列存储容量单位按从小到大排列，正确的是？',
+      options: ['B < KB < MB < GB', 'KB < B < MB < GB', 'MB < KB < GB < B', 'GB < MB < KB < B'],
+      answer: 0,
+      explanation: '存储单位由小到大依次为 B（字节）< KB < MB < GB < TB，相邻两级之间是 1024 倍关系。其余三个选项都把大小顺序弄反了，例如把 GB 排在最小，或把 KB 排到 B 之前。'
+    },
+    {
+      id: 20,
+      question: '下列软件中属于应用软件的是？',
+      options: ['Windows 10', 'Linux', 'WPS 表格', 'UNIX'],
+      answer: 2,
+      explanation: 'WPS 表格是面向表格处理这一具体任务的应用软件，与 Word、Excel、浏览器属于同类。Windows 10、Linux、UNIX 都是操作系统，属于系统软件，是应用软件赖以运行的基础平台。'
+    }
+  ];
+
+  const BANK_KEY = 'quiz.bank.v1';
+  const PROG_KEY = 'quiz.progress.v1';
+  const LETTERS = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('');
+
+  /* ================= 工具函数 ================= */
+  const $ = function (id) { return document.getElementById(id); };
+
+  function el(tag, className, text) {
+    const node = document.createElement(tag);
+    if (className) node.className = className;
+    if (text !== undefined && text !== null) node.textContent = String(text);
+    return node;
+  }
+
+  function typeName(v) {
+    if (v === null) return 'null';
+    if (Array.isArray(v)) return '数组';
+    const t = typeof v;
+    if (t === 'string') return '字符串';
+    if (t === 'number') return '数字';
+    if (t === 'boolean') return '布尔值';
+    if (t === 'undefined') return '缺失';
+    if (t === 'object') return '对象';
+    return t;
+  }
+
+  function letter(i) { return LETTERS[i] || String(i + 1); }
+
+  function fmtTime(ms) {
+    const total = Math.max(0, Math.floor(ms / 1000));
+    const h = Math.floor(total / 3600);
+    const m = Math.floor((total % 3600) / 60);
+    const s = total % 60;
+    const pad = function (n) { return n < 10 ? '0' + n : String(n); };
+    return h > 0 ? (h + ':' + pad(m) + ':' + pad(s)) : (pad(m) + ':' + pad(s));
+  }
+
+  function toast(msg) {
+    const box = el('div', 'toast', msg);
+    $('toastRoot').appendChild(box);
+    setTimeout(function () {
+      box.style.transition = 'opacity .3s ease';
+      box.style.opacity = '0';
+      setTimeout(function () { box.remove(); }, 320);
+    }, 2400);
+  }
+
+  /* ================= 本地存储 ================= */
+  let storageOk = true;
+  try {
+    localStorage.setItem('__quiz_probe__', '1');
+    localStorage.removeItem('__quiz_probe__');
+  } catch (e) {
+    storageOk = false;
+  }
+
+  function readJSON(key) {
+    if (!storageOk) return null;
+    try {
+      const raw = localStorage.getItem(key);
+      return raw ? JSON.parse(raw) : null;
+    } catch (e) {
+      return null;
+    }
+  }
+
+  let storageWarned = false;
+  function writeJSON(key, value) {
+    if (!storageOk) return false;
+    try {
+      localStorage.setItem(key, JSON.stringify(value));
+      return true;
+    } catch (e) {
+      storageOk = false;
+      if (!storageWarned) {
+        storageWarned = true;
+        $('storageBanner').hidden = false;
+        toast('本地存储写入失败，进度将不会保存');
+      }
+      return false;
+    }
+  }
+
+  /* ================= 题库校验 ================= */
+  // 返回该题的所有问题描述（中文），空数组表示合法
+  function checkQuestion(q, i) {
+    const errs = [];
+    const tag = '第 ' + (i + 1) + ' 题';
+    if (q === null || typeof q !== 'object' || Array.isArray(q)) {
+      errs.push(tag + '：必须是一个对象（形如 {"question":"…","options":["…","…"],"answer":0}），当前为' + typeName(q));
+      return errs;
+    }
+    if (typeof q.question !== 'string') {
+      errs.push(tag + '：字段 question 必须是非空字符串（当前：' + typeName(q.question) + '）');
+    } else if (!q.question.trim()) {
+      errs.push(tag + '：字段 question 不能为空字符串');
+    }
+    if (!Array.isArray(q.options)) {
+      errs.push(tag + '：字段 options 必须是字符串数组（当前：' + typeName(q.options) + '）');
+    } else {
+      if (q.options.length < 2) {
+        errs.push(tag + '：字段 options 至少需要 2 个选项（当前只有 ' + q.options.length + ' 个）');
+      }
+      for (let k = 0; k < q.options.length; k++) {
+        const o = q.options[k];
+        if (typeof o !== 'string') {
+          errs.push(tag + '：options 第 ' + (k + 1) + ' 项必须是字符串（当前：' + typeName(o) + '）');
+        } else if (!o.trim()) {
+          errs.push(tag + '：options 第 ' + (k + 1) + ' 项不能为空字符串');
+        }
+      }
+    }
+    if (Array.isArray(q.answer)) {
+      // 多选：answer 为下标数组
+      if (q.answer.length === 0) {
+        errs.push(tag + '：字段 answer 为数组时不能为空（多选题至少要有一个正确选项）');
+      } else {
+        for (let k = 0; k < q.answer.length; k++) {
+          const v = q.answer[k];
+          if (typeof v !== 'number' || !Number.isInteger(v)) {
+            errs.push(tag + '：answer 第 ' + (k + 1) + ' 项必须是整数（当前：' + typeName(v) + '）');
+          } else if (Array.isArray(q.options) && (v < 0 || v > q.options.length - 1)) {
+            errs.push(tag + '：answer 第 ' + (k + 1) + ' 项必须在 0 到 ' + (q.options.length - 1) + ' 之间（当前为 ' + v + '）');
+          }
+        }
+        const uniq = new Set(q.answer);
+        if (uniq.size !== q.answer.length) errs.push(tag + '：answer 数组中有重复的下标');
+      }
+    } else if (typeof q.answer !== 'number' || !Number.isInteger(q.answer)) {
+      errs.push(tag + '：字段 answer 必须是整数（单选题），或是整数数组（多选题）；当前：' + (Array.isArray(q.answer) ? '数组' : typeName(q.answer)));
+    } else if (Array.isArray(q.options) && q.options.length > 0) {
+      if (q.answer < 0 || q.answer > q.options.length - 1) {
+        errs.push(tag + '：字段 answer 必须在 0 到 ' + (q.options.length - 1) + ' 之间（当前为 ' + q.answer + '）');
+      }
+    }
+    if (q.explanation !== undefined && q.explanation !== null && typeof q.explanation !== 'string') {
+      errs.push(tag + '：字段 explanation 如果提供，必须是字符串（当前：' + typeName(q.explanation) + '）');
+    }
+    return errs;
+  }
+
+  // 解析并校验用户导入的题库文本
+  function parseBank(text) {
+    if (!text || !text.trim()) {
+      return { errors: ['内容为空：请粘贴 JSON 数组，或先选择一个 .json 文件。'] };
+    }
+    let data;
+    try {
+      data = JSON.parse(text);
+    } catch (e) {
+      return { errors: ['JSON 解析失败：' + e.message + '\n常见原因：多余或缺失的逗号、字符串没加双引号、括号不匹配、含有 // 注释。'] };
+    }
+    if (!Array.isArray(data)) {
+      return { errors: ['题库格式错误：顶层必须是一个数组 [ ... ]，当前为' + typeName(data) + '。'] };
+    }
+    if (data.length === 0) {
+      return { errors: ['题库为空：数组中至少要有 1 道题。'] };
+    }
+    let errors = [];
+    for (let i = 0; i < data.length; i++) {
+      errors = errors.concat(checkQuestion(data[i], i));
+      if (errors.length > 60) break;
+    }
+    if (errors.length) return { errors: errors };
+
+    const questions = data.map(function (q, i) {
+      return {
+        id: (typeof q.id === 'number' || typeof q.id === 'string') ? q.id : (i + 1),
+        question: q.question.trim(),
+        options: q.options.map(function (o) { return o.trim(); }),
+        answer: Array.isArray(q.answer) ? q.answer.slice().sort(function (a, b) { return a - b; }) : q.answer,
+        explanation: (typeof q.explanation === 'string') ? q.explanation : ''
+      };
+    });
+    return { questions: questions };
+  }
+
+  /* ================= 模态框 ================= */
+  function openModal(opts) {
+    return new Promise(function (resolve) {
+      const overlay = el('div', 'overlay');
+      const modal = el('div', 'modal' + (opts.wide ? ' wide' : ''));
+      const head = el('div', 'modal-head');
+      head.appendChild(el('h3', null, opts.title || '提示'));
+      const closeBtn = el('button', 'icon-btn', '×');
+      closeBtn.type = 'button';
+      closeBtn.setAttribute('aria-label', '关闭');
+      head.appendChild(closeBtn);
+      const body = el('div', 'modal-body');
+      if (typeof opts.body === 'string') {
+        const p = el('p', 'pre', opts.body);
+        body.appendChild(p);
+      } else if (opts.body) {
+        body.appendChild(opts.body);
+      }
+      const foot = el('div', 'modal-foot');
+      modal.appendChild(head);
+      modal.appendChild(body);
+      modal.appendChild(foot);
+      overlay.appendChild(modal);
+
+      let done = false;
+      function close(value) {
+        if (done) return;
+        done = true;
+        document.removeEventListener('keydown', onKey, true);
+        overlay.remove();
+        resolve(value);
+      }
+      function onKey(e) {
+        if (e.key === 'Escape') {
+          e.stopPropagation();
+          e.preventDefault();
+          close(null);
+        }
+      }
+      (opts.buttons || [{ label: '关闭', value: null }]).forEach(function (b) {
+        const btn = el('button', 'btn ' + (b.kind || 'ghost'), b.label);
+        btn.type = 'button';
+        btn.addEventListener('click', function () {
+          if (typeof b.onClick === 'function') {
+            if (b.onClick(close) === false) return;
+          }
+          close(b.value);
+        });
+        foot.appendChild(btn);
+      });
+      closeBtn.addEventListener('click', function () { close(null); });
+      overlay.addEventListener('mousedown', function (e) { if (e.target === overlay) close(null); });
+      document.addEventListener('keydown', onKey, true);
+      $('modalRoot').appendChild(overlay);
+
+      const focusTarget = foot.querySelector('.btn.primary') || foot.querySelector('.btn');
+      if (focusTarget && !opts.bodyIsForm) focusTarget.focus();
+    });
+  }
+
+  function confirmModal(title, message, okLabel, okKind) {
+    return openModal({
+      title: title,
+      body: message,
+      buttons: [
+        { label: '取消', value: false },
+        { label: okLabel, kind: okKind || 'primary', value: true }
+      ]
+    });
+  }
+
+  /* ================= 状态 ================= */
+  let bank = { source: 'builtin', questions: QUESTIONS.slice() };
+  // session: { active:[题目], answers:[null|{selected,correct}], pending:[数组], current, elapsedMs, finished }
+  //   answers[i].selected 单选为下标数字，多选为下标数组（升序）
+  //   pending[i] 记录多选题尚未确认的勾选
+  let session = null;
+  let running = false;     // 计时是否正在走
+  let runStart = 0;
+  let timerId = null;
+  let tickCount = 0;
+
+  function normalizeQuestion(q) {
+    return {
+      id: (q && q.id !== undefined) ? q.id : '',
+      question: String(q.question),
+      options: q.options.slice(),
+      answer: Array.isArray(q.answer) ? q.answer.slice().sort(function (a, b) { return a - b; }) : q.answer,
+      explanation: (typeof q.explanation === 'string') ? q.explanation : ''
+    };
+  }
+
+  function isMulti(q) { return Array.isArray(q.answer); }
+  function answerSet(q) { return isMulti(q) ? q.answer : [q.answer]; }
+  function lettersOf(q, idx) {
+    return (Array.isArray(idx) ? idx : [idx]).map(function (i) { return letter(i); }).join('、');
+  }
+  function questionTypeLabel(q) {
+    if (isMulti(q)) return '多选题';
+    if (q.options.length === 2 && /^(正确|对|是)$/.test(q.options[0]) && /^(错误|错|否)$/.test(q.options[1])) return '判断题';
+    return '单选题';
+  }
+  function sameSet(a, b) {
+    if (a.length !== b.length) return false;
+    const x = a.slice().sort(function (m, n) { return m - n; });
+    const y = b.slice().sort(function (m, n) { return m - n; });
+    return x.every(function (v, i) { return v === y[i]; });
+  }
+
+  function newSession(questions) {
+    pauseTimer();                       // 先结算并停止上一轮计时，避免旧计时混入新一轮
+    session = {
+      active: questions.map(normalizeQuestion),
+      answers: questions.map(function () { return null; }),
+      pending: questions.map(function () { return []; }),
+      current: 0,
+      elapsedMs: 0,
+      finished: false
+    };
+    startTimer();
+    saveProgress();
+    render();
+  }
+
+  function elapsedNow() {
+    return session ? (session.elapsedMs + (running ? (Date.now() - runStart) : 0)) : 0;
+  }
+
+  function saveProgress() {
+    if (!session) return;
+    writeJSON(PROG_KEY, {
+      v: 2,
+      active: session.active,
+      answers: session.answers,
+      pending: session.pending,
+      current: session.current,
+      elapsedMs: elapsedNow(),
+      finished: session.finished,
+      updatedAt: Date.now()
+    });
+  }
+
+  function clearProgress() {
+    if (storageOk) {
+      try { localStorage.removeItem(PROG_KEY); } catch (e) { /* ignore */ }
+    }
+  }
+
+  function restoreSession(p) {
+    if (!p || typeof p !== 'object') return false;
+    if (!Array.isArray(p.active) || p.active.length === 0) return false;
+    for (let i = 0; i < p.active.length; i++) {
+      if (checkQuestion(p.active[i], i).length) return false;
+    }
+    if (!Array.isArray(p.answers) || p.answers.length !== p.active.length) return false;
+
+    const validIdx = function (v, len) {
+      return typeof v === 'number' && Number.isInteger(v) && v >= 0 && v < len;
+    };
+    const answers = [];
+    for (let i = 0; i < p.active.length; i++) {
+      const a = p.answers[i];
+      const q = p.active[i];
+      if (a === null || a === undefined || typeof a !== 'object') { answers.push(null); continue; }
+      const s = a.selected;
+      const asArr = Array.isArray(s) ? s.slice() : (validIdx(s, q.options.length) ? [s] : null);
+      if (!asArr || asArr.length === 0 || !asArr.every(function (v) { return validIdx(v, q.options.length); })) {
+        answers.push(null);
+        continue;
+      }
+      asArr.sort(function (x, y) { return x - y; });
+      const sel = Array.isArray(q.answer) ? asArr : asArr[0];
+      const correct = Array.isArray(q.answer) ? sameSet(asArr, q.answer) : (asArr[0] === q.answer);
+      answers.push({ selected: sel, correct: correct });
+    }
+
+    const pending = p.active.map(function (q, i) {
+      const src = Array.isArray(p.pending) ? p.pending[i] : null;
+      if (!Array.isArray(src)) return [];
+      return src.filter(function (v) { return validIdx(v, q.options.length); })
+        .filter(function (v, k, arr) { return arr.indexOf(v) === k; })
+        .sort(function (x, y) { return x - y; });
+    });
+
+    let current = Number.isInteger(p.current) ? p.current : 0;
+    if (current < 0 || current >= p.active.length) {
+      current = 0;
+      while (current < answers.length - 1 && answers[current]) current++;
+    }
+    session = {
+      active: p.active.map(normalizeQuestion),
+      answers: answers,
+      pending: pending,
+      current: current,
+      elapsedMs: (typeof p.elapsedMs === 'number' && p.elapsedMs >= 0 && isFinite(p.elapsedMs)) ? p.elapsedMs : 0,
+      finished: !!p.finished
+    };
+    return true;
+  }
+
+  /* ================= 计时器 ================= */
+  function startTimer() {
+    if (!session || session.finished || running) return;
+    running = true;
+    runStart = Date.now();
+    if (timerId) clearInterval(timerId);
+    tickCount = 0;
+    timerId = setInterval(function () {
+      updateTimeDisplay();
+      tickCount++;
+      if (tickCount % 5 === 0) saveProgress();
+    }, 1000);
+  }
+
+  function pauseTimer() {
+    if (!running || !session) { running = false; return; }
+    session.elapsedMs += (Date.now() - runStart);
+    running = false;
+    if (timerId) { clearInterval(timerId); timerId = null; }
+  }
+
+  document.addEventListener('visibilitychange', function () {
+    if (document.hidden) {
+      pauseTimer();
+      saveProgress();
+    } else {
+      startTimer();
+    }
+  });
+  window.addEventListener('pagehide', function () {
+    pauseTimer();
+    saveProgress();
+  });
+
+  /* ================= 渲染 ================= */
+  function render() {
+    if (!session) return;
+    $('bankInfo').textContent = (bank.source === 'custom')
+      ? ('自定义题库 · ' + bank.questions.length + ' 题')
+      : ('内置示例题库 · ' + QUESTIONS.length + ' 题');
+    $('storageBanner').hidden = storageOk;
+
+    if (session.finished) {
+      $('quizView').hidden = true;
+      $('resultView').hidden = false;
+      renderResult();
+    } else {
+      $('quizView').hidden = false;
+      $('resultView').hidden = true;
+      renderQuestion();
+    }
+    renderStats();
+    updateTimeDisplay();
+  }
+
+  function renderQuestion() {
+    const i = session.current;
+    const q = session.active[i];
+    const rec = session.answers[i];
+    const multi = isMulti(q);
+    const right = answerSet(q);
+    const pend = session.pending[i] || [];
+    const picked = Array.isArray(rec && rec.selected) ? rec.selected : (rec ? [rec.selected] : []);
+
+    $('qMeta').textContent = questionTypeLabel(q) + ' · 第 ' + (i + 1) + ' / ' + session.active.length + ' 题';
+
+    const list = $('optionsList');
+    list.innerHTML = '';
+    q.options.forEach(function (opt, oi) {
+      const li = el('li');
+      const btn = el('button', 'opt');
+      btn.type = 'button';
+      btn.appendChild(el('span', 'key', letter(oi)));
+      btn.appendChild(el('span', 'opt-text', opt));
+
+      if (rec) {
+        btn.classList.add('locked');
+        if (right.indexOf(oi) > -1) btn.classList.add('correct');
+        else if (picked.indexOf(oi) > -1) btn.classList.add('wrong');
+        btn.setAttribute('aria-disabled', 'true');
+        btn.tabIndex = -1;
+        if (right.indexOf(oi) > -1) {
+          if (picked.indexOf(oi) > -1) btn.appendChild(el('span', 'mark', rec.correct ? '✓ 你的选择' : '✓ 已选中（正确）'));
+          else btn.appendChild(el('span', 'mark', multi ? '✓ 正确答案（漏选）' : '✓ 正确答案'));
+        } else if (picked.indexOf(oi) > -1) {
+          btn.appendChild(el('span', 'mark', '✗ 你的选择（错选）'));
+        }
+      } else {
+        if (multi && pend.indexOf(oi) > -1) btn.classList.add('picked');
+        btn.setAttribute('aria-pressed', multi ? (pend.indexOf(oi) > -1 ? 'true' : 'false') : 'false');
+        btn.addEventListener('click', function () { chooseOption(oi); });
+      }
+      li.appendChild(btn);
+      list.appendChild(li);
+    });
+
+    if (rec) {
+      const isLast = (i === session.active.length - 1);
+      const verdict = $('verdict');
+      verdict.textContent = rec.correct ? '回答正确' : '回答错误';
+      verdict.className = 'verdict ' + (rec.correct ? 'ok' : 'no');
+      $('correctAnswerText').textContent = '正确答案：' + lettersOf(q, right) + '. ' + right.map(function (k) { return q.options[k]; }).join('；');
+      $('explainText').textContent = (q.explanation && q.explanation.trim()) ? q.explanation : '（本题未提供解析）';
+      $('explainBox').hidden = false;
+      const next = $('btnNext');
+      next.hidden = false;
+      next.textContent = isLast ? '查看结果' : '下一题';
+      $('btnConfirm').hidden = true;
+      $('hintText').textContent = '快捷键：Enter / → ' + (isLast ? '查看结果' : '下一题');
+    } else {
+      $('explainBox').hidden = true;
+      $('btnNext').hidden = true;
+      if (multi) {
+        const cf = $('btnConfirm');
+        cf.hidden = false;
+        cf.disabled = pend.length === 0;
+        cf.textContent = pend.length ? ('确认答案（已选 ' + lettersOf(q, pend) + '）') : '确认答案';
+        $('hintText').textContent = '多选题：按 1-' + q.options.length + ' 或点击选项勾选（可多选），Enter 确认答案';
+      } else {
+        $('btnConfirm').hidden = true;
+        $('hintText').textContent = '快捷键：1-' + q.options.length + ' 选择选项';
+      }
+    }
+  }
+
+  function renderStats() {
+    const total = session.active.length;
+    let answered = 0;
+    let correct = 0;
+    session.answers.forEach(function (a) {
+      if (a) { answered++; if (a.correct) correct++; }
+    });
+    const shown = session.finished ? total : (session.current + 1);
+    $('statIndex').textContent = '第 ' + shown + ' / ' + total + ' 题';
+    $('progressBar').style.width = (total ? (answered / total * 100) : 0) + '%';
+    $('progressBar').parentNode.setAttribute('aria-valuenow', String(answered));
+    $('progressBar').parentNode.setAttribute('aria-valuemax', String(total));
+    $('statAcc').textContent = answered
+      ? ('正确率 ' + Math.round(correct / answered * 100) + '%（' + correct + '/' + answered + '）')
+      : '正确率 —';
+  }
+
+  function updateTimeDisplay() {
+    if (!session) return;
+    $('statTime').textContent = '用时 ' + fmtTime(elapsedNow());
+  }
+
+  function renderResult() {
+    const total = session.active.length;
+    let answered = 0;
+    let correct = 0;
+    session.answers.forEach(function (a) {
+      if (a) { answered++; if (a.correct) correct++; }
+    });
+    const acc = total ? Math.round(correct / total * 100) : 0;
+
+    const grid = $('resStats');
+    grid.innerHTML = '';
+    const stats = [
+      { k: '总题数', v: total, cls: '' },
+      { k: '答对数', v: correct, cls: 'good' },
+      { k: '正确率', v: acc + '%', cls: acc >= 60 ? 'good' : 'bad' },
+      { k: '总用时', v: fmtTime(session.elapsedMs), cls: '' }
+    ];
+    stats.forEach(function (s) {
+      const box = el('div', 'stat ' + s.cls);
+      box.appendChild(el('div', 'v', s.v));
+      box.appendChild(el('div', 'k', s.k));
+      grid.appendChild(box);
+    });
+
+    const wrong = [];
+    session.active.forEach(function (q, i) {
+      const rec = session.answers[i];
+      if (!rec || !rec.correct) wrong.push({ q: q, rec: rec, index: i });
+    });
+
+    $('wrongTitle').textContent = '错题列表（' + wrong.length + ' 题）';
+    $('wrongSub').textContent = answered < total
+      ? ('本次共 ' + total + ' 题，已作答 ' + answered + ' 题，未作答的题目也计入错题。')
+      : '答对 ' + correct + ' 题，答错 ' + wrong.length + ' 题。';
+
+    const list = $('wrongList');
+    list.innerHTML = '';
+    if (!wrong.length) {
+      list.appendChild(el('p', 'empty-note', '全部答对，没有错题。可以点“重新开始”再来一轮。'));
+    } else {
+      wrong.forEach(function (item) {
+        const q = item.q;
+        const rec = item.rec;
+        const card = el('div', 'wrong-item');
+
+        const headLine = el('div', 'wi-q');
+        headLine.appendChild(el('span', 'wi-idx', '第 ' + (item.index + 1) + ' 题'));
+        headLine.appendChild(el('span', null, q.question));
+        card.appendChild(headLine);
+
+        const rowMine = el('div', 'wi-row');
+        rowMine.appendChild(el('span', 'label', '你的答案：'));
+        if (rec) {
+          const sel = Array.isArray(rec.selected) ? rec.selected : [rec.selected];
+          rowMine.appendChild(el('span', 'bad', lettersOf(q, sel) + '. ' + sel.map(function (k) { return q.options[k]; }).join('；')));
+        } else {
+          rowMine.appendChild(el('span', 'bad', '未作答'));
+        }
+        card.appendChild(rowMine);
+
+        const rowRight = el('div', 'wi-row');
+        rowRight.appendChild(el('span', 'label', '正确答案：'));
+        const right = answerSet(q);
+        rowRight.appendChild(el('span', 'good', lettersOf(q, right) + '. ' + right.map(function (k) { return q.options[k]; }).join('；')));
+        card.appendChild(rowRight);
+
+        const exp = el('div', 'wi-exp');
+        exp.appendChild(el('span', 'label', '解析：'));
+        exp.appendChild(document.createTextNode((q.explanation && q.explanation.trim()) ? q.explanation : '（本题未提供解析）'));
+        card.appendChild(exp);
+
+        list.appendChild(card);
+      });
+    }
+
+    $('btnRedoWrong').disabled = wrong.length === 0;
+    window.__wrongIndexes = wrong.map(function (w) { return w.index; });
+  }
+
+  /* ================= 答题逻辑 ================= */
+  function chooseOption(oi) {
+    if (!session || session.finished) return;
+    const i = session.current;
+    const q = session.active[i];
+    if (session.answers[i]) return;              // 已判定，锁定
+    if (oi < 0 || oi >= q.options.length) return;
+
+    if (isMulti(q)) {
+      // 多选题：先勾选，点「确认答案」后再判定
+      const pend = session.pending[i] || (session.pending[i] = []);
+      const at = pend.indexOf(oi);
+      if (at > -1) pend.splice(at, 1);
+      else pend.push(oi);
+      pend.sort(function (a, b) { return a - b; });
+      saveProgress();
+      renderQuestion();
+      return;
+    }
+
+    session.answers[i] = { selected: oi, correct: oi === q.answer };
+    saveProgress();
+    renderQuestion();
+    renderStats();
+    scrollToExplain();
+  }
+
+  function confirmMulti() {
+    if (!session || session.finished) return;
+    const i = session.current;
+    const q = session.active[i];
+    if (!isMulti(q) || session.answers[i]) return;
+    const pend = (session.pending[i] || []).slice().sort(function (a, b) { return a - b; });
+    if (!pend.length) { toast('多选题至少要勾选一个选项'); return; }
+    session.answers[i] = { selected: pend, correct: sameSet(pend, q.answer) };
+    session.pending[i] = [];
+    saveProgress();
+    renderQuestion();
+    renderStats();
+    scrollToExplain();
+  }
+
+  function scrollToExplain() {
+    const box = $('explainBox');
+    if (box.scrollIntoView) {
+      try { box.scrollIntoView({ behavior: 'smooth', block: 'nearest' }); } catch (e) { /* ignore */ }
+    }
+  }
+
+  function nextQuestion() {
+    if (!session || session.finished) return;
+    const i = session.current;
+    if (!session.answers[i]) {
+      if (isMulti(session.active[i])) toast('多选题请先勾选选项，再按 Enter 或点「确认答案」');
+      else toast('请先选择一个答案（可按 1-4 键）');
+      return;
+    }
+    if (i >= session.active.length - 1) {
+      finishSession();
+      return;
+    }
+    session.current = i + 1;
+    saveProgress();
+    render();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+
+  function finishSession() {
+    session.finished = true;
+    pauseTimer();
+    saveProgress();
+    render();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+
+  function redoWrong() {
+    const idx = window.__wrongIndexes || [];
+    if (!idx.length) { toast('没有错题，无需重做'); return; }
+    const qs = idx.map(function (i) { return session.active[i]; });
+    clearProgress();
+    newSession(qs);
+    toast('已开始重做错题，共 ' + qs.length + ' 题');
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+
+  async function restartFlow() {
+    const ok = await confirmModal(
+      '重新开始',
+      '确定要重新开始吗？\n当前的答题进度、作答记录、错题与统计数据都会被清空，题库会保留。',
+      '确定清空并重来',
+      'primary'
+    );
+    if (!ok) return;
+    clearProgress();
+    newSession(bank.questions);
+    toast('已重新开始，共 ' + bank.questions.length + ' 题');
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+
+  /* ================= 导入题库 ================= */
+  function applyBank(questions) {
+    bank = { source: 'custom', questions: questions };
+    writeJSON(BANK_KEY, { v: 1, source: 'custom', questions: questions, importedAt: Date.now() });
+  }
+
+  function renderErrorBox(container, errors) {
+    container.innerHTML = '';
+    container.hidden = false;
+    container.className = 'err-box';
+    container.appendChild(el('strong', null, '校验未通过，共发现 ' + errors.length + ' 处问题：'));
+    const ul = el('ul');
+    const shown = errors.slice(0, 10);
+    shown.forEach(function (msg) {
+      ul.appendChild(el('li', null, msg));
+    });
+    container.appendChild(ul);
+    if (errors.length > shown.length) {
+      container.appendChild(el('p', null, '……还有 ' + (errors.length - shown.length) + ' 处问题，修正后可再次导入。'));
+    }
+  }
+
+  function openImport() {
+    const wrap = el('div', 'import-wrap');
+    const tip = el('p', 'muted', '两种方式任选其一：直接粘贴 JSON 数组，或选择一个 .json 文件（也可以把文件拖到这里）。');
+    const fileRow = el('div', 'file-row');
+    const fileInput = document.createElement('input');
+    fileInput.type = 'file';
+    fileInput.accept = '.json,application/json';
+    fileRow.appendChild(fileInput);
+    const textarea = document.createElement('textarea');
+    textarea.spellcheck = false;
+    textarea.placeholder = '[\n  {\n    "id": 1,\n    "question": "题干文字",\n    "options": ["选项A", "选项B", "选项C", "选项D"],\n    "answer": 0,\n    "explanation": "为什么选它、其他选项错在哪"\n  }\n]';
+    const msgBox = el('div');
+    msgBox.hidden = true;
+    wrap.appendChild(tip);
+    wrap.appendChild(fileRow);
+    wrap.appendChild(textarea);
+    wrap.appendChild(msgBox);
+
+    function clearMsg() { msgBox.hidden = true; msgBox.innerHTML = ''; msgBox.className = ''; }
+
+    function loadFile(file) {
+      if (!file) return;
+      const reader = new FileReader();
+      reader.onload = function () {
+        textarea.value = String(reader.result || '');
+        clearMsg();
+        toast('已读取「' + file.name + '」，点击“导入”开始校验');
+      };
+      reader.onerror = function () {
+        renderErrorBox(msgBox, ['读取文件失败，请重试，或改用粘贴 JSON 的方式。']);
+      };
+      reader.readAsText(file, 'utf-8');
+    }
+
+    fileInput.addEventListener('change', function () {
+      loadFile(fileInput.files && fileInput.files[0]);
+    });
+    ['dragenter', 'dragover'].forEach(function (ev) {
+      wrap.addEventListener(ev, function (e) { e.preventDefault(); wrap.classList.add('dragging'); });
+    });
+    wrap.addEventListener('dragleave', function (e) {
+      if (e.target === wrap) wrap.classList.remove('dragging');
+    });
+    wrap.addEventListener('drop', function (e) {
+      e.preventDefault();
+      wrap.classList.remove('dragging');
+      const dt = e.dataTransfer;
+      if (dt && dt.files && dt.files.length) loadFile(dt.files[0]);
+    });
+
+    let imported = null;
+
+    openModal({
+      title: '导入题库',
+      wide: true,
+      bodyIsForm: true,
+      body: wrap,
+      buttons: [
+        { label: '取消', value: null },
+        {
+          label: '导入',
+          kind: 'primary',
+          value: 'import',
+          onClick: function (close) {
+            const result = parseBank(textarea.value);
+            if (result.errors) {
+              renderErrorBox(msgBox, result.errors);
+              msgBox.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+              return false;              // 不关闭弹窗，让用户看到具体问题
+            }
+            imported = result.questions;
+            clearMsg();
+            close('import');
+            return false;
+          }
+        }
+      ]
+    }).then(async function (action) {
+      if (action !== 'import' || !imported) return;
+      await afterImport(imported);
+    });
+  }
+
+  async function afterImport(questions) {
+    const count = questions.length;
+    applyBank(questions);
+
+    const clearIt = await openModal({
+      title: '题库导入成功',
+      body: '新题库已载入，共 ' + count + ' 题，答题时使用该题库。\n是否同时清空当前进度？',
+      buttons: [
+        { label: '保留当前进度', value: false },
+        { label: '清空进度并开始新题库', kind: 'primary', value: true }
+      ]
+    });
+
+    if (clearIt) {
+      clearProgress();
+      newSession(bank.questions);
+      toast('已清空进度，开始使用新题库（' + count + ' 题）');
+    } else {
+      render();
+      toast('已替换题库；当前这一轮仍按原题继续，重新开始后使用新题库');
+    }
+  }
+
+  /* ================= 事件绑定 ================= */
+  $('btnNext').addEventListener('click', nextQuestion);
+  $('btnConfirm').addEventListener('click', confirmMulti);
+  $('btnImport').addEventListener('click', openImport);
+  $('btnRestart').addEventListener('click', function () { restartFlow(); });
+  $('btnRestart2').addEventListener('click', function () { restartFlow(); });
+  $('btnRedoWrong').addEventListener('click', redoWrong);
+
+  document.addEventListener('keydown', function (e) {
+    if (document.querySelector('.overlay')) return;                       // 弹窗打开时不响应
+    const t = e.target;
+    if (t && t.tagName && /^(INPUT|TEXTAREA|SELECT)$/.test(t.tagName)) return;
+    if (e.ctrlKey || e.metaKey || e.altKey) return;
+    if (!session || session.finished) return;
+
+    const i = session.current;
+    const q = session.active[i];
+    const rec = session.answers[i];
+
+    if (e.key >= '1' && e.key <= '9') {
+      const idx = Number(e.key) - 1;
+      if (idx < q.options.length) {
+        e.preventDefault();
+        if (rec) toast('本题已作答并锁定，请按 Enter 进入下一题');
+        else chooseOption(idx);
+      }
+      return;
+    }
+    if (e.key === 'Enter' || e.key === 'ArrowRight') {
+      e.preventDefault();
+      // 多选题：未判定时 Enter 先确认答案，已判定时才进入下一题
+      if (!rec && isMulti(q) && (session.pending[i] || []).length) confirmMulti();
+      else nextQuestion();
+    }
+  });
+
+  /* ================= 启动 ================= */
+  function boot() {
+    // 1. 读取题库（自定义题库优先）
+    const storedBank = readJSON(BANK_KEY);
+    if (storedBank && storedBank.source === 'custom' && Array.isArray(storedBank.questions) && storedBank.questions.length) {
+      let ok = true;
+      for (let i = 0; i < storedBank.questions.length; i++) {
+        if (checkQuestion(storedBank.questions[i], i).length) { ok = false; break; }
+      }
+      if (ok) {
+        bank = { source: 'custom', questions: storedBank.questions.map(normalizeQuestion) };
+      } else if (storageOk) {
+        try { localStorage.removeItem(BANK_KEY); } catch (e) { /* ignore */ }
+      }
+    }
+
+    // 2. 恢复进度
+    const restored = restoreSession(readJSON(PROG_KEY));
+
+    render();
+
+    if (restored) {
+      if (!session.finished) startTimer();
+      const anyAnswered = session.answers.some(function (a) { return !!a; });
+      if (anyAnswered) toast('已恢复到上次进度：第 ' + (session.current + 1) + ' / ' + session.active.length + ' 题');
+    } else {
+      newSession(bank.questions);
+    }
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', boot);
+  } else {
+    boot();
+  }
+})();
+</script>
+</body>
+</html>
