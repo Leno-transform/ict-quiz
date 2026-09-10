@@ -895,6 +895,7 @@
     const picked = Array.isArray(rec && rec.selected) ? rec.selected : (rec ? [rec.selected] : []);
 
     $('qMeta').textContent = questionTypeLabel(q) + ' · 第 ' + (i + 1) + ' / ' + session.active.length + ' 题';
+    $('questionText').textContent = q.question;
 
     const list = $('optionsList');
     list.innerHTML = '';
