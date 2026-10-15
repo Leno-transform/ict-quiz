@@ -1,0 +1,12 @@
+{
+  "11": {"status": "exclude", "reason": "题干明确写 IEEE 802.10，不能擅自换成 802.1Q；原协议与选项、答案不匹配，无法恢复原题意", "corrected_stem": null, "corrected_answer": null},
+  "48": {"status": "exclude", "reason": "原选项含残词，添加“交互式”才能使答案唯一，属于改题意而非可靠修复", "corrected_options": null},
+  "91": {"status": "exclude", "reason": "FE80:: 地址既是单播地址又是链路本地地址，单选题 A、C 均成立"},
+  "92": {"sources": ["https://info.support.huawei.com/info-finder/encyclopedia/zh/detail?action=queryEntityDetail&keyword=%E4%BA%91%E7%AE%A1%E7%90%86%E7%BD%91%E7%BB%9C"]},
+  "194": {"status": "exclude", "reason": "未说明是否手工配置 Router ID，只有不存在 Loopback 不足以确定选举结果"},
+  "196": {"status": "exclude", "reason": "未限定平台、生成树版本或扩展系统 ID，不能把 BPDU 桥 ID 编码直接等同于可配置优先级"},
+  "219": {"sources": ["https://info.support.huawei.com/info-finder/encyclopedia/zh/SD-Branch.html"]},
+  "304": {"sources": ["https://datatracker.ietf.org/doc/html/rfc4862", "https://datatracker.ietf.org/doc/html/rfc8415"]},
+  "324": {"sources": ["https://datatracker.ietf.org/doc/html/rfc4862", "https://datatracker.ietf.org/doc/html/rfc8415"]},
+  "510": {"sources": ["https://datatracker.ietf.org/doc/html/rfc4862", "https://datatracker.ietf.org/doc/html/rfc8415"]}
+}

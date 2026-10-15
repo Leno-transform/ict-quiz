@@ -1,0 +1,32 @@
+[
+  {
+    "id": 11,
+    "problem": "原题明确写 IEEE 802.10，审核将其改成 IEEE 802.1Q 后才改答案为 12 bit。这两个都是真实协议，不能确认只是 OCR。Cisco 官方文档说明 802.10 的 VLAN ID 由 4 字节 SAID 字段携带，原选项没有 32 bit。",
+    "recommendation": "exclude：缺乏原始图像证据时不要替换协议来修补题目；12 bit 可作为另写的新 802.1Q 题。",
+    "source": "https://www.cisco.com/en/US/docs/ios/lanswitch/configuration/guide/lsw_cfg_vlan_80210encapsulation.pdf"
+  },
+  {
+    "id": 48,
+    "problem": "原 B 是“通过 FTP 对路由器进行 pz”，审核改为“交互式配置”。恢复 pz 为配置尚合理，但新增交互式限制缩小题意。FTP 可以传送并恢复路由器配置文件，因此不能用原来笼统的“配置”来排除 FTP。",
+    "recommendation": "exclude：如果保留，须承认这是重新明确命令行登录题，而不是纯 OCR 修复；本次要求剔除残缺题，建议直接剔除。",
+    "source": "https://info.support.huawei.com/network/ptmngsys/Web/tsrev_ar/cn/content/ar/09_edesk_device_fails_to_startup/edesk_device_fails_to_startup_edesk004.html"
+  },
+  {
+    "id": 91,
+    "problem": "单选选项 A“单播地址”和 C“链路本地地址”同时描述 FE80:: 地址。审核解析自己称其“链路本地单播”，证实两选项的包含关系；题干没有要求最具体分类。",
+    "recommendation": "exclude：单选存在两个正确选项；不要仅用分类更具体来判另一个错误。",
+    "source": "https://www.rfc-editor.org/rfc/rfc4291"
+  },
+  {
+    "id": 194,
+    "problem": "题干只说没有 Loopback，却未说明未配置 Router ID。审核解析补加“未手工指定”，这个条件是自动选最大接口地址成立的必要条件；手工 Router ID 优先时 B 不必成立。",
+    "recommendation": "exclude：原题条件不足。若加入“未手工指定 Router ID”，应明确这是改写条件，而非 OCR 修复。",
+    "source": "https://support.huawei.com/enterprise/zh/doc/EDOC1100352131/753f0155"
+  },
+  {
+    "id": 196,
+    "problem": "题干问 BPDU 中可能出现的桥 ID，审核用华为配置优先级步长 4096 来判断 2048 不可能，但题干未限定华为/生成树版本/扩展系统 ID。BPDU 的 Bridge ID 前两字节还可能包含扩展系统 ID，不能等同于可配置 priority。",
+    "recommendation": "exclude：缺少平台及桥 ID 编码条件；当前解析只证明配置值不合法，没有证明报文中的 Bridge ID 不可能出现。",
+    "source": "https://www.cisco.com/c/en/us/td/docs/switches/lan/catalyst6500/ios/15-5SY/config_guide/sup2T/15_4_sy_swcg_2T/spanning_tree.html"
+  }
+]

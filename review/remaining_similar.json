@@ -1,0 +1,122 @@
+[
+  {
+    "a": 110,
+    "b": 164,
+    "sa": 0.83,
+    "oa": 1.0,
+    "stem_a": "在AC上配置国家码的命令为",
+    "stem_b": "AC 配置国家码的命令是？",
+    "options_a": {
+      "A": "nation-code",
+      "B": "province-code",
+      "C": "country-code",
+      "D": "state-code"
+    },
+    "options_b": {
+      "A": "province-code",
+      "B": "country-code",
+      "C": "state-code",
+      "D": "nation-code"
+    }
+  },
+  {
+    "a": 114,
+    "b": 178,
+    "sa": 0.85,
+    "oa": 1.0,
+    "stem_a": "UDP 是面向无连接的，必须依靠什么来保障应用所需的传输可靠性？",
+    "stem_b": "UDP是面向无连接的,必须依靠()来保障传输的可靠性",
+    "options_a": {
+      "A": "传输控制协议",
+      "B": "应用层协议",
+      "C": "网络层协议",
+      "D": "网际协议"
+    },
+    "options_b": {
+      "A": "网际协议",
+      "B": "传输控制协议",
+      "C": "网络层协议",
+      "D": "应用层协议"
+    }
+  },
+  {
+    "a": 222,
+    "b": 223,
+    "sa": 0.9,
+    "oa": 0.83,
+    "stem_a": "以下IEEE 802.11标准中不支持5GHz频段进行通信的是",
+    "stem_b": "以下IEEE 802.11标准中只支持2.4GHz频段进行通信的是",
+    "options_a": {
+      "A": "802.11n",
+      "B": "802.11g",
+      "C": "802.11ac wave 1",
+      "D": "802.11ac wave 2"
+    },
+    "options_b": {
+      "A": "802.11n",
+      "B": "802.11g",
+      "C": "802.11ax",
+      "D": "802.11a"
+    }
+  },
+  {
+    "a": 271,
+    "b": 357,
+    "sa": 0.97,
+    "oa": 0.96,
+    "stem_a": "以下关于无线设备的描述,正确的是",
+    "stem_b": "以下关于无线设备描述正确的是",
+    "options_a": {
+      "A": "无线控制器 AC 一般位于网络汇聚层，提供高速、安全、可靠的 WLAN 业务",
+      "B": "FIT AP一般独立完成用户接入、认证、业务转发等功能",
+      "C": "FAT AP一般与无线控制器配合工作",
+      "D": "无线设备没有线接口"
+    },
+    "options_b": {
+      "A": "无线设备没有线接口",
+      "B": "FAT AP一般与无线控制器配合工作",
+      "C": "FIT AP一般独立完成用户接入认证业务转发",
+      "D": "无线控制器AC一般位于整个网络的汇聚层提供高速、安全、可靠的wlan业务"
+    }
+  },
+  {
+    "a": 351,
+    "b": 415,
+    "sa": 0.85,
+    "oa": 0.84,
+    "stem_a": "SNMP由哪些主要部分组成",
+    "stem_b": "SNMP由以下哪些部分组成",
+    "options_a": {
+      "A": "代理进程",
+      "B": "被管设备",
+      "C": "网络管理站",
+      "D": "管理信息库"
+    },
+    "options_b": {
+      "A": "被管对象",
+      "B": "网络管理系统",
+      "C": "管理信息库",
+      "D": "代理进程"
+    }
+  },
+  {
+    "a": 300,
+    "b": 498,
+    "sa": 0.88,
+    "oa": 0.98,
+    "stem_a": "路由器 RADIUS 配置如下，下列说法正确的是？\nRADIUS-server template Huawei\nRADIUS-server shared-key cipher Huawei\nRADIUS-server authentication 200.0.12.1 1812\nRADIUS-server accounting 200.0.12.1 1813\nRADIUS-attribute nas-ip 200.0.12.2",
+    "stem_b": "路由器radius信息配置如图,下列说法正确的是#radius-server template Huawei radius-server shared.key cipher Huawei radius-server authentication 200.0.12.1 1812 radius-server accounding 200.0.12.1 1813#*",
+    "options_a": {
+      "A": "路由器发送radius报文源ip地址为200.0.12.1",
+      "B": "授权服务器的IP地址为200.0.12.1",
+      "C": "认证服务器的IP地址为200.0.12.1",
+      "D": "计费服务器的IP地址为200.0.12.1"
+    },
+    "options_b": {
+      "A": "路由器发送radius报文的源IP地址为200.0.12.2",
+      "B": "计费服务器的ip地址为200.0.12.1",
+      "C": "授权服务器的IP地址为200.0.12.1",
+      "D": "认证服务器的IP地址为200.0.12.1"
+    }
+  }
+]

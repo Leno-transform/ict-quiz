@@ -1,0 +1,3445 @@
+[
+  {
+    "id": 1,
+    "stem": "以下关于路由器的描述,错误的是:",
+    "options": {
+      "A": "路由器可以作为网关设备",
+      "B": "路由器不能隔离广播域",
+      "C": "路由器工作在网络层",
+      "D": "路由器能够实现IP报文转发"
+    },
+    "answer": "B",
+    "type": "single",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 2,
+    "stem": "某网络工程师在输入命令行时提示如下信息:Error:Unrecognized command found at ‘’ position.对于该提示信息说法正确的是:",
+    "options": {
+      "A": "输入命令不完整",
+      "B": "参数整型错",
+      "C": "输入命令不明确",
+      "D": "没有查找到关键字"
+    },
+    "answer": "D",
+    "type": "single",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 3,
+    "stem": "缺省情况下,广播网络上ospf协议HELLO报文发送周期为",
+    "options": {
+      "A": "20s",
+      "B": "30s",
+      "C": "10s",
+      "D": "40s"
+    },
+    "answer": "C",
+    "type": "single",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 4,
+    "stem": "如图所示的网络,主机A没有配置网关,主机B存在网关的ARP缓存,在主机A 使用命令ping 11.0.12.1,下列说法正确的是",
+    "options": {
+      "A": "不会有任何数据包从主机A出",
+      "B": "主机A发出的数据帧的目的MAC地址是MAC-c",
+      "C": "主机A 发出的数据帧的目的MAC地址是MAC-B",
+      "D": "主机A发出的数据包的目的IP地址为11.0.12.1"
+    },
+    "answer": "A",
+    "type": "single",
+    "initial_exclusion_reasons": [
+      "原文缺少题目引用的图示"
+    ]
+  },
+  {
+    "id": 5,
+    "stem": "ospf协议使用哪种状态表示邻接关系已经建立",
+    "options": {
+      "A": "2-way",
+      "B": "Attempt",
+      "C": "Down",
+      "D": "Full"
+    },
+    "answer": "A",
+    "type": "single",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 6,
+    "stem": "关于如图所示信息描述正确的是:",
+    "options": {
+      "A": "G 0/0/0接口没有配置IP地址",
+      "B": "G 0/0/0接口连接了一条错误的线缆",
+      "C": "G 0/0/0接口被管理员手动关闭了",
+      "D": "G 0/0/0接口没有启用动志路由协议"
+    },
+    "answer": "C",
+    "type": "single",
+    "initial_exclusion_reasons": [
+      "原文缺少题目引用的图示"
+    ]
+  },
+  {
+    "id": 7,
+    "stem": "管理员计划通过配置静态浮动路由来实现路由备份,则正确实现方法有:",
+    "options": {
+      "A": "管理员需要为主要静态路由和备用静态路由配置不同的TAG",
+      "B": "管理员只需要配置两个静态路由",
+      "C": "管理员需要为主用静态路由和备用静态路由配置不同的度量值",
+      "D": "管理员需要为主要静态路由和备用静态路由配置不同的协议优先级值"
+    },
+    "answer": "D",
+    "type": "single",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 8,
+    "stem": "ospf协议使用哪种报文发现和维护邻居关系",
+    "options": {
+      "A": "LSU",
+      "B": "LSR",
+      "C": "HELLO",
+      "D": "DD"
+    },
+    "answer": "C",
+    "type": "single",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 9,
+    "stem": "如图所示的网络,所有路由器运行ospf协议,链路开销值如图,则RTA路由表中达到网络10.0.0.0/8的路由条目的从上图值是多少",
+    "options": {
+      "A": "70",
+      "B": "60",
+      "C": "20",
+      "D": "100"
+    },
+    "answer": "B",
+    "type": "single",
+    "initial_exclusion_reasons": [
+      "原文缺少题目引用的图示"
+    ]
+  },
+  {
+    "id": 10,
+    "stem": "RSTP协议不包含以下哪个端口状态",
+    "options": {
+      "A": "Blocking",
+      "B": "Lea ing",
+      "C": "Discarding",
+      "D": "Forwarding"
+    },
+    "answer": "A",
+    "type": "single",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 11,
+    "stem": "IEEE802.10定义的vlan帧格式中vlan id总共有多少bit",
+    "options": {
+      "A": "6",
+      "B": "10",
+      "C": "12",
+      "D": "8"
+    },
+    "answer": "D",
+    "type": "single",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 12,
+    "stem": "如图所示,假设SWA刚刚启动,MAC地址表为空,现在主机A发送一个目的MAC地址为MAC-B的数据帧,下列说法正确的是:",
+    "options": {
+      "A": "SWA将数据帧丢弃",
+      "B": "将这个数据帧泛洪出去",
+      "C": "将这个数据帧只从g0/0/3端口转发出去",
+      "D": "将这个数据帧只从g0/0/2端口转发出去"
+    },
+    "answer": "B",
+    "type": "single",
+    "initial_exclusion_reasons": [
+      "原文缺少题目引用的图示"
+    ]
+  },
+  {
+    "id": 13,
+    "stem": "以下关于vlanif接口说法正确的是",
+    "options": {
+      "A": "不同的vlanif接口可以使用相同的IP地址",
+      "B": "vlanif接口没有MAC地址",
+      "C": "vlanif接口不需要学习MAC地址",
+      "D": "vlanif接口是三层接口"
+    },
+    "answer": "D",
+    "type": "single",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 14,
+    "stem": "在VRP平台上,命令“interface vlanif ”的作用是:",
+    "options": {
+      "A": "给某端口配置vlan",
+      "B": "创建一个vlan",
+      "C": "无此命令",
+      "D": "创建或进入vlan虚拟口视图"
+    },
+    "answer": "D",
+    "type": "single",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 15,
+    "stem": "RSTP协议存在几种端口状态:",
+    "options": {
+      "A": "3",
+      "B": "2",
+      "C": "4",
+      "D": "1"
+    },
+    "answer": "A",
+    "type": "single",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 16,
+    "stem": "路由器某个ACL中存在如下规则:rule deny tcp source 192.168.2.0 0.0.0.255 destination 172.16.10.2 0.0.0.0下列说法正确的是;",
+    "options": {
+      "A": "源ip172.16.10.2,目的ip为192.168.2.1的所有TCP报文匹配这条规则",
+      "B": "源ip192.168.2.1,目的ip为172.16.10.2的所有TCP报文匹配这条规则",
+      "C": "源ip172.16.10.2,目的ip为192.168.2.0的所有TCP报文匹配这条规则",
+      "D": "源ip192.168.2.1,目的ip为172.16.10.1的所有TCP报文匹配这条规则"
+    },
+    "answer": "B",
+    "type": "single",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 17,
+    "stem": "如图所示,私有网络中有一台web服务器需要向公网用户提供HITP服务,因此网络管理员需要在网关路由器RTA上配置NAT以实现需求,现下面配置中满足要求的是",
+    "options": {
+      "A": "A",
+      "B": "B",
+      "C": "C",
+      "D": "D"
+    },
+    "answer": "A",
+    "type": "single",
+    "initial_exclusion_reasons": [
+      "原文缺少题目引用的图示"
+    ]
+  },
+  {
+    "id": 18,
+    "stem": "NAPT允许多个私有IP地址通过不同的端口号映射到同一个公有IP地址,则下面关于NAPT中端口号描述正确的是",
+    "options": {
+      "A": "只需要配置端口号的范围",
+      "B": "必须手工配置端口号和私有地址的对应关系",
+      "C": "需要使用ACL分配端口号",
+      "D": "不需要做任何关于端口号的配置"
+    },
+    "answer": "D",
+    "type": "single",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 19,
+    "stem": "以下关于DHCP协议的使用场景说法正确的是",
+    "options": {
+      "A": "DHCP客户端和DHCP服务器必须连接到同一个交换机",
+      "B": "如果DHCP客户端和DHCP服务器不在同一个网段,需要通过DHCP中继来转发DHCP报文",
+      "C": "网络中不允许出现多个DHCP服务器",
+      "D": "DHCP中继接收到DHCP请求或应答报文后,不修改报文格式直接进行转发"
+    },
+    "answer": "B",
+    "type": "single",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 20,
+    "stem": "AP通过以下哪项报文从AC请求软件版本",
+    "options": {
+      "A": "VRP System Request",
+      "B": "Image Package Request",
+      "C": "Image Date Request",
+      "D": "Software Request"
+    },
+    "answer": "C",
+    "type": "single",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 21,
+    "stem": "在以太网这种多点访问网络上,PPPoE服务器可以通过一个以太网端口与很多PPPoE客户端建立起PPP连接,因此服务器必须为每个PPP会话建立唯一的会话标识符以区分不同的连接,PPPoE会使用什么参数建立会话标识符",
+    "options": {
+      "A": "IP地址与MAC地址",
+      "B": "MAC地址与PPP-ID",
+      "C": "MAC地址与Session-ID",
+      "D": "MAC地址"
+    },
+    "answer": "A",
+    "type": "single",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 22,
+    "stem": "ppp协议定义的是osi参考模型中哪个层次的封装格式",
+    "options": {
+      "A": "表示层",
+      "B": "应用层",
+      "C": "数据链路层",
+      "D": "网络层"
+    },
+    "answer": "C",
+    "type": "single",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 23,
+    "stem": "链路本地单播地址的接口标识总长度为多少bit",
+    "options": {
+      "A": "64bit",
+      "B": "32bit",
+      "C": "96bit",
+      "D": "48bit"
+    },
+    "answer": "A",
+    "type": "single",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 24,
+    "stem": "现需要实现一个python自动化脚本Telnet到设备上查看设备运行配置。以下说法错误的是",
+    "options": {
+      "A": "可以使用telnet.write(b“display current-confi guration \\n”)向设备输入查看当前配置的命令",
+      "B": "使用telnet。Telnet(host)连接到Telnet服务器",
+      "C": "telnet.close()用在每一次输入命令后,作用是用户等待交换机回显信息",
+      "D": "Telnetlib 可以实现这个功能"
+    },
+    "answer": "C",
+    "type": "single",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 25,
+    "stem": "以下关于静态路由说法错误的是",
+    "options": {
+      "A": "通过网络管理员手动配置",
+      "B": "路由器之间需要交互路由信息",
+      "C": "不能自动适应网络拓扑的变化",
+      "D": "对系统性能要求低"
+    },
+    "answer": "B",
+    "type": "single",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 26,
+    "stem": "VRP操作平台,以下哪条命令可以只查看静态路由",
+    "options": {
+      "A": "display ip routing-table",
+      "B": "display ip routing-table statistics",
+      "C": "display ip routing-table verbose",
+      "D": "display ip routing-table protocol static"
+    },
+    "answer": "D",
+    "type": "single",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 27,
+    "stem": "在VRP平台使用ping命令时,如果需要指定一个ip地址作为回显请求报文的源地址,那么应该使用下面哪一个参数",
+    "options": {
+      "A": "-d",
+      "B": "-a",
+      "C": "-s",
+      "D": "-n"
+    },
+    "answer": "B",
+    "type": "single",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 28,
+    "stem": "下列哪个ospf协议的报文可以确保LSA更新的可靠性",
+    "options": {
+      "A": "DD",
+      "B": "LSR",
+      "C": "LSU",
+      "D": "LSACK"
+    },
+    "answer": "D",
+    "type": "single",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 29,
+    "stem": "ospf协议使用哪种报文请求本地缺少的LSA",
+    "options": {
+      "A": "LSACK",
+      "B": "LSU",
+      "C": "HELLO",
+      "D": "LSR"
+    },
+    "answer": "D",
+    "type": "single",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 30,
+    "stem": "交换网络中STP协议的桥ID如下,拥有哪个桥ID的交换机会成为根桥",
+    "options": {
+      "A": "4096 00-01-02-03-04-DD",
+      "B": "32768 00-01-02-03-04-AA",
+      "C": "32768 00-01-02-03-04-BB",
+      "D": "32768 00-01-02-03-04-CC"
+    },
+    "answer": "A",
+    "type": "single",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 31,
+    "stem": "以下关于链路聚合LACP模式选举active端口说法正确的是:",
+    "options": {
+      "A": "先比较接口优先级,无法判断出较优者继续比较接口编号,越小越优",
+      "B": "只比较接口优先级",
+      "C": "比较设备优先级",
+      "D": "只比较接口编号"
+    },
+    "answer": "A",
+    "type": "single",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 32,
+    "stem": "以下关于Hybrid端口说法正确的是",
+    "options": {
+      "A": "Hybrid端口可以在出端口方向将某些vlan帧的tag剥掉",
+      "B": "Hybrid 端口发送数据帧时,一定携带vlan tag",
+      "C": "Hybrid 端口只接收带vlan tag 的数据帧",
+      "D": "Hybrid 端口不需要PVID"
+    },
+    "answer": "A",
+    "type": "single",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 33,
+    "stem": "使用命令“vlan batch 10 20”和:“vlan batch 10 to 20”,分别能创建的vlan数量是",
+    "options": {
+      "A": "11 和11",
+      "B": "2 和2",
+      "C": "11 和2",
+      "D": "2 和11"
+    },
+    "answer": "D",
+    "type": "single",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 34,
+    "stem": "二层ACL的编号范围是",
+    "options": {
+      "A": "4000-4999",
+      "B": "2000-2999",
+      "C": "6000-6031",
+      "D": "3000-3999"
+    },
+    "answer": "A",
+    "type": "single",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 35,
+    "stem": "高级ACL的编号范围是",
+    "options": {
+      "A": "2000-2999",
+      "B": "4000-4999",
+      "C": "6000-6031",
+      "D": "3000-3999"
+    },
+    "answer": "D",
+    "type": "single",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 36,
+    "stem": "DNS协议的主要作用是",
+    "options": {
+      "A": "文件传输",
+      "B": "远程输入",
+      "C": "域名解析",
+      "D": "邮件传输"
+    },
+    "answer": "C",
+    "type": "single",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 37,
+    "stem": "以下哪种协议不属于文件传输协议",
+    "options": {
+      "A": "FTP",
+      "B": "SFTP",
+      "C": "HTTP",
+      "D": "TFTP"
+    },
+    "answer": "C",
+    "type": "single",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 38,
+    "stem": "WiFi6相比WiFi5的优势不包括以下哪项",
+    "options": {
+      "A": "更高的消耗",
+      "B": "更高每AP接入终端数",
+      "C": "更低的传输时延",
+      "D": "更高的带宽"
+    },
+    "answer": "A",
+    "type": "single",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 39,
+    "stem": "FIT AP获取AC的IP地址之后首先执行的操作是",
+    "options": {
+      "A": "建立CAPWAP隧道",
+      "B": "请求配置文件",
+      "C": "下载配置文件",
+      "D": "升级软件版本"
+    },
+    "answer": "A",
+    "type": "single",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 40,
+    "stem": "段路由SR( )基于什么理念而设计的在网络上转发数据包的一种协议",
+    "options": {
+      "A": "策略路由",
+      "B": "源路由",
+      "C": "路由策略",
+      "D": "目的路由"
+    },
+    "answer": "B",
+    "type": "single",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 41,
+    "stem": "在PPP中,当通信双方的两端检测到物理链路激活时,就会从链路不可用阶段转化到链路建立阶段,在这个阶段主要通过()协议进行链路参数的协商",
+    "options": {
+      "A": "IP",
+      "B": "LCP",
+      "C": "NCP",
+      "D": "DHCP"
+    },
+    "answer": "C",
+    "type": "single",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 42,
+    "stem": "IP报文头部中有一个TTL字段,关于该字段说法正确的是:",
+    "options": {
+      "A": "该字段用于数据包防环",
+      "B": "该字段用于数据包分片",
+      "C": "该字段用来表示数据包的优先级",
+      "D": "该字段长度为7位"
+    },
+    "answer": "A",
+    "type": "single",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 43,
+    "stem": "IPV6基本报文长度为多少Byte",
+    "options": {
+      "A": "40",
+      "B": "48",
+      "C": "32",
+      "D": "64"
+    },
+    "answer": "A",
+    "type": "single",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 44,
+    "stem": "IPV6报文中哪一个字段的作用类似于IPV4报文中的TTL字段",
+    "options": {
+      "A": "hop limit",
+      "B": "Next header",
+      "C": "Traffic class",
+      "D": "Version"
+    },
+    "answer": "A",
+    "type": "single",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 45,
+    "stem": "缺省情况下在SNMP协议中,代理进程使用哪个端口号向NMS发送告警消息",
+    "options": {
+      "A": "161",
+      "B": "163",
+      "C": "164",
+      "D": "162"
+    },
+    "answer": "D",
+    "type": "single",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 46,
+    "stem": "如果一个接口的MAC地址为00E0-FCEF-0FEC,则对应的EUI-64地址为",
+    "options": {
+      "A": "00E0-FCEF-FFFE-0FEC",
+      "B": "02E0-FCFF-FEEF-0FEC",
+      "C": "00E0-FCFF-FEEF-0FEC",
+      "D": "02E0-FCEF-FFFE-0FEC"
+    },
+    "answer": "B",
+    "type": "single",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 47,
+    "stem": "查询设备ospf协议的配置信息,可以使用下列哪些命令",
+    "options": {
+      "A": "在ospf协议视图下输入命令“display this”",
+      "B": "Display current-configuration",
+      "C": "Display ospf peer",
+      "D": "Dis ip routing-table"
+    },
+    "answer": "A",
+    "type": "single",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 48,
+    "stem": "VRP不支持哪种方式对路由器进行配置",
+    "options": {
+      "A": "通过mini USB口对路由器进行配置",
+      "B": "通过FTP对路由器进行pz",
+      "C": "通过console口对路由器进行配置",
+      "D": "通过telnet对路由器进行配置"
+    },
+    "answer": "B",
+    "type": "single",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 49,
+    "stem": "以下说法正确的是:",
+    "options": {
+      "A": "路由器工作在网络层",
+      "B": "交换机工作在物理层",
+      "C": "交换机工作在网络层",
+      "D": "路由器工作在物理层"
+    },
+    "answer": "A",
+    "type": "single",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 50,
+    "stem": "在一台路由器上配置ospf时,必须手动进行配置有",
+    "options": {
+      "A": "指定每个使用ospf的接口的网络类型",
+      "B": "创建ospf区域",
+      "C": "创建ospf进程",
+      "D": "配置Router ID"
+    },
+    "answer": "B",
+    "type": "single",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 51,
+    "stem": "如果一个网络的网络地址为10.1.1.0/30,那么它的广播地址是",
+    "options": {
+      "A": "10.1.1.3",
+      "B": "10.1.1.1",
+      "C": "10.1.1.4",
+      "D": "10.1.1.2"
+    },
+    "answer": "A",
+    "type": "single",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 52,
+    "stem": "运行SNMPV1协议的网络设备使用哪种报文类型主动发送告警信息",
+    "options": {
+      "A": "Trap",
+      "B": "Response",
+      "C": "Get-Next Request",
+      "D": "Get-Request"
+    },
+    "answer": "A",
+    "type": "single",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 53,
+    "stem": "网络管理员在网络中捕获到一个数据帧,其目的MAC地址是01-00-5E-A0-B1-C3。关于该MAC地址说法正确的是",
+    "options": {
+      "A": "它是一个组播MAC地址",
+      "B": "它是一个单播MAC地址",
+      "C": "它是一个非法MAC地址",
+      "D": "它是一个广播MAC地址"
+    },
+    "answer": "A",
+    "type": "single",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 54,
+    "stem": "PPPoE会话建立和终结过程中不包括以下哪个阶段",
+    "options": {
+      "A": "发现阶段",
+      "B": "数据转发阶段",
+      "C": "会话阶段",
+      "D": "会话终结阶段"
+    },
+    "answer": "B",
+    "type": "single",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 55,
+    "stem": "以下哪一条命令配置认证模式为HWTACAS认证",
+    "options": {
+      "A": "authentication-mode hwtacacs",
+      "B": "authentication-mode none",
+      "C": "Authorization-mode hwtacacs",
+      "D": "Authorization-mode local"
+    },
+    "answer": "A",
+    "type": "single",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 56,
+    "stem": "wifi6所对应的IEEE802.11标准为",
+    "options": {
+      "A": "IEEE802.11au",
+      "B": "IEEE802.11ac",
+      "C": "IEEE802.11ax",
+      "D": "IEEE802.11at"
+    },
+    "answer": "C",
+    "type": "single",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 57,
+    "stem": "IPV6地址总长度为多少bit",
+    "options": {
+      "A": "64",
+      "B": "96",
+      "C": "128",
+      "D": "32"
+    },
+    "answer": "C",
+    "type": "single",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 58,
+    "stem": "以下哪个命令可以修改设备名字为huawei",
+    "options": {
+      "A": "sysname Huawei",
+      "B": "rename Huawei",
+      "C": "do name Huawei",
+      "D": "hostname"
+    },
+    "answer": "A",
+    "type": "single",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 59,
+    "stem": "以下哪种类型的ACL可以匹配传输层端口号",
+    "options": {
+      "A": "高级ACL",
+      "B": "基本ACL",
+      "C": "二层ACL",
+      "D": "中级ACL"
+    },
+    "answer": "A",
+    "type": "single",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 60,
+    "stem": "下列配置默认路由的命令中,正确的是",
+    "options": {
+      "A": "[Huawei]ip-route-static 0.0.0.0 0.0.0.0 0.0.0.0",
+      "B": "[Huawei]ip-route-static 0.0.0.0 255.255.255.255 192.168.1.1",
+      "C": "[Huawei-Serial0]ip-route-static 0.0.0.0 0.0.0.0 0.0.0.0",
+      "D": "[Huawei]ip route-static 0.0.0.0 0.0.0.0 192.168.1.1"
+    },
+    "answer": "D",
+    "type": "single",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 61,
+    "stem": "某公司申请到一个C类ip地址段,需要平均分配给8个子公司,最大的一个子公司有14台计算机不同的子公司必须在各自不同的网段中,则子网掩码应设为",
+    "options": {
+      "A": "255.255.255.192",
+      "B": "255.255.255.128",
+      "C": "255.255.255.240",
+      "D": "255.255.255.0"
+    },
+    "answer": "C",
+    "type": "single",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 62,
+    "stem": "网络管理员希望能够有效利用192.168.176.0/25网段的IP地址。现公司市场部门有20个主机,则最好分配下面哪一个地址段给市场部",
+    "options": {
+      "A": "192.168.176.160/27",
+      "B": "192.168.176.0/25",
+      "C": "192.168.176.96/27",
+      "D": "192.168.176.96/27"
+    },
+    "answer": "C",
+    "type": "single",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 63,
+    "stem": "Access类型的端口在发送报文时,会",
+    "options": {
+      "A": "打上本端口的PVID信息,然后再发送过去",
+      "B": "发送带Tag的报文",
+      "C": "剥离报文的vlan信息。然后再发送出去",
+      "D": "添加报文的vlan信息,然后再发送出去"
+    },
+    "answer": "C",
+    "type": "single",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 64,
+    "stem": "RSTP协议不包括以下哪个端口状态",
+    "options": {
+      "A": "Forwarding",
+      "B": "Lea ing",
+      "C": "Discarding",
+      "D": "Blocking"
+    },
+    "answer": "D",
+    "type": "single",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 65,
+    "stem": "网络管理员在三层交换机上创建了vlan,并在该vlan的虚拟接口下配置了IP地址,当使用命令“display ip interface briaf”查看接口状态时,发现vlanif10 接口处于down状态,则应该通过怎样的操作来使用v拉你发10 接口恢复正常",
+    "options": {
+      "A": "在BLANIF10 接口下使用命令“undo shutdown”",
+      "B": "将一个状态必为UP的物理接口划进vlan10",
+      "C": "将任意物理接口划进vlan10",
+      "D": "将一个状态必须为Up并且必须为trunk类型的接口划进vlan10"
+    },
+    "answer": "B",
+    "type": "single",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 66,
+    "stem": "下面关于二层以太网交换机的描述,说法不正确的是:",
+    "options": {
+      "A": "二层以太网交换机工作在数据链路层",
+      "B": "能够学习MAC地址",
+      "C": "需要对所转发的报文三层头部做一定的修改,然后再转发",
+      "D": "按照以太网二层头部信息进行转发"
+    },
+    "answer": "C",
+    "type": "single",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 67,
+    "stem": "以下哪种类型的ACL不匹配网络层信息",
+    "options": {
+      "A": "基本ACL",
+      "B": "二层ACL",
+      "C": "用户ACL",
+      "D": "高级ACL"
+    },
+    "answer": "B",
+    "type": "single",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 68,
+    "stem": "DHCP DISCOVER 报文的主要作用是",
+    "options": {
+      "A": "服务器对REQUEST报文的确定响应",
+      "B": "客户端用来寻找DHCP服务器",
+      "C": "客户端请求配置确认,或者续借租期",
+      "D": "DHCP服务器用来响应DHCP DISCOVER 报文,此报文携带了各种配置信息"
+    },
+    "answer": "B",
+    "type": "single",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 69,
+    "stem": "CAPWAP协议规定了AC与AP之间的通信标准,以下关于CAPWAP协议说法正确的是",
+    "options": {
+      "A": "CAPWAP是基于TCP传输的应用层协议",
+      "B": "CAWAP为减少AP的负担,使用一个隧道同时进行控制报文,数据报文的传输",
+      "C": "AP可以将用户的数据报文封装在CAPWAP中交由转AC转发",
+      "D": "为建立CAPWAP隧道,FIT AP只能通过广播形式的报文发现AC"
+    },
+    "answer": "C",
+    "type": "single",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 70,
+    "stem": "FIT AP 可以通过DHCP Option 获取AC的IP地址以此建立CAPWAP隧道,为此需要在DHCP服务器上配置哪个Option",
+    "options": {
+      "A": "OPTION 10",
+      "B": "OPTION 55",
+      "C": "OPTION 43",
+      "D": "OPTION 82"
+    },
+    "answer": "C",
+    "type": "single",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 71,
+    "stem": "基于MPLS 标签最多可以标出几类服务等级不同的数据流",
+    "options": {
+      "A": "8",
+      "B": "2",
+      "C": "4",
+      "D": "16"
+    },
+    "answer": "A",
+    "type": "single",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 72,
+    "stem": "缺省情况下运行SNMPV2C协议的网络设备使用以下哪个端口号向网络管理系统发送TRAP消息",
+    "options": {
+      "A": "161",
+      "B": "6",
+      "C": "162",
+      "D": "17"
+    },
+    "answer": "A",
+    "type": "single",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 73,
+    "stem": "IPV6报文头比ipv4报文头再增加了哪个字段",
+    "options": {
+      "A": "Destination Address",
+      "B": "Source Address",
+      "C": "Flow Label",
+      "D": "Version"
+    },
+    "answer": "C",
+    "type": "single",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 74,
+    "stem": "ipv6 无状态自动配置使用的RA报文属于以下哪种协议",
+    "options": {
+      "A": "UDpv6",
+      "B": "ICMPV6",
+      "C": "IGMPV6",
+      "D": "TCPV6"
+    },
+    "answer": "B",
+    "type": "single",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 75,
+    "stem": "以下哪个ipv6地址是全球单播地址",
+    "options": {
+      "A": "2001::12:1",
+      "B": "FE80::2E0:FCFF:FEEF:FEC",
+      "C": "FF20::2E0:FCFF:FEEF:FEC",
+      "D": "FF02::1"
+    },
+    "answer": "A",
+    "type": "single",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 76,
+    "stem": "采用MPLS标签双层嵌套技术的报文比原ip报文多了多少个字节",
+    "options": {
+      "A": "8",
+      "B": "32",
+      "C": "16",
+      "D": "4"
+    },
+    "answer": "A",
+    "type": "single",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 77,
+    "stem": "ospf报文类型有多少种",
+    "options": {
+      "A": "3",
+      "B": "5",
+      "C": "2",
+      "D": "4"
+    },
+    "answer": "B",
+    "type": "single",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 78,
+    "stem": "以下哪个命令可以查看ospf是否已经正确建立邻居关系",
+    "options": {
+      "A": "display ospf interface",
+      "B": "display ospf peer",
+      "C": "display ospf neighbor",
+      "D": "display ospf brief"
+    },
+    "answer": "B",
+    "type": "single",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 79,
+    "stem": "下列关于华为设备中静态路由的是否错误的是",
+    "options": {
+      "A": "静态路由的优先级为0时,则该路由一定会被优选",
+      "B": "静态路由的开销值(Cost)不可以被修改",
+      "C": "静态路由优先级的缺省值为0",
+      "D": "静态路由优先级值的范围为1-255"
+    },
+    "answer": "A",
+    "type": "single",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 80,
+    "stem": "在vrp平台上,直连路由、静态路由、rip、ospf区域内路由的默认协议优先级从高到低的排序是",
+    "options": {
+      "A": "直连路由。Ospf、rip、静态路由",
+      "B": "直连路由、静态路由、rip、ospf",
+      "C": "直连路由、ospf、静态路由、rip",
+      "D": "直连路由、rip、静态路由、ospf"
+    },
+    "answer": "C",
+    "type": "single",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 81,
+    "stem": "access端口发送数据帧时任何处理",
+    "options": {
+      "A": "打上pvid转发",
+      "B": "发送带TAG的报文",
+      "C": "替换vlan tag 转发",
+      "D": "剥离TAG转发"
+    },
+    "answer": "D",
+    "type": "single",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 82,
+    "stem": "在stp协议中,假设所有交换机所配置的优先级相同,交换机1的MAC地址为00-e0-fc-00-00-40,交换机2的MAC地址为00-e0-fc-00-00-10,交换机3的MAC地址为00-e0-fc-00-00-20,交换机4的MAC地址为00-e0-dc-00-00-80,则根交换机应当为",
+    "options": {
+      "A": "交换机3",
+      "B": "交换机4",
+      "C": "交换机2",
+      "D": "交换机1"
+    },
+    "answer": "C",
+    "type": "single",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 83,
+    "stem": "以下哪项不是RSTP可以提高收敛速度的原因",
+    "options": {
+      "A": "根端口的快速切换",
+      "B": "边缘端口的引入",
+      "C": "取消了Forward Delay",
+      "D": "P/A机制"
+    },
+    "answer": "C",
+    "type": "single",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 84,
+    "stem": "一个公司有50 个私有ip地址,管理员使用nat技术将公司网络接入公网,但是该公司仅有一个公网地址且不固定,则下列哪种lant转换方式符合需求",
+    "options": {
+      "A": "NAPT",
+      "B": "Basic NAT",
+      "C": "静态NAT",
+      "D": "easy-ip"
+    },
+    "answer": "D",
+    "type": "single",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 85,
+    "stem": "下面哪项参数不能用于高级访问控制列表",
+    "options": {
+      "A": "时间范围",
+      "B": "目的端口号",
+      "C": "物理接口",
+      "D": "协议号"
+    },
+    "answer": "C",
+    "type": "single",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 86,
+    "stem": "下面选项中,能使一台ip地址为10.0.0.1的主机访问inte et的必要技术是",
+    "options": {
+      "A": "静态路由",
+      "B": "动态路由",
+      "C": "NAT",
+      "D": "路由引入"
+    },
+    "answer": "C",
+    "type": "single",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 87,
+    "stem": "FTP协议控制平面使用端口号为",
+    "options": {
+      "A": "23",
+      "B": "21",
+      "C": "22",
+      "D": "24"
+    },
+    "answer": "B",
+    "type": "single",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 88,
+    "stem": "使用FTP进行文件传输时,会建立多少个TCP连接",
+    "options": {
+      "A": "1",
+      "B": "2",
+      "C": "3",
+      "D": "4"
+    },
+    "answer": "D",
+    "type": "single",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 89,
+    "stem": "完成链路认证后,SAT会继续发起链路服务协商,具体的协商是通过以下哪项报文实现",
+    "options": {
+      "A": "Association",
+      "B": "Negotiate",
+      "C": "Handshake",
+      "D": "Join"
+    },
+    "answer": "A",
+    "type": "single",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 90,
+    "stem": "用以下哪条命令可以查看路由器的CPU使用率",
+    "options": {
+      "A": "display cpu-usage",
+      "B": "display memory",
+      "C": "display cpu-state",
+      "D": "display interface"
+    },
+    "answer": "A",
+    "type": "single",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 91,
+    "stem": "ipv6 地址FE80::2E0:FCFF:FE6F:4F36属于哪一类",
+    "options": {
+      "A": "单播地址",
+      "B": "全球单播地址",
+      "C": "链路本地地址",
+      "D": "任播地址"
+    },
+    "answer": "C",
+    "type": "single",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 92,
+    "stem": "园区网搭建的生命周期中哪个阶段是一个项目的开端",
+    "options": {
+      "A": "网络优化",
+      "B": "网络运维",
+      "C": "规划与设计",
+      "D": "网络实施"
+    },
+    "answer": "C",
+    "type": "single",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 93,
+    "stem": "一个IPV4数据包首部长度字段为20B,总长度字段为1500B,则此数据包有效载荷为",
+    "options": {
+      "A": "1480B",
+      "B": "1520B",
+      "C": "20B",
+      "D": "1500B"
+    },
+    "answer": "A",
+    "type": "single",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 94,
+    "stem": "一条路由条目包含多少个要素,下列说法错误的是",
+    "options": {
+      "A": "NextHop显示此路由条目对应的本地接口地址",
+      "B": "Pre显示此路由协议的优先级",
+      "C": "Destination/Mask显示目的网络/主机的地址和掩码长度",
+      "D": "Proto显示学习此路由的来源"
+    },
+    "answer": "A",
+    "type": "single",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 95,
+    "stem": "vpr支持ospf多进程,如果在启用ospf时不指定进程号,则默认使用的进程号码是",
+    "options": {
+      "A": "0",
+      "B": "1",
+      "C": "10",
+      "D": "100"
+    },
+    "answer": "B",
+    "type": "single",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 96,
+    "stem": "ospf协议在网络层对应的协议号是",
+    "options": {
+      "A": "89",
+      "B": "0",
+      "C": "1",
+      "D": "6"
+    },
+    "answer": "A",
+    "type": "single",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 97,
+    "stem": "ospf 协议使用哪种报文对接收到的lsu报文进行确认",
+    "options": {
+      "A": "LSU",
+      "B": "LSACK",
+      "C": "LSR",
+      "D": "LSA"
+    },
+    "answer": "B",
+    "type": "single",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 98,
+    "stem": "system-view[Huawei]command-privilege level 3 view user save 关于上面的配置命令说法正确的是",
+    "options": {
+      "A": "修改用户视图命令的权限等级为3,并且保存配置",
+      "B": "修改用户的权限等级为3,并且保存配置",
+      "C": "修改某一用户使用的save命令的权限等级为3",
+      "D": "修改用户视图下的save命令的权限等级为3"
+    },
+    "answer": "C",
+    "type": "single",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 99,
+    "stem": "缺省情况下,STP计算的端口开销( )和端口带宽有一定关系,即带宽越大,开销越",
+    "options": {
+      "A": "一致",
+      "B": "小",
+      "C": "大",
+      "D": "不一定"
+    },
+    "answer": "B",
+    "type": "single",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 100,
+    "stem": "交换机和主机之间相连,交换机常用的端口链路类型为",
+    "options": {
+      "A": "Hybrid链路",
+      "B": "Trunk链路",
+      "C": "Access链路",
+      "D": "干线链路"
+    },
+    "answer": "C",
+    "type": "single",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 101,
+    "stem": "我们在笔记本电脑上搜索可接入无线网络时,显示出来的网络名称实际是",
+    "options": {
+      "A": "BSS",
+      "B": "BSSID",
+      "C": "ESS",
+      "D": "SSID"
+    },
+    "answer": "D",
+    "type": "single",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 102,
+    "stem": "下面关于静态与动态路由描述错误的是:",
+    "options": {
+      "A": "动态路由协议比静态路由要占用更多的系统资源",
+      "B": "链路产生故障后,静态路由能够自动完成网络收敛",
+      "C": "静态路由在企业中应用时配置简单,管理方便",
+      "D": "管理员在企业网络中部署动态路由协议后,后期维护和扩展能够更加方便"
+    },
+    "answer": "B",
+    "type": "single",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 103,
+    "stem": "在华为路由器上,缺省情况下静态路由协议优先级的数值为",
+    "options": {
+      "A": "120",
+      "B": "100",
+      "C": "0",
+      "D": "60"
+    },
+    "answer": "D",
+    "type": "single",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 104,
+    "stem": "ospf协议在哪种状态下确认DD报文的主从关系",
+    "options": {
+      "A": "2-Way",
+      "B": "Exchange",
+      "C": "Full",
+      "D": "ExStart"
+    },
+    "answer": "D",
+    "type": "single",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 105,
+    "stem": "以太网交换机工作在OSI参考模型的哪一层",
+    "options": {
+      "A": "数据链路层",
+      "B": "传输层、",
+      "C": "物理层",
+      "D": "网络层"
+    },
+    "answer": "A",
+    "type": "single",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 106,
+    "stem": "以下关于LACP模式的链路聚合说法正确的是",
+    "options": {
+      "A": "LACP模式下最多只能有4个活动端口",
+      "B": "LACP模式下不能设置端口的数量",
+      "C": "LACP模式下所有活动接口的参考数据的转发,分担负载流量",
+      "D": "LACP模式下链路两端的设备相互发送LACP报文"
+    },
+    "answer": "D",
+    "type": "single",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 107,
+    "stem": "缺省情况下,STP协议Forward Delay 时间是多少秒",
+    "options": {
+      "A": "15",
+      "B": "10",
+      "C": "20",
+      "D": "5"
+    },
+    "answer": "A",
+    "type": "single",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 108,
+    "stem": "RSTP配置BPDU报文中的Type字段取值为",
+    "options": {
+      "A": "0X03",
+      "B": "0X01",
+      "C": "0X00",
+      "D": "0X02"
+    },
+    "answer": "D",
+    "type": "single",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 109,
+    "stem": "管理员在哪一个视图下才能为路由器修改设备名称",
+    "options": {
+      "A": "Protocol-view",
+      "B": "User-view",
+      "C": "System-view",
+      "D": "Interface-view"
+    },
+    "answer": "C",
+    "type": "single",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 110,
+    "stem": "在AC上配置国家码的命令为",
+    "options": {
+      "A": "nation-code",
+      "B": "province-code",
+      "C": "country-code",
+      "D": "state-code"
+    },
+    "answer": "C",
+    "type": "single",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 111,
+    "stem": "LCP协商使用以下哪个参数检测链路环路和其他异常情况",
+    "options": {
+      "A": "CHAP",
+      "B": "MRU",
+      "C": "魔术字",
+      "D": "PAP"
+    },
+    "answer": "C",
+    "type": "single",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 112,
+    "stem": "园区网络搭建时,使用以下哪种协议可以避免出现二层环路",
+    "options": {
+      "A": "SNMP",
+      "B": "NAT",
+      "C": "OSPF",
+      "D": "RSTP"
+    },
+    "answer": "D",
+    "type": "single",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 113,
+    "stem": "在python的telnetlib中以下哪个方法可以非阻塞的读取数据",
+    "options": {
+      "A": "telnet.read very lazy()",
+      "B": "telnet,read all()",
+      "C": "telnet.read eager()",
+      "D": "telnet.read very eager()"
+    },
+    "answer": "D",
+    "type": "single",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 114,
+    "stem": "UPD是面向无连接的,必须依靠什么协议来保养传输的可靠性",
+    "options": {
+      "A": "传输控制协议",
+      "B": "应用层协议",
+      "C": "网络层协议",
+      "D": "网际协议"
+    },
+    "answer": "B",
+    "type": "single",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 115,
+    "stem": "通用路由平台VRP的全称为",
+    "options": {
+      "A": "Versatile Redundancy Platform",
+      "B": "Versatile Routing Protocol",
+      "C": "Virtual Routing Platform",
+      "D": "Versatile Routing Platform"
+    },
+    "answer": "D",
+    "type": "single",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 116,
+    "stem": "关于OSI参考模式中网络层的功能是否正确的是",
+    "options": {
+      "A": "在设备之间传输比特流,规定了电平、速度和电缆针脚",
+      "B": "OSI参考模式中靠近用户的那一层,为应用程序提供网络服务",
+      "C": "提供面向连接或者非面向连接的数据传递以及进行重传前的差错检测",
+      "D": "将比特组合成为字节,再将字节组合成为帧,使用链路层地址(以太网使用MAC地址)来访问介质,进行差错检测",
+      "E": "提供逻辑地址,实现数据从源到目的地的转发"
+    },
+    "answer": "E",
+    "type": "single",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 117,
+    "stem": "关于ARP协议的作用和报文封装,描述正确的是",
+    "options": {
+      "A": "ARP协议支持在PPP链路与HDLC链路上部署",
+      "B": "ARP协议基于Ethe et封装",
+      "C": "通过ARP协议可以获取目的端的MAC地址和UUID的地址",
+      "D": "网络设备上的ARP缓存只可以通过ARP协议得到"
+    },
+    "answer": "B",
+    "type": "single",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 118,
+    "stem": "IPV4最后一个选项字段( )是可变长的可选信息,该字段最大长度是",
+    "options": {
+      "A": "10B",
+      "B": "40B",
+      "C": "60B",
+      "D": "20B"
+    },
+    "answer": "B",
+    "type": "single",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 119,
+    "stem": "在路由表中不包含以下哪项内容",
+    "options": {
+      "A": "MAC",
+      "B": "NextHop",
+      "C": "Cost",
+      "D": "Destination/Mask"
+    },
+    "answer": "A",
+    "type": "single",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 120,
+    "stem": "关于ospf协议区域划分说法错误的是",
+    "options": {
+      "A": "划分ospf区域可以缩小部分路由器的LSDB规模",
+      "B": "同一个ospf区域中的路由器中的LSDB是完全一致的",
+      "C": "只有ABR才能作为ASBR",
+      "D": "Area 0是骨干区域,其他区域都必须与此区域相连"
+    },
+    "answer": "C",
+    "type": "single",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 121,
+    "stem": "掩码长度为12位可以表示为",
+    "options": {
+      "A": "255.240.0.0",
+      "B": "255.255.255.0",
+      "C": "255.148.0.0",
+      "D": "255.255.0.0"
+    },
+    "answer": "A",
+    "type": "single",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 122,
+    "stem": "在交换机MAC地址表中,以下哪一类表项不会老化",
+    "options": {
+      "A": "动态MAC地址表项",
+      "B": "设备MAC地址表项",
+      "C": "静态MAC地址表项",
+      "D": "端口MAC地址表项"
+    },
+    "answer": "C",
+    "type": "single",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 123,
+    "stem": "IEEE802.1Q定义的vlan帧格式总长度为多少字节",
+    "options": {
+      "A": "4",
+      "B": "3",
+      "C": "2",
+      "D": "1"
+    },
+    "answer": "A",
+    "type": "single",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 124,
+    "stem": "以下关于Adjacency Segment(邻接段)的说法错误的是哪个",
+    "options": {
+      "A": "Adjacency Segment用于标识网络中某节点的某个邻接",
+      "B": "Adjacency Segment 通过Adjacency Segment ID(SID)标识",
+      "C": "Adjacency Segment 必须手动配置",
+      "D": "Adjacency Segment 通过IGP协议扩散到其他网元,全局可见,本地有效"
+    },
+    "answer": "C",
+    "type": "single",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 125,
+    "stem": "下列哪项命令可以用来检查PPPoE客户端的会话状态",
+    "options": {
+      "A": "display pppoe-client session packet",
+      "B": "display pppoe-client session summary",
+      "C": "display ip interface brief",
+      "D": "display current-configuration"
+    },
+    "answer": "B",
+    "type": "single",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 126,
+    "stem": "无线接入控制器( )作为FIT AP架构中的统一管理、控制设备,以下关于AC说法错误的是",
+    "options": {
+      "A": "AP配置下发",
+      "B": "用户接入控制",
+      "C": "用户接入认证",
+      "D": "无论何种数据转发方式,用户的数据报文都由AC进行转发"
+    },
+    "answer": "D",
+    "type": "single",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 127,
+    "stem": "网络管理员给网络中的某台主机分配的IPV4地址为192.168.1.1/28.则这个主机所在的网络还可以增加多少台主机",
+    "options": {
+      "A": "13",
+      "B": "14",
+      "C": "15",
+      "D": "12"
+    },
+    "answer": "A",
+    "type": "single",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 128,
+    "stem": "ospf协议用哪种报文来描述自己的LSDB",
+    "options": {
+      "A": "DD",
+      "B": "LSR",
+      "C": "LSU",
+      "D": "HELLO"
+    },
+    "answer": "A",
+    "type": "single",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 129,
+    "stem": "主机使用以下哪个IPV4地址不能直接访问Inte et",
+    "options": {
+      "A": "50.1.1.1",
+      "B": "10.1.1.1",
+      "C": "100.1.1.1",
+      "D": "200.1.1.1"
+    },
+    "answer": "B",
+    "type": "single",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 130,
+    "stem": "下面关于MPLS LABEL标签的说法,错误的是哪一个",
+    "options": {
+      "A": "标签由报文的头部所携带,不包含拓扑信息",
+      "B": "标签封装在网络层和传输层",
+      "C": "标签用于唯一标识一个分组所属的转发等价类FEC",
+      "D": "标签是一个长度固定、只具有本地意义的短标识符"
+    },
+    "answer": "B",
+    "type": "single",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 131,
+    "stem": "RSTP协议存在几种端口状态",
+    "options": {
+      "A": "1",
+      "B": "3",
+      "C": "4",
+      "D": "2"
+    },
+    "answer": "B",
+    "type": "single",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 132,
+    "stem": "二层以太网交换机根据端口所接收到以太网帧的()生成MAC地址表的表项",
+    "options": {
+      "A": "目的MAC地址",
+      "B": "目的IP地址",
+      "C": "源IP地址",
+      "D": "源MAC地址"
+    },
+    "answer": "D",
+    "type": "single",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 133,
+    "stem": "下列关于STP协议F肉ward Delay的作用说法正确的是",
+    "options": {
+      "A": "提高STP的收敛速度",
+      "B": "提升BPDU的生存时间,保证配置BPDU可以转发到更多的交换机",
+      "C": "在Blocking状态和Dsiabled状态转化时需要延时",
+      "D": "减少BPDU发送时间间隔"
+    },
+    "answer": "C",
+    "type": "single",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 134,
+    "stem": "生成树协议中哪一个参数来进行根桥的选举",
+    "options": {
+      "A": "桥优先级",
+      "B": "端口ID",
+      "C": "根路径开销",
+      "D": "桥ID"
+    },
+    "answer": "D",
+    "type": "single",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 135,
+    "stem": "在wlan中标识一个AP覆盖范围是",
+    "options": {
+      "A": "SSID",
+      "B": "BSSID",
+      "C": "BSS",
+      "D": "ESS"
+    },
+    "answer": "C",
+    "type": "single",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 136,
+    "stem": "DHCP DISCOVER报文的目的IP地址为",
+    "options": {
+      "A": "255.255.255.255",
+      "B": "224.0.0.1",
+      "C": "224.0.0.2",
+      "D": "127.0.0.1"
+    },
+    "answer": "A",
+    "type": "single",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 137,
+    "stem": "AAA不包含下列哪一项",
+    "options": {
+      "A": "Authorization(授权)",
+      "B": "Accounting(计费)",
+      "C": "Authentication(认证)",
+      "D": "Audit(审计)"
+    },
+    "answer": "D",
+    "type": "single",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 138,
+    "stem": "RADIUS使用以下哪种报文类型表示认证拒绝",
+    "options": {
+      "A": "Access-Challenge",
+      "B": "Access-Accept",
+      "C": "Access-Request",
+      "D": "Access-Reject"
+    },
+    "answer": "D",
+    "type": "single",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 139,
+    "stem": "RSTP协议不包含以下哪个端口状态",
+    "options": {
+      "A": "Lea ing",
+      "B": "Frowarding",
+      "C": "Blocking",
+      "D": "Discarding"
+    },
+    "answer": "C",
+    "type": "single",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 140,
+    "stem": "RSTP存在几种端口状态",
+    "options": {
+      "A": "3",
+      "B": "4",
+      "C": "2",
+      "D": "1"
+    },
+    "answer": "A",
+    "type": "single",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 141,
+    "stem": "当主机经常移动位置时,使用哪种vlan划分方式最合适",
+    "options": {
+      "A": "基于端口划分",
+      "B": "基于IP子网划分",
+      "C": "基于MAC地址划分",
+      "D": "基于策略划分"
+    },
+    "answer": "C",
+    "type": "single",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 142,
+    "stem": "Tracert 诊断工具记录每一个ICMP TTL超时消息时(),从而可以向用户提供报文到达目的地所经过的IP地址",
+    "options": {
+      "A": "目的端口",
+      "B": "目的IP地址",
+      "C": "源端口",
+      "D": "源IP地址"
+    },
+    "answer": "D",
+    "type": "single",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 143,
+    "stem": "下列哪一类地址不能作为主机的IPv4地址",
+    "options": {
+      "A": "c类地址",
+      "B": "A类地址",
+      "C": "B类地址",
+      "D": "D类地址"
+    },
+    "answer": "D",
+    "type": "single",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 144,
+    "stem": "某公司申请到一个C类地址段,但要分配给6个子公司,最大的一个子公司有26台计算机不同的子公司必须在不同的网段中,则该最大的子公司的网络子网掩码应设为",
+    "options": {
+      "A": "255.255.255.128",
+      "B": "255.255.255.192",
+      "C": "255.255.255.224",
+      "D": "255.255.255.0"
+    },
+    "answer": "C",
+    "type": "single",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 145,
+    "stem": "下列哪一个命令可以修改设备名字为huawei",
+    "options": {
+      "A": "hostname Huawei",
+      "B": "do name Huawei",
+      "C": "sysname Huawei",
+      "D": "rename Huawei"
+    },
+    "answer": "C",
+    "type": "single",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 146,
+    "stem": "关于ARP报文的说法错误的是",
+    "options": {
+      "A": "ARP请求报文时广播发送的",
+      "B": "ARP报文不能被转发到其他广播域",
+      "C": "ARP应答报文是单播方式发送的",
+      "D": "任何链路层协议都需要ARP协议辅助"
+    },
+    "answer": "D",
+    "type": "single",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 147,
+    "stem": "园区网络规划时,设备互联IP地址推荐使用以下哪种掩码长度",
+    "options": {
+      "A": "30",
+      "B": "32",
+      "C": "16",
+      "D": "24"
+    },
+    "answer": "A",
+    "type": "single",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 148,
+    "stem": "下面关于MPLS LABEL 的说法错误的是哪一个",
+    "options": {
+      "A": "标签是一个长度固定、只具有本地意义的短标识符",
+      "B": "标签由报文的头部所携带,不包含拓扑信息",
+      "C": "标签封装在网络层和传输层之间",
+      "D": "标签用于唯一标识一个分组所属的转发等价类FEC"
+    },
+    "answer": "C",
+    "type": "single",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 149,
+    "stem": "VRP操作平台对于输入命令不完整使用下列哪一条信息提示",
+    "options": {
+      "A": "Error:Incomplete command found at ‘^’ position",
+      "B": "Error:Wrong paramater found at ‘^’ position",
+      "C": "Error:Ambiguous command found at ‘^’ position",
+      "D": "Error:Too many parameters found at ‘^’ position"
+    },
+    "answer": "A",
+    "type": "single",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 150,
+    "stem": "下列哪一个不可能是IPV4数据包首部长度",
+    "options": {
+      "A": "60B",
+      "B": "20B",
+      "C": "64B",
+      "D": "32B"
+    },
+    "answer": "C",
+    "type": "single",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 151,
+    "stem": "网络管理员使用ping来测试网络的连通性,在这个过程中下面哪些协议可能会被使用到",
+    "options": {
+      "A": "UDP",
+      "B": "ICMP",
+      "C": "ARP",
+      "D": "TCP"
+    },
+    "answer": "B",
+    "type": "single",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 152,
+    "stem": "基于端口划分vlan的特点是",
+    "options": {
+      "A": "根据报文携带的IP地址给数据帧添加BLAN标签",
+      "B": "主机移动位置不需要重新配置vlan",
+      "C": "主机移动位置需要重新配置vlan",
+      "D": "根据数据帧的协议类型,封装格式来分配vlan ID"
+    },
+    "answer": "C",
+    "type": "single",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 153,
+    "stem": "运行STP协议的设备端口处于F偶然ward ing状态,下列说法正确的是",
+    "options": {
+      "A": "该端口端口仅仅接收并处理BPDU,不转发用户流量",
+      "B": "该端口端口不仅不处理BPDU报文,也不转发用户流量",
+      "C": "该端口端口既会转发用户流量也处理BPDU报文",
+      "D": "该端口会根据收到的用户流量构建MAC地址表,但不转发用户流量"
+    },
+    "answer": "C",
+    "type": "single",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 154,
+    "stem": "交换机收到一个单播数据帧,会在MAC地址表中查找目的MAC地址,下列说法错误的是",
+    "options": {
+      "A": "如果查到了这个MAC地址,并且这个MAC地址在MAC地址表中对应的端口是者帧进入交换机的那个端口,则交换机执行丢弃操作",
+      "B": "如果查不到这个WAC地址,则交换机执行泛洪操作",
+      "C": "如果查到了这个MAC地址,并且这个MAC地址在MAC地址表中对应的端口不是者帧进入交换机的那个端口,则交换机执行操作",
+      "D": "如果查不到这个MAC地址,则交换机执行丢弃操作"
+    },
+    "answer": "D",
+    "type": "single",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 155,
+    "stem": "基本ACL的编号范围是",
+    "options": {
+      "A": "4000-4999",
+      "B": "6000-6031",
+      "C": "3000-3999",
+      "D": "2000-2999"
+    },
+    "answer": "D",
+    "type": "single",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 156,
+    "stem": "AR G3系列路由器上ACL缺省步长为",
+    "options": {
+      "A": "10",
+      "B": "5",
+      "C": "20",
+      "D": "15"
+    },
+    "answer": "B",
+    "type": "single",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 157,
+    "stem": "如下图所示的网络,主机A通过telnet登录到路由器A,然后在远程的界面通过FTP获取路由器B的配置文件,此时路由器A存在多少个TCP连接",
+    "options": {
+      "A": "4",
+      "B": "1",
+      "C": "3",
+      "D": "2"
+    },
+    "answer": "C",
+    "type": "single",
+    "initial_exclusion_reasons": [
+      "原文缺少题目引用的图示"
+    ]
+  },
+  {
+    "id": 158,
+    "stem": "一台Windows主机初次启动,如果采用DHCP的方式获取IP地址,那么主机发送的第一个数据包的源ip地址是",
+    "options": {
+      "A": "255.255.255.255",
+      "B": "0.0.0.0",
+      "C": "127.0.0.1",
+      "D": "169.254.2.33"
+    },
+    "answer": "B",
+    "type": "single",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 159,
+    "stem": "DHCP客户端在租期到达哪个比例时第一次发送续租报文",
+    "options": {
+      "A": "0.25",
+      "B": "0.5",
+      "C": "1",
+      "D": "0.875"
+    },
+    "answer": "B",
+    "type": "single",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 160,
+    "stem": "在wlan中用于标识无线网络,区分不同的无线网络的是",
+    "options": {
+      "A": "AP Name",
+      "B": "SSID",
+      "C": "VAP",
+      "D": "BSSID"
+    },
+    "answer": "B",
+    "type": "single",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 161,
+    "stem": "以下哪个时ipv6的链路本地地址",
+    "options": {
+      "A": "FC00::2E0:FCFF:FEEF:FEC",
+      "B": "FE80::2E0:FCFF:FEEF:FEC",
+      "C": "2000::2E0:FCFF:FEEF:FEC",
+      "D": "FF02::2E0:FCFF:FEFF:FEC"
+    },
+    "answer": "B",
+    "type": "single",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 162,
+    "stem": "以下关于手工负载均衡模式的链路聚合说法正确的是",
+    "options": {
+      "A": "手工负载分担模式下不能设置活动端口的数量",
+      "B": "手工负载分担模式下所有活动接口都参与数据的转发,分担负载流量",
+      "C": "手工负载分担模式下最多只能有4个活动端口",
+      "D": "手工负载分担模式下链路两端的设备互相发送LACP报文"
+    },
+    "answer": "A",
+    "type": "single",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 163,
+    "stem": "在WLAN中标识一个AP的覆盖范围是",
+    "options": {
+      "A": "BSSID",
+      "B": "BSS",
+      "C": "SSID",
+      "D": "ESS"
+    },
+    "answer": "A",
+    "type": "single",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 164,
+    "stem": "AC配置国家码的命令是",
+    "options": {
+      "A": "province-conde",
+      "B": "country-conde",
+      "C": "state-conde",
+      "D": "nation-conde"
+    },
+    "answer": "B",
+    "type": "single",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 165,
+    "stem": "为加入无线网络,Sta需要获取无线网络信息,STA采用哪种报文主动获取SSID",
+    "options": {
+      "A": "join",
+      "B": "Discovery",
+      "C": "Beacon",
+      "D": "Probe"
+    },
+    "answer": "D",
+    "type": "single",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 166,
+    "stem": "使用SNMPv1协议管理网络设备时,网络管理员使用哪条命令完成对网络设备的管理",
+    "options": {
+      "A": "Set Request",
+      "B": "Response",
+      "C": "Get-Next Request",
+      "D": "Get-Request"
+    },
+    "answer": "A",
+    "type": "single",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 167,
+    "stem": "主机ipv4地址为200.200.200.200/30,拥有下列ipv4地址的主机和其通信不需要经过路由器转发",
+    "options": {
+      "A": "200.200.200.203",
+      "B": "200.200.200.1",
+      "C": "200.200.200.1、",
+      "D": "200.200.200.200"
+    },
+    "answer": "B",
+    "type": "single",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 168,
+    "stem": "关于SNMP协议说法正确的是",
+    "options": {
+      "A": "SNMP协议采用组播的方式发送管理消息",
+      "B": "SNMP采用IGMP作为网络层协议",
+      "C": "SNMP采用UDP作为传输层协议",
+      "D": "SNMP协议只支持在以太网链路上发送管理消息"
+    },
+    "answer": "C",
+    "type": "single",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 169,
+    "stem": "以下选项中,不属于SDN网络架构的是",
+    "options": {
+      "A": "设备层",
+      "B": "控制器层",
+      "C": "芯片层",
+      "D": "应用协同层"
+    },
+    "answer": "C",
+    "type": "single",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 170,
+    "stem": "使用FTP协议进行路由器升级时,传输模式应该选择哪一种",
+    "options": {
+      "A": "字节模式",
+      "B": "文字模式",
+      "C": "语言模式",
+      "D": "二进制模式"
+    },
+    "answer": "D",
+    "type": "single",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 171,
+    "stem": "下列关于prefix segment 说法错误的是",
+    "options": {
+      "A": "prefix segment 用于识别网络中某个目的地址的前缀(prefix)",
+      "B": "prefix segment需要手工配置",
+      "C": "prefix segment通过IGP扩散到其他网元,全局可见,全局有效",
+      "D": "prefix segment可以由IGP自动分配"
+    },
+    "answer": "D",
+    "type": "single",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 172,
+    "stem": "下面哪个版本的SNMP支持加密特性",
+    "options": {
+      "A": "SNMP V3",
+      "B": "SNMP 2C",
+      "C": "SNMP 2",
+      "D": "SNMP1"
+    },
+    "answer": "A",
+    "type": "single",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 173,
+    "stem": "下列哪个属性不能作为衡量Cost的参数",
+    "options": {
+      "A": "时延",
+      "B": "Sysname",
+      "C": "跳数",
+      "D": "带宽"
+    },
+    "answer": "B",
+    "type": "single",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 174,
+    "stem": "MAC地址表不包括",
+    "options": {
+      "A": "端口号",
+      "B": "Vlan",
+      "C": "IP地址",
+      "D": "MAC地址"
+    },
+    "answer": "C",
+    "type": "single",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 175,
+    "stem": "RSTP协议使用P/A机制加快了上游端口转到Forwarding状态的速度,但是却没有出现临时环路的原因是什么",
+    "options": {
+      "A": "缩短了Forward Delay的时间",
+      "B": "缩短了Froward Delay的时间",
+      "C": "引入了边缘端口",
+      "D": "加快了端口角色选举的速度",
+      "E": "通过同步机制保证不会出现临时环路"
+    },
+    "answer": "E",
+    "type": "single",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 176,
+    "stem": "网络管理员在三层交换机上创建了vlan 10,并在该vlan的虚拟接口下配置了IP地址。当使用命令“display IPinterface brief“ 查看接口状态时,发现、vlanif 10 接口处于Down状态,则应该通过怎样的操作来使得vlanif 10 接口恢复正常",
+    "options": {
+      "A": "将一个状态必须为UP的物理接口划进vlan 10",
+      "B": "将一个状态必须为UP且必须为Trunk类型的接口划进vlan 10",
+      "C": "将任意物理接口划进vlan 10",
+      "D": "在vlanif 10 接口下使用命令“undo shutdown”"
+    },
+    "answer": "A",
+    "type": "single",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 177,
+    "stem": "RSTP协议中。当根端口失效的情况下,()就会快速转换为新的根端口并立即进入转发状态",
+    "options": {
+      "A": "Frowarding端口",
+      "B": "Alte ate端口",
+      "C": "Backup端口",
+      "D": "Edge端口"
+    },
+    "answer": "B",
+    "type": "single",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 178,
+    "stem": "UDP是面向无连接的,必须依靠()来保障传输的可靠性",
+    "options": {
+      "A": "网际协议",
+      "B": "传输控制协议",
+      "C": "网络层协议",
+      "D": "应用层协议"
+    },
+    "answer": "A",
+    "type": "single",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 179,
+    "stem": "VRP操作系统命令划分为访问级、监控级、配置级、管理级4个级别。能运行各种业务配置命令但是不能操作文件系统的是哪级",
+    "options": {
+      "A": "配置级",
+      "B": "访问级",
+      "C": "管理级",
+      "D": "监控级"
+    },
+    "answer": "A",
+    "type": "single",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 180,
+    "stem": "网络管理员在路由器设备上使用了Tracer tRoute功能后,路由器发出的数据包中,ipv4首部的Protocol字段取值为",
+    "options": {
+      "A": "17",
+      "B": "2",
+      "C": "1",
+      "D": "6"
+    },
+    "answer": "A",
+    "type": "single",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 181,
+    "stem": "下列路由协议中优先级最高的是",
+    "options": {
+      "A": "RIP",
+      "B": "Direct",
+      "C": "Static",
+      "D": "Ospf"
+    },
+    "answer": "B",
+    "type": "single",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 182,
+    "stem": "下列协议属于链路状态路由协议的是",
+    "options": {
+      "A": "PTP",
+      "B": "OSPF",
+      "C": "Direct",
+      "D": "Static"
+    },
+    "answer": "B",
+    "type": "single",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 183,
+    "stem": "ospf协议基于以下哪种协议",
+    "options": {
+      "A": "UDP",
+      "B": "HTTP",
+      "C": "TCP",
+      "D": "IP"
+    },
+    "answer": "D",
+    "type": "single",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 184,
+    "stem": "管理员要在路由器的G0/0/0接口上配置IP地址,那么使用下面哪个地址才是正确的是",
+    "options": {
+      "A": "237.6.1.2/24",
+      "B": "145.4.2.55/26",
+      "C": "127.3.1.4/28",
+      "D": "192.168.10.112/30"
+    },
+    "answer": "B",
+    "type": "single",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 185,
+    "stem": "为保证同一条数据流在同一条物理链路上转发,Eth Trunk采用哪种方式的负载分担",
+    "options": {
+      "A": "基于数据包入接口的负载分担",
+      "B": "基于包的负载分担",
+      "C": "基于应用层信息的负载分担",
+      "D": "基于流的负载分担"
+    },
+    "answer": "D",
+    "type": "single",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 186,
+    "stem": "包含以太网头部的Ethe etll帧的长度为",
+    "options": {
+      "A": "64-1518B",
+      "B": "60-1560B",
+      "C": "46-1500B",
+      "D": "64-1500B"
+    },
+    "answer": "A",
+    "type": "single",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 187,
+    "stem": "在存在冗余链路的二层网络中,可以使用下列哪种协议避免出现环路",
+    "options": {
+      "A": "STP",
+      "B": "UDP",
+      "C": "ARP",
+      "D": "VRRP"
+    },
+    "answer": "A",
+    "type": "single",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 188,
+    "stem": "如果一个以太网数据帧的Length/type=0x8100.下列说法正确的是",
+    "options": {
+      "A": "这个数据帧上层定存在UDP首部",
+      "B": "这个数据帧上层一定存在Ip首部",
+      "C": "这个数据帧上层定存在TCP首部",
+      "D": "这个数据帧一定携带了VLAN TAG"
+    },
+    "answer": "D",
+    "type": "single",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 189,
+    "stem": "管理员通过Telnet成功登录路由器后,发现无法配置路由器的接口IP地址那么可能的原因是",
+    "options": {
+      "A": "管理员使用的Telnet终端软件禁止相应操作",
+      "B": "SNMP参数配置错误",
+      "C": "Telnet用户的认证方式配置错误",
+      "D": "Telnet用户的级别配置错误"
+    },
+    "answer": "D",
+    "type": "single",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 190,
+    "stem": "当Ap与AC处于不同的三层网络时,推荐使用何种方式让AP发现AC",
+    "options": {
+      "A": "DHCP",
+      "B": "DNS",
+      "C": "广播方式",
+      "D": "AP上手动指定"
+    },
+    "answer": "A",
+    "type": "single",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 191,
+    "stem": "为让STA获取AP上的SSID相关信息,AP采用以下哪种报文主动对外声明无线网络SSID信息",
+    "options": {
+      "A": "Join",
+      "B": "Beacon",
+      "C": "Probe",
+      "D": "Discovery"
+    },
+    "answer": "B",
+    "type": "single",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 192,
+    "stem": "在AP上区分不同的用户,提供不同的网络服务,可以在通过配置以下哪种内容实现",
+    "options": {
+      "A": "TAP",
+      "B": "VAP",
+      "C": "VAC",
+      "D": "VT"
+    },
+    "answer": "B",
+    "type": "single",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 193,
+    "stem": "以下关于Python说法不正确的是",
+    "options": {
+      "A": "Python具有丰富的第三方库",
+      "B": "Python是一个门完全开源的高级编程语言",
+      "C": "Python可以用于自动化运维脚本、人工智能、数据科学等诸多领域",
+      "D": "Python拥有清晰的语法结构,简单易学同时运行效率高"
+    },
+    "answer": "D",
+    "type": "single",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 194,
+    "stem": "管理员在某台路由器上配置ospf,但该路由器上未配置loopback接口,则关于Router ID的描述正确的是",
+    "options": {
+      "A": "该路由器物理接口的最小IP地址将会成为Router ID",
+      "B": "该路由器物理接口的最大IP地址将会成为Router ID",
+      "C": "该路由器管理接口的IP地址将会成为Router ID",
+      "D": "该路由器的优先级将会成为Router ID"
+    },
+    "answer": "B",
+    "type": "single",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 195,
+    "stem": "ospf协议使用哪种报文向邻居发送LSA",
+    "options": {
+      "A": "LSR",
+      "B": "LSACK",
+      "C": "LSU",
+      "D": "LSA"
+    },
+    "answer": "C",
+    "type": "single",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 196,
+    "stem": "交换机发送的配置BPDU中,哪一个桥ID不可能会出现",
+    "options": {
+      "A": "0 00-01-01-03-04-CC",
+      "B": "8192 00-01-02-03-04-CC",
+      "C": "4096 00-01-02-03-04-CC",
+      "D": "2048 00-01-02-03-04-CC"
+    },
+    "answer": "C",
+    "type": "single",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 197,
+    "stem": "RSTP协议使用P/A机制加快了上游端口转到机制加快了上游端口转到Frowarding状态的速度,但是却没有出状态的速度,但是却没有出现临时环路的原因是什么,现临时环路的原因是什么()",
+    "options": {
+      "A": "缩短了Froward Delay的时间",
+      "B": "缩短了Froward Delay的时间",
+      "C": "引入了边缘端口",
+      "D": "加快了端口角色选举的速度",
+      "E": "通过同步机制保证不会出现临时环路"
+    },
+    "answer": "E",
+    "type": "single",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 198,
+    "stem": "现有交换机MAC地址表格如下,下列说法正确的是",
+    "options": {
+      "A": "MAC地址5489-9885-18a8是由管理员手工配置",
+      "B": "MAC地址5489-989d-1d30是由管理员手工配置",
+      "C": "交换机重启后,所有MAC地址需要重新学习",
+      "D": "MAC地址5489-9811-0b49"
+    },
+    "answer": "D",
+    "type": "single",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 199,
+    "stem": "如图所示,下列交换机的哪个端口会成为指定端口",
+    "options": {
+      "A": "SWC的g0/0/1",
+      "B": "SWC的g0/0/2",
+      "C": "SWA的g0/0/3",
+      "D": "SWB的g0/0/3"
+    },
+    "answer": "C",
+    "type": "single",
+    "initial_exclusion_reasons": [
+      "原文缺少题目引用的图示"
+    ]
+  },
+  {
+    "id": 200,
+    "stem": "如图所示,所有主机之间都可以正常通行,则SWA MAC地址和端口的对应关系正确的是",
+    "options": {
+      "A": "MAC-A G0/0/1 MAC-B G0/0/2 MAC-C G0/0/3",
+      "B": "MAC-A G0/0/1 MAC-B G0/0/1 MAC-C G0/0/3",
+      "C": "MAC-A G0/0/3 MAC-B G0/0/3 MAC-C G0/0/1",
+      "D": "MAC-A G0/0/2 MAC-B G0/0/2 MAC-C G0/0/3"
+    },
+    "answer": "C",
+    "type": "single",
+    "initial_exclusion_reasons": [
+      "原文缺少题目引用的图示"
+    ]
+  },
+  {
+    "id": 201,
+    "stem": "某台路由器运行ospf协议,并且没有指定Router ID,所有接口的IP地址如下,则路由器ospf协议的Router id为",
+    "options": {
+      "A": "10.0.21.1",
+      "B": "10.0.1.2",
+      "C": "10.0.1.1",
+      "D": "10.0.12.1"
+    },
+    "answer": "C",
+    "type": "single",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 202,
+    "stem": "路由器某一个ACL存在如下规则: Rule deny tcp source 192.168.1.0 0.0.0.255 destination 172.16.10.1 0.0.0.0 Destination-port eq 21下列说法正确的是",
+    "options": {
+      "A": "ACL的类型为基本的ACL",
+      "B": "源IP为192.168.1.1,目的ip为172.16.10.2,并且目的端口号为21的所有TCP报文匹配这条规则",
+      "C": "源IP为192.168.1.1,目的ip为172.16.10.1,并且目的端口号为21的所有TCP报文匹配这条规",
+      "D": "源IP为192.168.1.1,目的ip为172.16.10.2,并且目的端口号为21的所有TCP报文匹配这条规"
+    },
+    "answer": "C",
+    "type": "single",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 203,
+    "stem": "关于交换机端口配置,下列说法错误的是",
+    "options": {
+      "A": "如果数据帧携带的vlan tag为200,则剥离该tag转发",
+      "B": "如果收到不带vlan tag的数据帧,交换机要添加vlan tag 100",
+      "C": "接口类型为hybrid",
+      "D": "如果数据帧携带的vlantag为100,则剥离该tag转发"
+    },
+    "answer": "D",
+    "type": "single",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 204,
+    "stem": "某网络工程师在输入命令时提示如下信息:",
+    "options": {
+      "A": "输入命令不明确",
+      "B": "参数类型错误",
+      "C": "没有查找到关键字",
+      "D": "输入命令不完整"
+    },
+    "answer": "A",
+    "type": "single",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 205,
+    "stem": "当以ipv4协议作为网络层协议时,网络层首部不包含哪个字段",
+    "options": {
+      "A": "Destination IPV4 Address",
+      "B": "Source IPV4 Address",
+      "C": "Sequence Number",
+      "D": "TTL"
+    },
+    "answer": "D",
+    "type": "single",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 206,
+    "stem": "如果应用层协议为Telnet,那么ipv4首部中Protocol字段取值为",
+    "options": {
+      "A": "67",
+      "B": "6",
+      "C": "17",
+      "D": "53"
+    },
+    "answer": "A",
+    "type": "single",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 207,
+    "stem": "vlan标签中的Priority字段可以识别数据帧的优先级,此优先级的范围是",
+    "options": {
+      "A": "0-7",
+      "B": "0-15",
+      "C": "0-3",
+      "D": "0-63"
+    },
+    "answer": "B",
+    "type": "single",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 208,
+    "stem": "在使用FTP协议升级路由器软件时,传输模式应该选用",
+    "options": {
+      "A": "文字模式",
+      "B": "二进制模式",
+      "C": "字节模式",
+      "D": "流字节模式"
+    },
+    "answer": "B",
+    "type": "single",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 209,
+    "stem": "如果在PPP认证的过程中,被认证者发送了错误的用户名和密码给认证者,认证者将会发送哪种类型的报文给被认证者",
+    "options": {
+      "A": "Authenticate-Reply",
+      "B": "Authenticate-ACK",
+      "C": "Authenticate-NAK",
+      "D": "Authenticate-Reject"
+    },
+    "answer": "C",
+    "type": "single",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 210,
+    "stem": "以下关于交换机的描述,说法错误的是",
+    "options": {
+      "A": "交换机一般作为网络的出口设备",
+      "B": "交换机一般工作在数据链路层",
+      "C": "交换机可以为终端设备(PC、服务器)提供网络接入服务",
+      "D": "交换机能够完成数据帧的交换工作"
+    },
+    "answer": "A",
+    "type": "single",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 211,
+    "stem": "VRP操作系统命令划分为访问级、监控级、配置级、管理级4个级别。能运行各种业务配置命令但是不能操作文件系统的是哪一级",
+    "options": {
+      "A": "监控级",
+      "B": "管理级",
+      "C": "配置级",
+      "D": "访问级"
+    },
+    "answer": "C",
+    "type": "single",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 212,
+    "stem": "管理员发现两台路由器在建立ospf邻居时,停留在2-way状态,则下面描述正确的是",
+    "options": {
+      "A": "者两台路由器是广播型网络中的DR Other路由器",
+      "B": "路由器配置了错误的Router ID",
+      "C": "路由器配置了相同的进程ID",
+      "D": "路由器配置了相同的区域ID"
+    },
+    "answer": "A",
+    "type": "single",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 213,
+    "stem": "下列哪项是配置静态路由的基本参数",
+    "options": {
+      "A": "出接口的MAC地址",
+      "B": "目的网络",
+      "C": "下一跳的IP地址",
+      "D": "出接口"
+    },
+    "answer": "D",
+    "type": "single",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 214,
+    "stem": "命令port trunk allowpass vlan al1有什么作用",
+    "options": {
+      "A": "如果为相连的远端设备配置了port default vlan 3 命令",
+      "B": "与该端口相连的对端端口必须同时配置port trunk permit vlan al1",
+      "C": "相连的对端设备可以动态确定允许哪些vlan ID通过",
+      "D": "该端口上允许所有vlan 的数据帧"
+    },
+    "answer": "D",
+    "type": "single",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 215,
+    "stem": "交换机的MAC地址表不包含以下哪种信息",
+    "options": {
+      "A": "ip地址",
+      "B": "端口号",
+      "C": "VLAN",
+      "D": "MAC地址"
+    },
+    "answer": "A",
+    "type": "single",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 216,
+    "stem": "在一台充当认证服务器的路由器上配置了两个认证域“Area 1”和“Area 2”,用户如果使用正确的用户名“huawei”和密码:“hello”进行认证,则用户会被分配到哪个认证域当中",
+    "options": {
+      "A": "认证域“defaultadmin domain”",
+      "B": "认证域“default domain”",
+      "C": "认证域“Areal”",
+      "D": "认证域“Area2”"
+    },
+    "answer": "A",
+    "type": "single",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 217,
+    "stem": "以下哪个ipv6地址是组播地址",
+    "options": {
+      "A": "FE80::2E0:FCFF:FEEF:FEC",
+      "B": "2000::2E0:FCFF:FEEF:FEC",
+      "C": "FC00::2E0:FCFF:FEEF:FEC",
+      "D": "FF02::2E0:FCFF:FEEF:FEC"
+    },
+    "answer": "A",
+    "type": "single",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 218,
+    "stem": "ipv6报文头的哪个字段可以用于Qos",
+    "options": {
+      "A": "display Length",
+      "B": "Traffic Class",
+      "C": "Version",
+      "D": "Next Header"
+    },
+    "answer": "B",
+    "type": "single",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 219,
+    "stem": "以下哪些不是小型园区网络的特点",
+    "options": {
+      "A": "网络层次简单",
+      "B": "覆盖范围广",
+      "C": "用户数量少",
+      "D": "网络需求简单"
+    },
+    "answer": "B",
+    "type": "single",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 220,
+    "stem": "下列关于生成树协议根桥选举说法正确的是",
+    "options": {
+      "A": "桥优先级的数值最大的设备成为根桥",
+      "B": "桥优先级相同时,端口数量较多的设备成为根桥",
+      "C": "桥优先级相同时,MAC地址最大的设备成为根桥",
+      "D": "桥优先级数量最小的设备成为根桥"
+    },
+    "answer": "D",
+    "type": "single",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 221,
+    "stem": "以下哪种认证方式不需要输入用户名和密码",
+    "options": {
+      "A": "authentication-mode none",
+      "B": "authentication-mode local",
+      "C": "authentication-mode hwtacacs",
+      "D": "authorization-mode hwtacacs"
+    },
+    "answer": "A",
+    "type": "single",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 222,
+    "stem": "以下IEEE 802.11标准中不支持5GHz频段进行通信的是",
+    "options": {
+      "A": "802.11n",
+      "B": "802.11g",
+      "C": "802.1lac wave 1",
+      "D": "802.1lac wave 2"
+    },
+    "answer": "B",
+    "type": "single",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 223,
+    "stem": "以下IEEE 802.11标准中只支持2.4GHz频段进行通信的是",
+    "options": {
+      "A": "802.11n",
+      "B": "802.11g",
+      "C": "802.1lax",
+      "D": "802.1La"
+    },
+    "answer": "B",
+    "type": "single",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 224,
+    "stem": "AP通过以下哪项报文从AC.请求软件版本",
+    "options": {
+      "A": "VRP System Reuest",
+      "B": "Software Request",
+      "C": "Image DatA.Request",
+      "D": "Image packbag Request"
+    },
+    "answer": "C",
+    "type": "single",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 225,
+    "stem": "AR2200路由器的display startup 信息,关于这些信息说法错误的是",
+    "options": {
+      "A": "设备下次启动时的系统文件可以使用命令“startup system software”来修改",
+      "B": "正在运行的配置文件没有保存",
+      "C": "设备此次启动使用的系统文件是ar2200-v200r003c00spc00.cc",
+      "D": "设备下次启动时的系统文件不能被修改"
+    },
+    "answer": "D",
+    "type": "single",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 226,
+    "stem": "DHCP DISCOVER报文的主要作用是",
+    "options": {
+      "A": "服务器对REQUEST报文的确认响应",
+      "B": "客户端用来寻找DHCP服务器",
+      "C": "客户端请求配置确认,或者续租租期",
+      "D": "DHCP服务器用来响应DHCP DISCOVER 报文,此报文携带了各种配置信息"
+    },
+    "answer": "B",
+    "type": "single",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 227,
+    "stem": "DHCP服务器分配给客户端的动态ip地址,通常有一定的租借期限,那么关于租借期限的描述正确的是",
+    "options": {
+      "A": "租期更新定时器为总租期的50%,当“租期更新定时器”到期时,DHCP客户端必须进行HP地址的更新",
+      "B": "重绑定定时器为总租期的87.5%",
+      "C": "若“重绑定定时器”到期但客户端还没有收到服务器的响应则会一直发送",
+      "D": "在租借期限内,如果客户端收到OHCP NAK报文客户端就会立即停止使用此IP地址,并返回初始化状态,更新申请新的IP地址"
+    },
+    "answer": "C",
+    "type": "single",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 228,
+    "stem": "DHCP协议能够给客户端分配一些与TCP/IP相关的参数信息,在此过程中DHCP定义了多种报文,这些报文采用的封装是",
+    "options": {
+      "A": "TCP封装",
+      "B": "UDP封装",
+      "C": "PPP封装",
+      "D": "IP封装"
+    },
+    "answer": "B",
+    "type": "single",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 229,
+    "stem": "DSCP中的业务优先级描述正确的是",
+    "options": {
+      "A": "AF的优先级高于EF",
+      "B": "AF11丢包概率高于AF12",
+      "C": "CS的优先级最高",
+      "D": "AFLL优先级高于AF4"
+    },
+    "answer": "C",
+    "type": "single",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 230,
+    "stem": "IP地址总长度为的是bit",
+    "options": {
+      "A": "96",
+      "B": "64",
+      "C": "32",
+      "D": "128"
+    },
+    "answer": "D",
+    "type": "single",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 231,
+    "stem": "LDP邻居发现有不同的实现机制和规定,下面关于LDP邻居发现的描述错误的是",
+    "options": {
+      "A": "LDP发现机制包括LDP基本发现机制和LDP扩展发现机制",
+      "B": "LDP基本发现机制可以自动发现直连在同条链路上的LDP Peers",
+      "C": "LDP扩展发现机制能够发现非直连LDP Peers",
+      "D": "LDP发现机制都需要明确指明LDP Peer"
+    },
+    "answer": "D",
+    "type": "single",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 232,
+    "stem": "OPX的定义是",
+    "options": {
+      "A": "维护成本",
+      "B": "总体拥有成本",
+      "C": "运营成本",
+      "D": "运维成本"
+    },
+    "answer": "C",
+    "type": "single",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 233,
+    "stem": "FED技术可以解决以下哪些缺点",
+    "options": {
+      "A": "TCP全局同步现象",
+      "B": "TCP饿死现象",
+      "C": "无差别的丢弃"
+    },
+    "answer": "A",
+    "type": "single",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 234,
+    "stem": "RTA.使用NAT技术,且通过定义地址池来实现多对多的NAPT地址转换,使得私网内主机能够访问公网。假设地址池中仅有两个公网ip地址,并且已经分配给主机A与B做了地址交换,而此时若主机C希望访问公网,则下列说法正确的是",
+    "options": {
+      "A": "主机C无法分配到公网地址,不能访问公网",
+      "B": "所有主机轮流使用公网地址,都可以访问公网",
+      "C": "RTA将主机C的源端口进行转换,主机C可以访问公网",
+      "D": "RTA分配接口地址(200.10.10.3)给主机C,主机C可以访问公网"
+    },
+    "answer": "C",
+    "type": "single",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 235,
+    "stem": "SDN的网络架构所具备的三个基本特征是",
+    "options": {
+      "A": "特控分离、集中控制、开放接口",
+      "B": "转控分离、分散控制、开放接口",
+      "C": "转控集中、集中控制、开放接口",
+      "D": "特控分离、集中控制、封闭接口"
+    },
+    "answer": "A",
+    "type": "single",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 236,
+    "stem": "SDN主要技术流派主张SDN采用分层的开放架构,qw2倡导、定义集中式架构和Openflow的是哪一个技术流派",
+    "options": {
+      "A": "ETSI",
+      "B": "ONF",
+      "C": "ITU",
+      "D": "IETF"
+    },
+    "answer": "B",
+    "type": "single",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 237,
+    "stem": "VRP操作平台,以下哪条命令可以只查看静态路由",
+    "options": {
+      "A": "display ip routing-table statics",
+      "B": "display ip routing-table verbose",
+      "C": "display ip royting-table",
+      "D": "display ip routing-table protocol static"
+    },
+    "answer": "D",
+    "type": "single",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 238,
+    "stem": "VRP系统登录方式不包括哪一项",
+    "options": {
+      "A": "Telnet",
+      "B": "Netstream",
+      "C": "SSH",
+      "D": "web"
+    },
+    "answer": "B",
+    "type": "single",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 239,
+    "stem": "WLAN架构中FIT AP无法独立进行工作,需要由AC进行统一管理。FIT AP与AC之间通过以下哪种协议进行通信",
+    "options": {
+      "A": "IPsec",
+      "B": "WEP",
+      "C": "CAPWAP",
+      "D": "WAP"
+    },
+    "answer": "C",
+    "type": "single",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 240,
+    "stem": "标准STP模式下,下列非根交换机中哪个端口会转发由根交换机产生的TC置为BPDU",
+    "options": {
+      "A": "指定端口",
+      "B": "根端口",
+      "C": "备份端口",
+      "D": "预备端口"
+    },
+    "answer": "A",
+    "type": "single",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 241,
+    "stem": "不同虚拟机见可以利用vswitch建立VTEP隧道来进行VXLAN的通信,那么VXLAN的通信过程是",
+    "options": {},
+    "answer": "空",
+    "type": "single",
+    "initial_exclusion_reasons": [
+      "题干或选项残缺",
+      "答案缺失或不对应选项"
+    ]
+  },
+  {
+    "id": 242,
+    "stem": "1源VTEP将源VM发通的ARP广播封装为组播报文发送到L3网络中",
+    "options": {},
+    "answer": "空",
+    "type": "single",
+    "initial_exclusion_reasons": [
+      "题干或选项残缺",
+      "答案缺失或不对应选项"
+    ]
+  },
+  {
+    "id": 243,
+    "stem": "2目的VTEP收到组播报文后,学习源VW与VTEP映射关系,并将组播报文转发给本地VM",
+    "options": {},
+    "answer": "空",
+    "type": "single",
+    "initial_exclusion_reasons": [
+      "题干或选项残缺",
+      "答案缺失或不对应选项"
+    ]
+  },
+  {
+    "id": 244,
+    "stem": "3本地进行单播应答",
+    "options": {},
+    "answer": "空",
+    "type": "single",
+    "initial_exclusion_reasons": [
+      "题干或选项残缺",
+      "答案缺失或不对应选项"
+    ]
+  },
+  {
+    "id": 245,
+    "stem": "4目标VTEP封装Vxlan隧道,并建立映射封装后单播发给VTEP",
+    "options": {},
+    "answer": "空",
+    "type": "single",
+    "initial_exclusion_reasons": [
+      "题干或选项残缺",
+      "答案缺失或不对应选项"
+    ]
+  },
+  {
+    "id": 246,
+    "stem": "5源VTEP收到应道建立vm与目标VTEP映射关系,去掉隧道转发给源vm",
+    "options": {},
+    "answer": "空",
+    "type": "single",
+    "initial_exclusion_reasons": [
+      "题干或选项残缺",
+      "答案缺失或不对应选项"
+    ]
+  },
+  {
+    "id": 247,
+    "stem": "6源vm与目标vm通过隧道进行单播报文通信",
+    "options": {
+      "A": "1-3-2-4-6-5",
+      "B": "3-5-2-4-1-3",
+      "C": "1-2-3-4-5-6",
+      "D": "1-5-6-4-3-2"
+    },
+    "answer": "C",
+    "type": "single",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 248,
+    "stem": "传统网络的局限性不包括下列哪个",
+    "options": {
+      "A": "网络新业务升级的速度较慢",
+      "B": "网络协议实现复杂运维度较大",
+      "C": "不同厂家设备实现机制相似操作命令差异较小,易于操作",
+      "D": "流量路径的调整能力不够灵活"
+    },
+    "answer": "C",
+    "type": "single",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 249,
+    "stem": "对于PPP链路建立过程的描述说法错误的是",
+    "options": {
+      "A": "在Establish阶段,PPP链路进行LCP参数协商。协商内容包括最大接收单元MRU。认证方式魔术字等选项",
+      "B": "NCP协商成功后,PPP链路将保持通信状态,并且进行Terminate阶段",
+      "C": "DeaD阶段也被称为物理层不可用阶段。当通信双方的两端检测到物理线路激活时,就会从DeaD阶段迁移至Establish阶段,即链路建立阶段",
+      "D": "在Network阶段,PPP链路进行NCP协商,通过NCP协商来选择和配置一个网络层协议,并进行网络层参数协商",
+      "E": "PPP链路支持半双工和全双工两种模式"
+    },
+    "answer": "B",
+    "type": "single",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 250,
+    "stem": "高级ACL的编号范围是",
+    "options": {
+      "A": "3000-3999",
+      "B": "2000-2999",
+      "C": "4000-4999",
+      "D": "6000-6031"
+    },
+    "answer": "A",
+    "type": "single",
+    "initial_exclusion_reasons": [
+      "与原题 35 重复"
+    ]
+  },
+  {
+    "id": 251,
+    "stem": "关于ospf协议区域划分说法错误的是",
+    "options": {
+      "A": "Area.0是骨干区域,其他区域都必须与此区域相连",
+      "B": "同一个ospf区域中的路由器中的LSDB是完全一致的",
+      "C": "划分ospf区域可以缩小部分路由器的LSDB规模",
+      "D": "只有ABR才能作为ASBR"
+    },
+    "answer": "D",
+    "type": "single",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 252,
+    "stem": "管理员计划通过配置静态浮动路由来实现路由备份,则正确的实现方法是",
+    "options": {
+      "A": "管理员需要为主用静态路由和备用静态路由配置不同的度量值",
+      "B": "管理员需要为主用静态路由和备用静态路由配置不同的TAG",
+      "C": "管理员只需要配置两个静态路由",
+      "D": "管理员需要为主用静态路由和备用静态路由配置不同的协议优先级值"
+    },
+    "answer": "D",
+    "type": "single",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 253,
+    "stem": "管理员在什么情况下才能为路由器修改设备名称",
+    "options": {
+      "A": "User-view",
+      "B": "Protovol-view",
+      "C": "System-view",
+      "D": "Interface-view"
+    },
+    "answer": "C",
+    "type": "single",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 254,
+    "stem": "交换网络中STP协议的桥ID如下,拥有哪个桥ID的交换机会成为根桥",
+    "options": {
+      "A": "4096 00-01-02-03-04-DD",
+      "B": "32768 00-01-02-03-04-AA",
+      "C": "32768 00-01-02-03-04-CC",
+      "D": "32768 00-01-02-03-04-BB"
+    },
+    "answer": "A",
+    "type": "single",
+    "initial_exclusion_reasons": [
+      "与原题 30 重复"
+    ]
+  },
+  {
+    "id": 255,
+    "stem": "路由器工作在osi参考模型哪一层",
+    "options": {
+      "A": "数据链路层",
+      "B": "传输层",
+      "C": "应用层",
+      "D": "网络层"
+    },
+    "answer": "D",
+    "type": "single",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 256,
+    "stem": "某个设备已配置完成Telnet配置,设备登录地址为10.1.1.10,Telnet用户名为admin,密码为Huawei@123.以下使用telnetliB登录此设备正确的是",
+    "options": {
+      "A": "telnetlib.Telnet(10.1.1.0,23,admin,Huawei@123)",
+      "B": "telnetlib.Telnet(10.1.1.0)",
+      "C": "telnetlib.Telnet(10.1.1.0,23,Huawei@123)",
+      "D": "telnetlib.Telnet(10.1.1.0,admin)"
+    },
+    "answer": "A",
+    "type": "single",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 257,
+    "stem": "某个公司网络管理员想要把经常变换办公位置而导致经常会从不同的交换机接入公司网络的用户统一划分到vlan10,则应该采用以下哪种方式来划分vlan",
+    "options": {
+      "A": "基于协议划分vlan",
+      "B": "基于MAC地址划分vlan",
+      "C": "基于端口划分vlan",
+      "D": "基于子网划分vlan"
+    },
+    "answer": "D",
+    "type": "single",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 258,
+    "stem": "请问配置VRRP抢占时延的命令是",
+    "options": {
+      "A": "vrrp vrid 1 preempt-delay 20",
+      "B": "vrrp vrid 1 preempt-mode timer delay 20",
+      "C": "vrrp vrid ltimer delay 20",
+      "D": "vrrp vrid 1 preempt-timer 20"
+    },
+    "answer": "B",
+    "type": "single",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 259,
+    "stem": "缺省情况下,DHCP服务器分配IP地址的租期为",
+    "options": {
+      "A": "12h",
+      "B": "1h",
+      "C": "24h",
+      "D": "18h"
+    },
+    "answer": "C",
+    "type": "single",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 260,
+    "stem": "如果防火墙域间没有配置安全策略,或者查找安全策略时,所有安全策略都没有命中,则默认执行域间的缺省包过滤动作",
+    "options": {
+      "A": "只允许通过部分",
+      "B": "拒绝通过",
+      "C": "上报管理员",
+      "D": "不同的应默认动作不同"
+    },
+    "answer": "B",
+    "type": "single",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 261,
+    "stem": "如果应用层协议为Telnet,那么ipv4首部中protocol字段取值为",
+    "options": {
+      "A": "23",
+      "B": "17",
+      "C": "6",
+      "D": "67"
+    },
+    "answer": "A",
+    "type": "single",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 262,
+    "stem": "网络管理员给网络中的某一台主机分配ipv4地址为192.168.1.1/28,则这个主机所在网络还可以增加多少台主机",
+    "options": {
+      "A": "12",
+      "B": "15",
+      "C": "13",
+      "D": "14"
+    },
+    "answer": "D",
+    "type": "single",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 263,
+    "stem": "为实现FIT AP的上线,FIT AP首先需要获取AC的IP地址,FIT AP 获取AC的IP地址方式不包括以下哪个",
+    "options": {
+      "A": "广播方式",
+      "B": "AP上静态指定方式",
+      "C": "组播方式",
+      "D": "DHCP Option方式"
+    },
+    "answer": "A",
+    "type": "single",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 264,
+    "stem": "下列关于Trunk端口与Access端口描述正确的是",
+    "options": {
+      "A": "trunk端口只能发送untagged帧",
+      "B": "access端口只能发送untagged帧",
+      "C": "access端口只能发送tagged帧",
+      "D": "trunk端口只能发送tagged帧"
+    },
+    "answer": "B",
+    "type": "single",
+    "initial_exclusion_reasons": []
+  }
+]

@@ -1,5 +1,14 @@
-# 只跟踪刷题项目的三个文件，其余（个人笔记 / 缓存 / 工具）一律忽略
+__pycache__/
+*.pyc
+data/*.sqlite3*
+qa/
+*.log
+.env
+.env.*
+!.env.example
+*.sqlite3*
 .npm-cache/
 .tools/
-*.md
-!ICT题库-剔除清单.md
+.openai/
+mobile-site/.openai/
+ICT练习室.zip

@@ -1,0 +1,1208 @@
+[
+  {
+    "a": 10,
+    "b": 64,
+    "stem_similarity": 0.94,
+    "option_similarity": 1.0,
+    "stem_a": "RSTP协议不包含以下哪个端口状态",
+    "stem_b": "RSTP协议不包括以下哪个端口状态",
+    "options_a": {
+      "A": "Blocking",
+      "B": "Lea ing",
+      "C": "Discarding",
+      "D": "Forwarding"
+    },
+    "options_b": {
+      "A": "Forwarding",
+      "B": "Lea ing",
+      "C": "Discarding",
+      "D": "Blocking"
+    }
+  },
+  {
+    "a": 10,
+    "b": 139,
+    "stem_similarity": 1.0,
+    "option_similarity": 0.97,
+    "stem_a": "RSTP协议不包含以下哪个端口状态",
+    "stem_b": "RSTP协议不包含以下哪个端口状态",
+    "options_a": {
+      "A": "Blocking",
+      "B": "Lea ing",
+      "C": "Discarding",
+      "D": "Forwarding"
+    },
+    "options_b": {
+      "A": "Lea ing",
+      "B": "Frowarding",
+      "C": "Blocking",
+      "D": "Discarding"
+    }
+  },
+  {
+    "a": 64,
+    "b": 139,
+    "stem_similarity": 0.94,
+    "option_similarity": 0.97,
+    "stem_a": "RSTP协议不包括以下哪个端口状态",
+    "stem_b": "RSTP协议不包含以下哪个端口状态",
+    "options_a": {
+      "A": "Forwarding",
+      "B": "Lea ing",
+      "C": "Discarding",
+      "D": "Blocking"
+    },
+    "options_b": {
+      "A": "Lea ing",
+      "B": "Frowarding",
+      "C": "Blocking",
+      "D": "Discarding"
+    }
+  },
+  {
+    "a": 15,
+    "b": 140,
+    "stem_similarity": 0.92,
+    "option_similarity": 1.0,
+    "stem_a": "RSTP协议存在几种端口状态:",
+    "stem_b": "RSTP存在几种端口状态",
+    "options_a": {
+      "A": "3",
+      "B": "2",
+      "C": "4",
+      "D": "1"
+    },
+    "options_b": {
+      "A": "3",
+      "B": "4",
+      "C": "2",
+      "D": "1"
+    }
+  },
+  {
+    "a": 131,
+    "b": 140,
+    "stem_similarity": 0.92,
+    "option_similarity": 1.0,
+    "stem_a": "RSTP协议存在几种端口状态",
+    "stem_b": "RSTP存在几种端口状态",
+    "options_a": {
+      "A": "1",
+      "B": "3",
+      "C": "4",
+      "D": "2"
+    },
+    "options_b": {
+      "A": "3",
+      "B": "4",
+      "C": "2",
+      "D": "1"
+    }
+  },
+  {
+    "a": 58,
+    "b": 145,
+    "stem_similarity": 0.93,
+    "option_similarity": 0.94,
+    "stem_a": "以下哪个命令可以修改设备名字为huawei",
+    "stem_b": "下列哪一个命令可以修改设备名字为huawei",
+    "options_a": {
+      "A": "sysname Huawei",
+      "B": "rename Huawei",
+      "C": "do name Huawei",
+      "D": "hostname"
+    },
+    "options_b": {
+      "A": "hostname Huawei",
+      "B": "do name Huawei",
+      "C": "sysname Huawei",
+      "D": "rename Huawei"
+    }
+  },
+  {
+    "a": 130,
+    "b": 148,
+    "stem_similarity": 0.96,
+    "option_similarity": 0.99,
+    "stem_a": "下面关于MPLS LABEL标签的说法,错误的是哪一个",
+    "stem_b": "下面关于MPLS LABEL 的说法错误的是哪一个",
+    "options_a": {
+      "A": "标签由报文的头部所携带,不包含拓扑信息",
+      "B": "标签封装在网络层和传输层",
+      "C": "标签用于唯一标识一个分组所属的转发等价类FEC",
+      "D": "标签是一个长度固定、只具有本地意义的短标识符"
+    },
+    "options_b": {
+      "A": "标签是一个长度固定、只具有本地意义的短标识符",
+      "B": "标签由报文的头部所携带,不包含拓扑信息",
+      "C": "标签封装在网络层和传输层之间",
+      "D": "标签用于唯一标识一个分组所属的转发等价类FEC"
+    }
+  },
+  {
+    "a": 135,
+    "b": 163,
+    "stem_similarity": 0.97,
+    "option_similarity": 1.0,
+    "stem_a": "在wlan中标识一个AP覆盖范围是",
+    "stem_b": "在WLAN中标识一个AP的覆盖范围是",
+    "options_a": {
+      "A": "SSID",
+      "B": "BSSID",
+      "C": "BSS",
+      "D": "ESS"
+    },
+    "options_b": {
+      "A": "BSSID",
+      "B": "BSS",
+      "C": "SSID",
+      "D": "ESS"
+    }
+  },
+  {
+    "a": 65,
+    "b": 176,
+    "stem_similarity": 0.94,
+    "option_similarity": 0.85,
+    "stem_a": "网络管理员在三层交换机上创建了vlan,并在该vlan的虚拟接口下配置了IP地址,当使用命令“display ip interface briaf”查看接口状态时,发现vlanif10 接口处于down状态,则应该通过怎样的操作来使用v拉你发10 接口恢复正常",
+    "stem_b": "网络管理员在三层交换机上创建了vlan 10,并在该vlan的虚拟接口下配置了IP地址。当使用命令“display IPinterface brief“ 查看接口状态时,发现、vlanif 10 接口处于Down状态,则应该通过怎样的操作来使得vlanif 10 接口恢复正常",
+    "options_a": {
+      "A": "在BLANIF10 接口下使用命令“undo shutdown”",
+      "B": "将一个状态必为UP的物理接口划进vlan10",
+      "C": "将任意物理接口划进vlan10",
+      "D": "将一个状态必须为Up并且必须为trunk类型的接口划进vlan10"
+    },
+    "options_b": {
+      "A": "将一个状态必须为UP的物理接口划进vlan 10",
+      "B": "将一个状态必须为UP且必须为Trunk类型的接口划进vlan 10",
+      "C": "将任意物理接口划进vlan 10",
+      "D": "在vlanif 10 接口下使用命令“undo shutdown”"
+    }
+  },
+  {
+    "a": 179,
+    "b": 211,
+    "stem_similarity": 0.99,
+    "option_similarity": 1.0,
+    "stem_a": "VRP操作系统命令划分为访问级、监控级、配置级、管理级4个级别。能运行各种业务配置命令但是不能操作文件系统的是哪级",
+    "stem_b": "VRP操作系统命令划分为访问级、监控级、配置级、管理级4个级别。能运行各种业务配置命令但是不能操作文件系统的是哪一级",
+    "options_a": {
+      "A": "配置级",
+      "B": "访问级",
+      "C": "管理级",
+      "D": "监控级"
+    },
+    "options_b": {
+      "A": "监控级",
+      "B": "管理级",
+      "C": "配置级",
+      "D": "访问级"
+    }
+  },
+  {
+    "a": 20,
+    "b": 224,
+    "stem_similarity": 1.0,
+    "option_similarity": 0.96,
+    "stem_a": "AP通过以下哪项报文从AC请求软件版本",
+    "stem_b": "AP通过以下哪项报文从AC.请求软件版本",
+    "options_a": {
+      "A": "VRP System Request",
+      "B": "Image Package Request",
+      "C": "Image Date Request",
+      "D": "Software Request"
+    },
+    "options_b": {
+      "A": "VRP System Reuest",
+      "B": "Software Request",
+      "C": "Image DatA.Request",
+      "D": "Image packbag Request"
+    }
+  },
+  {
+    "a": 68,
+    "b": 226,
+    "stem_similarity": 1.0,
+    "option_similarity": 0.98,
+    "stem_a": "DHCP DISCOVER 报文的主要作用是",
+    "stem_b": "DHCP DISCOVER报文的主要作用是",
+    "options_a": {
+      "A": "服务器对REQUEST报文的确定响应",
+      "B": "客户端用来寻找DHCP服务器",
+      "C": "客户端请求配置确认,或者续借租期",
+      "D": "DHCP服务器用来响应DHCP DISCOVER 报文,此报文携带了各种配置信息"
+    },
+    "options_b": {
+      "A": "服务器对REQUEST报文的确认响应",
+      "B": "客户端用来寻找DHCP服务器",
+      "C": "客户端请求配置确认,或者续租租期",
+      "D": "DHCP服务器用来响应DHCP DISCOVER 报文,此报文携带了各种配置信息"
+    }
+  },
+  {
+    "a": 206,
+    "b": 261,
+    "stem_similarity": 1.0,
+    "option_similarity": 0.9,
+    "stem_a": "如果应用层协议为Telnet,那么ipv4首部中Protocol字段取值为",
+    "stem_b": "如果应用层协议为Telnet,那么ipv4首部中protocol字段取值为",
+    "options_a": {
+      "A": "67",
+      "B": "6",
+      "C": "17",
+      "D": "53"
+    },
+    "options_b": {
+      "A": "23",
+      "B": "17",
+      "C": "6",
+      "D": "67"
+    }
+  },
+  {
+    "a": 127,
+    "b": 262,
+    "stem_similarity": 0.97,
+    "option_similarity": 1.0,
+    "stem_a": "网络管理员给网络中的某台主机分配的IPV4地址为192.168.1.1/28.则这个主机所在的网络还可以增加多少台主机",
+    "stem_b": "网络管理员给网络中的某一台主机分配ipv4地址为192.168.1.1/28,则这个主机所在网络还可以增加多少台主机",
+    "options_a": {
+      "A": "13",
+      "B": "14",
+      "C": "15",
+      "D": "12"
+    },
+    "options_b": {
+      "A": "12",
+      "B": "15",
+      "C": "13",
+      "D": "14"
+    }
+  },
+  {
+    "a": 24,
+    "b": 267,
+    "stem_similarity": 0.99,
+    "option_similarity": 0.88,
+    "stem_a": "现需要实现一个python自动化脚本Telnet到设备上查看设备运行配置。以下说法错误的是",
+    "stem_b": "现在需要实现一个python自动化脚本Telnet到设备上查看设备运行配置,以下说法错误的是",
+    "options_a": {
+      "A": "可以使用telnet.write(b“display current-confi guration \\n”)向设备输入查看当前配置的命令",
+      "B": "使用telnet。Telnet(host)连接到Telnet服务器",
+      "C": "telnet.close()用在每一次输入命令后,作用是用户等待交换机回显信息",
+      "D": "Telnetlib 可以实现这个功能"
+    },
+    "options_b": {
+      "A": "telnetlib可以实现这个功能",
+      "B": "使用telnet。Telnet(host)连接Telnet服务器",
+      "C": "可以使用telnet.weite(b\\)向设备输入查看当前配置的命令",
+      "D": "telnet。close()用在每一次输入命令后,作用是用户等待交换机回显信息"
+    }
+  },
+  {
+    "a": 158,
+    "b": 268,
+    "stem_similarity": 0.99,
+    "option_similarity": 1.0,
+    "stem_a": "一台Windows主机初次启动,如果采用DHCP的方式获取IP地址,那么主机发送的第一个数据包的源ip地址是",
+    "stem_b": "一台Windows主机初次启动,如果采用DHCP的方式获取ip地址,那么此主机发送的第一个数据包的源IP地址是",
+    "options_a": {
+      "A": "255.255.255.255",
+      "B": "0.0.0.0",
+      "C": "127.0.0.1",
+      "D": "169.254.2.33"
+    },
+    "options_b": {
+      "A": "127.0.0.1",
+      "B": "169.254.2.33",
+      "C": "0.0.0.0",
+      "D": "255.255.255.255"
+    }
+  },
+  {
+    "a": 141,
+    "b": 281,
+    "stem_similarity": 0.9,
+    "option_similarity": 1.0,
+    "stem_a": "当主机经常移动位置时,使用哪种vlan划分方式最合适",
+    "stem_b": "主机经常移动文职时,使用哪种vlan划分方式最合适",
+    "options_a": {
+      "A": "基于端口划分",
+      "B": "基于IP子网划分",
+      "C": "基于MAC地址划分",
+      "D": "基于策略划分"
+    },
+    "options_b": {
+      "A": "基于MAC地址划分",
+      "B": "基于端口划分",
+      "C": "基于ip子网划分",
+      "D": "基于策略划分"
+    }
+  },
+  {
+    "a": 290,
+    "b": 363,
+    "stem_similarity": 0.94,
+    "option_similarity": 0.98,
+    "stem_a": "为检测CAPWAP隧道的连通状态,在CAPWAP隧道建立之后AC使用以下哪些CAPWAP报文进行探测",
+    "stem_b": "为检测CAPWAP隧道的连通状态,在CAWAP隧道建立后AC使用哪些CAPWAP报文进行检测",
+    "options_a": {
+      "A": "DPD",
+      "B": "Hello",
+      "C": "Echo",
+      "D": "Keepalive"
+    },
+    "options_b": {
+      "A": "keeplive",
+      "B": "DPD",
+      "C": "Echo",
+      "D": "Hello"
+    }
+  },
+  {
+    "a": 357,
+    "b": 373,
+    "stem_similarity": 1.0,
+    "option_similarity": 0.98,
+    "stem_a": "以下关于无线设备描述正确的是",
+    "stem_b": "以下关于无线设备描述正确的是",
+    "options_a": {
+      "A": "无线设备没有线接口",
+      "B": "FAT AP一般与无线控制器配合工作",
+      "C": "FIT AP一般独立完成用户接入认证业务转发",
+      "D": "无线控制器AC一般位于整个网络的汇聚层提供高速、安全、可靠的wlan业务"
+    },
+    "options_b": {
+      "A": "FAT AP一般与无线控制器配合工作",
+      "B": "无线设备没有有线接口",
+      "C": "FIA AP一般独立完成用户接入认证业务转发",
+      "D": "无线控制器AC一般位于整个网络的汇聚层,提供高速、安全、可靠的wlan业务"
+    }
+  },
+  {
+    "a": 375,
+    "b": 398,
+    "stem_similarity": 0.96,
+    "option_similarity": 0.98,
+    "stem_a": "哪些wlan策略支持open方式的链路认证方式",
+    "stem_b": "哪些wlan安全策略支持open方式的链路认证方式",
+    "options_a": {
+      "A": "WPA2-802.1x",
+      "B": "WPA",
+      "C": "WPA2-PSK",
+      "D": "WEP"
+    },
+    "options_b": {
+      "A": "WPA28021",
+      "B": "WPA",
+      "C": "WPA2-PSK",
+      "D": "WEP"
+    }
+  },
+  {
+    "a": 363,
+    "b": 402,
+    "stem_similarity": 0.94,
+    "option_similarity": 0.98,
+    "stem_a": "为检测CAPWAP隧道的连通状态,在CAWAP隧道建立后AC使用哪些CAPWAP报文进行检测",
+    "stem_b": "为检测CAPWAP隧道的连通状态,在CAPWAP隧道建立之后AC使用以下哪些CAPWAP报文进行探测",
+    "options_a": {
+      "A": "keeplive",
+      "B": "DPD",
+      "C": "Echo",
+      "D": "Hello"
+    },
+    "options_b": {
+      "A": "keepalive",
+      "B": "echo",
+      "C": "DPD",
+      "D": "Hello"
+    }
+  },
+  {
+    "a": 286,
+    "b": 409,
+    "stem_similarity": 0.97,
+    "option_similarity": 1.0,
+    "stem_a": "链路聚合的LACP模式采用LACPDU选举主动端,LACPDU中的哪些信息是选举LACP主动端的依据",
+    "stem_b": "链路聚合的LACP模式采用LACPDU选举主动端,LACPDU中的哪些信息是LACP主动端的依据是",
+    "options_a": {
+      "A": "接口编号",
+      "B": "MAC地址",
+      "C": "设备优先级",
+      "D": "接口优先级"
+    },
+    "options_b": {
+      "A": "接口编号",
+      "B": "接口优先级",
+      "C": "设备优先级",
+      "D": "MAC地址"
+    }
+  },
+  {
+    "a": 287,
+    "b": 410,
+    "stem_similarity": 0.98,
+    "option_similarity": 0.97,
+    "stem_a": "在交换机上,哪些vlan可以通过使用undo命令来对其他进行删除",
+    "stem_b": "在交换机上,哪些vlan可以通过使用undo命令来对其进行删除",
+    "options_a": {
+      "A": "vlan 1024",
+      "B": "vlan 2",
+      "C": "vlan4094",
+      "D": "vlan 1"
+    },
+    "options_b": {
+      "A": "vlan 1",
+      "B": "vlan 2",
+      "C": "vlan 1024",
+      "D": "vlan 4096"
+    }
+  },
+  {
+    "a": 283,
+    "b": 419,
+    "stem_similarity": 0.97,
+    "option_similarity": 1.0,
+    "stem_a": "vrp支持通过哪种方式对路由器进行配置",
+    "stem_b": "VRP支持通过哪几种方式对路由器进行配置",
+    "options_a": {
+      "A": "通过ftp对路由器进行配置",
+      "B": "通过telnet对路由器进行配置",
+      "C": "通过console口对路由器进行配置",
+      "D": "通过mini USB口对路由器进行配置"
+    },
+    "options_b": {
+      "A": "通过telnet对路由器进行配置",
+      "B": "通过Console口对路由器进行配置",
+      "C": "通过FTP对路由器进行配置",
+      "D": "通过miniUSB口对路由器进行配置"
+    }
+  },
+  {
+    "a": 343,
+    "b": 423,
+    "stem_similarity": 0.91,
+    "option_similarity": 0.98,
+    "stem_a": "STP端口在下列哪种状态之间转化时存在Froward Delay",
+    "stem_b": "stp端口在下列哪种状态之间相互转换时存在forward delay",
+    "options_a": {
+      "A": "Frowarding-Disabled",
+      "B": "Lea ing-Frowarding",
+      "C": "Disabled-Blocking",
+      "D": "Blocking-Listening",
+      "E": "Listening-Lea ing"
+    },
+    "options_b": {
+      "A": "blocking listening",
+      "B": "listening lea ing",
+      "C": "lea ing forwarding",
+      "D": "disabled blocking",
+      "E": "forwarding disabled"
+    }
+  },
+  {
+    "a": 406,
+    "b": 430,
+    "stem_similarity": 0.87,
+    "option_similarity": 0.98,
+    "stem_a": "以下哪些IEEE802.11标准支持工作在5GHz频段",
+    "stem_b": "以下哪些IEEE 802.11标准支持工作在2.4GHz两个字段",
+    "options_a": {
+      "A": "802.11n",
+      "B": "802.11ax",
+      "C": "802.11a",
+      "D": "802.11g"
+    },
+    "options_b": {
+      "A": "802.11g",
+      "B": "802.11n",
+      "C": "802.11ax",
+      "D": "802.11ac"
+    }
+  },
+  {
+    "a": 340,
+    "b": 434,
+    "stem_similarity": 0.97,
+    "option_similarity": 0.96,
+    "stem_a": "下列关于缺省路由说法正确的是",
+    "stem_b": "下列关于缺省路由的说法正确的是",
+    "options_a": {
+      "A": "如果报文的目的地址不能与路由表的其他任何路由条目匹配,那么路由器将根据缺省路由转发报文",
+      "B": "缺省路由只能由管理员手工配置",
+      "C": "任何一台路由器的路由表中必须存在缺省路由",
+      "D": "在路由表中,缺省路由以到网络0.0.0.0(子网掩码为0.0.0.0)的路由形式出现"
+    },
+    "options_b": {
+      "A": "如果报文的目的地址不能与路由表的其他任何路由条目匹配,那么路由器将会根据缺省路由转发该报文",
+      "B": "在路由表中,缺省路由以到网络0.0.0.0(掩码也为0.0.0.0)的路由形式出现",
+      "C": "任何将一台路由器的路由表中必须存在缺省路由",
+      "D": "缺省路由只能有管理员手工配置"
+    }
+  },
+  {
+    "a": 384,
+    "b": 438,
+    "stem_similarity": 0.88,
+    "option_similarity": 1.0,
+    "stem_a": "ospf协议支持以下哪些协议类型",
+    "stem_b": "ospf协议支持以下哪些网络类型",
+    "options_a": {
+      "A": "点到多点",
+      "B": "点到点类型",
+      "C": "广播类型",
+      "D": "NBMA"
+    },
+    "options_b": {
+      "A": "广播类型",
+      "B": "点到多点",
+      "C": "点到点类型",
+      "D": "NBMA"
+    }
+  },
+  {
+    "a": 295,
+    "b": 444,
+    "stem_similarity": 0.94,
+    "option_similarity": 0.97,
+    "stem_a": "下列关于ospf区域描述正确的是",
+    "stem_b": "下面关于ospf区域描述正确的是",
+    "options_a": {
+      "A": "在配置ospf区域正确必须给路由器的loopback接口配置IP地址",
+      "B": "所有的网络都应在区域0中宣告",
+      "C": "骨干区域的编号不能为2",
+      "D": "区域的编号范围是从0.0.0.0到255.255.255.255"
+    },
+    "options_b": {
+      "A": "所有的网络都应在区域0中宣告",
+      "B": "在配置ospf区域之前必须给路由器的loopback接口配置IP地址",
+      "C": "区域的编号范围是0.0.0.0到255.255.255.255",
+      "D": "骨干区域的编号不能为2"
+    }
+  },
+  {
+    "a": 306,
+    "b": 448,
+    "stem_similarity": 0.97,
+    "option_similarity": 0.98,
+    "stem_a": "在华为设备中,ospf选举riouter id的方法可以是下列哪种",
+    "stem_b": "在华为设备中,ospf选举router id方法可以是下列哪种",
+    "options_a": {
+      "A": "如果未配置loopback接口,则在其他接口的IP地址中选取最大的IP地址作为Router ID",
+      "B": "华为交换机可能使用最大的vlanif的IP地址作为router ID",
+      "C": "如果配置了loopback接口,则从loopback接口的IP地址中选择最大的ip地址作为router ID",
+      "D": "通过手工定义一个任意的合法router ID",
+      "E": "使用默认的127.0.0.1"
+    },
+    "options_b": {
+      "A": "使用默认的127.0.0.1",
+      "B": "如果未配置lookback接口,则在其他接口的ip地址选举最大的IP地址作为ROUTER id",
+      "C": "如果配置了loopback接口,则从loopback接口的IP地址中选择最大的IP地址作为router id",
+      "D": "华为交换机可能使用最大的vlanif的IP地址作为router id",
+      "E": "通过手工定义一个任意的合法的router id"
+    }
+  },
+  {
+    "a": 326,
+    "b": 448,
+    "stem_similarity": 0.97,
+    "option_similarity": 0.98,
+    "stem_a": "在华为设备中,ospf选举riouter id的方法可以是下列哪种",
+    "stem_b": "在华为设备中,ospf选举router id方法可以是下列哪种",
+    "options_a": {
+      "A": "如果未配置loopback接口,则在其他接口的IP地址中选取最大的IP地址作为Router ID",
+      "B": "华为交换机可能使用最大的vlanif的IP地址作为router ID",
+      "C": "如果配置了loopback接口,则从loopback接口的IP地址中选择最大的ip地址作为router ID",
+      "D": "通过手工定义一个任意的合法router ID",
+      "E": "使用默认的127.0.0.1"
+    },
+    "options_b": {
+      "A": "使用默认的127.0.0.1",
+      "B": "如果未配置lookback接口,则在其他接口的ip地址选举最大的IP地址作为ROUTER id",
+      "C": "如果配置了loopback接口,则从loopback接口的IP地址中选择最大的IP地址作为router id",
+      "D": "华为交换机可能使用最大的vlanif的IP地址作为router id",
+      "E": "通过手工定义一个任意的合法的router id"
+    }
+  },
+  {
+    "a": 314,
+    "b": 461,
+    "stem_similarity": 1.0,
+    "option_similarity": 0.91,
+    "stem_a": "ip route-static 10.0.2.2 255.255.255.255 10.0.12.2 preference 20,关于此命令说法正确的是",
+    "stem_b": "IP route-static 10.0.2.2 255.255.255.255 10.0.12.2 preference 20,关于此命令说法正确的是",
+    "options_a": {
+      "A": "该优先级为20",
+      "B": "该路由可以指导目的IP地址为10.0.2.2的数据报转发",
+      "C": "该路由可以指导目的ip地址为10.0.12.2的数据zhuanfa",
+      "D": "该路由的NextHop为10.0.12.2"
+    },
+    "options_b": {
+      "A": "该路由的NextHop为10.0.12.2",
+      "B": "该路由优先级为20",
+      "C": "该路由可以指导目的IP地址为10.0.2.2的数据包转发",
+      "D": "该路由可以指导目的ip地址为10.0.12.2的数据包转发"
+    }
+  },
+  {
+    "a": 334,
+    "b": 461,
+    "stem_similarity": 1.0,
+    "option_similarity": 0.91,
+    "stem_a": "ip route-static 10.0.2.2 255.255.255.255 10.0.12.2 preference 20,关于此命令说法正确的是",
+    "stem_b": "IP route-static 10.0.2.2 255.255.255.255 10.0.12.2 preference 20,关于此命令说法正确的是",
+    "options_a": {
+      "A": "该优先级为20",
+      "B": "该路由可以指导目的IP地址为10.0.2.2的数据报转发",
+      "C": "该路由可以指导目的ip地址为10.0.12.2的数据zhuanfa",
+      "D": "该路由的NextHop为10.0.12.2"
+    },
+    "options_b": {
+      "A": "该路由的NextHop为10.0.12.2",
+      "B": "该路由优先级为20",
+      "C": "该路由可以指导目的IP地址为10.0.2.2的数据包转发",
+      "D": "该路由可以指导目的ip地址为10.0.12.2的数据包转发"
+    }
+  },
+  {
+    "a": 482,
+    "b": 483,
+    "stem_similarity": 1.0,
+    "option_similarity": 0.91,
+    "stem_a": "关于MPLS转发流程中,Ingress节点转发的描述正确的是",
+    "stem_b": "关于MPLS转发流程中,ingress节点转发的描述正确的是",
+    "options_a": {
+      "A": "ingress节点收到数据包后回收先查看ILM表,查看tunnel ID",
+      "B": "根据ILM表的tunnel id找到对应的NHLFE表项将LFHB和NHLFE表项关联起来",
+      "C": "查看NHLFE表项,可以得到出接口、下一跳、出标签和标签操作类型,标签操作类型为push",
+      "D": "在P分组报文中压入获得的标签并根据Qos策略处理EXP,同时处理TTL,然后将封装好的MPLS分组报文发送给下一跳"
+    },
+    "options_b": {
+      "A": "ingress 节点收到数据包回收先查看ILM表,查找TunnelID",
+      "B": "查看ILM表项可以得到出接口、下一跳、出标签和标签操作类型为push",
+      "C": "根据ILM表项的Tunnel ID找到对应的NHLFE表项关联起来",
+      "D": "在IP分组报文中压入获得的标签,并根据Qos策略处理EXP。同时处理TTL,然后将封装好的MPLS分组报文发送给下一跳"
+    }
+  },
+  {
+    "a": 300,
+    "b": 498,
+    "stem_similarity": 0.9,
+    "option_similarity": 0.98,
+    "stem_a": "路由器radius信息配置如下,下列说法正确的是 Radius-server template Huawei Radius-server shared-key cipher Huawei Radius-server authenrication 200.0.12.1 1812 Radius-server accounting 200.0.12.1 1813 Radius-attribute nas-ip 200.0.12.2",
+    "stem_b": "路由器radius信息配置如图,下列说法正确的是#radius-server template Huawei radius-server shared.key cipher Huawei radius-server authentication 200.0.12.1 1812 radius-server accounding 200.0.12.1 1813#*",
+    "options_a": {
+      "A": "路由器发送radius报文源ip地址为200.0.12.1",
+      "B": "授权服务器的IP地址为200.0.12.1",
+      "C": "认证服务器的IP地址为200.0.12.1",
+      "D": "计费服务器的IP地址为200.0.12.1"
+    },
+    "options_b": {
+      "A": "路由器发送radius报文的源IP地址为200.0.12.2",
+      "B": "计费服务器的ip地址为200.0.12.1",
+      "C": "授权服务器的IP地址为200.0.12.1",
+      "D": "认证服务器的IP地址为200.0.12.1"
+    }
+  },
+  {
+    "a": 320,
+    "b": 498,
+    "stem_similarity": 0.9,
+    "option_similarity": 0.98,
+    "stem_a": "路由器radius信息配置如下,下列说法正确的是 Radius-server template Huawei Radius-server shared-key cipher Huawei Radius-server authenrication 200.0.12.1 1812 Radius-server accounting 200.0.12.1 1813 Radius-attribute nas-ip 200.0.12.2",
+    "stem_b": "路由器radius信息配置如图,下列说法正确的是#radius-server template Huawei radius-server shared.key cipher Huawei radius-server authentication 200.0.12.1 1812 radius-server accounding 200.0.12.1 1813#*",
+    "options_a": {
+      "A": "路由器发送radius报文源ip地址为200.0.12.1",
+      "B": "授权服务器的IP地址为200.0.12.1",
+      "C": "认证服务器的IP地址为200.0.12.1",
+      "D": "计费服务器的IP地址为200.0.12.1"
+    },
+    "options_b": {
+      "A": "路由器发送radius报文的源IP地址为200.0.12.2",
+      "B": "计费服务器的ip地址为200.0.12.1",
+      "C": "授权服务器的IP地址为200.0.12.1",
+      "D": "认证服务器的IP地址为200.0.12.1"
+    }
+  },
+  {
+    "a": 311,
+    "b": 499,
+    "stem_similarity": 0.98,
+    "option_similarity": 1.0,
+    "stem_a": "某个私有网络内有主机需要访问inte et,为实现此需求,管理员应该在该网络的边缘路由器上做出如下哪些配置",
+    "stem_b": "某个私有网络内有主机需要访问inte et,为实现此需求,管理员应该在该网络的边缘路由器是做出如下哪些配置",
+    "options_a": {
+      "A": "默认路由",
+      "B": "NAT",
+      "C": "STP",
+      "D": "DHCP"
+    },
+    "options_b": {
+      "A": "默认路由",
+      "B": "STP",
+      "C": "DHCP",
+      "D": "NAT"
+    }
+  },
+  {
+    "a": 331,
+    "b": 499,
+    "stem_similarity": 0.98,
+    "option_similarity": 1.0,
+    "stem_a": "某个私有网络内有主机需要访问inte et,为实现此需求,管理员应该在该网络的边缘路由器上做出如下哪些配置",
+    "stem_b": "某个私有网络内有主机需要访问inte et,为实现此需求,管理员应该在该网络的边缘路由器是做出如下哪些配置",
+    "options_a": {
+      "A": "默认路由",
+      "B": "NAT",
+      "C": "STP",
+      "D": "DHCP"
+    },
+    "options_b": {
+      "A": "默认路由",
+      "B": "STP",
+      "C": "DHCP",
+      "D": "NAT"
+    }
+  },
+  {
+    "a": 316,
+    "b": 500,
+    "stem_similarity": 0.97,
+    "option_similarity": 1.0,
+    "stem_a": "目前,公司有一个网络管理员,公司网络中的AR2200通过telnet直接输入密码后就可以实现远程管理。新来了两个网络管理员后,公司希望给所有的管理员分配各自的用户和密码,以及不同权限等级,那么应该如何操作",
+    "stem_b": "目前,公司有一个网络管理员,公司网络中的AR2200通过telnet直接输入密码后就实现远程管理,新来了两个网络管理员后,公司希望给所有管理员分配各自的用户名和密码,以及不同的权限等级,那么应该如何操作",
+    "options_a": {
+      "A": "在配置每个管理员的账户时,需要配置不同的权限级别",
+      "B": "telnet配置的用户认证模式必须选择AAA模式",
+      "C": "在AAA视图下配置三个用户名和各自对应的密码",
+      "D": "每个管理员在运行telnet命令时,使用设备的不同公网ip地址"
+    },
+    "options_b": {
+      "A": "每个管理员在运行telnet命令时,使用设备的不同公网IP地址",
+      "B": "telnet配置的用户认证模式必须选择AAA模式",
+      "C": "在配置每个管理员的账户时,需要配置不同的权限级别",
+      "D": "在AAA视图下配置三个用户名和各自对应的密码"
+    }
+  },
+  {
+    "a": 336,
+    "b": 500,
+    "stem_similarity": 0.97,
+    "option_similarity": 1.0,
+    "stem_a": "目前,公司有一个网络管理员,公司网络中的AR2200通过telnet直接输入密码后就可以实现远程管理。新来了两个网络管理员后,公司希望给所有的管理员分配各自的用户和密码,以及不同权限等级,那么应该如何操作",
+    "stem_b": "目前,公司有一个网络管理员,公司网络中的AR2200通过telnet直接输入密码后就实现远程管理,新来了两个网络管理员后,公司希望给所有管理员分配各自的用户名和密码,以及不同的权限等级,那么应该如何操作",
+    "options_a": {
+      "A": "在配置每个管理员的账户时,需要配置不同的权限级别",
+      "B": "telnet配置的用户认证模式必须选择AAA模式",
+      "C": "在AAA视图下配置三个用户名和各自对应的密码",
+      "D": "每个管理员在运行telnet命令时,使用设备的不同公网ip地址"
+    },
+    "options_b": {
+      "A": "每个管理员在运行telnet命令时,使用设备的不同公网IP地址",
+      "B": "telnet配置的用户认证模式必须选择AAA模式",
+      "C": "在配置每个管理员的账户时,需要配置不同的权限级别",
+      "D": "在AAA视图下配置三个用户名和各自对应的密码"
+    }
+  },
+  {
+    "a": 304,
+    "b": 510,
+    "stem_similarity": 0.97,
+    "option_similarity": 0.96,
+    "stem_a": "以下关于IPv6地址配置说法正确的是",
+    "stem_b": "以下关于ipv6地址配置的说法正确的是",
+    "options_a": {
+      "A": "ipv6支持无状态主动配置",
+      "B": "ipv6地址只能手工配置",
+      "C": "ipv6地址支持多种方式主动配置",
+      "D": "ipv6支持DHCPV6的形式进行地址配置"
+    },
+    "options_b": {
+      "A": "ipv6支持无状态主动配置",
+      "B": "ipv6地址支持多种方式的自动配置",
+      "C": "ipv6支持DHCPV6的形状进行地址配置",
+      "D": "ipv6地址只能手工配置"
+    }
+  },
+  {
+    "a": 324,
+    "b": 510,
+    "stem_similarity": 0.97,
+    "option_similarity": 0.96,
+    "stem_a": "以下关于IPv6地址配置说法正确的是",
+    "stem_b": "以下关于ipv6地址配置的说法正确的是",
+    "options_a": {
+      "A": "ipv6支持无状态主动配置",
+      "B": "ipv6地址只能手工配置",
+      "C": "ipv6地址支持多种方式主动配置",
+      "D": "ipv6支持DHCPV6的形式进行地址配置"
+    },
+    "options_b": {
+      "A": "ipv6支持无状态主动配置",
+      "B": "ipv6地址支持多种方式的自动配置",
+      "C": "ipv6支持DHCPV6的形状进行地址配置",
+      "D": "ipv6地址只能手工配置"
+    }
+  },
+  {
+    "a": 307,
+    "b": 519,
+    "stem_similarity": 1.0,
+    "option_similarity": 0.97,
+    "stem_a": "在ospf协议中,下面对DR的描述正确的是",
+    "stem_b": "在ospf协议中,下面对DR的描述正确的是",
+    "options_a": {
+      "A": "若两台路由器的优先级相等,则选择router ID 的路由器作为DR",
+      "B": "DR和BDR之间也要建立邻居关系",
+      "C": "默认情况下,本广播网络中所有的路由器都将参与DR选举",
+      "D": "若两台路由器的优先级值不同,则选择优先级值较小的路由器作为DR"
+    },
+    "options_b": {
+      "A": "DR与DR之间要建立邻接关系",
+      "B": "若两台路由器的优先级值相等,则选择Router ID的路由器作为DR",
+      "C": "默认情况下,本广播网络中所有的路由器都将参与DR选举",
+      "D": "若两台路由器的优先级值不同,则选择优先级值较小的路由器作为DR"
+    }
+  },
+  {
+    "a": 327,
+    "b": 519,
+    "stem_similarity": 1.0,
+    "option_similarity": 0.97,
+    "stem_a": "在ospf协议中,下面对DR的描述正确的是",
+    "stem_b": "在ospf协议中,下面对DR的描述正确的是",
+    "options_a": {
+      "A": "若两台路由器的优先级相等,则选择router ID 的路由器作为DR",
+      "B": "DR和BDR之间也要建立邻居关系",
+      "C": "默认情况下,本广播网络中所有的路由器都将参与DR选举",
+      "D": "若两台路由器的优先级值不同,则选择优先级值较小的路由器作为DR"
+    },
+    "options_b": {
+      "A": "DR与DR之间要建立邻接关系",
+      "B": "若两台路由器的优先级值相等,则选择Router ID的路由器作为DR",
+      "C": "默认情况下,本广播网络中所有的路由器都将参与DR选举",
+      "D": "若两台路由器的优先级值不同,则选择优先级值较小的路由器作为DR"
+    }
+  },
+  {
+    "a": 539,
+    "b": 630,
+    "stem_similarity": 0.99,
+    "option_similarity": 1.0,
+    "stem_a": "telnetlib中telnet readveryeager()的作用是非阻塞的读取数据,通常需要和time模块一起使用",
+    "stem_b": "telnetlib中telnet readveryeagerc的作用是非阻塞的读取数据,通常需要和time模块一起使用",
+    "options_a": {
+      "A": "正确",
+      "B": "错误"
+    },
+    "options_b": {
+      "A": "正确",
+      "B": "错误"
+    }
+  },
+  {
+    "a": 545,
+    "b": 631,
+    "stem_similarity": 0.97,
+    "option_similarity": 1.0,
+    "stem_a": "只有WPA2-PSK的安全策略才支持使用TKIP进行数据加密",
+    "stem_b": "只有wpai-psk的安全策略才支持使用tkip进行数据加密",
+    "options_a": {
+      "A": "正确",
+      "B": "错误"
+    },
+    "options_b": {
+      "A": "正确",
+      "B": "错误"
+    }
+  },
+  {
+    "a": 529,
+    "b": 633,
+    "stem_similarity": 0.9,
+    "option_similarity": 1.0,
+    "stem_a": "IEEE 802.1lac标准只支持5GHz频段",
+    "stem_b": "IEEE802.11ac只支持5GHz频段",
+    "options_a": {
+      "A": "正确",
+      "B": "错误"
+    },
+    "options_b": {
+      "A": "正确",
+      "B": "错误"
+    }
+  },
+  {
+    "a": 579,
+    "b": 634,
+    "stem_similarity": 0.93,
+    "option_similarity": 1.0,
+    "stem_a": "广播地址是网络地址中主机全部部署为1的一种特殊地址,它也可以做为主机地址使用",
+    "stem_b": "广播地址是网络地址主机位全部部署1的一种特殊地址,它也可以作为主机地址使用",
+    "options_a": {
+      "A": "正确",
+      "B": "错误"
+    },
+    "options_b": {
+      "A": "正确",
+      "B": "错误"
+    }
+  },
+  {
+    "a": 606,
+    "b": 637,
+    "stem_similarity": 0.91,
+    "option_similarity": 1.0,
+    "stem_a": "AP的一个射频上只能绑定 一个SSID",
+    "stem_b": "AP一个射频口只能绑定一个ssid",
+    "options_a": {
+      "A": "正确",
+      "B": "错误"
+    },
+    "options_b": {
+      "A": "正确",
+      "B": "错误"
+    }
+  },
+  {
+    "a": 583,
+    "b": 638,
+    "stem_similarity": 0.92,
+    "option_similarity": 1.0,
+    "stem_a": "config模式时华为设备上缺省的ACL匹配顺序",
+    "stem_b": "config模式是华为设备上缺省的acl配置顺序",
+    "options_a": {
+      "A": "正确",
+      "B": "错误"
+    },
+    "options_b": {
+      "A": "正确",
+      "B": "错误"
+    }
+  },
+  {
+    "a": 594,
+    "b": 640,
+    "stem_similarity": 0.86,
+    "option_similarity": 1.0,
+    "stem_a": "FIT AP上线的过程中一定会从AC下载软件版本",
+    "stem_b": "FIT上线过程中一定会在AC上下载软件版本",
+    "options_a": {
+      "A": "正确",
+      "B": "错误"
+    },
+    "options_b": {
+      "A": "正确",
+      "B": "错误"
+    }
+  },
+  {
+    "a": 547,
+    "b": 653,
+    "stem_similarity": 0.97,
+    "option_similarity": 1.0,
+    "stem_a": "NMPV1定义了5种协议操作",
+    "stem_b": "SNMPV1定义了5种协议操作",
+    "options_a": {
+      "A": "正确",
+      "B": "错误"
+    },
+    "options_b": {
+      "A": "正确",
+      "B": "错误"
+    }
+  },
+  {
+    "a": 548,
+    "b": 653,
+    "stem_similarity": 0.97,
+    "option_similarity": 1.0,
+    "stem_a": "NMPV1定义了5种协议操作",
+    "stem_b": "SNMPV1定义了5种协议操作",
+    "options_a": {
+      "A": "正确",
+      "B": "错误"
+    },
+    "options_b": {
+      "A": "正确",
+      "B": "错误"
+    }
+  },
+  {
+    "a": 529,
+    "b": 663,
+    "stem_similarity": 0.95,
+    "option_similarity": 1.0,
+    "stem_a": "IEEE 802.1lac标准只支持5GHz频段",
+    "stem_b": "IEEE802.11ac标准只支持5GHz频段",
+    "options_a": {
+      "A": "正确",
+      "B": "错误"
+    },
+    "options_b": {
+      "A": "正确",
+      "B": "错误"
+    }
+  },
+  {
+    "a": 633,
+    "b": 663,
+    "stem_similarity": 0.95,
+    "option_similarity": 1.0,
+    "stem_a": "IEEE802.11ac只支持5GHz频段",
+    "stem_b": "IEEE802.11ac标准只支持5GHz频段",
+    "options_a": {
+      "A": "正确",
+      "B": "错误"
+    },
+    "options_b": {
+      "A": "正确",
+      "B": "错误"
+    }
+  },
+  {
+    "a": 591,
+    "b": 665,
+    "stem_similarity": 0.95,
+    "option_similarity": 1.0,
+    "stem_a": "NFV(network functional virtualization),网络功能虚拟化,实现了以软件化的方式部署网络应用",
+    "stem_b": "NFV(network functional virtualization),网络功能虚拟化实现了已特殊化的方式部署网络应用",
+    "options_a": {
+      "A": "正确",
+      "B": "错误"
+    },
+    "options_b": {
+      "A": "正确",
+      "B": "错误"
+    }
+  },
+  {
+    "a": 644,
+    "b": 669,
+    "stem_similarity": 0.97,
+    "option_similarity": 1.0,
+    "stem_a": "当两台ospf路由器形成2-way的邻居关系时,LSDB已完成同步",
+    "stem_b": "当两台ospf路由器形成2-way邻居关系时,LSDB已经完成同步",
+    "options_a": {
+      "A": "正确",
+      "B": "错误"
+    },
+    "options_b": {
+      "A": "正确",
+      "B": "错误"
+    }
+  },
+  {
+    "a": 740,
+    "b": 765,
+    "stem_similarity": 0.98,
+    "option_similarity": 1.0,
+    "stem_a": "IGP路由要想成为BGP路由,只能通过network命令",
+    "stem_b": "IGP路由想成为BGP路由,只能通过network命令",
+    "options_a": {
+      "A": "正确",
+      "B": "错误"
+    },
+    "options_b": {
+      "A": "正确",
+      "B": "错误"
+    }
+  },
+  {
+    "a": 694,
+    "b": 766,
+    "stem_similarity": 0.98,
+    "option_similarity": 1.0,
+    "stem_a": "import-route linit命令不能够限制一个OSPF进程内可引入的最大外部路由数量",
+    "stem_b": "import route linit命令不能限制一个ospf进程内可以引入的最大外部路由数量",
+    "options_a": {
+      "A": "正确",
+      "B": "错误"
+    },
+    "options_b": {
+      "A": "正确",
+      "B": "错误"
+    }
+  },
+  {
+    "a": 743,
+    "b": 767,
+    "stem_similarity": 0.95,
+    "option_similarity": 1.0,
+    "stem_a": "ospf支持多进程,在同一台路由器上可以运行多个不同的ospf进程,?之间相互不影响,彼此独立,不同ospf进程之间的路由交互相当于不同路由协议之间的路由交互",
+    "stem_b": "ospf支持多种进程,在同一台路由器上可以运行多个不同的ospf进程,它们之间相互部影响,彼此独立,不同ospf进程之间的路由交互相当于路由协议之间的路由交互",
+    "options_a": {
+      "A": "正确",
+      "B": "错误"
+    },
+    "options_b": {
+      "A": "正确",
+      "B": "错误"
+    }
+  },
+  {
+    "a": 564,
+    "b": 770,
+    "stem_similarity": 0.98,
+    "option_similarity": 1.0,
+    "stem_a": "RSTP中处于discarding状态下的端口,虽然会对接收到的数据帧丢弃处理,但是可以根据该端口收到的数据帧维护MAC地址表",
+    "stem_b": "RSTP中处于discarding状态下的端口,虽然会对接收到的数据帧做丢弃处理,但是可以根据端口收到的数据帧维护MAC地址表",
+    "options_a": {
+      "A": "正确",
+      "B": "错误"
+    },
+    "options_b": {
+      "A": "正确",
+      "B": "错误"
+    }
+  },
+  {
+    "a": 724,
+    "b": 772,
+    "stem_similarity": 0.95,
+    "option_similarity": 1.0,
+    "stem_a": "由表中路由条目的下一跳地址一定与自身直接连接口的地址在同一网段",
+    "stem_b": "路由表中路由条目的下一跳地址一定会与自身直连接口的地址在同一网段",
+    "options_a": {
+      "A": "正确",
+      "B": "错误"
+    },
+    "options_b": {
+      "A": "正确",
+      "B": "错误"
+    }
+  },
+  {
+    "a": 537,
+    "b": 773,
+    "stem_similarity": 0.98,
+    "option_similarity": 1.0,
+    "stem_a": "运行ospf协议的路由器所有接口必须属于同一区域",
+    "stem_b": "运行ospf协议的路由器,所有接口必须属于同一个区域",
+    "options_a": {
+      "A": "正确",
+      "B": "错误"
+    },
+    "options_b": {
+      "A": "正确",
+      "B": "错误"
+    }
+  },
+  {
+    "a": 600,
+    "b": 783,
+    "stem_similarity": 0.97,
+    "option_similarity": 1.0,
+    "stem_a": "ipv6报文的基本首部长度是固定值",
+    "stem_b": "IPV6报文基本首部长度是固定值",
+    "options_a": {
+      "A": "正确",
+      "B": "错误"
+    },
+    "options_b": {
+      "A": "正确",
+      "B": "错误"
+    }
+  }
+]

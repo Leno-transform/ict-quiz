@@ -1,0 +1,2924 @@
+[
+  {
+    "id": 529,
+    "stem": "IEEE 802.1lac标准只支持5GHz频段",
+    "options": {
+      "A": "正确",
+      "B": "错误"
+    },
+    "answer": "B",
+    "type": "judge",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 530,
+    "stem": "STA发现无线网络的方式只有通过AP对外发送的Beacon帧",
+    "options": {
+      "A": "正确",
+      "B": "错误"
+    },
+    "answer": "B",
+    "type": "judge",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 531,
+    "stem": "运行SNMP协议的网络设备可以主动上报告警信息以便网络管理员及时发现故障",
+    "options": {
+      "A": "正确",
+      "B": "错误"
+    },
+    "answer": "A",
+    "type": "judge",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 532,
+    "stem": "主机访问服务器的web服务器时,网络层protocol字段取值为6",
+    "options": {
+      "A": "正确",
+      "B": "错误"
+    },
+    "answer": "A",
+    "type": "judge",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 533,
+    "stem": "华为AR路由器的命令界面下,save命令的作用是保存当前的系统时间",
+    "options": {
+      "A": "正确",
+      "B": "错误"
+    },
+    "answer": "B",
+    "type": "judge",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 534,
+    "stem": "华为路由器中tracert诊断工具被用来跟踪数据的转发路径",
+    "options": {
+      "A": "正确",
+      "B": "错误"
+    },
+    "answer": "A",
+    "type": "judge",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 535,
+    "stem": "运行ospf协议的路由器在完成LSDB同步后才能达到FULL状态",
+    "options": {
+      "A": "正确",
+      "B": "错误"
+    },
+    "answer": "A",
+    "type": "judge",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 536,
+    "stem": "路由器所有的接口属于同一个广播域",
+    "options": {
+      "A": "正确",
+      "B": "错误"
+    },
+    "answer": "B",
+    "type": "judge",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 537,
+    "stem": "运行ospf协议的路由器所有接口必须属于同一区域",
+    "options": {
+      "A": "正确",
+      "B": "错误"
+    },
+    "answer": "B",
+    "type": "judge",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 538,
+    "stem": "动态路由协议能够自动适应网络拓扑的变化",
+    "options": {
+      "A": "正确",
+      "B": "错误"
+    },
+    "answer": "A",
+    "type": "judge",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 539,
+    "stem": "telnetlib中telnet readveryeager()的作用是非阻塞的读取数据,通常需要和time模块一起使用",
+    "options": {
+      "A": "正确",
+      "B": "错误"
+    },
+    "answer": "A",
+    "type": "judge",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 540,
+    "stem": "运行STP协议的交换机端口在任何状态下都可以直接转化为disabled状态",
+    "options": {
+      "A": "正确",
+      "B": "错误"
+    },
+    "answer": "A",
+    "type": "judge",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 541,
+    "stem": "ipv6地址2001:ABEF:224E:FFE2:BCCO:CDOO:DDBE:8D58不能简写",
+    "options": {
+      "A": "正确",
+      "B": "错误"
+    },
+    "answer": "A",
+    "type": "judge",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 542,
+    "stem": "二层交换机属于数据链路层设备,可以识别数据帧中的mac地址信息,根据mac地址转发数据,并且将这些mac地址与对应的端口信息记录在自己的mac地址表中",
+    "options": {
+      "A": "正确",
+      "B": "错误"
+    },
+    "answer": "A",
+    "type": "judge",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 543,
+    "stem": "如果配置的ACL规则存在包含关系,应注意严格条件的规则编号需要排序靠前,宽松条件的规则编号需要排序靠后,避免报文因命中宽松条件的规则而停止往下继续匹配,从而使其无法命中严格条件的规则",
+    "options": {
+      "A": "正确",
+      "B": "错误"
+    },
+    "answer": "A",
+    "type": "judge",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 544,
+    "stem": "如果报文匹配ACL的结果是“拒绝”,该报文最终被丢弃",
+    "options": {
+      "A": "正确",
+      "B": "错误"
+    },
+    "answer": "B",
+    "type": "judge",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 545,
+    "stem": "只有WPA2-PSK的安全策略才支持使用TKIP进行数据加密",
+    "options": {
+      "A": "正确",
+      "B": "错误"
+    },
+    "answer": "B",
+    "type": "judge",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 546,
+    "stem": "CAPWAP的控制隧道和数据隧道传输采用的端口号一致",
+    "options": {
+      "A": "正确",
+      "B": "错误"
+    },
+    "answer": "B",
+    "type": "judge",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 547,
+    "stem": "NMPV1定义了5种协议操作",
+    "options": {
+      "A": "正确",
+      "B": "错误"
+    },
+    "answer": "A",
+    "type": "judge",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 548,
+    "stem": "NMPV1定义了5种协议操作",
+    "options": {
+      "A": "正确",
+      "B": "错误"
+    },
+    "answer": "A",
+    "type": "judge",
+    "initial_exclusion_reasons": [
+      "与原题 547 重复"
+    ]
+  },
+  {
+    "id": 549,
+    "stem": "管理信息库MIB(management information base)是一个虚拟的数据库,这个数据库只存在于NMS上",
+    "options": {
+      "A": "正确",
+      "B": "错误"
+    },
+    "answer": "B",
+    "type": "judge",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 550,
+    "stem": "telnetlib 中telnet read all( )的作用时读取所有数据直到EOF,如果回显没有返回EOF则会一致阻塞",
+    "options": {
+      "A": "正确",
+      "B": "错误"
+    },
+    "answer": "B",
+    "type": "judge",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 551,
+    "stem": "ARP协议能够根据目的IP地址解析目标设备mac地址,从而实现mac地址与ip地址的映射",
+    "options": {
+      "A": "正确",
+      "B": "错误"
+    },
+    "answer": "A",
+    "type": "judge",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 552,
+    "stem": "VRP界面下,使用startuo saved-configuration backup.cfg配置下次启动时使用Backup.cfg文件",
+    "options": {
+      "A": "正确",
+      "B": "错误"
+    },
+    "answer": "A",
+    "type": "judge",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 553,
+    "stem": "运行ospf协议的路由器先达到FULL状态,然后进行LSDB同步",
+    "options": {
+      "A": "正确",
+      "B": "错误"
+    },
+    "answer": "B",
+    "type": "judge",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 554,
+    "stem": "如果一个以太网数据帧的type/Length字段的值为0x0800,则数据帧承载的上层报文首部长度范围为20-60B",
+    "options": {
+      "A": "正确",
+      "B": "错误"
+    },
+    "answer": "A",
+    "type": "judge",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 555,
+    "stem": "同一台交换机vlanif接口的IP地址不能相同",
+    "options": {
+      "A": "正确",
+      "B": "错误"
+    },
+    "answer": "A",
+    "type": "judge",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 556,
+    "stem": "主机使用IP地址192.168.1.2访问inte et一点要经过NAT.",
+    "options": {
+      "A": "正确",
+      "B": "错误"
+    },
+    "answer": "A",
+    "type": "judge",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 557,
+    "stem": "二层ACL可以匹配源MAC、目的MAC、源ip、目的ip等信息",
+    "options": {
+      "A": "正确",
+      "B": "错误"
+    },
+    "answer": "B",
+    "type": "judge",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 558,
+    "stem": "wifi6实际是指IEEE802.11ax标准",
+    "options": {
+      "A": "正确",
+      "B": "错误"
+    },
+    "answer": "A",
+    "type": "judge",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 559,
+    "stem": "4GHz频段中的14个可用频段不存在信道重叠",
+    "options": {
+      "A": "正确",
+      "B": "错误"
+    },
+    "answer": "B",
+    "type": "judge",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 560,
+    "stem": "FIT AP可以不依赖AC独立进行工作",
+    "options": {
+      "A": "正确",
+      "B": "错误"
+    },
+    "answer": "B",
+    "type": "judge",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 561,
+    "stem": "网络管理系统通过SNMP协议只能查看设备运行状态而不能下发配置",
+    "options": {
+      "A": "正确",
+      "B": "错误"
+    },
+    "answer": "B",
+    "type": "judge",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 562,
+    "stem": "VRP系统中的登录超时时间只能在VTY接口下配置",
+    "options": {
+      "A": "正确",
+      "B": "错误"
+    },
+    "answer": "B",
+    "type": "judge",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 563,
+    "stem": "Eth-Trunk两端的负载分担模式可以不一致",
+    "options": {
+      "A": "正确",
+      "B": "错误"
+    },
+    "answer": "A",
+    "type": "judge",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 564,
+    "stem": "RSTP中处于discarding状态下的端口,虽然会对接收到的数据帧丢弃处理,但是可以根据该端口收到的数据帧维护MAC地址表",
+    "options": {
+      "A": "正确",
+      "B": "错误"
+    },
+    "answer": "B",
+    "type": "judge",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 565,
+    "stem": "国家码的配置会影响实际传输使用的频率以及最大传输功率",
+    "options": {
+      "A": "正确",
+      "B": "错误"
+    },
+    "answer": "A",
+    "type": "judge",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 566,
+    "stem": "STP协议中根桥发出的BPDU报文中的message age为0",
+    "options": {
+      "A": "正确",
+      "B": "错误"
+    },
+    "answer": "A",
+    "type": "judge",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 567,
+    "stem": "SDN的起源是转控分离,转控分离是实现SDN的一种方式而不是本质。",
+    "options": {
+      "A": "正确",
+      "B": "错误"
+    },
+    "answer": "A",
+    "type": "judge",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 568,
+    "stem": "VRP操作平台中pwd和dir命令都可以查看当前目录下的文件信息",
+    "options": {
+      "A": "正确",
+      "B": "错误"
+    },
+    "answer": "B",
+    "type": "judge",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 569,
+    "stem": "ospf的router id必须和路由器的某个接口ip地址相同",
+    "options": {
+      "A": "正确",
+      "B": "错误"
+    },
+    "answer": "B",
+    "type": "judge",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 570,
+    "stem": "静态路由协议的优先级不能手工指定",
+    "options": {
+      "A": "正确",
+      "B": "错误"
+    },
+    "answer": "B",
+    "type": "judge",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 571,
+    "stem": "路由表中某调路由信息的proto为ospf,则此路由的优先级一定为10",
+    "options": {
+      "A": "正确",
+      "B": "错误"
+    },
+    "answer": "B",
+    "type": "judge",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 572,
+    "stem": "在广播网络上,DR和BDR都使用组播地址224.0.0.6来接收链路状态更新报文",
+    "options": {
+      "A": "正确",
+      "B": "错误"
+    },
+    "answer": "A",
+    "type": "judge",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 573,
+    "stem": "用户不能将vlan id配置为0",
+    "options": {
+      "A": "正确",
+      "B": "错误"
+    },
+    "answer": "A",
+    "type": "judge",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 574,
+    "stem": "交换机的端口在收到不携带vlan tag数据帧时,一定添加PVID",
+    "options": {
+      "A": "正确",
+      "B": "错误"
+    },
+    "answer": "B",
+    "type": "judge",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 575,
+    "stem": "RSTP协议中,边缘端口收到配置BPDU报文,就丧失了边缘端口属性",
+    "options": {
+      "A": "正确",
+      "B": "错误"
+    },
+    "answer": "A",
+    "type": "judge",
+    "initial_exclusion_reasons": [
+      "与原题 525 重复"
+    ]
+  },
+  {
+    "id": 576,
+    "stem": "hybrid端口既可以连接用户主机,又可以连接其他交换机",
+    "options": {
+      "A": "正确",
+      "B": "错误"
+    },
+    "answer": "A",
+    "type": "judge",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 577,
+    "stem": "SDN架构中协调的作用是基于用户意图完成业务部署,openstack属于业务协调层",
+    "options": {
+      "A": "正确",
+      "B": "错误"
+    },
+    "answer": "A",
+    "type": "judge",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 578,
+    "stem": "路由器在转发某个数据包时,如果未匹配到对应的明细路由且无默认路由时,将直接丢弃该数据包",
+    "options": {
+      "A": "正确",
+      "B": "错误"
+    },
+    "answer": "A",
+    "type": "judge",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 579,
+    "stem": "广播地址是网络地址中主机全部部署为1的一种特殊地址,它也可以做为主机地址使用",
+    "options": {
+      "A": "正确",
+      "B": "错误"
+    },
+    "answer": "B",
+    "type": "judge",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 580,
+    "stem": "telnetlib是python自带的实现telnet协议的模板",
+    "options": {
+      "A": "正确",
+      "B": "错误"
+    },
+    "answer": "A",
+    "type": "judge",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 581,
+    "stem": "Trunk类型的端口和hybrid类型的端口在接收数据帧时的处理方式相同",
+    "options": {
+      "A": "正确",
+      "B": "错误"
+    },
+    "answer": "A",
+    "type": "judge",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 582,
+    "stem": "RSTP中alte ate端口和backup端口均无法转发流量,也不可以接收、处理、发送BPDU",
+    "options": {
+      "A": "正确",
+      "B": "错误"
+    },
+    "answer": "B",
+    "type": "judge",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 583,
+    "stem": "config模式时华为设备上缺省的ACL匹配顺序",
+    "options": {
+      "A": "正确",
+      "B": "错误"
+    },
+    "answer": "A",
+    "type": "judge",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 584,
+    "stem": "默认情况下,STP协议中的根桥的根路径开销一定是",
+    "options": {
+      "A": "正确",
+      "B": "错误"
+    },
+    "answer": "A",
+    "type": "judge",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 585,
+    "stem": "NAPT是通过TCP或者UDP或者IP报文中的协议号区分不同用户的ip地址",
+    "options": {
+      "A": "正确",
+      "B": "错误"
+    },
+    "answer": "B",
+    "type": "judge",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 586,
+    "stem": "VTY用户界面的“maximum-vty”命令可以配置多少个用户可以同时通过telnet登录设备",
+    "options": {
+      "A": "正确",
+      "B": "错误"
+    },
+    "answer": "A",
+    "type": "judge",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 587,
+    "stem": "AP的工作模式不允许进行切换",
+    "options": {
+      "A": "正确",
+      "B": "错误"
+    },
+    "answer": "B",
+    "type": "judge",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 588,
+    "stem": "树形网络拓扑实际上是一种层次化的星型结构,易于扩充网络规模,但是层级越高的节点故障导致的网络问题越严重",
+    "options": {
+      "A": "正确",
+      "B": "错误"
+    },
+    "answer": "A",
+    "type": "judge",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 589,
+    "stem": "DHCPv6服务器支持为主机提供DNS服务器地址等其他配置信息",
+    "options": {
+      "A": "正确",
+      "B": "错误"
+    },
+    "answer": "A",
+    "type": "judge",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 590,
+    "stem": "ipv6协议使用NS和NA报文进行重复动作检测(DAD)",
+    "options": {
+      "A": "正确",
+      "B": "错误"
+    },
+    "answer": "A",
+    "type": "judge",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 591,
+    "stem": "NFV(network functional virtualization),网络功能虚拟化,实现了以软件化的方式部署网络应用",
+    "options": {
+      "A": "正确",
+      "B": "错误"
+    },
+    "answer": "A",
+    "type": "judge",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 592,
+    "stem": "168.1.0/25网段的广播地址为192.168.1.128",
+    "options": {
+      "A": "正确",
+      "B": "错误"
+    },
+    "answer": "B",
+    "type": "judge",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 593,
+    "stem": "他、以太网帧在交换机内部都是以带vlan tag的形式来被处理和转发",
+    "options": {
+      "A": "正确",
+      "B": "错误"
+    },
+    "answer": "B",
+    "type": "judge",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 594,
+    "stem": "FIT AP上线的过程中一定会从AC下载软件版本",
+    "options": {
+      "A": "正确",
+      "B": "错误"
+    },
+    "answer": "B",
+    "type": "judge",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 595,
+    "stem": "缺省情况下,STP协议中的端口状态由disable转化为frowarding状态至少需要30s的时间",
+    "options": {
+      "A": "正确",
+      "B": "错误"
+    },
+    "answer": "A",
+    "type": "judge",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 596,
+    "stem": "华为ARG3系列路由器默认存在SNMP的所有版本(SNMPV1\\SNMPV2C和snipv3)",
+    "options": {
+      "A": "正确",
+      "B": "错误"
+    },
+    "answer": "A",
+    "type": "judge",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 597,
+    "stem": "DHCP offer报文可以携带DNS地址,但是只能携带一个DNS地址",
+    "options": {
+      "A": "正确",
+      "B": "错误"
+    },
+    "answer": "B",
+    "type": "judge",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 598,
+    "stem": ":1/128是ipv6环回地址",
+    "options": {
+      "A": "正确",
+      "B": "错误"
+    },
+    "answer": "A",
+    "type": "judge",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 599,
+    "stem": "骨干区域内部、的路由器有其它所有区域的完整链路状态信息",
+    "options": {
+      "A": "正确",
+      "B": "错误"
+    },
+    "answer": "B",
+    "type": "judge",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 600,
+    "stem": "ipv6报文的基本首部长度是固定值",
+    "options": {
+      "A": "正确",
+      "B": "错误"
+    },
+    "answer": "A",
+    "type": "judge",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 601,
+    "stem": "交换机接收到一个单播数据帧,如果该数据帧目的MAC在MAC地表中能够找到,这些数据帧一定会从此MAC对应的端口转发出去",
+    "options": {
+      "A": "正确",
+      "B": "错误"
+    },
+    "answer": "B",
+    "type": "judge",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 602,
+    "stem": "运行STP的设备收到RSTP的配置BPDU时会丢弃",
+    "options": {
+      "A": "正确",
+      "B": "错误"
+    },
+    "answer": "B",
+    "type": "judge",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 603,
+    "stem": "华为交换机上不能创建vlan4095,不能删除vlan1",
+    "options": {
+      "A": "正确",
+      "B": "错误"
+    },
+    "answer": "A",
+    "type": "judge",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 604,
+    "stem": "在以ppp作为数据链路层协议的接口上,可以指定下一跳地址或出接口来配置静态路由",
+    "options": {
+      "A": "正确",
+      "B": "错误"
+    },
+    "answer": "A",
+    "type": "judge",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 605,
+    "stem": "AC上可以手动指定创建CAPWAP隧道的源地址或者源接口",
+    "options": {
+      "A": "正确",
+      "B": "错误"
+    },
+    "answer": "A",
+    "type": "judge",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 606,
+    "stem": "AP的一个射频上只能绑定 一个SSID",
+    "options": {
+      "A": "正确",
+      "B": "错误"
+    },
+    "answer": "B",
+    "type": "judge",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 607,
+    "stem": "园区网络规划时,服务器建议采用静态IP地址",
+    "options": {
+      "A": "正确",
+      "B": "错误"
+    },
+    "answer": "A",
+    "type": "judge",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 608,
+    "stem": "主机使用无状态地址自动配置方案来获取ipv6地址时,无法获取DNS服务器",
+    "options": {
+      "A": "正确",
+      "B": "错误"
+    },
+    "answer": "B",
+    "type": "judge",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 609,
+    "stem": "SNMP报文时通过TCP来承载",
+    "options": {
+      "A": "正确",
+      "B": "错误"
+    },
+    "answer": "B",
+    "type": "judge",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 610,
+    "stem": "如果一个网络的网络地址为192.168.1.0,那么它的广播地址定是192.168.1.255",
+    "options": {
+      "A": "正确",
+      "B": "错误"
+    },
+    "answer": "B",
+    "type": "judge",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 611,
+    "stem": "在AR路由器上创建的认证方案、授权方案、计费方案、hytacacs或者radius服务器模板,只有在域下应用后才能生效",
+    "options": {
+      "A": "正确",
+      "B": "错误"
+    },
+    "answer": "A",
+    "type": "judge",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 612,
+    "stem": "trunk端口可以允许多个vlan通过,包括vlan4096",
+    "options": {
+      "A": "正确",
+      "B": "错误"
+    },
+    "answer": "B",
+    "type": "judge",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 613,
+    "stem": "radius是实现AAA的常见协议",
+    "options": {
+      "A": "正确",
+      "B": "错误"
+    },
+    "answer": "A",
+    "type": "judge",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 614,
+    "stem": "ICMP报文不包含端口号,所以无法使用NAPT",
+    "options": {
+      "A": "正确",
+      "B": "错误"
+    },
+    "answer": "B",
+    "type": "judge",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 615,
+    "stem": "RSTP中backup端口可以替换发生故障的根端口",
+    "options": {
+      "A": "正确",
+      "B": "错误"
+    },
+    "answer": "B",
+    "type": "judge",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 616,
+    "stem": "交换机通过堆叠、集群之后成为一台逻辑上的交换机可以部署跨物理设备的Eth-Trunk以提高网络可靠性",
+    "options": {
+      "A": "正确",
+      "B": "错误"
+    },
+    "answer": "A",
+    "type": "judge",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 617,
+    "stem": "ospf的router id必须和路由器的某个接口ip地址相同",
+    "options": {
+      "A": "正确",
+      "B": "错误"
+    },
+    "answer": "B",
+    "type": "judge",
+    "initial_exclusion_reasons": [
+      "与原题 569 重复"
+    ]
+  },
+  {
+    "id": 618,
+    "stem": "一台主机和其它主机通信一定要配置网关",
+    "options": {
+      "A": "正确",
+      "B": "错误"
+    },
+    "answer": "B",
+    "type": "judge",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 619,
+    "stem": "FAT AP无需AC即可独立完成无线接入、无限定义、业务数据转发等工作",
+    "options": {
+      "A": "正确",
+      "B": "错误"
+    },
+    "answer": "A",
+    "type": "judge",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 620,
+    "stem": "园区可以提高链路聚合和堆叠提高网络可靠性",
+    "options": {
+      "A": "正确",
+      "B": "错误"
+    },
+    "answer": "A",
+    "type": "judge",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 621,
+    "stem": "VRP中的登录超时功能只能在VTY接口下设置",
+    "options": {
+      "A": "正确",
+      "B": "错误"
+    },
+    "answer": "B",
+    "type": "judge",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 622,
+    "stem": "交换机上可以用vlan batch批量创建vlan简化配置",
+    "options": {
+      "A": "正确",
+      "B": "错误"
+    },
+    "answer": "A",
+    "type": "judge",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 623,
+    "stem": "vty中的max-vty可以设置多个用户同时使用telnet登录此设备",
+    "options": {
+      "A": "正确",
+      "B": "错误"
+    },
+    "answer": "A",
+    "type": "judge",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 624,
+    "stem": "wlan的二层组网指的是STA将AC做为自己的网关",
+    "options": {
+      "A": "正确",
+      "B": "错误"
+    },
+    "answer": "B",
+    "type": "judge",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 625,
+    "stem": "wep方式的安全策略支持使用TKIP进行数据加密",
+    "options": {
+      "A": "正确",
+      "B": "错误"
+    },
+    "answer": "B",
+    "type": "judge",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 626,
+    "stem": "交换机堆叠支持两台以上设备,通过堆叠可以将多台交换机组成逻辑上的一台设备",
+    "options": {
+      "A": "正确",
+      "B": "错误"
+    },
+    "answer": "A",
+    "type": "judge",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 627,
+    "stem": "NAS设备对用户的管理是基于域的,每个用户的属于一个域,一个域是由属于同一个域的用户构成的群体",
+    "options": {
+      "A": "正确",
+      "B": "错误"
+    },
+    "answer": "A",
+    "type": "judge",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 628,
+    "stem": "使用传统座机进行通话是网络通信的一种方式",
+    "options": {
+      "A": "正确",
+      "B": "错误"
+    },
+    "answer": "A",
+    "type": "judge",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 629,
+    "stem": "园区规划时,可以按照业务类型进行vlan的规划",
+    "options": {
+      "A": "正确",
+      "B": "错误"
+    },
+    "answer": "A",
+    "type": "judge",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 630,
+    "stem": "telnetlib中telnet readveryeagerc的作用是非阻塞的读取数据,通常需要和time模块一起使用",
+    "options": {
+      "A": "正确",
+      "B": "错误"
+    },
+    "answer": "A",
+    "type": "judge",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 631,
+    "stem": "只有wpai-psk的安全策略才支持使用tkip进行数据加密",
+    "options": {
+      "A": "正确",
+      "B": "错误"
+    },
+    "answer": "B",
+    "type": "judge",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 632,
+    "stem": "当交换机有冗余链路时,使用stp可以解决问题",
+    "options": {
+      "A": "正确",
+      "B": "错误"
+    },
+    "answer": "A",
+    "type": "judge",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 633,
+    "stem": "IEEE802.11ac只支持5GHz频段",
+    "options": {
+      "A": "正确",
+      "B": "错误"
+    },
+    "answer": "A",
+    "type": "judge",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 634,
+    "stem": "广播地址是网络地址主机位全部部署1的一种特殊地址,它也可以作为主机地址使用",
+    "options": {
+      "A": "正确",
+      "B": "错误"
+    },
+    "answer": "B",
+    "type": "judge",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 635,
+    "stem": "路由表中某路由信息的proto为direct,则路由优先级一定为0",
+    "options": {
+      "A": "正确",
+      "B": "错误"
+    },
+    "answer": "A",
+    "type": "judge",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 636,
+    "stem": "主机192.168.1.2访问公网地址一定要经过NAT",
+    "options": {
+      "A": "正确",
+      "B": "错误"
+    },
+    "answer": "A",
+    "type": "judge",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 637,
+    "stem": "AP一个射频口只能绑定一个ssid",
+    "options": {
+      "A": "正确",
+      "B": "错误"
+    },
+    "answer": "B",
+    "type": "judge",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 638,
+    "stem": "config模式是华为设备上缺省的acl配置顺序",
+    "options": {
+      "A": "正确",
+      "B": "错误"
+    },
+    "answer": "A",
+    "type": "judge",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 639,
+    "stem": "STA发现无线网络的方式只有通过AP对外发送的beacon帧",
+    "options": {
+      "A": "正确",
+      "B": "错误"
+    },
+    "answer": "B",
+    "type": "judge",
+    "initial_exclusion_reasons": [
+      "与原题 530 重复"
+    ]
+  },
+  {
+    "id": 640,
+    "stem": "FIT上线过程中一定会在AC上下载软件版本",
+    "options": {
+      "A": "正确",
+      "B": "错误"
+    },
+    "answer": "B",
+    "type": "judge",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 641,
+    "stem": "AR G3系列路由器上ACL支持两种匹配顺序,配置顺序和自动排序",
+    "options": {
+      "A": "正确",
+      "B": "错误"
+    },
+    "answer": "A",
+    "type": "judge",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 642,
+    "stem": "vrp操作平台中使用命令mkdir test系统会创建个名字为test的目录",
+    "options": {
+      "A": "正确",
+      "B": "错误"
+    },
+    "answer": "A",
+    "type": "judge",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 643,
+    "stem": "由于tcp协议在建立连接和关闭连接时采用三次握手机制,所以TCP支持可靠传输",
+    "options": {
+      "A": "正确",
+      "B": "错误"
+    },
+    "answer": "B",
+    "type": "judge",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 644,
+    "stem": "当两台ospf路由器形成2-way的邻居关系时,LSDB已完成同步",
+    "options": {
+      "A": "正确",
+      "B": "错误"
+    },
+    "answer": "B",
+    "type": "judge",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 645,
+    "stem": "ospf进程的router id修改之后立即生效",
+    "options": {
+      "A": "正确",
+      "B": "错误"
+    },
+    "answer": "B",
+    "type": "judge",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 646,
+    "stem": "ospf的router id必须和路由器的某个接口ip地址相同",
+    "options": {
+      "A": "正确",
+      "B": "错误"
+    },
+    "answer": "B",
+    "type": "judge",
+    "initial_exclusion_reasons": [
+      "与原题 569 重复"
+    ]
+  },
+  {
+    "id": 647,
+    "stem": "缺省情况下,华为交换机的桥优先级取值为32768",
+    "options": {
+      "A": "正确",
+      "B": "错误"
+    },
+    "answer": "A",
+    "type": "judge",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 648,
+    "stem": "trunk端口既能发送带标签的数据帧,也能发送不带标签的数据帧",
+    "options": {
+      "A": "正确",
+      "B": "错误"
+    },
+    "answer": "A",
+    "type": "judge",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 649,
+    "stem": "AP无需AC即可独立完成无线用户接入,无线用户认证,业务数据转发的工作",
+    "options": {
+      "A": "正确",
+      "B": "错误"
+    },
+    "answer": "B",
+    "type": "judge",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 650,
+    "stem": "AC使用CAPWAP的控制隧道传输对FIT AP的管理报文",
+    "options": {
+      "A": "正确",
+      "B": "错误"
+    },
+    "answer": "A",
+    "type": "judge",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 651,
+    "stem": "WPLS标签头封装在报文的数据链路层头部和网络层头部之间",
+    "options": {
+      "A": "正确",
+      "B": "错误"
+    },
+    "answer": "A",
+    "type": "judge",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 652,
+    "stem": "SNMP报文是通过UDP来承载",
+    "options": {
+      "A": "正确",
+      "B": "错误"
+    },
+    "answer": "A",
+    "type": "judge",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 653,
+    "stem": "SNMPV1定义了5种协议操作",
+    "options": {
+      "A": "正确",
+      "B": "错误"
+    },
+    "answer": "B",
+    "type": "judge",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 654,
+    "stem": "运行SNMP协议的网络设备本地的运行一个代理进程",
+    "options": {
+      "A": "正确",
+      "B": "错误"
+    },
+    "answer": "A",
+    "type": "judge",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 655,
+    "stem": "对于达到同一个目的网络的多条路径,路由器需要通过比较preforence值的大小进行选择,如果preference相同,则依据cost值的大小进行选择",
+    "options": {
+      "A": "正确",
+      "B": "错误"
+    },
+    "answer": "B",
+    "type": "judge",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 656,
+    "stem": "交换机的端口在发送携带vlan tag和pvid一致的数据帧时,一定剥离vlan tag 转发",
+    "options": {
+      "A": "正确",
+      "B": "错误"
+    },
+    "answer": "B",
+    "type": "judge",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 657,
+    "stem": "静态NAT只能实现私有地址和公有地址的一对一映射",
+    "options": {
+      "A": "正确",
+      "B": "错误"
+    },
+    "answer": "A",
+    "type": "judge",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 658,
+    "stem": "交换机组成的网络不开启STP,一定出现二层环路",
+    "options": {
+      "A": "正确",
+      "B": "错误"
+    },
+    "answer": "B",
+    "type": "judge",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 659,
+    "stem": "BFD(双向转发检测)技术属于快速检测技术,但它较为复杂,需要特殊厂商设备支持",
+    "options": {
+      "A": "正确",
+      "B": "错误"
+    },
+    "answer": "B",
+    "type": "judge",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 660,
+    "stem": "BFD可以实现ms(毫秒)级别的链路状态检测",
+    "options": {
+      "A": "正确",
+      "B": "错误"
+    },
+    "answer": "A",
+    "type": "judge",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 661,
+    "stem": "BFD通过周期性检测报文判断是否发生,是一个依赖路由协议的快速故障检测机制",
+    "options": {
+      "A": "正确",
+      "B": "错误"
+    },
+    "answer": "B",
+    "type": "judge",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 662,
+    "stem": "BFD只是一种通用的快速检测技术,自身可以实现快速倒换的功能,没有必要和其他快速倒换技术一起使用",
+    "options": {
+      "A": "正确",
+      "B": "错误"
+    },
+    "answer": "B",
+    "type": "judge",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 663,
+    "stem": "IEEE802.11ac标准只支持5GHz频段",
+    "options": {
+      "A": "正确",
+      "B": "错误"
+    },
+    "answer": "B",
+    "type": "judge",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 664,
+    "stem": "ip报文中使用Tos字段进行Qos标记,Tos字段中是使用前6bit来标记DSCP的",
+    "options": {
+      "A": "正确",
+      "B": "错误"
+    },
+    "answer": "A",
+    "type": "judge",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 665,
+    "stem": "NFV(network functional virtualization),网络功能虚拟化实现了已特殊化的方式部署网络应用",
+    "options": {
+      "A": "正确",
+      "B": "错误"
+    },
+    "answer": "A",
+    "type": "judge",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 666,
+    "stem": "VRRP报文不支持认证",
+    "options": {
+      "A": "正确",
+      "B": "错误"
+    },
+    "answer": "B",
+    "type": "judge",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 667,
+    "stem": "vxlan采用mas in tcp封装方式将二层报文用三层协议进行封装",
+    "options": {
+      "A": "正确",
+      "B": "错误"
+    },
+    "answer": "B",
+    "type": "judge",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 668,
+    "stem": "带宽决定了数据传输的速率,而且传输的最大带宽是由传输路径上的最小来南路带宽决定的",
+    "options": {
+      "A": "正确",
+      "B": "错误"
+    },
+    "answer": "A",
+    "type": "judge",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 669,
+    "stem": "当两台ospf路由器形成2-way邻居关系时,LSDB已经完成同步",
+    "options": {
+      "A": "正确",
+      "B": "错误"
+    },
+    "answer": "B",
+    "type": "judge",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 670,
+    "stem": "端到端时延等于路径所有处理时延与队列时延之和",
+    "options": {
+      "A": "正确",
+      "B": "错误"
+    },
+    "answer": "B",
+    "type": "judge",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 671,
+    "stem": "根桥交换机上所有的端口都是指定端口",
+    "options": {
+      "A": "正确",
+      "B": "错误"
+    },
+    "answer": "A",
+    "type": "judge",
+    "initial_exclusion_reasons": [
+      "与原题 526 重复"
+    ]
+  },
+  {
+    "id": 672,
+    "stem": "管理信息库MIB(management information base)是一个虚拟的数据库,这个数据库只存在于NMS上",
+    "options": {
+      "A": "正确",
+      "B": "错误"
+    },
+    "answer": "B",
+    "type": "judge",
+    "initial_exclusion_reasons": [
+      "与原题 549 重复"
+    ]
+  },
+  {
+    "id": 673,
+    "stem": "交换机堆叠支持两台以上设备,通过堆叠可以将多台交换机组成逻辑上的一台设备",
+    "options": {
+      "A": "正确",
+      "B": "错误"
+    },
+    "answer": "A",
+    "type": "judge",
+    "initial_exclusion_reasons": [
+      "与原题 626 重复"
+    ]
+  },
+  {
+    "id": 674,
+    "stem": "静态MAC地址表在系统重启后,保存的表项不会丢失",
+    "options": {
+      "A": "正确",
+      "B": "错误"
+    },
+    "answer": "A",
+    "type": "judge",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 675,
+    "stem": "流镜像分为本地流镜像和远程流镜像两种方式",
+    "options": {
+      "A": "正确",
+      "B": "错误"
+    },
+    "answer": "A",
+    "type": "judge",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 676,
+    "stem": "路由协议通过hello 报文可以检测到故障,所有不需要BFD",
+    "options": {
+      "A": "正确",
+      "B": "错误"
+    },
+    "answer": "B",
+    "type": "judge",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 677,
+    "stem": "如果为UDP,则网络层protocol字取值为6",
+    "options": {
+      "A": "正确",
+      "B": "错误"
+    },
+    "answer": "A",
+    "type": "judge",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 678,
+    "stem": "在ipv4网络中,AP支持静态和dhcp两种方式获取IP地址",
+    "options": {
+      "A": "正确",
+      "B": "错误"
+    },
+    "answer": "A",
+    "type": "judge",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 679,
+    "stem": "在华为设备上,如果使用AAA认证进行授权,当远程服务器无响应时,可以从网络设备进行授权",
+    "options": {
+      "A": "正确",
+      "B": "错误"
+    },
+    "answer": "A",
+    "type": "judge",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 680,
+    "stem": "在园区网络中通过使用链路聚合、堆叠技术可以提高网络可靠性",
+    "options": {
+      "A": "正确",
+      "B": "错误"
+    },
+    "answer": "A",
+    "type": "judge",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 681,
+    "stem": "VRP平台上,当我们引入ospf路由到isis的时候,如果不指定cost,开销值将默认为16",
+    "options": {
+      "A": "正确",
+      "B": "错误"
+    },
+    "answer": "B",
+    "type": "judge",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 682,
+    "stem": "BGPASPATH属性是一种可选的过度属性",
+    "options": {
+      "A": "正确",
+      "B": "错误"
+    },
+    "answer": "B",
+    "type": "judge",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 683,
+    "stem": "当两个路由器之间提高DD报文交换数据库信息时,首先形成一个主从关系,router id大的一定为主",
+    "options": {
+      "A": "正确",
+      "B": "错误"
+    },
+    "answer": "A",
+    "type": "judge",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 684,
+    "stem": "在wlan中大型网络当中,vlan pool采用HASH方式分配vlan的话,各个vlan用户的数目会被均匀划分",
+    "options": {
+      "A": "正确",
+      "B": "错误"
+    },
+    "answer": "B",
+    "type": "judge",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 685,
+    "stem": "DHCP中继负责转发DHCP服务器和DHCP客户端之间的DHCP报文,协助DHCP服务器向DHCP客户端动态分配网络参数",
+    "options": {
+      "A": "正确",
+      "B": "错误"
+    },
+    "answer": "A",
+    "type": "judge",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 686,
+    "stem": "当两台优先级相同的设备同时竞争master角色时,则IP地址较小的接口所在的设备应当被选为master设备",
+    "options": {
+      "A": "正确",
+      "B": "错误"
+    },
+    "answer": "B",
+    "type": "judge",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 687,
+    "stem": "VRRP的接口和虚拟IP地址可以相同",
+    "options": {
+      "A": "正确",
+      "B": "错误"
+    },
+    "answer": "A",
+    "type": "judge",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 688,
+    "stem": "在防火墙上ping防火墙某接口IP地址时,这些报文将交给防火墙内部模块进行处理,并不转发出去",
+    "options": {
+      "A": "正确",
+      "B": "错误"
+    },
+    "answer": "A",
+    "type": "judge",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 689,
+    "stem": "IGMP Snooping无法解决二层交换机上组播流量的带宽浪费,即IGMP Snooping在二层交换机上面配置与否对组播流量无影响",
+    "options": {
+      "A": "正确",
+      "B": "错误"
+    },
+    "answer": "B",
+    "type": "judge",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 690,
+    "stem": "当IGMP查询配了SSM Mapping规则后,只能对运行IGMPv2的成员主机提供SSM服务",
+    "options": {
+      "A": "正确",
+      "B": "错误"
+    },
+    "answer": "B",
+    "type": "judge",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 691,
+    "stem": "一个交换机上电之后加入一个正在运行的堆叠系统,该行为被称为堆叠加入",
+    "options": {
+      "A": "正确",
+      "B": "错误"
+    },
+    "answer": "B",
+    "type": "judge",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 692,
+    "stem": "如果一台框式交换机只支持使用主控板上的集群卡建立集群连接,则表示该框式交换机使用的是CCS2堆叠技术",
+    "options": {
+      "A": "正确",
+      "B": "错误"
+    },
+    "answer": "B",
+    "type": "judge",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 693,
+    "stem": "MQS与PBR一样,只能在设备的三层接口下调用",
+    "options": {
+      "A": "正确",
+      "B": "错误"
+    },
+    "answer": "B",
+    "type": "judge",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 694,
+    "stem": "import-route linit命令不能够限制一个OSPF进程内可引入的最大外部路由数量",
+    "options": {
+      "A": "正确",
+      "B": "错误"
+    },
+    "answer": "B",
+    "type": "judge",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 695,
+    "stem": "ospf stub区域的ABR不向stub区域泛洪第五类LSA、第四类LSA、向stub区域画告一条默认LSA,指导数据包如何到达AS外部的目的地",
+    "options": {
+      "A": "正确",
+      "B": "错误"
+    },
+    "answer": "A",
+    "type": "judge",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 696,
+    "stem": "ospf路由协议中,asbr-summary命令可以跟not-advertise参数,该参数的意义是不通告聚合路由",
+    "options": {
+      "A": "正确",
+      "B": "错误"
+    },
+    "answer": "A",
+    "type": "judge",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 697,
+    "stem": "运行isis两台路由器,只有IH发送时间间隔相同才可以建立邻接关系",
+    "options": {
+      "A": "正确",
+      "B": "错误"
+    },
+    "answer": "B",
+    "type": "judge",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 698,
+    "stem": "ospf dr-priority命令默认值为1,取值为0-255",
+    "options": {
+      "A": "正确",
+      "B": "错误"
+    },
+    "answer": "A",
+    "type": "judge",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 699,
+    "stem": "在ospf广播或者NAMA网络类型中,DR priority大的设备不一定会成为DR",
+    "options": {
+      "A": "正确",
+      "B": "错误"
+    },
+    "answer": "A",
+    "type": "judge",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 700,
+    "stem": "框式交换机在收到业务报文后,先经过上行接口板处理,然后再经过下行接口板处理,最后从接口发出",
+    "options": {
+      "A": "正确",
+      "B": "错误"
+    },
+    "answer": "A",
+    "type": "judge",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 701,
+    "stem": "imaster NCE-Campus支持通过NETCONF实现对华为网络设备进行管理,并且支持通过SNMP对第三方设备进行管理",
+    "options": {
+      "A": "正确",
+      "B": "错误"
+    },
+    "answer": "A",
+    "type": "judge",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 702,
+    "stem": "将防火墙的一个接口划分到Untrust安全域之后,该接口就属于Untrust区域,不再属于Local区域",
+    "options": {
+      "A": "正确",
+      "B": "错误"
+    },
+    "answer": "B",
+    "type": "judge",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 703,
+    "stem": "IGMP代理设备收到某组播组的报告报文后,如果没有找到相应的组播组,IGMP代理设备会向接入设备发送针对该组播组的报告报文,并在组播转发表中添加该组播组",
+    "options": {
+      "A": "正确",
+      "B": "错误"
+    },
+    "answer": "B",
+    "type": "judge",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 704,
+    "stem": "IP组播地址的前4bit是固定的1110,对应组播的MAC地址的高25bit,IP组播地址的后28bit中,只有23bit被映射到MAC地址,因此丢失了5bit的地址信息,直接结果是有32个ip组播地址映射到同一个MAC地址上",
+    "options": {
+      "A": "正确",
+      "B": "错误"
+    },
+    "answer": "A",
+    "type": "judge",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 705,
+    "stem": "IGMP3不仅支持IGMPV1版本的普遍组查询和IGMPv2版本的特定组查询,还支持IGMPV3版本的指定源/组查询",
+    "options": {
+      "A": "正确",
+      "B": "错误"
+    },
+    "answer": "A",
+    "type": "judge",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 706,
+    "stem": "IGMPv1定义了在共享网络中存在多个路由器时选举查询器的机制",
+    "options": {
+      "A": "正确",
+      "B": "错误"
+    },
+    "answer": "B",
+    "type": "judge",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 707,
+    "stem": "对于链路状态路由协议,使用filter-policy import时,被隔离的链路状态信息,将不能被计算成路由,并且它的邻居也不能收到完整的链路状态信息",
+    "options": {
+      "A": "正确",
+      "B": "错误"
+    },
+    "answer": "B",
+    "type": "judge",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 708,
+    "stem": "BGP的选路规则中,通过aggregate命令生成的手动聚合路由的优先级高于summary automatic命令生成的自动聚合路由",
+    "options": {
+      "A": "正确",
+      "B": "错误"
+    },
+    "answer": "A",
+    "type": "judge",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 709,
+    "stem": "通过重发布命令注入BGP的路由,其Origin属性为Incomplete",
+    "options": {
+      "A": "正确",
+      "B": "错误"
+    },
+    "answer": "A",
+    "type": "judge",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 710,
+    "stem": "BGP邻居是通过UDP建立的邻居关系",
+    "options": {
+      "A": "正确",
+      "B": "错误"
+    },
+    "answer": "B",
+    "type": "judge",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 711,
+    "stem": "运行关于双链路热备配置,在配置AC的优先级时,优先级的数值越大,该AC的实际优先级越高",
+    "options": {
+      "A": "正确",
+      "B": "错误"
+    },
+    "answer": "B",
+    "type": "judge",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 712,
+    "stem": "基于MAC优先的portal认证场景中,当用户进行portal认证成功后,在一定时间内断开网络重新连接,能够直接通过MAC认证接入,无需输入用户密码重新进行portal认证",
+    "options": {
+      "A": "正确",
+      "B": "错误"
+    },
+    "answer": "A",
+    "type": "judge",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 713,
+    "stem": "在ospf中,AS边界路由器是、可以是Inte et Router,或者是ABR,但是必须属于骨干区域",
+    "options": {
+      "A": "正确",
+      "B": "错误"
+    },
+    "answer": "B",
+    "type": "judge",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 714,
+    "stem": "NSSA区域的ABR不会向NSSA泛洪第四类和第五类LSA,会将LSA泛洪给其他区域",
+    "options": {
+      "A": "正确",
+      "B": "错误"
+    },
+    "answer": "B",
+    "type": "judge",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 715,
+    "stem": "ICMPv6有差错报文(ERROR Message)和信息报文(Information Message)两种类型",
+    "options": {
+      "A": "正确",
+      "B": "错误"
+    },
+    "answer": "A",
+    "type": "judge",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 716,
+    "stem": "ipv6链路本地地址可以通过无状态自动配置生成",
+    "options": {
+      "A": "正确",
+      "B": "错误"
+    },
+    "answer": "B",
+    "type": "judge",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 717,
+    "stem": "从组播源到接收者的最短路径,成为最短路径树SPT",
+    "options": {
+      "A": "正确",
+      "B": "错误"
+    },
+    "answer": "B",
+    "type": "judge",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 718,
+    "stem": "如果路由器system视图下和BGP视图下都配置了router-id,由于视图优先级高,则BGP使用BGP视图下的router-id",
+    "options": {
+      "A": "正确",
+      "B": "错误"
+    },
+    "answer": "A",
+    "type": "judge",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 719,
+    "stem": "当两台BGP邻居所支持的Hold time时间不一致时,邻居会协商采用两端能够支持的最低的hold time时间间隔",
+    "options": {
+      "A": "正确",
+      "B": "错误"
+    },
+    "answer": "A",
+    "type": "judge",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 720,
+    "stem": "VRP缺省情况下,当BGP的邻居出口路由策略(router-pokicy)改变后,需要手工操作才会向该邻居重新发送update消息",
+    "options": {
+      "A": "正确",
+      "B": "错误"
+    },
+    "answer": "B",
+    "type": "judge",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 721,
+    "stem": "在ospf路由域中,含有至少两个路由器的广播型网络和NBMA网络中,必须指定一台路由器为DR,另一台位BDR",
+    "options": {
+      "A": "正确",
+      "B": "错误"
+    },
+    "answer": "B",
+    "type": "judge",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 722,
+    "stem": "ospf路由协议中,bandwidth-reference命令的单位是Mbps",
+    "options": {
+      "A": "正确",
+      "B": "错误"
+    },
+    "answer": "A",
+    "type": "judge",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 723,
+    "stem": "默认情况下,ospf端口开销与端口的带宽有关,计算公式为bandwidth-reference/ban dwidth开销只ospf自己计算,不能手工更改",
+    "options": {
+      "A": "正确",
+      "B": "错误"
+    },
+    "answer": "B",
+    "type": "judge",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 724,
+    "stem": "由表中路由条目的下一跳地址一定与自身直接连接口的地址在同一网段",
+    "options": {
+      "A": "正确",
+      "B": "错误"
+    },
+    "answer": "B",
+    "type": "judge",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 725,
+    "stem": "在BGP选路规则中,localpref值高的路由优先",
+    "options": {
+      "A": "正确",
+      "B": "错误"
+    },
+    "answer": "A",
+    "type": "judge",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 726,
+    "stem": "EVPN是一种只能提供二层网络互联的VPN技术",
+    "options": {
+      "A": "正确",
+      "B": "错误"
+    },
+    "answer": "B",
+    "type": "judge",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 727,
+    "stem": "两台路由器通过多种物理链路建立一对逻辑BGP对等体时,必须使用connect-interface命令",
+    "options": {
+      "A": "正确",
+      "B": "错误"
+    },
+    "answer": "A",
+    "type": "judge",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 728,
+    "stem": "在广播域NBMA网络中,并非所有的邻居间都会建立邻接关系",
+    "options": {
+      "A": "正确",
+      "B": "错误"
+    },
+    "answer": "A",
+    "type": "judge",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 729,
+    "stem": "随板AC指的是华为敏捷交换机内置AC能力,实现有线无线业务的融合管理,有线业务和无线业务流量统一由敏捷交换机集中管理",
+    "options": {
+      "A": "正确",
+      "B": "错误"
+    },
+    "answer": "A",
+    "type": "judge",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 730,
+    "stem": "在VRRP中,当设备状态变为master后,会立刻发送免费ARP来刷新下游设备电脑MAC表项,从而把用户的流量引到此台设备上来",
+    "options": {
+      "A": "正确",
+      "B": "错误"
+    },
+    "answer": "A",
+    "type": "judge",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 731,
+    "stem": "路由选择工具router-policy能够基于预先定义的条件来进行过滤并设置BGP属性,所以它经常被用来针对BGP Peer的策略,也经常在路由生成时期被使用,缺省情况下所有未分配的路由都被拒绝通过router-policy",
+    "options": {
+      "A": "正确",
+      "B": "错误"
+    },
+    "answer": "A",
+    "type": "judge",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 732,
+    "stem": "RPF具有防止组播转发环路的功能",
+    "options": {
+      "A": "正确",
+      "B": "错误"
+    },
+    "answer": "A",
+    "type": "judge",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 733,
+    "stem": "不同于STP,RSTP的BPDU type只有一种,其值为2,没有TCP BPDU",
+    "options": {
+      "A": "正确",
+      "B": "错误"
+    },
+    "answer": "A",
+    "type": "judge",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 734,
+    "stem": "speaker只将发生变化的路由通告给邻居",
+    "options": {
+      "A": "正确",
+      "B": "错误"
+    },
+    "answer": "A",
+    "type": "judge",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 735,
+    "stem": "ospf支持区域认证和接口认证两种方式,若同时配置这两种认证方式,则接口认证优于区域认证",
+    "options": {
+      "A": "正确",
+      "B": "错误"
+    },
+    "answer": "A",
+    "type": "judge",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 736,
+    "stem": "如果DR Priority被设置为0,那么在ospf路由域中,该路由器允许被选举DR或者BDR,只不过优先级最低",
+    "options": {
+      "A": "正确",
+      "B": "错误"
+    },
+    "answer": "B",
+    "type": "judge",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 737,
+    "stem": "ospf路由协议中,区域内路由的计算涉及的LSA类型只有router LSA、Network LSA和Summary LSA",
+    "options": {
+      "A": "正确",
+      "B": "错误"
+    },
+    "answer": "B",
+    "type": "judge",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 738,
+    "stem": "在MSTP协议中,每个MST Instance都单独使用RSTP算法,计算单独的生成树",
+    "options": {
+      "A": "正确",
+      "B": "错误"
+    },
+    "answer": "A",
+    "type": "judge",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 739,
+    "stem": "VRP缺省情况下,会对BGP引入的路由进行自动聚合",
+    "options": {
+      "A": "正确",
+      "B": "错误"
+    },
+    "answer": "B",
+    "type": "judge",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 740,
+    "stem": "IGP路由要想成为BGP路由,只能通过network命令",
+    "options": {
+      "A": "正确",
+      "B": "错误"
+    },
+    "answer": "B",
+    "type": "judge",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 741,
+    "stem": "状态检测防火墙使用会话表来追踪激活的TCP会话和UDP会话,并且防火墙安全策略决定建立哪些会话,而且数据包只有与会话相关联时才会被转发",
+    "options": {
+      "A": "正确",
+      "B": "错误"
+    },
+    "answer": "A",
+    "type": "judge",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 742,
+    "stem": "策略路由和路由策略都可以影响数据包的转发过程,的是它们对数据包的影响方式不同的,策略路由时基于策略的转发,基于转发平面,路由策略时基于控制平面,为路由协议和路由表服务",
+    "options": {
+      "A": "正确",
+      "B": "错误"
+    },
+    "answer": "A",
+    "type": "judge",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 743,
+    "stem": "ospf支持多进程,在同一台路由器上可以运行多个不同的ospf进程,?之间相互不影响,彼此独立,不同ospf进程之间的路由交互相当于不同路由协议之间的路由交互",
+    "options": {
+      "A": "正确",
+      "B": "错误"
+    },
+    "answer": "A",
+    "type": "judge",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 744,
+    "stem": "为了免区域间的环路,ospf规定不允许直接在两个非骨干区域之间发布路由信息,只允许在同一个区域内部,或者在骨干区域和非骨干区域之间发布路由信息,因此,每个区域边界路由器(ABR)都必须连接到骨干区域",
+    "options": {
+      "A": "正确",
+      "B": "错误"
+    },
+    "answer": "A",
+    "type": "judge",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 745,
+    "stem": "可以通过发生主备服务报文和重传等机制防止主备AC间的HSB备份通道中断且无法感知的情况",
+    "options": {
+      "A": "正确",
+      "B": "错误"
+    },
+    "answer": "B",
+    "type": "judge",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 746,
+    "stem": "快速检测技术可以尽早地检测到与相邻设备间的通信故障,以便系统能够及时采取措施,保证业务部中断",
+    "options": {
+      "A": "正确",
+      "B": "错误"
+    },
+    "answer": "A",
+    "type": "judge",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 747,
+    "stem": "组播路由中(*;G)路由表项可以指导报文转发",
+    "options": {
+      "A": "正确",
+      "B": "错误"
+    },
+    "answer": "B",
+    "type": "judge",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 748,
+    "stem": "路由协议优先级的作用是给不同协议发现的路由分配不同的优先级,这样当一个路由器同时从不同的路由协议学到相同的路由时,可以有一个选择的优先顺序",
+    "options": {
+      "A": "正确",
+      "B": "错误"
+    },
+    "answer": "A",
+    "type": "judge",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 749,
+    "stem": "ospf特点之一是只支持MD5验证",
+    "options": {
+      "A": "正确",
+      "B": "错误"
+    },
+    "answer": "B",
+    "type": "judge",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 750,
+    "stem": "RSTP边端口无需等待forwarding delay,可以直接进入forwarding状态,如果边缘端口接收到了BPDU,则边缘端口会被直接关闭并进Aerro-down状态",
+    "options": {
+      "A": "正确",
+      "B": "错误"
+    },
+    "answer": "B",
+    "type": "judge",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 751,
+    "stem": "一台VRRP虚拟路由器只能拥有虚拟IP地址",
+    "options": {
+      "A": "正确",
+      "B": "错误"
+    },
+    "answer": "B",
+    "type": "judge",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 752,
+    "stem": "在wlan网络中,使能HSB备份组,若AP已经在主AC首先之后,再在备AC上离线添加AP信息后,备AC上的AP状态会显示为fault。此时需要在备AC的HSB备份视图下先执行undo hsb enable命令去使能HSB主备备份功能,再执行hsb enable命令使HSB主备备份功能,此时,主AC上的信息会备份到备AC,实现主备信息备份一致,AC上的AP状态会显示为standby",
+    "options": {
+      "A": "正确",
+      "B": "错误"
+    },
+    "answer": "A",
+    "type": "judge",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 753,
+    "stem": "IGMP协议运行在ip主机与其直接连接的组播路由器之间,维护组播组成员关系",
+    "options": {
+      "A": "正确",
+      "B": "错误"
+    },
+    "answer": "A",
+    "type": "judge",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 754,
+    "stem": "SSH使用非对称加法AES、DES实现数据传输的安全性,使用HMAC保证数据完整的完整性校验",
+    "options": {
+      "A": "正确",
+      "B": "错误"
+    },
+    "answer": "B",
+    "type": "judge",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 755,
+    "stem": "实现流量过滤功能,可以使用traffic-flter,也可以使用MQC相当于traffic-filter,NQC可以在更多的视图内调用",
+    "options": {
+      "A": "正确",
+      "B": "错误"
+    },
+    "answer": "A",
+    "type": "judge",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 756,
+    "stem": "DDos攻击是指攻击者通过控制大量的僵尸主机,向目标网络发送大量精心构造的攻击报文,从而使被攻击者产生拒绝向正常用户请求提供服务的效果",
+    "options": {
+      "A": "正确",
+      "B": "错误"
+    },
+    "answer": "A",
+    "type": "judge",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 757,
+    "stem": "缺省情况下。华为AR路由器的VRRP运行在抢占模式",
+    "options": {
+      "A": "正确",
+      "B": "错误"
+    },
+    "answer": "A",
+    "type": "judge",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 758,
+    "stem": "当在华为路由器上运行ospfv3时,ospfv3进程会自动选择一个接口地址作为该进程的router id",
+    "options": {
+      "A": "正确",
+      "B": "错误"
+    },
+    "answer": "B",
+    "type": "judge",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 759,
+    "stem": "两台处于不同区域的level-1路由器可以形成邻居关系",
+    "options": {
+      "A": "正确",
+      "B": "错误"
+    },
+    "answer": "B",
+    "type": "judge",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 760,
+    "stem": "路由器根据转发表直接指导数据库的转发",
+    "options": {
+      "A": "正确",
+      "B": "错误"
+    },
+    "answer": "B",
+    "type": "judge",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 761,
+    "stem": "双链路热备时,AP会与主AC、备AC建立CAPWAP链路",
+    "options": {
+      "A": "正确",
+      "B": "错误"
+    },
+    "answer": "A",
+    "type": "judge",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 762,
+    "stem": "一台路由器上不能配置多个BGP进程",
+    "options": {
+      "A": "正确",
+      "B": "错误"
+    },
+    "answer": "A",
+    "type": "judge",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 763,
+    "stem": "ACL本质上是一个报文过滤器,将ACL在业务模块中应用,ACL才能生效",
+    "options": {
+      "A": "正确",
+      "B": "错误"
+    },
+    "answer": "A",
+    "type": "judge",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 764,
+    "stem": "BGP选路规则中,MED值高的路由优先",
+    "options": {
+      "A": "正确",
+      "B": "错误"
+    },
+    "answer": "B",
+    "type": "judge",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 765,
+    "stem": "IGP路由想成为BGP路由,只能通过network命令",
+    "options": {
+      "A": "正确",
+      "B": "错误"
+    },
+    "answer": "B",
+    "type": "judge",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 766,
+    "stem": "import route linit命令不能限制一个ospf进程内可以引入的最大外部路由数量",
+    "options": {
+      "A": "正确",
+      "B": "错误"
+    },
+    "answer": "B",
+    "type": "judge",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 767,
+    "stem": "ospf支持多种进程,在同一台路由器上可以运行多个不同的ospf进程,它们之间相互部影响,彼此独立,不同ospf进程之间的路由交互相当于路由协议之间的路由交互",
+    "options": {
+      "A": "正确",
+      "B": "错误"
+    },
+    "answer": "A",
+    "type": "judge",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 768,
+    "stem": "ospf中,在广播类型网络中的选举出来的DR和BDR即侦听224.0.0.5地址,也侦听224.0.0.6地址",
+    "options": {
+      "A": "正确",
+      "B": "错误"
+    },
+    "answer": "A",
+    "type": "judge",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 769,
+    "stem": "RSTP中backup端口可以替换发生故障的根端口",
+    "options": {
+      "A": "正确",
+      "B": "错误"
+    },
+    "answer": "B",
+    "type": "judge",
+    "initial_exclusion_reasons": [
+      "与原题 615 重复"
+    ]
+  },
+  {
+    "id": 770,
+    "stem": "RSTP中处于discarding状态下的端口,虽然会对接收到的数据帧做丢弃处理,但是可以根据端口收到的数据帧维护MAC地址表",
+    "options": {
+      "A": "正确",
+      "B": "错误"
+    },
+    "answer": "B",
+    "type": "judge",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 771,
+    "stem": "VRP版本缺省情况下,当BGP的邻居入口路由策略(router-poliy)改变后,会自动向该邻居发生refresh以请求邻居重新发送update消息",
+    "options": {
+      "A": "正确",
+      "B": "错误"
+    },
+    "answer": "A",
+    "type": "judge",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 772,
+    "stem": "路由表中路由条目的下一跳地址一定会与自身直连接口的地址在同一网段",
+    "options": {
+      "A": "正确",
+      "B": "错误"
+    },
+    "answer": "B",
+    "type": "judge",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 773,
+    "stem": "运行ospf协议的路由器,所有接口必须属于同一个区域",
+    "options": {
+      "A": "正确",
+      "B": "错误"
+    },
+    "answer": "B",
+    "type": "judge",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 774,
+    "stem": "4类LSA(ASBR-SUMMARY-LSA)不允许NSSA区域中出现",
+    "options": {
+      "A": "正确",
+      "B": "错误"
+    },
+    "answer": "A",
+    "type": "judge",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 775,
+    "stem": "stub区域和totally stub区域中不存在5类LSA",
+    "options": {
+      "A": "正确",
+      "B": "错误"
+    },
+    "answer": "A",
+    "type": "judge",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 776,
+    "stem": "当两台BGP邻居所支持的BGP版本不一致时,邻居会协商采用两端能够支持的最高BGP版本",
+    "options": {
+      "A": "正确",
+      "B": "错误"
+    },
+    "answer": "B",
+    "type": "judge",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 777,
+    "stem": "localpreferebce属性用于判断流量离开AS时的最佳路由,当通过不同IBGP对等体得到目的地址相同但下一跳不同的多条路由时,将优先选择localpreferebce属性值较高的路由",
+    "options": {
+      "A": "正确",
+      "B": "错误"
+    },
+    "answer": "A",
+    "type": "judge",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 778,
+    "stem": "BGP在建立邻居的过程中,如果在active状态下TCP连接失败,则BGP会回到Idle状态重新尝试TCP连接",
+    "options": {
+      "A": "正确",
+      "B": "错误"
+    },
+    "answer": "B",
+    "type": "judge",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 779,
+    "stem": "一种路由协议在引入其他路由协议时,为了只引入一部分满足条件的路由信息,并且对所引入的路由信息的某些信息的某些属性进行设置,那么只能使用router-policy工具",
+    "options": {
+      "A": "正确",
+      "B": "错误"
+    },
+    "answer": "B",
+    "type": "judge",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 780,
+    "stem": "BFD为确保两端系统都知道状态的变化,在BFD状态机的建立和拆除时,都采用三次握手机制",
+    "options": {
+      "A": "正确",
+      "B": "错误"
+    },
+    "answer": "A",
+    "type": "judge",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 781,
+    "stem": "在wlan组网中配置双链路热备时,配置AC优先级的数值越大,则AC的实际优先级就越高",
+    "options": {
+      "A": "正确",
+      "B": "错误"
+    },
+    "answer": "B",
+    "type": "judge",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 782,
+    "stem": "在BGP中有两种部署Fil Iter-Policy工具方法,一种是在B6P下全局部署,另一种是在指向对等体时部署",
+    "options": {
+      "A": "正确",
+      "B": "错误"
+    },
+    "answer": "A",
+    "type": "judge",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 783,
+    "stem": "IPV6报文基本首部长度是固定值",
+    "options": {
+      "A": "正确",
+      "B": "错误"
+    },
+    "answer": "A",
+    "type": "judge",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 784,
+    "stem": "BFD中的本地标识符和远端标识符配置错误后,若想修改,可删除错误配置在重新配置或者直接配置正确的标识符覆盖错误的标识符",
+    "options": {
+      "A": "正确",
+      "B": "错误"
+    },
+    "answer": "B",
+    "type": "judge",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 785,
+    "stem": "在A网络中,两台DR other设备并不会建立邻接关系,他们的状态会维持在2-way",
+    "options": {
+      "A": "正确",
+      "B": "错误"
+    },
+    "answer": "A",
+    "type": "judge",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 786,
+    "stem": "流策略支持在接口调用。但是只支持在接口的出口方向调用流策略",
+    "options": {
+      "A": "正确",
+      "B": "错误"
+    },
+    "answer": "A",
+    "type": "judge",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 787,
+    "stem": "默认情况下,IS-ISLevel-1-2路由器会将level-2区域的明细路由信息发布到level-1区域,保证level-1区域的路由器能够正常访问骨干区域的设备",
+    "options": {
+      "A": "正确",
+      "B": "错误"
+    },
+    "answer": "A",
+    "type": "judge",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 788,
+    "stem": "在VRRP中,当虚拟路由器回应ARP请求时,会使用主路由器直连接口MAC地址",
+    "options": {
+      "A": "正确",
+      "B": "错误"
+    },
+    "answer": "B",
+    "type": "judge",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 789,
+    "stem": "绑定到VRF实例的物理接口不能再划分出子接口",
+    "options": {
+      "A": "正确",
+      "B": "错误"
+    },
+    "answer": "A",
+    "type": "judge",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 790,
+    "stem": "华为CloudGampus解决方案支持业务随行功能,该功能可以通过图形化策略配置,实现用户随时随地接入",
+    "options": {
+      "A": "正确",
+      "B": "错误"
+    },
+    "answer": "A",
+    "type": "judge",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 791,
+    "stem": "一个非边缘端口是否迁移到frowarding状态是RSTP检测拓扑发生变化的标准之一",
+    "options": {
+      "A": "正确",
+      "B": "错误"
+    },
+    "answer": "B",
+    "type": "judge",
+    "initial_exclusion_reasons": []
+  },
+  {
+    "id": 792,
+    "stem": "一个Router-policy下可以有多个节点,不同的节点号用节点标识,不同节点之间的关系是”或”的关系",
+    "options": {
+      "A": "正确",
+      "B": "错误"
+    },
+    "answer": "A",
+    "type": "judge",
+    "initial_exclusion_reasons": []
+  }
+]

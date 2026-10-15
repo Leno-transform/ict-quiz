@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="780" height="220" viewBox="0 0 780 220" role="img" aria-labelledby="title desc">
+<title id="title">Telnet 登录与 FTP 文件获取示意图</title><desc id="desc">主机 A 使用 Telnet 登录路由器 A，并在路由器 A 上通过 FTP 向路由器 B 获取配置文件。图示只表示题干中的业务关系，不表示实际布线。</desc>
+<rect width="780" height="220" fill="#f8fbfa"/>
+<g fill="none" stroke="#94aea4" stroke-width="2"><path d="M209 111H314"/><path d="M466 111H571"/></g>
+<g fill="#fff" stroke="#d4e2db"><rect x="57" y="76" width="152" height="72" rx="10"/><rect x="314" y="76" width="152" height="72" rx="10"/><rect x="571" y="76" width="152" height="72" rx="10"/></g>
+<g font-family="Segoe UI,Microsoft YaHei,sans-serif" text-anchor="middle" fill="#244438"><text x="133" y="118" font-size="17">主机 A</text><text x="390" y="118" font-size="17">路由器 A</text><text x="647" y="118" font-size="17">路由器 B</text><text x="261" y="95" font-size="12" fill="#6d8e7e">Telnet 登录</text><text x="519" y="95" font-size="12" fill="#6d8e7e">FTP 获取配置</text><text x="390" y="184" font-size="11" fill="#82968a">在路由器 A 的远程会话中发起 FTP 操作</text></g>
+</svg>
