@@ -49,13 +49,13 @@ python app.py --port 8766
 
 ## 手机独立使用
 
-**手机请用 Safari（iPhone）或 Chrome（安卓）打开网址：[ICT 练习室](https://lhh-builder.github.io/ict-quiz/)。网址需先启用下述 GitHub Pages 发布。不要在微信、QQ 或“文件”的 HTML 附件预览中刷题。** 附件预览可能不执行 JavaScript，旧版会一直停留在“正在加载题库”。新版会显示打开说明，但仍需切换到完整浏览器才能练习。浏览器内若禁用了 JavaScript，也需先允许执行。
+**手机请用 Safari（iPhone）或 Chrome（安卓）打开网址：[ICT 练习室](https://lhh-builder.github.io/ict-quiz/)，本仓库已启用 GitHub Pages。不要在微信、QQ 或“文件”的 HTML 附件预览中刷题。** 附件预览可能不执行 JavaScript，旧版会一直停留在“正在加载题库”。新版会显示打开说明，但仍需切换到完整浏览器才能练习。浏览器内若禁用了 JavaScript，也需先允许执行。
 
 ### 可安装的网页版本
 
 仓库根目录的 `index.html`、`manifest.webmanifest`、`sw.js` 和图标组成可安装网页版本（PWA）。题库、解析和图片已内置，无需连接电脑的 Python 服务。
 
-**代码推送到 GitHub 不等于网站已经发布。** 若要通过网址使用，请在仓库 **Settings → Pages** 中选择 **Deploy from a branch → main → / (root)**，保存后以 GitHub Pages 页面实际给出的地址为准。也可将 `mobile-site/dist/` 发布到其他支持 HTTPS 的静态托管平台。参见 [GitHub Pages 发布说明](https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site)。
+本仓库已从 `main` 分支根目录发布。若复制到自己的仓库，**代码推送到 GitHub 不等于网站已经发布**：请在仓库 **Settings → Pages** 中选择 **Deploy from a branch → main → / (root)**，保存后以 GitHub Pages 页面实际给出的地址为准。也可将 `mobile-site/dist/` 发布到其他支持 HTTPS 的静态托管平台。参见 [GitHub Pages 发布说明](https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site)。
 
 首次用手机联网打开网页，等待显示 **“离线就绪”** 后：
 
