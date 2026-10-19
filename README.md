@@ -49,7 +49,7 @@ python app.py --port 8766
 
 ## 手机独立使用
 
-**手机请用 Safari（iPhone）或 Chrome（安卓）打开网址：[ICT 练习室](https://lhh-builder.github.io/ict-quiz/)，本仓库已启用 GitHub Pages。不要在微信、QQ 或“文件”的 HTML 附件预览中刷题。** 附件预览可能不执行 JavaScript，旧版会一直停留在“正在加载题库”。新版会显示打开说明，但仍需切换到完整浏览器才能练习。浏览器内若禁用了 JavaScript，也需先允许执行。
+**手机请用 Safari（iPhone）或 Chrome（安卓）打开网址：[ICT 练习室](https://leno-transform.github.io/ict-quiz/)，本仓库已启用 GitHub Pages。不要在微信、QQ 或“文件”的 HTML 附件预览中刷题。** 附件预览可能不执行 JavaScript，旧版会一直停留在“正在加载题库”。新版会显示打开说明，但仍需切换到完整浏览器才能练习。浏览器内若禁用了 JavaScript，也需先允许执行。
 
 ### 可安装的网页版本
 
