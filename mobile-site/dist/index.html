@@ -11,6 +11,8 @@
 @media(max-width:600px){.nav-item{font-size:11px;white-space:nowrap;gap:5px;padding:11px 6px}.nav-count{padding:2px 5px}.nav-icon{flex:none}}
 .question-card h2{font-size:22px;font-weight:700;line-height:1.85;color:#102c35}.option-text{font-size:15px;line-height:1.85;color:#263d46}.question-keyword{font-weight:800;color:inherit}#explanation{font-size:14px;line-height:1.95}.option-letter{font-size:14px}.mobile-status{font-size:12px;line-height:1.8;color:#667c74;padding:10px 0}.install-button{margin-top:10px}.mobile-help{font-size:12px;line-height:1.8;color:#60766c;margin:10px 0 0}.mobile-help summary{cursor:pointer;font-weight:600}.mobile-help p{margin:7px 0}.mobile-ready{color:#137d70}
 @media(max-width:600px){.question-card h2{font-size:20px;line-height:1.85}.option-text{font-size:14px;line-height:1.85}.option{min-height:60px;align-items:flex-start;padding:14px 12px}.option-letter{margin-top:1px}.option-result{align-self:center}.primary-button,.secondary-button,.nav-item{min-height:44px}.settings-card select{font-size:16px;min-height:44px}.feedback-top{font-size:14px}.feedback-top>span{font-size:12px}.selection-hint{font-size:12px}.source-links a{font-size:12px}.question-footer .primary-button,.question-footer .secondary-button{min-width:108px}}
+
+.startup-help{margin:20px 0;padding:18px;border:1px solid #b8d6cb;border-radius:10px;background:#edf7f2;color:#214c40;line-height:1.8;overflow-wrap:anywhere}.startup-help h2{font-size:18px;margin:0 0 8px}.startup-help p{font-size:14px;margin:8px 0}.startup-help a{font-size:15px;font-weight:700;text-decoration:underline}
 </style>
 <meta name="theme-color" content="#142c35"><meta name="apple-mobile-web-app-capable" content="yes"><link rel="manifest" href="./manifest.webmanifest"><link rel="apple-touch-icon" href="./icon-192.png"></head>
 <body>
@@ -26,6 +28,14 @@
     <div class="sidebar-bottom"><span class="local-dot"></span> 手机独立版 · 记录保存在本机</div>
   </aside>
   <main>
+    <section id="startup-help" class="startup-help" role="status">
+      <h2>打开方式说明</h2>
+      <p>如果这里一直没有出现题目，请检查打开方式。微信、QQ 和“文件”的 HTML 附件预览可能无法运行刷题功能。</p>
+      <p>手机请复制下方网址，在 iPhone 的 Safari 或安卓的 Chrome 中打开，再添加到主屏幕。首次等待“离线就绪”后即可离线使用。</p>
+      <a href="https://lhh-builder.github.io/ict-quiz/">https://lhh-builder.github.io/ict-quiz/</a>
+      <p>若网址尚未发布，请先按 README 的 GitHub Pages 步骤启用网站。电脑本地版请双击“启动网站.cmd”。正常载入后，本提示会自动收起。</p>
+    </section>
+    <noscript><style>.stats-grid,.practice-layout{display:none}</style><p class="startup-help">当前预览未执行 JavaScript，无法刷题。请复制上方网址到浏览器打开；如果已在浏览器，请允许网页运行 JavaScript。</p></noscript>
     <header class="topbar"><div class="breadcrumb">网络赛道 <span>/</span> <span id="breadcrumb-mode">顺序练习</span></div><div class="topbar-right"><span class="offline-tag">OFFLINE READY</span><button id="export-toggle" class="text-button" aria-expanded="false" aria-controls="export-menu">导出资料 ↓</button></div>
       <div id="export-menu" class="export-menu" hidden><a href="/exports/materials.zip" download>完整资料包 · 含全部解析与图片</a><a href="/exports/explanations.md" download>全部题目与解析 · Markdown</a><a href="/exports/questions.json" download>结构化题库 · JSON</a><a href="/exports/cleaning.md" download>题库清理与修正报告</a><a href="/api/backup" download>我的学习记录 · JSON</a></div>
     </header>
@@ -38,11 +48,11 @@
     </section>
     <section class="practice-layout">
       <div class="practice-column">
-        <div class="practice-toolbar"><div><span class="section-dot"></span><strong id="session-label">顺序练习</strong><span class="muted" id="session-progress">正在加载题库…</span></div><button id="restart" class="text-button">重新开始 ↻</button></div>
+        <div class="practice-toolbar"><div><span class="section-dot"></span><strong id="session-label">顺序练习</strong><span class="muted" id="session-progress">尚未启动，请查看上方打开说明</span></div><button id="restart" class="text-button">重新开始 ↻</button></div>
         <div class="progress-track"><div id="progress-fill"></div></div>
         <article id="question-card" class="question-card" aria-busy="true">
-          <div class="question-meta"><div><span class="type-tag" id="question-type">加载中</span><span class="topic-tag" id="question-topic"></span></div><span id="question-number" class="muted"></span></div>
-          <h2 id="question-stem">正在打开你的练习室…</h2>
+          <div class="question-meta"><div><span class="type-tag" id="question-type">打开提示</span><span class="topic-tag" id="question-topic"></span></div><span id="question-number" class="muted"></span></div>
+          <h2 id="question-stem">未出现题目时，请用浏览器打开。</h2>
           <figure id="question-figure" hidden><img id="question-image" alt=""><figcaption id="figure-caption"></figcaption></figure>
           <p id="selection-hint" class="selection-hint"></p>
           <fieldset id="options"><legend class="sr-only">选择答案</legend></fieldset>
@@ -440,9 +450,10 @@ async function init() {
       Number.isInteger(saved.position) && saved.position >= 0 && saved.position < Math.max(1, saved.queue.length) && saved.entries;
     if (validSaved) { state = saved; syncSettings(); render(); }
     else newSession("sequential", {type: "all", topic: "all", count: "20", includeMastered: false});
+    $("startup-help").hidden = true;
   } catch (error) {
     $("question-stem").textContent = "练习室暂时无法打开";
-    $("selection-hint").textContent = `${error.message} 请确认启动窗口仍在运行，然后刷新页面。`;
+    $("selection-hint").textContent = `${error.message} ${window.ICTOffline ? "请在 Safari 或 Chrome 中打开网址；若已在浏览器，请检查网站存储权限，再刷新。" : "请确认启动窗口仍在运行，然后刷新页面。"}`;
     $("question-card").setAttribute("aria-busy", "false");
     toast(error.message);
   }

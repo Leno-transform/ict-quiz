@@ -270,9 +270,10 @@ async function init() {
       Number.isInteger(saved.position) && saved.position >= 0 && saved.position < Math.max(1, saved.queue.length) && saved.entries;
     if (validSaved) { state = saved; syncSettings(); render(); }
     else newSession("sequential", {type: "all", topic: "all", count: "20", includeMastered: false});
+    $("startup-help").hidden = true;
   } catch (error) {
     $("question-stem").textContent = "练习室暂时无法打开";
-    $("selection-hint").textContent = `${error.message} 请确认启动窗口仍在运行，然后刷新页面。`;
+    $("selection-hint").textContent = `${error.message} ${window.ICTOffline ? "请在 Safari 或 Chrome 中打开网址；若已在浏览器，请检查网站存储权限，再刷新。" : "请确认启动窗口仍在运行，然后刷新页面。"}`;
     $("question-card").setAttribute("aria-busy", "false");
     toast(error.message);
   }
