@@ -27,10 +27,10 @@
       if (path !== "/api/answer") throw new Error("不支持的操作。");
       const q = questions.get(body.question_id);
       if (!q || !Array.isArray(body.selected) || !body.selected.length ||
-          body.selected.some(v => !Object.hasOwn(q.options, v)) ||
+          body.selected.some(v => typeof v !== "string" || (q.type === "fill" ? !v.trim() || v.trim().length > 200 : !Object.hasOwn(q.options, v))) ||
           new Set(body.selected).size !== body.selected.length ||
           (q.type !== "multiple" && body.selected.length !== 1)) throw new Error("请选择有效的答案。");
-      const selected = [...body.selected].sort();
+      const selected = q.type === "fill" ? [body.selected[0].trim()] : [...body.selected].sort();
       const old = records.attempts[body.token];
       if (old) {
         if (old.question_id !== q.id || JSON.stringify(old.selected) !== JSON.stringify(selected))

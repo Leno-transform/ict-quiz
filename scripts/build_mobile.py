@@ -2,6 +2,7 @@
 import base64
 import hashlib
 import json
+import mimetypes
 import re
 import struct
 import zlib
@@ -35,8 +36,9 @@ def main():
     bank["version"] = hashlib.sha256((ROOT / "data" / "questions.json").read_bytes()).hexdigest()[:12]
     for q in bank["questions"]:
         if q["image"]:
-            svg = (ROOT / "web" / q["image"]["src"].lstrip("/")).read_bytes()
-            q["image"]["src"] = "data:image/svg+xml;base64," + base64.b64encode(svg).decode("ascii")
+            path = ROOT / "web" / q["image"]["src"].lstrip("/")
+            mime = mimetypes.guess_type(path.name)[0] or "application/octet-stream"
+            q["image"]["src"] = "data:" + mime + ";base64," + base64.b64encode(path.read_bytes()).decode("ascii")
     page = (ROOT / "web" / "index.html").read_text(encoding="utf-8")
     page = page.replace('href="/"', 'href="./index.html"')
     page = page.replace('<link rel="stylesheet" href="/style.css"><script src="/app.js" defer></script>',

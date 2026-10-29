@@ -1,0 +1,2803 @@
+[
+  {
+    "source_number": 331,
+    "action": "correct",
+    "explanation": "DHCP 的 DNS 服务器选项可携带多个 IPv4 地址，长度为 4 字节的整数倍，并非只能提供一个。",
+    "sources": [
+      "https://www.rfc-editor.org/rfc/rfc2132"
+    ],
+    "corrected_options": {
+      "A": "正确",
+      "B": "错误"
+    },
+    "reason": "清除相邻题目混入的选项文字"
+  },
+  {
+    "source_number": 332,
+    "action": "keep",
+    "explanation": "邻接段表示特定节点的一条邻接链路，Adj-SID 可由节点动态分配，不能说必须手工配置。",
+    "sources": [
+      "https://www.rfc-editor.org/rfc/rfc8402.html"
+    ]
+  },
+  {
+    "source_number": 333,
+    "action": "keep",
+    "explanation": "一个物理 AP 可创建多个 VAP，分别绑定 SSID 和安全策略，为不同用户提供不同服务。",
+    "sources": [
+      "https://info.support.huawei.com/info-finder/encyclopedia/en/SSID.html"
+    ]
+  },
+  {
+    "source_number": 334,
+    "action": "keep",
+    "explanation": "display pppoe-client session summary 汇总显示 PPPoE 客户端会话状态，便于确认是否建立成功。",
+    "sources": [
+      "https://info.support.huawei.com/network/ptmngsys/Web/tsrev_ar/en/content/ar/13_edesk_pppoe_cannot_dialup_to_the_internet/edesk_pppoe_cannot_dialup_to_the_internet_edesk001.html"
+    ]
+  },
+  {
+    "source_number": 335,
+    "action": "keep",
+    "explanation": "直接转发时用户数据由AP本地进入有线网络，不必经过AC；AC仍负责AP配置与用户接入管理。",
+    "sources": [
+      "https://info.support.huawei.com/hedex/api/pages/EDOC1100210440/AZK0901G/09/resources/dc/dc_fd_wlan_basic_0007.html"
+    ]
+  },
+  {
+    "source_number": 336,
+    "action": "correct",
+    "explanation": "IPv6 环回地址是 ::1/128，用于本机通信，不能作为链路上转发的源或目的地址。",
+    "sources": [
+      "https://datatracker.ietf.org/doc/html/rfc4291"
+    ],
+    "corrected_options": {
+      "A": "正确",
+      "B": "错误"
+    },
+    "reason": "修复环回地址的双冒号",
+    "corrected_answer": "A",
+    "corrected_stem": "::1/128是IPv6环回地址。"
+  },
+  {
+    "source_number": 337,
+    "action": "correct",
+    "explanation": "SLAAC负责生成IPv6地址，DNS还可通过RA中的RDNSS选项提供，因此不能说使用SLAAC就无法获取DNS。",
+    "sources": [
+      "https://www.rfc-editor.org/rfc/rfc8106"
+    ],
+    "corrected_answer": "B",
+    "reason": "RA可以携带DNS服务器信息，原答案已过时"
+  },
+  {
+    "source_number": 338,
+    "action": "keep",
+    "explanation": "交换机主要提供局域网终端接入与二层帧转发，网络出口通常由路由器或防火墙承担。",
+    "sources": [
+      "https://info.support.huawei.com/hedex/api/pages/EDOC1000053358/YEF0907R/25/resources/en-us_concept_0141563763.html"
+    ]
+  },
+  {
+    "source_number": 339,
+    "action": "keep",
+    "explanation": "history-command max-size 20把历史命令缓存调整为20条；这里的单位是命令条数，不是字节。",
+    "sources": [
+      "https://info.support.huawei.com/hedex/api/pages/EDOC1000053358/YEF0907R/25/resources/en-us_task_0141547205.html"
+    ]
+  },
+  {
+    "source_number": 340,
+    "action": "keep",
+    "explanation": "Ctrl+Z 可从配置视图直接返回用户视图，因此从系统视图返回用户视图也是其适用情形。",
+    "sources": [
+      "https://support.huawei.com/enterprise/en/doc/EDOC1100410538/36ae01a3/using-command-line-shortcut-keys"
+    ]
+  },
+  {
+    "source_number": 341,
+    "action": "keep",
+    "explanation": "各区域维护本区域的拓扑 LSDB；骨干区域收到其他区域的摘要路由，不等于掌握其他区域的完整拓扑。",
+    "sources": [
+      "https://www.rfc-editor.org/rfc/rfc2328"
+    ]
+  },
+  {
+    "source_number": 342,
+    "action": "keep",
+    "explanation": "/28 有 16 个地址，除网络和广播地址后有 14 个主机地址；已占用一个，还能增加 13 台。",
+    "sources": [
+      "https://www.rfc-editor.org/rfc/rfc791.html"
+    ]
+  },
+  {
+    "source_number": 343,
+    "action": "keep",
+    "explanation": "Hello 报文周期性发现邻居并维护其存活状态，也用于检查建立邻居所需的参数。",
+    "sources": [
+      "https://www.rfc-editor.org/rfc/rfc2328.html"
+    ]
+  },
+  {
+    "source_number": 344,
+    "action": "keep",
+    "explanation": "OSPF Area ID 是 32 位值，骨干区域固定为 0.0.0.0；并不要求所有网络都在骨干区域中。",
+    "sources": [
+      "https://www.rfc-editor.org/rfc/rfc2328"
+    ]
+  },
+  {
+    "source_number": 345,
+    "action": "keep",
+    "explanation": "DD 携带 LSA 首部摘要描述本地数据库，邻居据此发现缺少或旧的 LSA。",
+    "sources": [
+      "https://www.rfc-editor.org/rfc/rfc2328.html"
+    ]
+  },
+  {
+    "source_number": 346,
+    "action": "keep",
+    "explanation": "10.1.1.1 位于 RFC 1918 的 10.0.0.0/8 私有范围，公网不直接路由这些地址。",
+    "sources": [
+      "https://www.rfc-editor.org/rfc/rfc791.html"
+    ]
+  },
+  {
+    "source_number": 347,
+    "action": "exclude",
+    "reason": "两主机掩码不同，原选项C“不能获取对方MAC”不严谨：/24主机仍可对/30主机发ARP并取得应答；给定选项缺少无歧义的唯一正确项。",
+    "explanation": "",
+    "sources": []
+  },
+  {
+    "source_number": 348,
+    "action": "keep",
+    "explanation": "图中4条以太网链路分别属于4个广播网段；OSPF在每个广播网段独立选举一个DR。",
+    "sources": [
+      "https://datatracker.ietf.org/doc/html/rfc2328"
+    ]
+  },
+  {
+    "source_number": 349,
+    "action": "keep",
+    "explanation": "同一子网内的主机可直接 ARP 解析并通信，通常只有访问其他子网时才需要默认网关。",
+    "sources": [
+      "https://www.rfc-editor.org/rfc/rfc826"
+    ]
+  },
+  {
+    "source_number": 350,
+    "action": "correct",
+    "explanation": "VRP静态路由默认优先级为60，备用路径设为70，数值更大故仅在主路由失效后使用。",
+    "sources": [
+      "https://info.support.huawei.com/hedex/api/pages/EDOC1100277650/AZM1016J/03/resources/vrp/feature_0003992083.html"
+    ],
+    "corrected_options": {
+      "A": "ip route-static 10.0.2.2 255.255.255.255 10.0.12.2\nip route-static 10.0.2.2 255.255.255.255 10.0.21.2 preference 40",
+      "B": "ip route-static 10.0.2.2 255.255.255.255 10.0.12.2\nip route-static 10.0.2.2 255.255.255.255 10.0.21.2",
+      "C": "ip route-static 10.0.2.2 255.255.255.255 10.0.12.2 preference 70\nip route-static 10.0.2.2 255.255.255.255 10.0.21.2",
+      "D": "ip route-static 10.0.2.2 255.255.255.255 10.0.12.2\nip route-static 10.0.2.2 255.255.255.255 10.0.21.2 preference 70"
+    },
+    "reason": "依据PDF第84页恢复分行选项"
+  },
+  {
+    "source_number": 351,
+    "action": "keep",
+    "explanation": "MPLS标签通常插在二层头与三层报文之间，而不是网络层与传输层之间；每个标签栈项固定4字节。",
+    "sources": [
+      "https://datatracker.ietf.org/doc/html/rfc3031"
+    ]
+  },
+  {
+    "source_number": 352,
+    "action": "keep",
+    "explanation": "IPv6 基本首部固定为 40 字节；可变的扩展首部位于基本首部之后。",
+    "sources": [
+      "https://www.rfc-editor.org/rfc/rfc8200"
+    ]
+  },
+  {
+    "source_number": 353,
+    "action": "keep",
+    "explanation": "RSTP把端口状态简化为Discarding、Learning和Forwarding三种，区别于传统STP的五种状态。",
+    "sources": [
+      "https://info.support.huawei.com/info-finder/encyclopedia/en/RSTP.html"
+    ]
+  },
+  {
+    "source_number": 354,
+    "action": "keep",
+    "explanation": "路由器子接口按VLAN 10标签终结报文，因此对接交换机端口需允许VLAN 10且以Tagged方式发送；普通Trunk配置满足要求。",
+    "sources": [
+      "https://info.support.huawei.com/info-finder/encyclopedia/zh/VLAN.html"
+    ]
+  },
+  {
+    "source_number": 355,
+    "action": "correct",
+    "explanation": "HUB不划分冲突域，默认同VLAN二层交换机仍为一个广播域；路由器按三层接口隔离广播域。",
+    "sources": [
+      "https://info.support.huawei.com/info-finder/encyclopedia/zh/VLAN.html"
+    ],
+    "corrected_options": {
+      "A": "一台采用默认配置的二层交换机所有端口上连接的设备属于一个冲突域",
+      "B": "一台HUB所有端口上连接的设备属于一个广播域",
+      "C": "一台HUB所有端口上连接的设备属于一个冲突域",
+      "D": "一台路由器所连接的设备属于一个广播域",
+      "E": "一台采用默认配置的二层交换机所有端口上连接的设备属于一个广播域"
+    },
+    "reason": "依据PDF第86页恢复分行选项",
+    "corrected_answer": "BCE"
+  },
+  {
+    "source_number": 356,
+    "action": "keep",
+    "explanation": "交换机收到帧后，用源 MAC、入端口和 VLAN 学习表项，再根据目的 MAC 选择转发出口。",
+    "sources": [
+      "https://info.support.huawei.com/hedex/api/pages/EDOC1000053358/YEF0907R/25/resources/en-us_concept_0141563763.html"
+    ]
+  },
+  {
+    "source_number": 357,
+    "action": "keep",
+    "explanation": "输出中的Eth-Trunk1.100表明子接口号100，地址为10.0.12.2/24，成员列表显示两条物理链路。",
+    "sources": [
+      "https://info.support.huawei.com/info-finder/encyclopedia/en/LACP.html"
+    ]
+  },
+  {
+    "source_number": 358,
+    "action": "correct",
+    "explanation": "路由器的两个接口隔离出两个广播域；HUB不隔离冲突域，交换机按端口隔离冲突域，不能把所有主机算在同一个域中。",
+    "sources": [
+      "https://standards.ieee.org/standard/802_3-2022.html"
+    ],
+    "corrected_options": {
+      "A": "此网络中有6个冲突域",
+      "B": "此网络中有6个广播域",
+      "C": "此网络中有12个冲突域",
+      "D": "此网络中有2个广播域"
+    },
+    "reason": "依据PDF第87页原始截图恢复选项"
+  },
+  {
+    "source_number": 359,
+    "action": "keep",
+    "explanation": "目的MAC已知也不保证转发：若查得出接口就是入接口，交换机会过滤该帧；端口状态和VLAN限制也会影响转发。",
+    "sources": [
+      "https://standards.ieee.org/standard/802_3-2022.html"
+    ]
+  },
+  {
+    "source_number": 360,
+    "action": "keep",
+    "explanation": "认证通过仅说明允许登录；用户等级过低时，仍无权执行配置接口 IP 的命令。",
+    "sources": [
+      "https://info.support.huawei.com/hedex/api/pages/EDOC1000053358/YEF0907R/25/resources/en-us_cliref_0133032600.html"
+    ]
+  },
+  {
+    "source_number": 361,
+    "action": "exclude",
+    "reason": "扫描答案A与旧题原文B冲突；题目未区分RSTP版本2报文与兼容模式发送的版本0配置BPDU，不能在缺少该前提时简单判断丢弃。",
+    "explanation": "",
+    "sources": []
+  },
+  {
+    "source_number": 362,
+    "action": "keep",
+    "explanation": "STP先比较桥ID选根桥；桥ID由桥优先级和MAC地址组成，数值更小者优先。",
+    "sources": [
+      "https://info.support.huawei.com/info-finder/encyclopedia/en/RSTP.html"
+    ]
+  },
+  {
+    "source_number": 363,
+    "action": "keep",
+    "explanation": "经典 STP 有 Disabled、Blocking、Listening、Learning、Forwarding 五种状态；Discarding 属于 RSTP 状态名。",
+    "sources": [
+      "https://info.support.huawei.com/enterprise/zh/doc/EDOC1100457495/e66d44a3"
+    ]
+  },
+  {
+    "source_number": 364,
+    "action": "keep",
+    "explanation": "Forward Delay为拓扑收敛和MAC学习保留等待时间，避免旧路径未失效时新路径过早转发形成临时环路。",
+    "sources": [
+      "https://info.support.huawei.com/info-finder/encyclopedia/en/RSTP.html"
+    ]
+  },
+  {
+    "source_number": 365,
+    "action": "exclude",
+    "reason": "第88页同一题出现两套不同选项及A、BD两种答案，且路由前缀格式含错误，不能按当前单选结构可靠判分。",
+    "explanation": "",
+    "sources": []
+  },
+  {
+    "source_number": 366,
+    "action": "keep",
+    "explanation": "Telnet会话依赖到10.0.12.2的现有IP通路，修改该连接接口IP或关闭接口都会破坏会话。",
+    "sources": [
+      "https://datatracker.ietf.org/doc/html/rfc9293"
+    ]
+  },
+  {
+    "source_number": 367,
+    "action": "correct",
+    "explanation": "DHCP客户端与服务器位于不同网段时，中继转发客户端广播请求并设置中继信息；同一网络可部署多台DHCP服务器。",
+    "sources": [
+      "https://datatracker.ietf.org/doc/html/rfc2131"
+    ],
+    "corrected_options": {
+      "A": "DHCP中继接收到DHCP请求或应答后，不修改报文格式而直接转发",
+      "B": "网络中不允许出现多个DHCP服务器",
+      "C": "DHCP客户端和DHCP服务器必须连接到同一个交换机",
+      "D": "DHCP客户端和服务器不在同一网段时，可通过DHCP中继转发报文"
+    },
+    "corrected_answer": "D",
+    "reason": "依据PDF第89页恢复粘连选项"
+  },
+  {
+    "source_number": 368,
+    "action": "keep",
+    "explanation": "STP先比较桥ID选根桥；桥ID由桥优先级和MAC地址组成，数值更小者优先。",
+    "sources": [
+      "https://info.support.huawei.com/info-finder/encyclopedia/en/RSTP.html"
+    ]
+  },
+  {
+    "source_number": 369,
+    "action": "keep",
+    "explanation": "BSS 是基本服务集，表示单个 AP 提供服务的基本覆盖区域；BSSID 则是这个 BSS 的标识符。",
+    "sources": [
+      "https://info.support.huawei.com/info-finder/encyclopedia/en/SSID.html"
+    ]
+  },
+  {
+    "source_number": 370,
+    "action": "correct",
+    "explanation": "传统VRP的VTY认证方式包括AAA、Password和None；MD5密文不是独立的Telnet登录认证模式。",
+    "sources": [
+      "https://info.support.huawei.com/hedex/api/pages/EDOC1000053358/YEF0907R/25/resources/en-us_task_0141547205.html"
+    ],
+    "corrected_answer": "ABC",
+    "reason": "原答案遗漏传统VRP支持的None无认证模式"
+  },
+  {
+    "source_number": 371,
+    "action": "correct",
+    "explanation": "初始客户端尚无服务器地址，DHCPDISCOVER 通常以 255.255.255.255 有限广播寻找服务器。",
+    "sources": [
+      "https://www.rfc-editor.org/rfc/rfc2131.html"
+    ],
+    "corrected_options": {
+      "A": "255.255.255.255",
+      "B": "224.0.0.1",
+      "C": "224.0.0.2",
+      "D": "127.0.0.1"
+    },
+    "reason": "删除相邻题或附加截图混入的选项内容"
+  },
+  {
+    "source_number": 372,
+    "action": "keep",
+    "explanation": "AAA 依次是 Authentication、Authorization、Accounting，对应身份认证、权限授权和使用记录。",
+    "sources": [
+      "https://info.support.huawei.com/enterprise/zh/doc/EDOC1100410648/330af205"
+    ]
+  },
+  {
+    "source_number": 373,
+    "action": "keep",
+    "explanation": "规则匹配源 192.168.1.0/24、目的 172.16.10.1 且 TCP 目的端口为 21 的报文。",
+    "sources": [
+      "https://info.support.huawei.com/info-finder/encyclopedia/en/ACL.html"
+    ]
+  },
+  {
+    "source_number": 374,
+    "action": "keep",
+    "explanation": "Access-Reject 表示服务器拒绝认证，Access-Accept 则表示认证通过。",
+    "sources": [
+      "https://www.rfc-editor.org/rfc/rfc2865.html"
+    ]
+  },
+  {
+    "source_number": 375,
+    "action": "correct",
+    "explanation": "认证和计费服务器都为200.0.12.1，RADIUS认证应答也携带授权属性；NAS-IP属性不是报文源IP配置。",
+    "sources": [
+      "https://datatracker.ietf.org/doc/html/rfc2865"
+    ],
+    "corrected_answer": "BCD",
+    "reason": "RADIUS认证服务器同时通过Access-Accept携带授权属性，B项不应排除"
+  },
+  {
+    "source_number": 376,
+    "action": "keep",
+    "explanation": "Trunk是否发送标签取决于PVID和允许VLAN；两端标签处理不一致时，VLAN 10不能仅凭链路连通就正常互通。",
+    "sources": [
+      "https://info.support.huawei.com/info-finder/encyclopedia/zh/VLAN.html"
+    ]
+  },
+  {
+    "source_number": 377,
+    "action": "keep",
+    "explanation": "0x0806 表示 Ethernet II 中承载 ARP，请求可以使用广播目的 MAC；源 MAC 必须是单播地址。",
+    "sources": [
+      "https://www.rfc-editor.org/rfc/rfc826",
+      "https://www.iana.org/assignments/ieee-802-numbers/ieee-802-numbers.xhtml"
+    ]
+  },
+  {
+    "source_number": 378,
+    "action": "keep",
+    "explanation": "RSTP 将端口状态归并为 Discarding、Learning、Forwarding；Blocking 是传统 STP 的状态名。",
+    "sources": [
+      "https://info.support.huawei.com/enterprise/zh/doc/EDOC1100457495/e66d44a3"
+    ]
+  },
+  {
+    "source_number": 379,
+    "action": "keep",
+    "explanation": "RSTP把端口状态简化为Discarding、Learning和Forwarding三种，区别于传统STP的五种状态。",
+    "sources": [
+      "https://info.support.huawei.com/info-finder/encyclopedia/en/RSTP.html"
+    ]
+  },
+  {
+    "source_number": 380,
+    "action": "keep",
+    "explanation": "基于 MAC 的 VLAN 分配跟随终端身份，主机更换交换机端口后仍可归入相同 VLAN。",
+    "sources": [
+      "https://support.huawei.com/enterprise/zh/doc/EDOC1100365027/2580a0e4/Interface%20Types.htm"
+    ]
+  },
+  {
+    "source_number": 381,
+    "action": "keep",
+    "explanation": "MAC表中的Static表项由管理员配置；Dynamic表项由源MAC学习，重启或老化后需要重新学习。",
+    "sources": [
+      "https://standards.ieee.org/standard/802_3-2022.html"
+    ]
+  },
+  {
+    "source_number": 382,
+    "action": "keep",
+    "explanation": "STP 选举比较桥 ID、根路径开销和端口 ID；Forward Delay 是状态过渡计时器，并非选举参数。",
+    "sources": [
+      "https://info.support.huawei.com/enterprise/zh/doc/EDOC1100457495/e66d44a3"
+    ]
+  },
+  {
+    "source_number": 383,
+    "action": "keep",
+    "explanation": "VLAN ID 4095 被保留，普通 VLAN 为 1–4094；华为缺省 VLAN 1 不能删除。",
+    "sources": [
+      "https://info.support.huawei.com/enterprise/zh/doc/EDOC1100276977/c672b196"
+    ]
+  },
+  {
+    "source_number": 384,
+    "action": "correct",
+    "explanation": "华为 VRP 的 tracert 通常发送逐步增加 TTL 的 UDP 探测报文，所以 IPv4 Protocol 为 17。",
+    "sources": [
+      "https://info.support.huawei.com/hedex/api/pages/EDOC1100363264/AEN0403J/06/resources/command/yunshan/TRACERT%28DGNIP4OM%29.html"
+    ],
+    "corrected_answer": "D",
+    "reason": "华为tracert默认UDP探测，IPv4协议号为17"
+  },
+  {
+    "source_number": 385,
+    "action": "correct",
+    "explanation": "PPP 是点到点链路，出口对端唯一，因此静态路由可使用出接口或下一跳描述路径。",
+    "sources": [
+      "https://info.support.huawei.com/hedex/api/pages/EDOC1100277650/AZM1016J/03/resources/vrp/feature_0003992083.html"
+    ],
+    "corrected_options": {
+      "A": "正确",
+      "B": "错误"
+    },
+    "reason": "清除相邻题目混入的选项文字"
+  },
+  {
+    "source_number": 386,
+    "action": "keep",
+    "explanation": "典型 SDN 分为应用层、控制层与基础设施/设备层；芯片属于设备内部组成。",
+    "sources": [
+      "https://opennetworking.org/sdn-definition/"
+    ]
+  },
+  {
+    "source_number": 387,
+    "action": "keep",
+    "explanation": "中间路由器发回 ICMP Time Exceeded，其源 IP 标识该跳设备，Tracert 据此显示路径。",
+    "sources": [
+      "https://www.rfc-editor.org/rfc/rfc792.html"
+    ]
+  },
+  {
+    "source_number": 388,
+    "action": "keep",
+    "explanation": "一个OSPF广播网段只选举一个DR和一个BDR；多个DROther不会同时都成为备份指定路由器。",
+    "sources": [
+      "https://datatracker.ietf.org/doc/html/rfc2328"
+    ]
+  },
+  {
+    "source_number": 389,
+    "action": "correct",
+    "explanation": "/22 精确覆盖这四个 /24，/21 覆盖更大范围，默认路由 /0 同样能匹配；/23 无法覆盖四段。",
+    "sources": [
+      "https://support.huawei.com/enterprise/zh/doc/EDOC1100333406/ac7caed7/ip-route-static"
+    ],
+    "corrected_stem": "将10.24.0.0/24、10.24.1.0/24、10.24.2.0/24、10.24.3.0/24四个连续网段汇总，最精确的汇总路由是哪一条？",
+    "reason": "补明最精确汇总前提，排除更宽泛默认路由也覆盖的歧义"
+  },
+  {
+    "source_number": 390,
+    "action": "keep",
+    "explanation": "OSPF 的四类常见网络类型为广播、NBMA、点到点和点到多点；广播与 NBMA 才选举 DR/BDR。",
+    "sources": [
+      "https://info.support.huawei.com/enterprise/zh/doc/EDOC1100334536/c1083833"
+    ]
+  },
+  {
+    "source_number": 391,
+    "action": "keep",
+    "explanation": "capwap source interface 或 capwap source ip-address 可指定 AC 建立 CAPWAP 通道时使用的本地源。",
+    "sources": [
+      "https://info.support.huawei.com/enterprise/zh/doc/EDOC1100276720/37ee09e1"
+    ]
+  },
+  {
+    "source_number": 392,
+    "action": "keep",
+    "explanation": "传统 D 类地址范围 224.0.0.0/4 用于组播，不分配为普通主机的单播地址。",
+    "sources": [
+      "https://www.rfc-editor.org/rfc/rfc791.html"
+    ]
+  },
+  {
+    "source_number": 393,
+    "action": "correct",
+    "explanation": "一个射频可承载多个 VAP，各 VAP 可对应不同 SSID；上限依 AP 型号而定。",
+    "sources": [
+      "https://info.support.huawei.com/info-finder/encyclopedia/zh/SSID.html"
+    ],
+    "corrected_options": {
+      "A": "正确",
+      "B": "错误"
+    },
+    "reason": "清除相邻题目混入的选项文字"
+  },
+  {
+    "source_number": 394,
+    "action": "keep",
+    "explanation": "26 台主机至少需要 5 bit 主机位，2⁵−2=30；因此选 /27，即 255.255.255.224。",
+    "sources": [
+      "https://www.rfc-editor.org/rfc/rfc791.html"
+    ]
+  },
+  {
+    "source_number": 395,
+    "action": "keep",
+    "explanation": "图中两台主机位于不同IPv4网段，需要三层路由转发；HUB和二层交换机不能代替网关完成跨网段路由。",
+    "sources": [
+      "https://info.support.huawei.com/hedex/api/pages/EDOC1100277650/AZM1016J/03/resources/vrp/feature_0003992083.html"
+    ]
+  },
+  {
+    "source_number": 396,
+    "action": "keep",
+    "explanation": "华为VRP使用sysname修改设备名称，提示符中的设备名也会随之改变；hostname是其他系统常见命令。",
+    "sources": [
+      "https://info.support.huawei.com/hedex/api/pages/EDOC1000053358/YEF0907R/25/resources/en-us_task_0141547205.html"
+    ]
+  },
+  {
+    "source_number": 397,
+    "action": "keep",
+    "explanation": "服务器提供稳定服务，通常使用静态地址或 DHCP 地址保留，便于客户端定位和统一管理。",
+    "sources": [
+      "https://info.support.huawei.com/hedex/api/pages/EDOC1100331917/AZM1014P/06/resources/dc/dc_cfg_dhcp_6013.html"
+    ]
+  },
+  {
+    "source_number": 398,
+    "action": "keep",
+    "explanation": "以太网 IPv4 通常用 ARP 解析地址；PPP 点到点链路不需要 Ethernet MAC 解析，不能推广到所有链路协议。",
+    "sources": [
+      "https://www.rfc-editor.org/rfc/rfc826.html"
+    ]
+  },
+  {
+    "source_number": 399,
+    "action": "keep",
+    "explanation": "传统点到点互联常用 /30，提供两个可用主机地址；双方支持 RFC 3021 时也可使用 /31。",
+    "sources": [
+      "https://www.rfc-editor.org/rfc/rfc791.html"
+    ]
+  },
+  {
+    "source_number": 400,
+    "action": "exclude",
+    "reason": "原答案标为AC，但A中的bytes命令写入符合telnetlib.write用法，C才明确错误；缺少其他代码上下文，原多选答案不可可靠复现。",
+    "explanation": "",
+    "sources": []
+  },
+  {
+    "source_number": 401,
+    "action": "keep",
+    "explanation": "NFV 把网络功能从专用硬件中解耦为软件实例，可在通用服务器上部署和管理。",
+    "sources": [
+      "https://www.etsi.org/technical-groups/nfv/"
+    ]
+  },
+  {
+    "source_number": 402,
+    "action": "keep",
+    "explanation": "IPv6 可手工配置，也可通过 SLAAC 无状态自动配置或 DHCPv6 获取地址，自动配置不止一种方式。",
+    "sources": [
+      "https://datatracker.ietf.org/doc/html/rfc4862",
+      "https://datatracker.ietf.org/doc/html/rfc8415"
+    ]
+  },
+  {
+    "source_number": 403,
+    "action": "correct",
+    "explanation": "SLAAC负责生成IPv6地址，DNS还可通过RA中的RDNSS选项提供，因此不能说使用SLAAC就无法获取DNS。",
+    "sources": [
+      "https://www.rfc-editor.org/rfc/rfc8106"
+    ],
+    "corrected_answer": "B",
+    "reason": "RA可以携带DNS服务器信息，原答案已过时"
+  },
+  {
+    "source_number": 404,
+    "action": "keep",
+    "explanation": "SNMP常规IPv4传输使用UDP，管理请求通常发往161端口，Trap通知通常使用162端口；本题不是TCP传输扩展场景。",
+    "sources": [
+      "https://datatracker.ietf.org/doc/html/rfc3416"
+    ]
+  },
+  {
+    "source_number": 405,
+    "action": "keep",
+    "explanation": "MPLS标签通常插在二层头与三层报文之间，而不是网络层与传输层之间；每个标签栈项固定4字节。",
+    "sources": [
+      "https://datatracker.ietf.org/doc/html/rfc3031"
+    ]
+  },
+  {
+    "source_number": 406,
+    "action": "keep",
+    "explanation": "Incomplete command 表示已识别命令，但还缺少执行所需的关键字或参数。",
+    "sources": [
+      "https://info.support.huawei.com/hedex/api/pages/EDOC1100277644/AEM10221/04/resources/software/nev8r10_vrpv8r16/user/galaxy/vrp_cli_cfg_0008.html"
+    ]
+  },
+  {
+    "source_number": 407,
+    "action": "keep",
+    "explanation": "广播地址由网络前缀和全 1 主机位共同确定；只给 192.168.1.0 而未给掩码，不能确定广播地址。",
+    "sources": [
+      "https://www.rfc-editor.org/rfc/rfc791"
+    ]
+  },
+  {
+    "source_number": 408,
+    "action": "keep",
+    "explanation": "Fat AP 可独立提供 WLAN，Fit AP 由 AC 管理，Cloud AP 由云平台管理；具体模式还取决于设备型号。",
+    "sources": [
+      "https://support.huawei.com/enterprise/en/doc/EDOC1100081212/1f32f097/ap-mode-switching---overview-examples-and-troubleshooting"
+    ]
+  },
+  {
+    "source_number": 409,
+    "action": "keep",
+    "explanation": "IPv4 IHL 占 4 bit 且以 4 字节为单位，首部长度为 20–60 字节，64 字节超出上限。",
+    "sources": [
+      "https://www.rfc-editor.org/rfc/rfc791.html"
+    ]
+  },
+  {
+    "source_number": 410,
+    "action": "keep",
+    "explanation": "认证、授权、计费方案和服务器模板是配置资源；在用户所属域下引用后，才用于该域的用户接入流程。",
+    "sources": [
+      "https://info.support.huawei.com/enterprise/zh/doc/EDOC1100410648/330af205"
+    ]
+  },
+  {
+    "source_number": 411,
+    "action": "keep",
+    "explanation": "两网段直接连接同一路由器即可形成直连路由；主机A的ARP映射是下一跳网关的IP和MAC，而非远端主机B。",
+    "sources": [
+      "https://datatracker.ietf.org/doc/html/rfc826"
+    ]
+  },
+  {
+    "source_number": 412,
+    "action": "keep",
+    "explanation": "Router ID 可手工指定；自动选择时优先采用最大的 Loopback 地址，否则选其他接口中最大的地址。",
+    "sources": [
+      "https://support.huawei.com/enterprise/zh/doc/EDOC1100352131/753f0155"
+    ]
+  },
+  {
+    "source_number": 413,
+    "action": "keep",
+    "explanation": "ping主要使用ICMP回显请求和应答；IPv4以太网发送前可能还需ARP解析同链路目标或下一跳MAC。",
+    "sources": [
+      "https://datatracker.ietf.org/doc/html/rfc826"
+    ]
+  },
+  {
+    "source_number": 414,
+    "action": "keep",
+    "explanation": "优先匹配更长前缀：10.0.2.2命中/32路由走10.0.21.2；10.0.0.1只命中图中的/8路由，走10.0.12.2。",
+    "sources": [
+      "https://info.support.huawei.com/hedex/api/pages/EDOC1100277650/AZM1016J/03/resources/vrp/feature_0003992083.html"
+    ]
+  },
+  {
+    "source_number": 415,
+    "action": "keep",
+    "explanation": "路由器转发时重写二层头，出接口直接连接主机B，目的MAC改为MAC-B；未做NAT时目的IP仍为11.0.12.1。",
+    "sources": [
+      "https://datatracker.ietf.org/doc/html/rfc826"
+    ]
+  },
+  {
+    "source_number": 416,
+    "action": "keep",
+    "explanation": "OSPFv3 为 IPv6 定义了邻居发现与链路状态路由机制，OSPFv2 主要用于 IPv4。",
+    "sources": [
+      "https://www.rfc-editor.org/rfc/rfc5340"
+    ]
+  },
+  {
+    "source_number": 417,
+    "action": "correct",
+    "explanation": "广播型接口的默认 Hello 间隔为 10 秒，Dead 间隔通常为其 4 倍。",
+    "sources": [
+      "https://www.rfc-editor.org/rfc/rfc2328.html"
+    ],
+    "corrected_options": {
+      "A": "10s",
+      "B": "30s",
+      "C": "20s",
+      "D": "40s"
+    },
+    "reason": "删除相邻题或附加截图混入的选项内容"
+  },
+  {
+    "source_number": 418,
+    "action": "keep",
+    "explanation": "首次选举先比较DR优先级，再比较Router ID；默认优先级1的设备可参选，DR与BDR之间建立Full邻接。",
+    "sources": [
+      "https://datatracker.ietf.org/doc/html/rfc2328"
+    ]
+  },
+  {
+    "source_number": 419,
+    "action": "correct",
+    "explanation": "在无回接、端口正常的常规拓扑中，根桥到根的开销为0，各活动端口通常作为指定端口发送配置BPDU。",
+    "sources": [
+      "https://info.support.huawei.com/info-finder/encyclopedia/en/RSTP.html"
+    ],
+    "reason": "恢复被相邻题污染的判断选项；解析注明通常拓扑语境",
+    "corrected_options": {
+      "A": "正确",
+      "B": "错误"
+    }
+  },
+  {
+    "source_number": 420,
+    "action": "correct",
+    "explanation": "链路聚合可提高总带宽、实现逐流负载分担，并通过成员链路冗余提高可靠性；它本身不提供加密等安全机制。",
+    "sources": [
+      "https://info.support.huawei.com/info-finder/encyclopedia/en/LACP.html"
+    ],
+    "corrected_answer": "ACD",
+    "reason": "链路聚合没有内置的认证或加密安全保证"
+  },
+  {
+    "source_number": 421,
+    "action": "keep",
+    "explanation": "802.1Q 的 VID 只有 12 位，普通 VLAN ID 最大 4094；4096 超出字段范围。",
+    "sources": [
+      "https://info.support.huawei.com/enterprise/zh/doc/EDOC1100276977/c672b196"
+    ]
+  },
+  {
+    "source_number": 422,
+    "action": "keep",
+    "explanation": "子接口号.30仅是本地编号；真正匹配入向标签的是dot1q termination vid 100，因此接收VLAN 100流量。",
+    "sources": [
+      "https://info.support.huawei.com/info-finder/encyclopedia/zh/VLAN.html"
+    ]
+  },
+  {
+    "source_number": 423,
+    "action": "keep",
+    "explanation": "A和B的PVID分别为10、20且其接入口仅放行各自VLAN；C的Hybrid口可接收10和20的Tagged流量，所以可分别与A、B通信。",
+    "sources": [
+      "https://info.support.huawei.com/info-finder/encyclopedia/zh/VLAN.html"
+    ]
+  },
+  {
+    "source_number": 424,
+    "action": "keep",
+    "explanation": "VLANIF 是三层逻辑接口，配置 IP 地址和子网掩码后才能确定其所属网段并进行三层通信。",
+    "sources": [
+      "https://info.support.huawei.com/info-finder/encyclopedia/zh/VLAN.html"
+    ]
+  },
+  {
+    "source_number": 425,
+    "action": "keep",
+    "explanation": "0x8100 表示帧带有 802.1Q VLAN 标记，后续协议仍可承载 ARP 或包含 TCP、UDP、ICMP 的 IP 报文。",
+    "sources": [
+      "https://info.support.huawei.com/info-finder/encyclopedia/zh/VLAN.html"
+    ]
+  },
+  {
+    "source_number": 426,
+    "action": "keep",
+    "explanation": "二层环路还需要实际存在闭环链路；本身是树形拓扑的网络，即使不运行 STP 也不会必然出现环路。",
+    "sources": [
+      "https://info.support.huawei.com/enterprise/zh/doc/EDOC1100457495/e66d44a3"
+    ]
+  },
+  {
+    "source_number": 427,
+    "action": "keep",
+    "explanation": "默认路由把未知目的流量送往互联网出口，NAT 把私网地址转换为可在公网通信的地址。",
+    "sources": [
+      "https://support.huawei.com/enterprise/zh/doc/EDOC1100333406/ac7caed7/ip-route-static"
+    ]
+  },
+  {
+    "source_number": 428,
+    "action": "keep",
+    "explanation": "AAA是认证、授权、计费的管理框架；RADIUS是实现其中功能的一种协议，两者不能画等号。",
+    "sources": [
+      "https://datatracker.ietf.org/doc/html/rfc2865"
+    ]
+  },
+  {
+    "source_number": 429,
+    "action": "keep",
+    "explanation": "ICMP 查询报文虽无 TCP/UDP 端口，但有标识符，NAPT 可转换标识符以区分并还原不同主机的查询。",
+    "sources": [
+      "https://www.rfc-editor.org/rfc/rfc3022"
+    ]
+  },
+  {
+    "source_number": 430,
+    "action": "correct",
+    "explanation": "DHCP 集中下发地址与 DNS 等参数，并利用租约回收和复用地址，减少手工配置及地址冲突。",
+    "sources": [
+      "https://www.rfc-editor.org/rfc/rfc2131"
+    ],
+    "corrected_options": {
+      "A": "可以实现IP地址重复利用",
+      "B": "工作量大且不好管理",
+      "C": "配置信息发生变化(如DNS),只需要管理员在DHCP服务器上修改,方便统一管理",
+      "D": "避免IP地址冲突"
+    },
+    "reason": "删除相邻题或附加截图混入的选项内容"
+  },
+  {
+    "source_number": 431,
+    "action": "keep",
+    "explanation": "VAP模板中的forward-mode direct-forward指定直接转发，让用户数据从AP本地进入有线网络。",
+    "sources": [
+      "https://info.support.huawei.com/hedex/api/pages/EDOC1100210440/AZK0901G/09/resources/dc/dc_fd_wlan_basic_0007.html"
+    ]
+  },
+  {
+    "source_number": 432,
+    "action": "keep",
+    "explanation": "CAPWAP 使用 Image Data Request / Response 传输镜像相关数据，AP 可据此完成软件镜像下载。",
+    "sources": [
+      "https://www.rfc-editor.org/rfc/rfc5415.html"
+    ]
+  },
+  {
+    "source_number": 433,
+    "action": "keep",
+    "explanation": "CAPWAP 控制通道传输配置、状态等管理消息；用户数据封装使用数据通道。",
+    "sources": [
+      "https://www.rfc-editor.org/rfc/rfc5415"
+    ]
+  },
+  {
+    "source_number": 434,
+    "action": "keep",
+    "explanation": "主机发送RS请求路由信息，路由器使用RA通告前缀及其他参数；RA既可响应RS，也可周期性主动发送。",
+    "sources": [
+      "https://datatracker.ietf.org/doc/html/rfc8200"
+    ]
+  },
+  {
+    "source_number": 435,
+    "action": "correct",
+    "explanation": "Telnet(host)先建立TCP连接；用户名和密码通常等看到登录提示后再分别write，不能作为构造函数的额外凭据参数。",
+    "sources": [
+      "https://docs.python.org/3.12/library/telnetlib.html"
+    ],
+    "corrected_options": {
+      "A": "telnetlib.Telnet(\"10.1.1.10\", \"admin\")",
+      "B": "telnetlib.Telnet(\"10.1.1.10\", 23, \"admin\", \"Huawei@123\")",
+      "C": "telnetlib.Telnet(\"10.1.1.10\")",
+      "D": "telnetlib.Telnet(\"10.1.1.10\", \"admin\", \"Huawei@123\")"
+    },
+    "corrected_answer": "C",
+    "reason": "把选项中的统一错误地址.0修正为题干.10并补齐字符串引号，恢复构造函数考点"
+  },
+  {
+    "source_number": 436,
+    "action": "keep",
+    "explanation": "路由器、交换机和防火墙是常见转发或安全设备；Agile Controller属于集中控制与策略管理系统。",
+    "sources": [
+      "https://opennetworking.org/sdn-definition/"
+    ]
+  },
+  {
+    "source_number": 437,
+    "action": "keep",
+    "explanation": "delete通常把文件放入回收站；delete /unreserved跳过回收站永久删除，因此不能说都必须再清空回收站。",
+    "sources": [
+      "https://info.support.huawei.com/hedex/api/pages/EDOC1000053358/YEF0907R/25/resources/en-us_task_0141547205.html"
+    ]
+  },
+  {
+    "source_number": 438,
+    "action": "keep",
+    "explanation": "ABR需连接骨干区域和至少一个其他区域；图中RTD连接Area 1和Area 2却未直接连接Area 0，不能把三台都判作ABR。",
+    "sources": [
+      "https://datatracker.ietf.org/doc/html/rfc2328"
+    ]
+  },
+  {
+    "source_number": 439,
+    "action": "keep",
+    "explanation": "给备用静态路由设置更大的 preference，优先使用主路由，主路由失效后切到备用。",
+    "sources": [
+      "https://support.huawei.com/enterprise/zh/doc/EDOC1100333406/ac7caed7/ip-route-static"
+    ]
+  },
+  {
+    "source_number": 440,
+    "action": "keep",
+    "explanation": "路由器根据 IP 目的地址执行跨网络转发，对应 OSI 网络层。",
+    "sources": [
+      "https://info.support.huawei.com/info-finder/encyclopedia/en/detail?action=queryEntityDetail&keyword=IP+routing"
+    ]
+  },
+  {
+    "source_number": 441,
+    "action": "correct",
+    "explanation": "ping -i指定发送ICMP Echo Request的接口；指定源IP地址使用-a，不能把二者混淆。",
+    "sources": [
+      "https://info.support.huawei.com/hedex/api/pages/EDOC1000053358/YEF0907R/25/resources/en-us_task_0141547205.html"
+    ],
+    "corrected_stem": "在华为AR G3路由器上，VRP中ping命令的-i参数用来设置什么？",
+    "reason": "依据PDF第104页恢复OCR漏掉的参数字母i"
+  },
+  {
+    "source_number": 442,
+    "action": "keep",
+    "explanation": "255.255.255.255 是 /32 主机路由，目的地址为 10.0.2.2，下一跳为 10.0.12.2，preference 为 20。",
+    "sources": [
+      "https://support.huawei.com/enterprise/zh/doc/EDOC1100333406/ac7caed7/ip-route-static"
+    ]
+  },
+  {
+    "source_number": 443,
+    "action": "keep",
+    "explanation": "Router B和C的优先级均为0，不参加DR/BDR选举，二者都是DROther，广播网段上彼此稳定在2-Way。",
+    "sources": [
+      "https://datatracker.ietf.org/doc/html/rfc2328"
+    ]
+  },
+  {
+    "source_number": 444,
+    "action": "keep",
+    "explanation": "手工聚合先建Eth-Trunk，再把两物理口加入；VLAN 100的Tagged转发配置在聚合接口上，不使用LACP模式。",
+    "sources": [
+      "https://info.support.huawei.com/info-finder/encyclopedia/en/LACP.html"
+    ]
+  },
+  {
+    "source_number": 445,
+    "action": "keep",
+    "explanation": "Alternate端口接收来自另一设备指定端口的更优BPDU，处于丢弃状态，为根端口提供备用路径。",
+    "sources": [
+      "https://info.support.huawei.com/info-finder/encyclopedia/en/RSTP.html"
+    ]
+  },
+  {
+    "source_number": 446,
+    "action": "keep",
+    "explanation": "Alternate 备份根端口，Backup 备份同一网段上的指定端口，故 Backup 不能承担根端口的替代角色。",
+    "sources": [
+      "https://info.support.huawei.com/enterprise/zh/doc/EDOC1100457495/e66d44a3"
+    ]
+  },
+  {
+    "source_number": 447,
+    "action": "keep",
+    "explanation": "输出的Active Times为Hello 2秒、MaxAge 20秒、Forward Delay 15秒，所以把Forward Delay说成20秒错误。",
+    "sources": [
+      "https://info.support.huawei.com/info-finder/encyclopedia/en/RSTP.html"
+    ]
+  },
+  {
+    "source_number": 448,
+    "action": "keep",
+    "explanation": "传统STP未立即感知链路故障时先等MaxAge 20秒，再经Listening和Learning各15秒，合计约50秒。",
+    "sources": [
+      "https://info.support.huawei.com/info-finder/encyclopedia/en/RSTP.html"
+    ]
+  },
+  {
+    "source_number": 449,
+    "action": "keep",
+    "explanation": "config匹配顺序按rule编号从小到大，与管理员输入规则的先后无关；先匹配编号较小的deny规则。",
+    "sources": [
+      "https://info.support.huawei.com/hedex/api/pages/EDOC1100362944/AZN04029/05/resources/vrp/dc_vrp_acl4_cfg_0041.html"
+    ]
+  },
+  {
+    "source_number": 450,
+    "action": "keep",
+    "explanation": "需同时开启FTP服务、创建用户密码、允许该用户使用FTP，并设置FTP目录，才能按题设登录并访问指定根目录。",
+    "sources": [
+      "https://datatracker.ietf.org/doc/html/rfc959"
+    ]
+  },
+  {
+    "source_number": 451,
+    "action": "keep",
+    "explanation": "VTY 使用 AAA 后可按用户名验证；在 AAA 中建立各管理员账号，并分别设置密码和权限级别。",
+    "sources": [
+      "https://info.support.huawei.com/hedex/api/pages/EDOC1000053358/YEF0907R/25/resources/en-us_task_0133027518.html"
+    ]
+  },
+  {
+    "source_number": 452,
+    "action": "keep",
+    "explanation": "Telnet服务器默认监听TCP 23端口；TCP 22用于SSH，TCP 21用于FTP控制连接。",
+    "sources": [
+      "https://datatracker.ietf.org/doc/html/rfc9293"
+    ]
+  },
+  {
+    "source_number": 453,
+    "action": "keep",
+    "explanation": "802.11g在2.4GHz频段采用OFDM，标准最高物理协商速率为54Mbit/s，实际吞吐量通常更低。",
+    "sources": [
+      "https://info.support.huawei.com/hedex/api/pages/EDOC1100210440/AZK0901G/09/resources/dc/dc_fd_wlan_basic_0007.html"
+    ]
+  },
+  {
+    "source_number": 454,
+    "action": "keep",
+    "explanation": "华为 AP 可广播发现同网段 AC，也可静态指定或通过 DHCP Option 获取 AC 地址；组播不是列出的发现方式。",
+    "sources": [
+      "https://info.support.huawei.com/hedex/api/pages/EDOC1100210440/AZK0901G/09/resources/dc/dc_fd_wlan_basic_0007.html"
+    ]
+  },
+  {
+    "source_number": 455,
+    "action": "keep",
+    "explanation": "IEEE 802.1Q标签的TPID通常为0x8100，用来指示后续包含VLAN标签控制信息。",
+    "sources": [
+      "https://info.support.huawei.com/info-finder/encyclopedia/zh/VLAN.html"
+    ]
+  },
+  {
+    "source_number": 456,
+    "action": "keep",
+    "explanation": "防火墙可执行区域间访问控制、用户认证和NAT，不能把网络地址转换排除在防火墙能力之外。",
+    "sources": [
+      "https://info.support.huawei.com/info-finder/encyclopedia/zh/NGFW.html"
+    ]
+  },
+  {
+    "source_number": 457,
+    "action": "keep",
+    "explanation": "家庭和公司办公网通常覆盖有限地理范围，属于局域网；宽带城域网和互联网分别属于更大范围网络。",
+    "sources": [
+      "https://standards.ieee.org/standard/802_3-2022.html"
+    ]
+  },
+  {
+    "source_number": 458,
+    "action": "keep",
+    "explanation": "华为直连路由优先级为0，数值越小越优先；接口地址和协议状态正常时系统自动生成直连路由。",
+    "sources": [
+      "https://info.support.huawei.com/hedex/api/pages/EDOC1100277650/AZM1016J/03/resources/vrp/feature_0003992083.html"
+    ]
+  },
+  {
+    "source_number": 459,
+    "action": "keep",
+    "explanation": "应区分Router ID与接口IP，并对照邻居/接口输出中的DR标识；图中本机RID为10.0.2.2、接口10.0.12.2且为DR。",
+    "sources": [
+      "https://datatracker.ietf.org/doc/html/rfc2328"
+    ]
+  },
+  {
+    "source_number": 460,
+    "action": "keep",
+    "explanation": "OSPF Router ID用于标识已有邻接和LSA，修改配置后通常需重启相应OSPF进程才更新运行中的Router ID。",
+    "sources": [
+      "https://datatracker.ietf.org/doc/html/rfc2328"
+    ]
+  },
+  {
+    "source_number": 461,
+    "action": "keep",
+    "explanation": "主机A访问不同网段的B，先把帧交给默认网关，二层目的MAC为MAC-C；IP目的地址仍是B的11.0.12.1。",
+    "sources": [
+      "https://datatracker.ietf.org/doc/html/rfc826"
+    ]
+  },
+  {
+    "source_number": 462,
+    "action": "correct",
+    "explanation": "Forwarding端口会学习源MAC并转发用户流量；传统STP中并非每个转发端口都周期发送配置BPDU，指定端口负责发送。",
+    "sources": [
+      "https://info.support.huawei.com/info-finder/encyclopedia/en/RSTP.html"
+    ],
+    "corrected_stem": "下面关于生成树协议中Forwarding状态的描述，错误的是哪些项？",
+    "reason": "删除混入题干的作答批注"
+  },
+  {
+    "source_number": 463,
+    "action": "keep",
+    "explanation": "堆叠或集群把多台物理设备组成一个逻辑设备，可把不同成员上的端口加入同一 Eth-Trunk。",
+    "sources": [
+      "https://info.support.huawei.com/info-finder/encyclopedia/zh/%E5%A0%86%E5%8F%A0.html"
+    ]
+  },
+  {
+    "source_number": 464,
+    "action": "keep",
+    "explanation": "标签是否保留取决于出接口的Tagged/UnTagged配置；图中交换机互联端口对VLAN 10按Tagged发送。",
+    "sources": [
+      "https://info.support.huawei.com/info-finder/encyclopedia/zh/VLAN.html"
+    ]
+  },
+  {
+    "source_number": 465,
+    "action": "keep",
+    "explanation": "手工聚合不交换LACPDU，已选入聚合的Up成员参与转发；不能像LACP那样协商主备成员数量。",
+    "sources": [
+      "https://info.support.huawei.com/info-finder/encyclopedia/en/LACP.html"
+    ]
+  },
+  {
+    "source_number": 466,
+    "action": "keep",
+    "explanation": "聚合链路的总可用带宽与活动成员数量及成员带宽有关；单条流通常只落在一个成员端口上。",
+    "sources": [
+      "https://info.support.huawei.com/info-finder/encyclopedia/zh/Eth-trunk.html"
+    ]
+  },
+  {
+    "source_number": 467,
+    "action": "keep",
+    "explanation": "STP按桥ID选根后，每个网段比较根路径开销、发送桥ID和端口ID选指定端口，图中对应SWB G0/0/1和SWA G0/0/3。",
+    "sources": [
+      "https://info.support.huawei.com/info-finder/encyclopedia/en/RSTP.html"
+    ]
+  },
+  {
+    "source_number": 468,
+    "action": "keep",
+    "explanation": "VLANIF 的链路状态依赖所属 VLAN 至少一个成员接口 Up；只有创建 VLAN 和配置 IP 不够。",
+    "sources": [
+      "https://info.support.huawei.com/info-finder/encyclopedia/zh/detail?action=queryEntityDetail&keyword=Super+VLAN"
+    ]
+  },
+  {
+    "source_number": 469,
+    "action": "keep",
+    "explanation": "Alternate是根端口的备用路径，原根端口失效时可快速接替；Backup备份的是本机指定端口。",
+    "sources": [
+      "https://info.support.huawei.com/info-finder/encyclopedia/en/RSTP.html"
+    ]
+  },
+  {
+    "source_number": 470,
+    "action": "keep",
+    "explanation": "huawei域绑定了RADIUS认证方案而非本地认证；未绑定专门计费方案，授权方案采用缺省本地授权口径。",
+    "sources": [
+      "https://datatracker.ietf.org/doc/html/rfc2865"
+    ]
+  },
+  {
+    "source_number": 471,
+    "action": "keep",
+    "explanation": "UDP不提供确认重传、排序和流量控制；需要可靠性时，应由其上的应用协议自行补足这些机制。",
+    "sources": [
+      "https://datatracker.ietf.org/doc/html/rfc768"
+    ]
+  },
+  {
+    "source_number": 472,
+    "action": "correct",
+    "explanation": "mkdir test在当前文件路径下新建名为test的目录；它不切换当前工作目录，切换使用cd。",
+    "sources": [
+      "https://info.support.huawei.com/hedex/api/pages/EDOC1000053358/YEF0907R/25/resources/en-us_task_0141547205.html"
+    ],
+    "corrected_options": {
+      "A": "正确",
+      "B": "错误"
+    },
+    "reason": "恢复完整判断题结构",
+    "corrected_stem": "VRP操作平台中执行mkdir test，会创建名为test的目录。",
+    "corrected_answer": "A"
+  },
+  {
+    "source_number": 473,
+    "action": "keep",
+    "explanation": "TCP 建连通常使用三次握手，正常关闭通常使用四个报文；可靠传输还依赖确认、序号、重传等机制。",
+    "sources": [
+      "https://www.rfc-editor.org/rfc/rfc9293"
+    ]
+  },
+  {
+    "source_number": 474,
+    "action": "correct",
+    "explanation": "配置级对应默认命令级别 2，可配置业务；文件系统等基本系统管理通常需要管理级 3。",
+    "sources": [
+      "https://info.support.huawei.com/hedex/api/pages/EDOC1000053358/YEF0907R/25/resources/en-us_cliref_0133032600.html"
+    ],
+    "corrected_options": {
+      "A": "配置级",
+      "B": "访问级",
+      "C": "管理级",
+      "D": "监控级"
+    },
+    "reason": "删除相邻题或附加截图混入的选项内容"
+  },
+  {
+    "source_number": 475,
+    "action": "keep",
+    "explanation": "quit退出当前视图；当前若在系统视图，执行一次quit即返回用户视图，system-view则方向相反。",
+    "sources": [
+      "https://info.support.huawei.com/hedex/api/pages/EDOC1000053358/YEF0907R/25/resources/en-us_task_0141547205.html"
+    ]
+  },
+  {
+    "source_number": 476,
+    "action": "keep",
+    "explanation": "/28为每个子网提供16个地址、14个可用主机地址；将/24划分为/28可得到16个子网，满足至少8个子网的需求。",
+    "sources": [
+      "https://datatracker.ietf.org/doc/html/rfc791"
+    ]
+  },
+  {
+    "source_number": 477,
+    "action": "correct",
+    "explanation": "华为 VRP 的 tracert 通常发送逐步增加 TTL 的 UDP 探测报文，所以 IPv4 Protocol 为 17。",
+    "sources": [
+      "https://info.support.huawei.com/hedex/api/pages/EDOC1100363264/AEN0403J/06/resources/command/yunshan/TRACERT%28DGNIP4OM%29.html"
+    ],
+    "corrected_answer": "A",
+    "reason": "华为tracert默认UDP探测，IPv4协议号为17"
+  },
+  {
+    "source_number": 478,
+    "action": "keep",
+    "explanation": "图中只有一台设备优先级非0，可成为DR；其余设备不参选，因而没有合格的BDR候选者。",
+    "sources": [
+      "https://datatracker.ietf.org/doc/html/rfc2328"
+    ]
+  },
+  {
+    "source_number": 479,
+    "action": "correct",
+    "explanation": "华为直连路由 preference 为 0，比 OSPF 10、静态 60、RIP 100 更优先。",
+    "sources": [
+      "https://info.support.huawei.com/info-finder/encyclopedia/en/detail?action=queryEntityDetail&keyword=IP+routing"
+    ],
+    "corrected_options": {
+      "A": "RIP",
+      "B": "Direct",
+      "C": "Static",
+      "D": "OSPF"
+    },
+    "reason": "删除相邻题或附加截图混入的选项内容"
+  },
+  {
+    "source_number": 480,
+    "action": "correct",
+    "explanation": "图示MTU为1500而不是1480，接口物理和协议状态均Up；10.0.12.1/24对应广播地址10.0.12.255。",
+    "sources": [
+      "https://datatracker.ietf.org/doc/html/rfc791"
+    ],
+    "corrected_options": {
+      "A": "Ethernet0/0/0接口的MTU值为1480",
+      "B": "Ethernet0/0/0接口对应的广播地址为10.0.12.255",
+      "C": "Ethernet0/0/0接口物理链路正常",
+      "D": "Ethernet0/0/0接口的IP地址为10.0.12.1/24"
+    },
+    "reason": "恢复选项A，将图中输出文字移出选项"
+  },
+  {
+    "source_number": 481,
+    "action": "keep",
+    "explanation": "Hello报文带网络掩码、Hello/Dead间隔和邻居列表等信息；sysname是设备本地名称，不是Hello字段。",
+    "sources": [
+      "https://datatracker.ietf.org/doc/html/rfc2328"
+    ]
+  },
+  {
+    "source_number": 482,
+    "action": "keep",
+    "explanation": "缺省路由前缀为0.0.0.0/0，在没有更长前缀匹配时使用；可静态配置也可通过动态协议产生。",
+    "sources": [
+      "https://info.support.huawei.com/hedex/api/pages/EDOC1100277650/AZM1016J/03/resources/vrp/feature_0003992083.html"
+    ]
+  },
+  {
+    "source_number": 483,
+    "action": "keep",
+    "explanation": "一个OSPF广播网段只选举一个DR和一个BDR；多个DROther不会同时都成为备份指定路由器。",
+    "sources": [
+      "https://datatracker.ietf.org/doc/html/rfc2328"
+    ]
+  },
+  {
+    "source_number": 484,
+    "action": "keep",
+    "explanation": "给备用静态路由设置更大的 preference，优先使用主路由，主路由失效后切到备用。",
+    "sources": [
+      "https://support.huawei.com/enterprise/zh/doc/EDOC1100333406/ac7caed7/ip-route-static"
+    ]
+  },
+  {
+    "source_number": 485,
+    "action": "keep",
+    "explanation": "OSPF 泛洪链路状态信息并维护 LSDB，通过 SPF 算法计算路径，属于链路状态协议。",
+    "sources": [
+      "https://www.rfc-editor.org/rfc/rfc2328.html"
+    ]
+  },
+  {
+    "source_number": 486,
+    "action": "keep",
+    "explanation": "2-Way 只说明双向 Hello 通信建立，LSDB 同步要经过 ExStart、Exchange、Loading 等阶段后达到 Full。",
+    "sources": [
+      "https://www.rfc-editor.org/rfc/rfc2328"
+    ]
+  },
+  {
+    "source_number": 487,
+    "action": "keep",
+    "explanation": "OSPF Router ID用于标识已有邻接和LSA，修改配置后通常需重启相应OSPF进程才更新运行中的Router ID。",
+    "sources": [
+      "https://datatracker.ietf.org/doc/html/rfc2328"
+    ]
+  },
+  {
+    "source_number": 488,
+    "action": "keep",
+    "explanation": "OSPF 直接运行在 IP 上，协议号为 89，不依赖 TCP 或 UDP。",
+    "sources": [
+      "https://www.rfc-editor.org/rfc/rfc2328.html"
+    ]
+  },
+  {
+    "source_number": 489,
+    "action": "keep",
+    "explanation": "Router ID 是 32 位路由器标识，可手工指定，无需与任何实际接口 IP 相同。",
+    "sources": [
+      "https://www.rfc-editor.org/rfc/rfc2328"
+    ]
+  },
+  {
+    "source_number": 490,
+    "action": "keep",
+    "explanation": "两条静态路由若优先级相同，会形成等价候选而非主备；浮动静态路由应给备用路径配置更低实际优先级。",
+    "sources": [
+      "https://info.support.huawei.com/hedex/api/pages/EDOC1100277650/AZM1016J/03/resources/vrp/feature_0003992083.html"
+    ]
+  },
+  {
+    "source_number": 491,
+    "action": "keep",
+    "explanation": "145.4.2.55/26 是有效单播主机地址；237 属组播、127 属回环，.112/30 是网络地址。",
+    "sources": [
+      "https://www.rfc-editor.org/rfc/rfc791.html"
+    ]
+  },
+  {
+    "source_number": 492,
+    "action": "keep",
+    "explanation": "按流散列把同一流映射到相同成员链路，避免逐包分担造成的报文乱序。",
+    "sources": [
+      "https://info.support.huawei.com/info-finder/encyclopedia/en/LACP.html"
+    ]
+  },
+  {
+    "source_number": 493,
+    "action": "keep",
+    "explanation": "交换机按目的MAC查找出接口，源MAC用于学习；Dynamic表项重启后需重学，不能说所有表项都永久保留。",
+    "sources": [
+      "https://standards.ieee.org/standard/802_3-2022.html"
+    ]
+  },
+  {
+    "source_number": 494,
+    "action": "correct",
+    "explanation": "先比较桥ID确定根桥，再比较根路径代价及端口ID选择根端口；并行链路中的较劣端口被置为Blocking防环。",
+    "sources": [
+      "https://info.support.huawei.com/info-finder/encyclopedia/en/RSTP.html"
+    ],
+    "corrected_options": {
+      "A": "STB的G0/O/2端口",
+      "B": "STB的G0/O/3端口",
+      "C": "STA的G0/O/2端口",
+      "D": "STA的G0/0/3端口"
+    },
+    "reason": "删除相邻题或附加截图混入的选项内容"
+  },
+  {
+    "source_number": 495,
+    "action": "keep",
+    "explanation": "输出的Active Times为Hello 2秒、MaxAge 20秒、Forward Delay 15秒，所以把Forward Delay说成20秒错误。",
+    "sources": [
+      "https://info.support.huawei.com/info-finder/encyclopedia/en/RSTP.html"
+    ]
+  },
+  {
+    "source_number": 496,
+    "action": "keep",
+    "explanation": "MAC表中的Static表项由管理员配置；Dynamic表项由源MAC学习，重启或老化后需要重新学习。",
+    "sources": [
+      "https://standards.ieee.org/standard/802_3-2022.html"
+    ]
+  },
+  {
+    "source_number": 497,
+    "action": "keep",
+    "explanation": "采用扩展系统ID的STP桥优先级以4096为步长，2048不在合法配置值中；0、4096和8192均可配置。",
+    "sources": [
+      "https://info.support.huawei.com/info-finder/encyclopedia/en/RSTP.html"
+    ]
+  },
+  {
+    "source_number": 498,
+    "action": "keep",
+    "explanation": "华为 STP 桥优先级缺省为 32768；桥 ID 比较时先比较优先级，再比较 MAC 地址。",
+    "sources": [
+      "https://info.support.huawei.com/hedex/api/pages/EDOC1100362944/AZN04029/06/resources/command/yunshan/GLOBALSTPPRIORITY%28MSTPOM%29.html"
+    ]
+  },
+  {
+    "source_number": 499,
+    "action": "keep",
+    "explanation": "RSTP只有Discarding、Learning、Forwarding三种状态，传统STP的Listening被合并到Discarding。",
+    "sources": [
+      "https://info.support.huawei.com/info-finder/encyclopedia/en/RSTP.html"
+    ]
+  },
+  {
+    "source_number": 500,
+    "action": "keep",
+    "explanation": "Trunk 发出 PVID 对应 VLAN 的帧时通常去标签，其他允许 VLAN 的帧保留标签。",
+    "sources": [
+      "https://info.support.huawei.com/hedex/api/pages/EDOC1100331435/AEM10132/04/resources/dc/dc_cfg_vlan_1007.html"
+    ]
+  },
+  {
+    "source_number": 501,
+    "action": "keep",
+    "explanation": "P/A 握手前会同步下游端口，将可能成环的非边缘指定端口置于非转发状态，再允许新链路快速转发。",
+    "sources": [
+      "https://info.support.huawei.com/enterprise/zh/doc/EDOC1100457495/e66d44a3"
+    ]
+  },
+  {
+    "source_number": 502,
+    "action": "keep",
+    "explanation": "Hybrid口若将VLAN 10配置为untagged，发送该VLAN帧时去除标签；其他Tagged VLAN发送时保留标签。",
+    "sources": [
+      "https://info.support.huawei.com/info-finder/encyclopedia/zh/VLAN.html"
+    ]
+  },
+  {
+    "source_number": 503,
+    "action": "keep",
+    "explanation": "动态MAC由源地址学习，会老化且重启后丢失；静态MAC与动态MAC的保存行为不同，不能混为一谈。",
+    "sources": [
+      "https://standards.ieee.org/standard/802_3-2022.html"
+    ]
+  },
+  {
+    "source_number": 504,
+    "action": "keep",
+    "explanation": "经典 STP 从 Listening 到 Learning、再到 Forwarding，通常各等待一个 Forward Delay，以降低临时环路风险。",
+    "sources": [
+      "https://info.support.huawei.com/enterprise/zh/doc/EDOC1100457495/e66d44a3"
+    ]
+  },
+  {
+    "source_number": 505,
+    "action": "keep",
+    "explanation": "聚合成员应满足相应设备的接口类型和速率要求；题中可用组合均为GE口，不能把GE与FE混在同一聚合组。",
+    "sources": [
+      "https://info.support.huawei.com/info-finder/encyclopedia/en/LACP.html"
+    ]
+  },
+  {
+    "source_number": 506,
+    "action": "keep",
+    "explanation": "未打标签的标准 Ethernet II 帧通常为 64–1518 字节，包含 MAC 首部和 FCS，不包含前导码。",
+    "sources": [
+      "https://support.huawei.com/enterprise/zh/doc/EDOC1100412642/461ce9f6"
+    ]
+  },
+  {
+    "source_number": 507,
+    "action": "keep",
+    "explanation": "STP 选择无环的逻辑转发树，阻塞部分冗余链路，同时保留故障后的替代路径。",
+    "sources": [
+      "https://info.support.huawei.com/enterprise/zh/doc/EDOC1100457495/e66d44a3"
+    ]
+  },
+  {
+    "source_number": 508,
+    "action": "keep",
+    "explanation": "0x8100 是常见 802.1Q 标签的 TPID，表示其后存在 VLAN 控制信息。",
+    "sources": [
+      "https://info.support.huawei.com/hedex/api/pages/EDOC1100331440/AZM10131/04/resources/dc/dc_cfg_vlan_1005.html"
+    ]
+  },
+  {
+    "source_number": 509,
+    "action": "correct",
+    "explanation": "应先deny TCP目的端口80，再permit其他IP流量；若permit ip排在前面，后续拒绝规则不会再被匹配。",
+    "sources": [
+      "https://info.support.huawei.com/hedex/api/pages/EDOC1100362944/AZN04029/05/resources/vrp/dc_vrp_acl4_cfg_0041.html"
+    ],
+    "corrected_answer": "D",
+    "reason": "原图答案缺失，依据明确协议原理补齐答案"
+  },
+  {
+    "source_number": 510,
+    "action": "keep",
+    "explanation": "RADIUS 常用于集中式 AAA，其中 Access 类报文处理认证授权，Accounting 报文处理计费记录。",
+    "sources": [
+      "https://www.rfc-editor.org/rfc/rfc2865"
+    ]
+  },
+  {
+    "source_number": 511,
+    "action": "keep",
+    "explanation": "接口过滤中拒绝TCP和UDP会影响FTP及SNMP，而ICMP与OSPF属于不同IP协议号，不能据此一起判为拒绝。",
+    "sources": [
+      "https://info.support.huawei.com/hedex/api/pages/EDOC1100362944/AZN04029/05/resources/vrp/dc_vrp_acl4_cfg_0041.html"
+    ]
+  },
+  {
+    "source_number": 512,
+    "action": "keep",
+    "explanation": "认证通过仅说明允许登录；用户等级过低时，仍无权执行配置接口 IP 的命令。",
+    "sources": [
+      "https://info.support.huawei.com/hedex/api/pages/EDOC1000053358/YEF0907R/25/resources/en-us_cliref_0133032600.html"
+    ]
+  },
+  {
+    "source_number": 513,
+    "action": "keep",
+    "explanation": "lease day 0 hour 10把租期设为10小时，短于常见默认租期；DHCP Relay命令不用于修改地址池租期。",
+    "sources": [
+      "https://datatracker.ietf.org/doc/html/rfc2131"
+    ]
+  },
+  {
+    "source_number": 514,
+    "action": "keep",
+    "explanation": "首次分配通常经过 Discover、Offer、Request、ACK；协议没有 DHCP ROLLOVER 报文。",
+    "sources": [
+      "https://www.rfc-editor.org/rfc/rfc2131"
+    ]
+  },
+  {
+    "source_number": 515,
+    "action": "keep",
+    "explanation": "AP 与 AC 不同网段时可通过 DHCP Option 43 获取 AC 地址，以单播方式跨三层发现 AC。",
+    "sources": [
+      "https://info.support.huawei.com/hedex/api/pages/EDOC1100210440/AZK0901G/09/resources/dc/dc_fd_wlan_basic_0007.html"
+    ]
+  },
+  {
+    "source_number": 516,
+    "action": "keep",
+    "explanation": "题目未说明AP工作模式：Fat AP可独立接入和认证转发，Fit AP通常需AC，因此不能把所有AP一概说成独立完成。",
+    "sources": [
+      "https://info.support.huawei.com/hedex/api/pages/EDOC1100210440/AZK0901G/09/resources/dc/dc_fd_wlan_basic_0007.html"
+    ]
+  },
+  {
+    "source_number": 517,
+    "action": "keep",
+    "explanation": "AP 周期性发送 Beacon，广播 SSID、能力和时间等信息，供 STA 被动扫描。",
+    "sources": [
+      "https://info.support.huawei.com/hedex/api/pages/EDOC1100210440/AZK0901G/09/resources/dc/dc_fd_wlan_basic_0008.html"
+    ]
+  },
+  {
+    "source_number": 518,
+    "action": "keep",
+    "explanation": "一个物理 AP 可创建多个 VAP，分别绑定 SSID 和安全策略，为不同用户提供不同服务。",
+    "sources": [
+      "https://info.support.huawei.com/info-finder/encyclopedia/en/SSID.html"
+    ]
+  },
+  {
+    "source_number": 519,
+    "action": "correct",
+    "explanation": "CAPWAP 控制通道传输配置、状态等管理消息；用户数据封装使用数据通道。",
+    "sources": [
+      "https://www.rfc-editor.org/rfc/rfc5415"
+    ],
+    "corrected_options": {
+      "A": "正确",
+      "B": "错误"
+    },
+    "reason": "清除相邻题目混入的选项文字"
+  },
+  {
+    "source_number": 520,
+    "action": "exclude",
+    "reason": "原页A、B、C三个选项重复为同一段控制模式描述，题目明显复制损坏；同考点另有完整642题可练习。",
+    "explanation": "",
+    "sources": []
+  },
+  {
+    "source_number": 521,
+    "action": "keep",
+    "explanation": "MPLS 标签栈放在二层帧头之后、网络层报文之前，常被称作二层与三层之间的封装。",
+    "sources": [
+      "https://www.rfc-editor.org/rfc/rfc3032"
+    ]
+  },
+  {
+    "source_number": 522,
+    "action": "keep",
+    "explanation": "常用 SNMP 使用 UDP，管理请求一般发往 UDP 161，Trap/Inform 通知一般发往 UDP 162。",
+    "sources": [
+      "https://www.rfc-editor.org/rfc/rfc3417"
+    ]
+  },
+  {
+    "source_number": 523,
+    "action": "keep",
+    "explanation": "SNMPv3 的 USM 可提供认证和加密；SNMPv2c 仍用团体字，增加了 GetBulk 和 Inform 等操作。",
+    "sources": [
+      "https://www.rfc-editor.org/rfc/rfc3414",
+      "https://www.rfc-editor.org/rfc/rfc3416"
+    ]
+  },
+  {
+    "source_number": 524,
+    "action": "keep",
+    "explanation": "任播将相同地址配置给多个接口，路由把流量送到其中最近的节点，可支持冗余及分担，地址格式与单播相同。",
+    "sources": [
+      "https://www.rfc-editor.org/rfc/rfc4291"
+    ]
+  },
+  {
+    "source_number": 526,
+    "action": "keep",
+    "explanation": "NFV-MANO包含NFVO、VNFM和VIM；分别承担编排、VNF生命周期和虚拟基础设施资源管理，底层虚拟化由NFVI实现。",
+    "sources": [
+      "https://www.etsi.org/technologies/nfv"
+    ]
+  },
+  {
+    "source_number": 527,
+    "action": "keep",
+    "explanation": "Python语法清晰、生态丰富，但解释执行的纯Python代码通常不以运行效率高为主要优势，不能与开发效率混淆。",
+    "sources": [
+      "https://docs.python.org/3.12/tutorial/"
+    ]
+  },
+  {
+    "source_number": 529,
+    "action": "keep",
+    "explanation": "对应链路两端应有一致的接口速率和双工模式，聚合成员数也需匹配规划；接口编号和光模块商品型号不必完全相同。",
+    "sources": [
+      "https://info.support.huawei.com/info-finder/encyclopedia/en/LACP.html"
+    ]
+  },
+  {
+    "source_number": 530,
+    "action": "keep",
+    "explanation": "未手动指定Router ID且没有Loopback地址时，VRP从可用物理接口IPv4地址中选择最大值作为Router ID。",
+    "sources": [
+      "https://datatracker.ietf.org/doc/html/rfc2328"
+    ]
+  },
+  {
+    "source_number": 531,
+    "action": "keep",
+    "explanation": "LSU 携带一个或多个完整 LSA，向邻居同步和泛洪链路状态信息。",
+    "sources": [
+      "https://www.rfc-editor.org/rfc/rfc2328.html"
+    ]
+  },
+  {
+    "source_number": 532,
+    "action": "keep",
+    "explanation": "视频、网页、邮件和即时聊天都要通过网络在不同设备间传送数据，都是通信网络的应用。",
+    "sources": [
+      "https://info.support.huawei.com/info-finder/encyclopedia/zh/%E4%BA%A4%E6%8D%A2%E6%9C%BA.html"
+    ]
+  },
+  {
+    "source_number": 533,
+    "action": "correct",
+    "explanation": "/22 精确覆盖这四个 /24，/21 覆盖更大范围，默认路由 /0 同样能匹配；/23 无法覆盖四段。",
+    "sources": [
+      "https://support.huawei.com/enterprise/zh/doc/EDOC1100333406/ac7caed7/ip-route-static"
+    ],
+    "corrected_stem": "将10.24.0.0/24、10.24.1.0/24、10.24.2.0/24、10.24.3.0/24四个连续网段汇总，最精确的汇总路由是哪一条？",
+    "reason": "补明最精确汇总前提，排除更宽泛默认路由也覆盖的歧义"
+  },
+  {
+    "source_number": 534,
+    "action": "keep",
+    "explanation": "VRP先比较路由来源的Preference，同类再比较Cost；两者通常都是数值越小越优，不能反过来说越大越优。",
+    "sources": [
+      "https://info.support.huawei.com/hedex/api/pages/EDOC1100277650/AZM1016J/03/resources/vrp/feature_0003992083.html"
+    ]
+  },
+  {
+    "source_number": 535,
+    "action": "keep",
+    "explanation": "交换机从收到帧的源MAC学习“MAC—入端口”映射；转发时才使用目的MAC查询出接口。",
+    "sources": [
+      "https://standards.ieee.org/standard/802_3-2022.html"
+    ]
+  },
+  {
+    "source_number": 536,
+    "action": "keep",
+    "explanation": "802.1Q中的VID 0表示优先级标签而非可供普通用户创建的VLAN；通常可配置VLAN ID为1至4094。",
+    "sources": [
+      "https://info.support.huawei.com/info-finder/encyclopedia/zh/VLAN.html"
+    ]
+  },
+  {
+    "source_number": 537,
+    "action": "correct",
+    "explanation": "802.1Q插入的标签共4字节，由2字节TPID和2字节TCI组成；题干应问标签长度，不是整个帧长度。",
+    "sources": [
+      "https://info.support.huawei.com/info-finder/encyclopedia/zh/VLAN.html"
+    ],
+    "corrected_stem": "IEEE 802.1Q定义的VLAN标签长度为多少字节？",
+    "reason": "原题把标签长度误写为VLAN帧总长度"
+  },
+  {
+    "source_number": 538,
+    "action": "keep",
+    "explanation": "连接终端的边缘端口不等待正常生成树收敛延迟即可进入Forwarding，但收到BPDU后可能失去边缘属性。",
+    "sources": [
+      "https://info.support.huawei.com/info-finder/encyclopedia/en/RSTP.html"
+    ]
+  },
+  {
+    "source_number": 539,
+    "action": "keep",
+    "explanation": "同一子网内的主机可直接 ARP 解析并通信，通常只有访问其他子网时才需要默认网关。",
+    "sources": [
+      "https://www.rfc-editor.org/rfc/rfc826"
+    ]
+  },
+  {
+    "source_number": 540,
+    "action": "correct",
+    "explanation": "堆叠把多台交换机作为逻辑设备管理，可扩展端口并支持跨设备聚合，但不会消除所有通信故障。",
+    "sources": [
+      "https://info.support.huawei.com/info-finder/encyclopedia/zh/Eth-trunk.html"
+    ],
+    "corrected_options": {
+      "A": "扩展端口数量",
+      "B": "可以部署跨物理设备的链路聚合",
+      "C": "解决通信故障",
+      "D": "简化配置管理，只需管理一台逻辑设备"
+    },
+    "reason": "删除相邻题或附加截图混入的选项内容"
+  },
+  {
+    "source_number": 541,
+    "action": "keep",
+    "explanation": "SSID是向用户标识无线网络的服务集名称；BSSID用于区分具体BSS实例，AP Name是设备管理名称。",
+    "sources": [
+      "https://info.support.huawei.com/info-finder/encyclopedia/en/SSID.html"
+    ]
+  },
+  {
+    "source_number": 542,
+    "action": "keep",
+    "explanation": "Fat AP具备独立的接入控制、安全认证和转发能力，通常不依赖独立AC集中管理即可提供无线服务。",
+    "sources": [
+      "https://info.support.huawei.com/hedex/api/pages/EDOC1100210440/AZK0901G/09/resources/dc/dc_fd_wlan_basic_0007.html"
+    ]
+  },
+  {
+    "source_number": 543,
+    "action": "exclude",
+    "reason": "802.11a、b、g和ac都是有效的WLAN标准，给出的四个选项均不能满足“不包括”的题意，且原文批注也指出该题有误。",
+    "explanation": "",
+    "sources": []
+  },
+  {
+    "source_number": 544,
+    "action": "keep",
+    "explanation": "管理站通过 Agent 访问被管设备的信息，MIB 定义管理对象及其结构，四者共同构成管理体系。",
+    "sources": [
+      "https://www.rfc-editor.org/rfc/rfc3411"
+    ]
+  },
+  {
+    "source_number": 545,
+    "action": "keep",
+    "explanation": "链路聚合提供成员链路冗余，堆叠提供成员设备冗余，两者结合可降低单链路或单设备故障影响。",
+    "sources": [
+      "https://info.support.huawei.com/info-finder/encyclopedia/zh/%E5%A0%86%E5%8F%A0.html"
+    ]
+  },
+  {
+    "source_number": 546,
+    "action": "keep",
+    "explanation": "idle-timeout 可在 Console、VTY 等用户界面配置，登录超时并不限于 VTY。",
+    "sources": [
+      "https://info.support.huawei.com/hedex/api/pages/EDOC1100362944/AZN04029/05/resources/vrp/dc_vrp_acl4_cfg_0076.html"
+    ]
+  },
+  {
+    "source_number": 547,
+    "action": "keep",
+    "explanation": "应分别为PC2和PC1的主机前缀指定所需链路的对端IP作为下一跳；往返方向可以独立选择不同静态路径。",
+    "sources": [
+      "https://info.support.huawei.com/hedex/api/pages/EDOC1100277650/AZM1016J/03/resources/vrp/feature_0003992083.html"
+    ]
+  },
+  {
+    "source_number": 548,
+    "action": "keep",
+    "explanation": "华为设备OSPF内部路由的缺省Preference为10；OSPF外部路由通常为150，需区分路由类别。",
+    "sources": [
+      "https://info.support.huawei.com/hedex/api/pages/EDOC1100277650/AZM1016J/03/resources/vrp/feature_0003992083.html"
+    ]
+  },
+  {
+    "source_number": 549,
+    "action": "keep",
+    "explanation": "silent-interface使该接口不再发送或处理OSPF报文，因此现有邻居会超时Down；接口所在网段仍可作为被通告网段。",
+    "sources": [
+      "https://datatracker.ietf.org/doc/html/rfc2328"
+    ]
+  },
+  {
+    "source_number": 550,
+    "action": "keep",
+    "explanation": "华为静态路由 preference 的可配置范围为 1–255、默认 60；0 不属于可配置的普通静态路由优先级。",
+    "sources": [
+      "https://support.huawei.com/enterprise/zh/doc/EDOC1100333406/ac7caed7/ip-route-static"
+    ]
+  },
+  {
+    "source_number": 551,
+    "action": "keep",
+    "explanation": "/12 表示前 12 位为 1：首字节为 255，第二字节为 11110000₂=240。",
+    "sources": [
+      "https://www.rfc-editor.org/rfc/rfc791.html"
+    ]
+  },
+  {
+    "source_number": 552,
+    "action": "keep",
+    "explanation": "配置中VLAN 100为Tagged发送，VLAN 200为Untagged发送；PVID 100用于给收到的无标签帧归类。",
+    "sources": [
+      "https://info.support.huawei.com/info-finder/encyclopedia/zh/VLAN.html"
+    ]
+  },
+  {
+    "source_number": 553,
+    "action": "keep",
+    "explanation": "vlan batch 支持一次创建多个指定编号或范围内的 VLAN，减少逐个进入 VLAN 视图的操作。",
+    "sources": [
+      "https://info.support.huawei.com/hedex/api/pages/EDOC1100277650/AZM1016J/04/resources/command/yunshan/BATCHCREATEVLAN%28VLANOM%29.html"
+    ]
+  },
+  {
+    "source_number": 554,
+    "action": "keep",
+    "explanation": "两接入口分别把无标签帧归入VLAN 20和10，但均允许10、20以无标签形式发出，因此按图配置两主机可互访。",
+    "sources": [
+      "https://info.support.huawei.com/info-finder/encyclopedia/zh/VLAN.html"
+    ]
+  },
+  {
+    "source_number": 555,
+    "action": "keep",
+    "explanation": "只要仍有可用聚合成员，Eth-Trunk可保持Up；两条成员链路都关闭后聚合接口应Down，不能继续转发。",
+    "sources": [
+      "https://info.support.huawei.com/info-finder/encyclopedia/en/LACP.html"
+    ]
+  },
+  {
+    "source_number": 556,
+    "action": "keep",
+    "explanation": "华为交换机STP的缺省桥优先级是32768；优先级和桥MAC共同组成用于根桥选举的桥ID。",
+    "sources": [
+      "https://info.support.huawei.com/info-finder/encyclopedia/en/RSTP.html"
+    ]
+  },
+  {
+    "source_number": 557,
+    "action": "keep",
+    "explanation": "华为基本 ACL 编号范围为 2000–2999，主要用于基于源 IP 的分类与过滤。",
+    "sources": [
+      "https://info.support.huawei.com/info-finder/encyclopedia/en/ACL.html"
+    ]
+  },
+  {
+    "source_number": 558,
+    "action": "keep",
+    "explanation": "最大VTY数量限制可同时建立的远程终端会话数，Telnet和STelnet会占用这些VTY用户界面。",
+    "sources": [
+      "https://info.support.huawei.com/hedex/api/pages/EDOC1000053358/YEF0907R/25/resources/en-us_task_0141547205.html"
+    ]
+  },
+  {
+    "source_number": 559,
+    "action": "keep",
+    "explanation": "部分华为AP支持Fat、Fit和云模式切换，受型号及软件包限制；不能笼统说AP模式永远不能切换。",
+    "sources": [
+      "https://info.support.huawei.com/hedex/api/pages/EDOC1100210440/AZK0901G/09/resources/dc/dc_fd_wlan_basic_0007.html"
+    ]
+  },
+  {
+    "source_number": 560,
+    "action": "keep",
+    "explanation": "AC 可按 AP 的 MAC 地址、序列号 SN 验证其身份，也可配置不认证；普通 AP 接入认证没有 Password 选项。",
+    "sources": [
+      "https://info.support.huawei.com/hedex/api/pages/EDOC1100331917/AZM1014P/05/resources/dc/dc_cfg_wlan_basic_0018.html"
+    ]
+  },
+  {
+    "source_number": 561,
+    "action": "keep",
+    "explanation": "802.11n可在2.4GHz和5GHz工作；802.11a仅5GHz，802.11b/g仅2.4GHz。",
+    "sources": [
+      "https://info.support.huawei.com/hedex/api/pages/EDOC1100210440/AZK0901G/09/resources/dc/dc_fd_wlan_basic_0007.html"
+    ]
+  },
+  {
+    "source_number": 562,
+    "action": "keep",
+    "explanation": "802.11b 和 802.11g 只使用 2.4 GHz；802.11a 使用 5 GHz，802.11n 可使用 2.4 GHz 和 5 GHz。",
+    "sources": [
+      "https://info.support.huawei.com/info-finder/encyclopedia/zh/detail?action=queryEntityDetail&keyword=WiFi"
+    ]
+  },
+  {
+    "source_number": 563,
+    "action": "exclude",
+    "reason": "AES是基础分组密码，CCMP是基于AES的安全封装，两者不属于同一层次；缺少模式、密钥长度等条件，不能简单唯一排序安全强度。",
+    "explanation": "",
+    "sources": []
+  },
+  {
+    "source_number": 564,
+    "action": "keep",
+    "explanation": "WLAN 二层组网描述 AP 与 AC 的管理网络二层可达关系；STA 网关位置不决定 AP 与 AC 的组网类型。",
+    "sources": [
+      "https://info.support.huawei.com/hedex/api/pages/EDOC1100331917/AZM1014P/05/resources/dc/dc_wlan_example_web_basic_0025.html"
+    ]
+  },
+  {
+    "source_number": 565,
+    "action": "keep",
+    "explanation": "WEP 使用 RC4 密钥流机制，TKIP 属于 WPA 等安全机制，并非 WEP 的加密方式。",
+    "sources": [
+      "https://info.support.huawei.com/enterprise/en/doc/EDOC1100365074/797da56d/configuring-the-offline-management-and-antenna-alignment-vap"
+    ]
+  },
+  {
+    "source_number": 566,
+    "action": "keep",
+    "explanation": "企业集中管理 WLAN 通常用 AC 管理 AP，PoE 交换机同时给 AP 提供有线连接和供电。",
+    "sources": [
+      "https://info.support.huawei.com/hedex/api/pages/EDOC1100210440/AZK0901G/09/resources/dc/dc_fd_wlan_basic_0007.html"
+    ]
+  },
+  {
+    "source_number": 567,
+    "action": "correct",
+    "explanation": "支持 iStack 的型号可把多台设备组成统一的逻辑交换机，具体最大成员数由产品能力决定。",
+    "sources": [
+      "https://info.support.huawei.com/info-finder/encyclopedia/zh/%E5%A0%86%E5%8F%A0.html"
+    ],
+    "corrected_answer": "A",
+    "reason": "原图答案缺失，依据明确协议原理补齐答案"
+  },
+  {
+    "source_number": 568,
+    "action": "correct",
+    "explanation": "RSTP把端口状态简化为Discarding、Learning和Forwarding三种，区别于传统STP的五种状态。",
+    "sources": [
+      "https://info.support.huawei.com/info-finder/encyclopedia/en/RSTP.html"
+    ],
+    "corrected_options": {
+      "A": "2",
+      "B": "4",
+      "C": "3",
+      "D": "1"
+    },
+    "reason": "恢复粘连的四个数值选项"
+  },
+  {
+    "source_number": 569,
+    "action": "keep",
+    "explanation": "普通PC接入口通常配置Access，收发无标签帧并归属于一个业务VLAN；Trunk主要用于承载多个VLAN。",
+    "sources": [
+      "https://info.support.huawei.com/info-finder/encyclopedia/zh/VLAN.html"
+    ]
+  },
+  {
+    "source_number": 570,
+    "action": "keep",
+    "explanation": "OSPF通过LSA描述链路状态并运行SPF算法；Direct和Static不是动态路由协议，FTP用于文件传输。",
+    "sources": [
+      "https://datatracker.ietf.org/doc/html/rfc2328"
+    ]
+  },
+  {
+    "source_number": 571,
+    "action": "keep",
+    "explanation": "/25每个网段含128个地址，192.168.1.0/25范围为.0至.127，末地址.127是该子网广播地址。",
+    "sources": [
+      "https://datatracker.ietf.org/doc/html/rfc791"
+    ]
+  },
+  {
+    "source_number": 572,
+    "action": "keep",
+    "explanation": "网络项目先明确业务、规模和约束并形成规划设计，再实施、运维和优化；规划设计是生命周期的起点。",
+    "sources": [
+      "https://info.support.huawei.com/hedex/api/pages/EDOC1100277650/AZM1016J/03/resources/vrp/feature_0003992083.html"
+    ]
+  },
+  {
+    "source_number": 573,
+    "action": "keep",
+    "explanation": "防火墙可执行区域间访问控制、用户认证和NAT，不能把网络地址转换排除在防火墙能力之外。",
+    "sources": [
+      "https://info.support.huawei.com/info-finder/encyclopedia/zh/NGFW.html"
+    ]
+  },
+  {
+    "source_number": 574,
+    "action": "keep",
+    "explanation": "服务器提供稳定服务，通常使用静态地址或 DHCP 地址保留，便于客户端定位和统一管理。",
+    "sources": [
+      "https://info.support.huawei.com/hedex/api/pages/EDOC1100331917/AZM1014P/06/resources/dc/dc_cfg_dhcp_6013.html"
+    ]
+  },
+  {
+    "source_number": 575,
+    "action": "keep",
+    "explanation": "AC 集中管理 Fit AP，常放在汇聚层或旁挂部署；Fat AP 可独立工作，AP 通常仍有有线上联接口。",
+    "sources": [
+      "https://info.support.huawei.com/info-finder/encyclopedia/zh/detail?action=queryEntityDetail&keyword=WAC"
+    ]
+  },
+  {
+    "source_number": 576,
+    "action": "correct",
+    "explanation": "ARP字段包括源硬件地址、源协议地址、操作码和硬件类型，四项都是ARP报文的标准字段。",
+    "sources": [
+      "https://datatracker.ietf.org/doc/html/rfc826"
+    ],
+    "corrected_answer": "ABCD",
+    "corrected_options": {
+      "A": "Source Hardware Address",
+      "B": "Source Protocol Address",
+      "C": "Operation Code",
+      "D": "Hardware Type"
+    },
+    "reason": "原参考答案ACD遗漏ARP必有的源协议地址字段B"
+  },
+  {
+    "source_number": 577,
+    "action": "correct",
+    "explanation": "/30每块含4个地址；.200所在子网为.200至.203，广播地址为主机位全1的200.200.200.203。",
+    "sources": [
+      "https://datatracker.ietf.org/doc/html/rfc791"
+    ],
+    "corrected_options": {
+      "A": "200.200.200.203",
+      "B": "200.200.200.200",
+      "C": "200.200.200.255",
+      "D": "200.200.200.252"
+    },
+    "reason": "删除相邻题或附加截图混入的选项内容"
+  },
+  {
+    "source_number": 578,
+    "action": "keep",
+    "explanation": "私有地址范围中的172段仅为172.16.0.0至172.31.255.255；172.32.1.1不在私有范围，其他三项均为私网地址。",
+    "sources": [
+      "https://datatracker.ietf.org/doc/html/rfc791"
+    ]
+  },
+  {
+    "source_number": 579,
+    "action": "keep",
+    "explanation": "相邻接口的 Area ID 与 Dead Interval 必须一致；Router ID 应不同，DR 优先级可以不同。",
+    "sources": [
+      "https://www.rfc-editor.org/rfc/rfc2328"
+    ]
+  },
+  {
+    "source_number": 580,
+    "action": "keep",
+    "explanation": "ping主要使用ICMP回显请求和应答；IPv4以太网发送前可能还需ARP解析同链路目标或下一跳MAC。",
+    "sources": [
+      "https://datatracker.ietf.org/doc/html/rfc826"
+    ]
+  },
+  {
+    "source_number": 581,
+    "action": "keep",
+    "explanation": "DR/BDR先比较接口优先级，再以Router ID决胜；优先级0不参选。按图给定参数，Router A是BDR。",
+    "sources": [
+      "https://datatracker.ietf.org/doc/html/rfc2328"
+    ]
+  },
+  {
+    "source_number": 582,
+    "action": "keep",
+    "explanation": "LACPDU 包含系统 MAC、系统优先级、端口优先级及端口号；接口描述文字不参与协议交换。",
+    "sources": [
+      "https://support.huawei.com/enterprise/zh/doc/EDOC1100459514/b1d8b5a3"
+    ]
+  },
+  {
+    "source_number": 583,
+    "action": "correct",
+    "explanation": "根桥SWA与SWC优先级同为4096，但SWA的MAC更小而胜出；根桥的Hello计时值通过配置BPDU传给全网。",
+    "sources": [
+      "https://info.support.huawei.com/info-finder/encyclopedia/en/RSTP.html"
+    ],
+    "corrected_answer": "B",
+    "corrected_options": {
+      "A": "SWB",
+      "B": "SWA",
+      "C": "SWC",
+      "D": "SWD"
+    },
+    "reason": "依据PDF第135至136页修正重复C标签，恢复第二选项SWA为B"
+  },
+  {
+    "source_number": 584,
+    "action": "correct",
+    "explanation": "NAS 按域选用认证、授权、计费方案；用户被映射到某个域后，使用该域的策略和服务器配置。",
+    "sources": [
+      "https://info.support.huawei.com/enterprise/zh/doc/EDOC1100410648/330af205"
+    ],
+    "corrected_options": {
+      "A": "正确",
+      "B": "错误"
+    },
+    "reason": "清除相邻题目混入的选项文字"
+  },
+  {
+    "source_number": 585,
+    "action": "keep",
+    "explanation": "NAPT同时转换IP地址和传输层端口，以端口区分多个内网连接；它不是修改以太网MAC地址。",
+    "sources": [
+      "https://datatracker.ietf.org/doc/html/rfc3022"
+    ]
+  },
+  {
+    "source_number": 586,
+    "action": "keep",
+    "explanation": "中型园区常见接入、汇聚和核心三层架构；“网络层”是OSI分层名称，不是此处的园区部署层次。",
+    "sources": [
+      "https://info.support.huawei.com/hedex/api/pages/EDOC1100277650/AZM1016J/03/resources/vrp/feature_0003992083.html"
+    ]
+  },
+  {
+    "source_number": 587,
+    "action": "keep",
+    "explanation": "传统固定电话通过公共交换电话网络传递语音，属于通信网络的一种应用。",
+    "sources": [
+      "https://www.itu.int/epublications/publication/itu-t-p-10-g-100-2017-amd-2-2024-05-new-definitions-for-inclusion-in-recommendation-itu-t-p-10-g-100"
+    ]
+  },
+  {
+    "source_number": 588,
+    "action": "keep",
+    "explanation": "按业务划分 VLAN 可隔离广播和不同业务流量，并便于分别配置访问控制和服务质量策略。",
+    "sources": [
+      "https://info.support.huawei.com/hedex/api/pages/EDOC1100331435/AEM10132/04/resources/dc/dc_cfg_vlan_1007.html"
+    ]
+  },
+  {
+    "source_number": 589,
+    "action": "keep",
+    "explanation": "SNMP 的 Get 类操作读取对象，SetRequest 修改可写对象，因此不只支持查看状态。",
+    "sources": [
+      "https://www.rfc-editor.org/rfc/rfc1157"
+    ]
+  },
+  {
+    "source_number": 590,
+    "action": "correct",
+    "explanation": "Telnet(host)只建立到主机默认23端口的连接；认证需后续读提示并写入用户名、密码，不在构造函数中直接传入。",
+    "sources": [
+      "https://docs.python.org/3.12/library/telnetlib.html"
+    ],
+    "corrected_options": {
+      "A": "telnetlib.Telnet(\"10.1.1.10\", \"admin\", \"Huawei@123\")",
+      "B": "telnetlib.Telnet(\"10.1.1.10\", 23, \"admin\", \"Huawei@123\")",
+      "C": "telnetlib.Telnet(\"10.1.1.10\", \"admin\")",
+      "D": "telnetlib.Telnet(\"10.1.1.10\")"
+    },
+    "corrected_answer": "D",
+    "reason": "统一模块名并补齐IP字符串引号，恢复原题构造函数考点"
+  },
+  {
+    "source_number": 591,
+    "action": "correct",
+    "explanation": "read_very_eager读取当前已到达的数据而通常不等待新数据；可用适当等待控制读取时机，但IAC协商处理仍有特殊情况。",
+    "sources": [
+      "https://docs.python.org/3.12/library/telnetlib.html"
+    ],
+    "corrected_stem": "telnetlib中Telnet.read_very_eager通常用于非阻塞读取当前可用数据，常与time模块配合使用。",
+    "reason": "修正模块名、方法名的OCR错误，并避免绝对不阻塞表述"
+  },
+  {
+    "source_number": 592,
+    "action": "keep",
+    "explanation": "VLANIF 是三层逻辑接口，配置 IP 地址和子网掩码后才能确定其所属网段并进行三层通信。",
+    "sources": [
+      "https://info.support.huawei.com/info-finder/encyclopedia/zh/VLAN.html"
+    ]
+  },
+  {
+    "source_number": 593,
+    "action": "keep",
+    "explanation": "CAPWAP控制隧道用Echo检测连通性，数据隧道用Keepalive；两个检测机制对应不同隧道。",
+    "sources": [
+      "https://datatracker.ietf.org/doc/html/rfc5415"
+    ]
+  },
+  {
+    "source_number": 594,
+    "action": "keep",
+    "explanation": "TKIP 可用于 WPA，也曾被 WPA2 的兼容配置支持，因此并非 WPA2-PSK 独有。",
+    "sources": [
+      "https://info.support.huawei.com/enterprise/en/doc/EDOC1100365074/797da56d/configuring-the-offline-management-and-antenna-alignment-vap"
+    ]
+  },
+  {
+    "source_number": 595,
+    "action": "keep",
+    "explanation": "Huawei IPv4 AP 可从 DHCP Option 43 的厂商信息获取 AC 地址，然后发送单播发现请求。",
+    "sources": [
+      "https://info.support.huawei.com/hedex/api/pages/EDOC1100210440/AZK0901G/09/resources/dc/dc_fd_wlan_basic_0007.html"
+    ]
+  },
+  {
+    "source_number": 596,
+    "action": "keep",
+    "explanation": "VAP是在物理AP上建立的逻辑接入实例，可分别绑定SSID、VLAN和安全策略，为不同用户提供不同服务。",
+    "sources": [
+      "https://info.support.huawei.com/info-finder/encyclopedia/en/SSID.html"
+    ]
+  },
+  {
+    "source_number": 597,
+    "action": "keep",
+    "explanation": "聚合模式应相同，不能嵌套Eth-Trunk，通常也不能混合不同速率成员；同速率光口与电口能否混合以设备规格为准。",
+    "sources": [
+      "https://info.support.huawei.com/info-finder/encyclopedia/en/LACP.html"
+    ]
+  },
+  {
+    "source_number": 598,
+    "action": "correct",
+    "explanation": "0x8100 表示帧带有 802.1Q VLAN 标记，后续协议仍可承载 ARP 或包含 TCP、UDP、ICMP 的 IP 报文。",
+    "sources": [
+      "https://info.support.huawei.com/info-finder/encyclopedia/zh/VLAN.html"
+    ],
+    "corrected_answer": "ABCD",
+    "reason": "原图答案缺失，依据明确协议原理补齐答案"
+  },
+  {
+    "source_number": 599,
+    "action": "keep",
+    "explanation": "传统STP端口在Learning完成MAC学习等待后可直接进入Forwarding；其他状态通常仍需经过学习过程。",
+    "sources": [
+      "https://info.support.huawei.com/info-finder/encyclopedia/en/RSTP.html"
+    ]
+  },
+  {
+    "source_number": 600,
+    "action": "keep",
+    "explanation": "私网地址不能直接作为公网可路由地址使用，常通过NAT转换；同时需有到Internet的路由，通常使用默认路由。",
+    "sources": [
+      "https://datatracker.ietf.org/doc/html/rfc3022"
+    ]
+  },
+  {
+    "source_number": 601,
+    "action": "keep",
+    "explanation": "上方向键和 Ctrl+P 都读取上一条历史命令；左方向键移动光标，Ctrl+U 清除当前行。",
+    "sources": [
+      "https://support.huawei.com/enterprise/en/doc/EDOC1100410538/36ae01a3/using-command-line-shortcut-keys"
+    ]
+  },
+  {
+    "source_number": 602,
+    "action": "keep",
+    "explanation": "封装为数据添加各层控制信息，解封装逐层处理这些信息，使不同层协议协同完成端到端通信。",
+    "sources": [
+      "https://www.rfc-editor.org/rfc/rfc791"
+    ]
+  },
+  {
+    "source_number": 603,
+    "action": "keep",
+    "explanation": "LSR用于请求对端提供本地缺失或较新的LSA；LSU负责承载并发送被请求的完整LSA。",
+    "sources": [
+      "https://datatracker.ietf.org/doc/html/rfc2328"
+    ]
+  },
+  {
+    "source_number": 604,
+    "action": "keep",
+    "explanation": "骨干区域是 Area 0，区域号为 32 位值；Loopback 配置不是创建 OSPF 区域的必备前提。",
+    "sources": [
+      "https://www.rfc-editor.org/rfc/rfc2328"
+    ]
+  },
+  {
+    "source_number": 605,
+    "action": "keep",
+    "explanation": "STP 通过选举根桥并阻塞部分冗余路径形成无环拓扑，避免广播风暴和 MAC 地址表震荡。",
+    "sources": [
+      "https://info.support.huawei.com/enterprise/zh/doc/EDOC1100457495/e66d44a3"
+    ]
+  },
+  {
+    "source_number": 606,
+    "action": "keep",
+    "explanation": "交换机从各收到帧的源MAC学习对应入端口，主机A、B、C分别位于图中G0/0/1、G0/0/2、G0/0/3方向。",
+    "sources": [
+      "https://standards.ieee.org/standard/802_3-2022.html"
+    ]
+  },
+  {
+    "source_number": 607,
+    "action": "correct",
+    "explanation": "ARP缓存只解决二层封装的目标MAC，不能绕过VLAN隔离；图中接入口属于不同VLAN，仍不能直接互通。",
+    "sources": [
+      "https://info.support.huawei.com/info-finder/encyclopedia/zh/VLAN.html"
+    ],
+    "corrected_options": {
+      "A": "正确",
+      "B": "错误"
+    },
+    "reason": "清除相邻题目混入的选项文字"
+  },
+  {
+    "source_number": 608,
+    "action": "keep",
+    "explanation": "Fit AP通过CAPWAP与AC建立控制隧道进行发现、配置和管理；需要集中转发时还使用数据隧道。",
+    "sources": [
+      "https://datatracker.ietf.org/doc/html/rfc5415"
+    ]
+  },
+  {
+    "source_number": 609,
+    "action": "exclude",
+    "reason": "正确命令是forward-mode direct-forward，而原选项仅有direct-Forward等不完整片段；题干要求命令时无完整正确项。",
+    "explanation": "",
+    "sources": []
+  },
+  {
+    "source_number": 610,
+    "action": "keep",
+    "explanation": "802.11ac 的 VHT 物理层工作在 5 GHz 频段；双频 AP 的 2.4 GHz 无线通常使用其他 802.11 标准。",
+    "sources": [
+      "https://www-file.huawei.com/-/media/corporate/pdf/ilab/cloud_vr_oriented_bearer_network_white_paper_en_v2.pdf"
+    ]
+  },
+  {
+    "source_number": 611,
+    "action": "keep",
+    "explanation": "跨三层时二层广播发现不能直达AC，可通过DHCP Option 43或DNS解析获取AC地址，再进行单播发现。",
+    "sources": [
+      "https://info.support.huawei.com/hedex/api/pages/EDOC1100210440/AZK0901G/09/resources/dc/dc_fd_wlan_basic_0007.html"
+    ]
+  },
+  {
+    "source_number": 612,
+    "action": "keep",
+    "explanation": "802.11n 与 802.11ax 都支持 2.4 GHz 和 5 GHz；802.11g 仅 2.4 GHz，802.11ac 使用 5 GHz。",
+    "sources": [
+      "https://info.support.huawei.com/info-finder/encyclopedia/zh/detail?action=queryEntityDetail&keyword=WiFi"
+    ]
+  },
+  {
+    "source_number": 613,
+    "action": "correct",
+    "explanation": "一个MPLS标签栈项固定4字节；本题默认只压入一层标签，多层标签栈需按每层4字节累计。",
+    "sources": [
+      "https://datatracker.ietf.org/doc/html/rfc3031"
+    ],
+    "corrected_stem": "IP报文压入一层MPLS标签后，增加多少字节？",
+    "reason": "明确一层标签前提，避免标签栈层数歧义"
+  },
+  {
+    "source_number": 614,
+    "action": "exclude",
+    "reason": "XML、JSON是编码格式，NETCONF、RESTCONF是管理协议；将它们并列询问“哪个不是开放接口”缺少统一口径，原答案A不能唯一成立。",
+    "explanation": "",
+    "sources": []
+  },
+  {
+    "source_number": 615,
+    "action": "correct",
+    "explanation": "IPv6链路本地单播使用FE80::/10前缀；FC00::/7为唯一本地地址，FF00::/8为组播地址。",
+    "sources": [
+      "https://datatracker.ietf.org/doc/html/rfc8200"
+    ],
+    "corrected_options": {
+      "A": "FC00::2E0:FCFF:FEEF:FEC",
+      "B": "FE80::2E0:FCFF:FEEF:FEC",
+      "C": "2000::2E0:FCFF:FEEF:FEC",
+      "D": "FF02::2E0:FCFF:FEEF:FEC"
+    },
+    "reason": "依据前缀和原图修复丢失的双冒号"
+  },
+  {
+    "source_number": 616,
+    "action": "keep",
+    "explanation": "南向接口负责控制器与设备交互，SNMP 用于管理，NETCONF 用于配置，OpenFlow/PCEP 用于转发或路径控制。",
+    "sources": [
+      "https://www.rfc-editor.org/rfc/rfc3411"
+    ]
+  },
+  {
+    "source_number": 617,
+    "action": "keep",
+    "explanation": "数据平面负责转发报文，控制平面计算路由等状态，管理平面负责配置、监控和维护。",
+    "sources": [
+      "https://www.rfc-editor.org/rfc/rfc3411"
+    ]
+  },
+  {
+    "source_number": 618,
+    "action": "keep",
+    "explanation": "输出明确显示VRP 5.130、运行时间1分钟及设备名Huawei；MPU(Master)不代表另有正常运行的备用主控板。",
+    "sources": [
+      "https://info.support.huawei.com/hedex/api/pages/EDOC1000053358/YEF0907R/25/resources/en-us_task_0141547205.html"
+    ]
+  },
+  {
+    "source_number": 619,
+    "action": "keep",
+    "explanation": "AC 集中管理 Fit AP，常放在汇聚层或旁挂部署；Fat AP 可独立工作，AP 通常仍有有线上联接口。",
+    "sources": [
+      "https://info.support.huawei.com/info-finder/encyclopedia/zh/detail?action=queryEntityDetail&keyword=WAC"
+    ]
+  },
+  {
+    "source_number": 620,
+    "action": "keep",
+    "explanation": "普通 IPv4 子网中主机位全为 1 是定向广播地址，不可分配为普通主机地址。",
+    "sources": [
+      "https://datatracker.ietf.org/doc/html/rfc1812"
+    ]
+  },
+  {
+    "source_number": 621,
+    "action": "keep",
+    "explanation": "手工聚合不交换LACPDU，已选入聚合的Up成员参与转发；不能像LACP那样协商主备成员数量。",
+    "sources": [
+      "https://info.support.huawei.com/info-finder/encyclopedia/en/LACP.html"
+    ]
+  },
+  {
+    "source_number": 622,
+    "action": "keep",
+    "explanation": "0x8100 是 802.1Q Tag 的类型标识；Trunk 和配置为 tagged 的 Hybrid 端口可发送带 VLAN 标记的帧。",
+    "sources": [
+      "https://info.support.huawei.com/info-finder/encyclopedia/zh/VLAN.html"
+    ]
+  },
+  {
+    "source_number": 623,
+    "action": "keep",
+    "explanation": "桥ID同时包含优先级和MAC，需区分桥优先级与端口优先级；图中不能把端口显示值当成本机桥优先级0。",
+    "sources": [
+      "https://info.support.huawei.com/info-finder/encyclopedia/en/RSTP.html"
+    ]
+  },
+  {
+    "source_number": 624,
+    "action": "keep",
+    "explanation": "BSS 是基本服务集，表示单个 AP 提供服务的基本覆盖区域；BSSID 则是这个 BSS 的标识符。",
+    "sources": [
+      "https://info.support.huawei.com/info-finder/encyclopedia/en/SSID.html"
+    ]
+  },
+  {
+    "source_number": 625,
+    "action": "correct",
+    "explanation": "Telnet.close()用于关闭会话，不是等待回显；应使用read_until等读取方法接收设备输出，write发送bytes命令。",
+    "sources": [
+      "https://docs.python.org/3.12/library/telnetlib.html"
+    ],
+    "corrected_answer": "B",
+    "corrected_options": {
+      "A": "telnetlib可以实现Telnet连接和配置读取",
+      "B": "telnet.close()用于每次输入命令后等待交换机回显",
+      "C": "使用telnetlib.Telnet(host)连接Telnet服务器",
+      "D": "可使用telnet.write(b\"display current-configuration\\n\")输入查看当前配置命令"
+    },
+    "reason": "原图第144页明确为单选B，恢复D选项并纠正OCR误提取的BD答案"
+  },
+  {
+    "source_number": 626,
+    "action": "keep",
+    "explanation": "华为直连路由的优先级为 0，数值越小优先级越高，直连路径因此优于常见动态和静态路由。",
+    "sources": [
+      "https://info.support.huawei.com/hedex/api/pages/EDOC1100277650/AZM1016J/03/resources/vrp/feature_0003992083.html"
+    ]
+  },
+  {
+    "source_number": 627,
+    "action": "keep",
+    "explanation": "普通未带802.1Q标签的Ethernet II帧为64至1518字节，包含MAC头与FCS，但不含前导码和帧间隙。",
+    "sources": [
+      "https://standards.ieee.org/standard/802_3-2022.html"
+    ]
+  },
+  {
+    "source_number": 628,
+    "action": "keep",
+    "explanation": "192.168.1.2 是私有地址，不能在公网直接路由；可通过 NAT 或应用代理等方式访问互联网，不能说一定使用 NAT。",
+    "sources": [
+      "https://www.rfc-editor.org/rfc/rfc1918"
+    ]
+  },
+  {
+    "source_number": 629,
+    "action": "keep",
+    "explanation": "一个射频可通过多个VAP提供多个SSID，各VAP有独立BSSID与业务配置；不是一个射频只能绑定一个SSID。",
+    "sources": [
+      "https://info.support.huawei.com/info-finder/encyclopedia/en/SSID.html"
+    ]
+  },
+  {
+    "source_number": 630,
+    "action": "keep",
+    "explanation": "WLAN可采用MAC、802.1X或Portal等接入认证，RADIUS常作为后台认证协议，具体能力取决于设备与部署方式。",
+    "sources": [
+      "https://datatracker.ietf.org/doc/html/rfc2865"
+    ]
+  },
+  {
+    "source_number": 631,
+    "action": "correct",
+    "explanation": "country-code用于设置国家或地区码，决定可用信道与发射功率限制；选项中的conde是code的拼写错误。",
+    "sources": [
+      "https://info.support.huawei.com/hedex/api/pages/EDOC1100210440/AZK0901G/09/resources/dc/dc_fd_wlan_basic_0007.html"
+    ],
+    "corrected_options": {
+      "A": "province-code",
+      "B": "country-code",
+      "C": "state-code",
+      "D": "nation-code"
+    },
+    "reason": "纠正全部选项conde的拼写错误"
+  },
+  {
+    "source_number": 632,
+    "action": "keep",
+    "explanation": "802.11的Open System链路认证与后续WEP/WPA/WPA2数据保护是不同阶段；Open认证不代表后续数据一定不加密。",
+    "sources": [
+      "https://info.support.huawei.com/hedex/api/pages/EDOC1100210440/AZK0901G/09/resources/dc/dc_fd_wlan_basic_0007.html"
+    ]
+  },
+  {
+    "source_number": 633,
+    "action": "keep",
+    "explanation": "主机发送RS请求路由信息，路由器使用RA通告前缀及其他参数；RA既可响应RS，也可周期性主动发送。",
+    "sources": [
+      "https://datatracker.ietf.org/doc/html/rfc8200"
+    ]
+  },
+  {
+    "source_number": 634,
+    "action": "correct",
+    "explanation": "MANO由NFVO、VNFM和VIM组成；VIM管理NFVI计算、存储和网络资源，VNFM管理虚拟网络功能生命周期。",
+    "sources": [
+      "https://www.etsi.org/technologies/nfv"
+    ],
+    "corrected_options": {
+      "A": "VNFM负责虚拟网络功能的管理",
+      "B": "NFVO负责业务和资源编排",
+      "C": "MANO由NFVO、VNFM和VIM组成",
+      "D": "VIM负责虚拟基础设施资源管理"
+    },
+    "reason": "恢复粘连选项并修正VIM漏字；资源管理不等于实现底层虚拟化"
+  },
+  {
+    "source_number": 635,
+    "action": "keep",
+    "explanation": "逐流哈希把同一流固定分配到同一成员链路，可避免不同链路时延引起的报文乱序；逐包分担不保证这一点。",
+    "sources": [
+      "https://info.support.huawei.com/info-finder/encyclopedia/en/LACP.html"
+    ]
+  },
+  {
+    "source_number": 636,
+    "action": "keep",
+    "explanation": "config 指按规则编号的配置顺序匹配，auto 指按深度优先原则自动排序；原句关键谓语“是”可明确修复。",
+    "sources": [
+      "https://info.support.huawei.com/hedex/api/pages/EDOC1100362944/AZN04029/05/resources/vrp/dc_vrp_acl4_cfg_0041.html"
+    ]
+  },
+  {
+    "source_number": 637,
+    "action": "keep",
+    "explanation": "STA 可被动接收 Beacon，也可主动发送 Probe Request 并接收 Probe Response 来发现网络。",
+    "sources": [
+      "https://info.support.huawei.com/hedex/api/pages/EDOC1100210440/AZK0901G/09/resources/dc/dc_fd_wlan_basic_0008.html"
+    ]
+  },
+  {
+    "source_number": 638,
+    "action": "keep",
+    "explanation": "主动扫描时 STA 发送 Probe Request 查询无线网络，AP 通过 Probe Response 返回 SSID 等信息。",
+    "sources": [
+      "https://info.support.huawei.com/hedex/api/pages/EDOC1100210440/AZK0901G/09/resources/dc/dc_fd_wlan_basic_0008.html"
+    ]
+  },
+  {
+    "source_number": 639,
+    "action": "correct",
+    "explanation": "SNMP的SetRequest用于修改可写MIB对象；GetRequest和GetNextRequest用于读取，Response用于返回操作结果。",
+    "sources": [
+      "https://datatracker.ietf.org/doc/html/rfc3416"
+    ],
+    "corrected_stem": "使用SNMPv1管理设备时，哪一种请求用于修改设备的可写配置对象？",
+    "reason": "原题“完成管理”过于宽泛，明确其原答案对应的写配置操作"
+  },
+  {
+    "source_number": 640,
+    "action": "correct",
+    "explanation": "虚拟机通过Hypervisor实现隔离和硬件解耦；共享宿主内核并靠命名空间隔离是容器特征，不能作为VM封装原理。",
+    "sources": [
+      "https://www.etsi.org/technologies/nfv"
+    ],
+    "corrected_answer": "ABD",
+    "corrected_options": {
+      "A": "分区，可以在单一物理服务器上同时运行多个虚拟机",
+      "B": "隔离，同一物理服务器上的虚拟机相互隔离",
+      "C": "封装，虚拟机共享操作空间并通过命名空间实现封装",
+      "D": "硬件独立，虚拟机和硬件解耦，支持在服务器之间迁移"
+    },
+    "corrected_stem": "虚拟机是实现NFV的一种基础，关于虚拟机特点的描述正确的是哪些项？",
+    "reason": "恢复粘连选项，纠正容器特征被误当作虚拟机封装"
+  },
+  {
+    "source_number": 641,
+    "action": "correct",
+    "explanation": "200.200.200.201/30所在子网为.200/30，可用主机地址为.201和.202；.200是网络地址，.203是广播地址。",
+    "sources": [
+      "https://datatracker.ietf.org/doc/html/rfc791"
+    ],
+    "corrected_options": {
+      "A": "200.200.200.203",
+      "B": "200.200.200.202",
+      "C": "200.200.200.1",
+      "D": "200.200.200.200"
+    },
+    "reason": "删除相邻题或附加截图混入的选项内容"
+  },
+  {
+    "source_number": 642,
+    "action": "keep",
+    "explanation": "SR可扩展现有IGP并使用源路由，兼容集中与分布式控制；SR-MPLS仍需标签转发表，不能一概称为纯IP转发。",
+    "sources": [
+      "https://datatracker.ietf.org/doc/html/rfc8402"
+    ]
+  },
+  {
+    "source_number": 643,
+    "action": "keep",
+    "explanation": "常见 SNMP 基于 UDP 传输，查询常用 161 端口，通知常用 162 端口。",
+    "sources": [
+      "https://www.rfc-editor.org/rfc/rfc1157.html"
+    ]
+  },
+  {
+    "source_number": 644,
+    "action": "keep",
+    "explanation": "Python语法清晰、生态丰富，但解释执行的纯Python代码通常不以运行效率高为主要优势，不能与开发效率混淆。",
+    "sources": [
+      "https://docs.python.org/3.12/tutorial/"
+    ]
+  },
+  {
+    "source_number": 645,
+    "action": "keep",
+    "explanation": "典型 SDN 分为应用层、控制层与基础设施/设备层；芯片属于设备内部组成。",
+    "sources": [
+      "https://opennetworking.org/sdn-definition/"
+    ]
+  },
+  {
+    "source_number": 646,
+    "action": "keep",
+    "explanation": "固件是二进制文件，应使用 Image/Binary 模式，避免 ASCII 模式转换换行而破坏文件。",
+    "sources": [
+      "https://www.rfc-editor.org/rfc/rfc959.html"
+    ]
+  },
+  {
+    "source_number": 647,
+    "action": "keep",
+    "explanation": "AP仅在自身软件与AC要求版本不一致等需要升级的情况下下载镜像，版本兼容时可以跳过镜像升级阶段。",
+    "sources": [
+      "https://datatracker.ietf.org/doc/html/rfc5415"
+    ]
+  },
+  {
+    "source_number": 648,
+    "action": "keep",
+    "explanation": "Prefix-SID绑定一个IGP前缀，通常需规划并配置索引后由IGP通告；IGP自动分配更常对应本地邻接SID。",
+    "sources": [
+      "https://datatracker.ietf.org/doc/html/rfc8402"
+    ]
+  },
+  {
+    "source_number": 649,
+    "action": "keep",
+    "explanation": "config 按规则编号匹配；auto 按匹配条件的精确程度自动排序，即深度优先顺序。",
+    "sources": [
+      "https://info.support.huawei.com/hedex/api/pages/EDOC1100362944/AZN04029/05/resources/vrp/dc_vrp_acl4_cfg_0041.html"
+    ]
+  },
+  {
+    "source_number": 650,
+    "action": "keep",
+    "explanation": "SNMPv3 的 USM 可提供认证与隐私保护，使用 authPriv 时加密报文内容。",
+    "sources": [
+      "https://www.rfc-editor.org/rfc/rfc3414.html"
+    ]
+  }
+]

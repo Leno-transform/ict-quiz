@@ -1,6 +1,6 @@
 "use strict";
 const $ = (id) => document.getElementById(id);
-const typeNames = {single: "单选题", multiple: "多选题", judge: "判断题"};
+const typeNames = {single: "单选题", multiple: "多选题", judge: "判断题", fill: "填空题"};
 const modeNames = {sequential: "顺序练习", random: "随机练习", mistakes: "错题复习"};
 const storageKey = "ict-practice-session-v1";
 let bank, stats, state, busy = false, toastTimer;
@@ -53,6 +53,7 @@ function shuffle(items) {
   return list;
 }
 function syncSettings() {
+  $("bank-filter").value = state.filters.bank || "all";
   $("type-filter").value = state.filters.type;
   $("topic-filter").value = state.filters.topic;
   $("random-count").value = state.filters.count;
@@ -60,13 +61,17 @@ function syncSettings() {
 }
 function newSession(mode = state?.mode || "sequential", filters = null) {
   if (busy) return toast("正在保存这次作答，请稍候。");
-  filters ||= {type: $("type-filter").value, topic: $("topic-filter").value,
+  filters ||= {bank: $("bank-filter").value, type: $("type-filter").value, topic: $("topic-filter").value,
     count: $("random-count").value, includeMastered: $("include-mastered").checked};
-  let questions = bank.questions.filter(q => (filters.type === "all" || q.type === filters.type) &&
+  let questions = bank.questions.filter(q => (!filters.bank || filters.bank === "all" || q.bank_ids?.includes(filters.bank)) && (filters.type === "all" || q.type === filters.type) &&
     (filters.topic === "all" || q.topic === filters.topic));
   if (mode === "mistakes") {
     const wrongIds = new Set(stats.mistakes.filter(q => filters.includeMastered || !q.mastered).map(q => q.id));
     questions = questions.filter(q => wrongIds.has(q.id));
+  }
+  if (filters.bank && filters.bank !== "all") {
+    const sourceNumber = q => q.source_refs.find(r => r.bank_id === filters.bank).number;
+    questions.sort((a, b) => sourceNumber(a) - sourceNumber(b));
   }
   let queue = questions.map(q => q.id);
   if (mode === "random") {
@@ -130,7 +135,10 @@ function render() {
   $("progress-fill").style.width = `${(state.position + Number(Boolean(feedback))) / state.queue.length * 100}%`;
   $("question-type").textContent = typeNames[q.type];
   $("question-topic").textContent = q.topic;
-  $("question-number").textContent = `原题 #${String(q.id).padStart(3, "0")}`;
+  const references = q.source_refs || [{bank_name: "原题库", number: q.id}];
+  const reference = references.find(r => r.bank_id === state.filters.bank) || references[0];
+  $("question-number").textContent = `${reference.bank_name} #${reference.number}`;
+  $("question-number").title = references.map(r => `${r.bank_name} #${r.number}${r.page ? `（第 ${r.page} 页）` : ""}`).join("；");
   emphasizeKeywords($("question-stem"), q.stem);
   $("question-figure").hidden = !q.image;
   if (q.image) {
@@ -141,10 +149,20 @@ function render() {
     $("question-image").removeAttribute("src");
     $("question-image").alt = "";
   }
-  $("selection-hint").textContent = q.type === "multiple" ? "选择所有正确选项，再点击“确认答案”。" : "选择一个答案，即刻查看对错与解析。";
+  $("selection-hint").textContent = q.type === "fill" ? "按题目要求输入答案（注意大小写），再点击“确认答案”。" : q.type === "multiple" ? "选择所有正确选项，再点击“确认答案”。" : "选择一个答案，即刻查看对错与解析。";
   $("options").replaceChildren();
   const legend = document.createElement("legend");
   legend.className = "sr-only"; legend.textContent = "选择答案"; $("options").append(legend);
+  if (q.type === "fill") {
+    const label = document.createElement("label"); label.className = "fill-label"; label.textContent = "你的答案";
+    const input = document.createElement("input"); input.type = "text"; input.className = "fill-input";
+    input.id = "fill-answer"; input.maxLength = 200; input.autocomplete = "off"; input.spellcheck = false;
+    input.setAttribute("autocapitalize", "off"); input.value = attempt.selected[0] || "";
+    input.disabled = busy || Boolean(feedback);
+    input.addEventListener("input", () => { attempt.selected = input.value.trim() ? [input.value] : []; $("submit").disabled = !attempt.selected.length; persist(); });
+    input.addEventListener("keydown", event => { if (event.key === "Enter") { event.preventDefault(); submitAnswer(); } });
+    label.append(input); $("options").append(label);
+  }
   for (const [letter, text] of Object.entries(q.options)) {
     const label = document.createElement("label"); label.className = "option";
     const input = document.createElement("input");
@@ -178,7 +196,7 @@ function render() {
     });
     $("options").append(label);
   }
-  $("submit").hidden = q.type !== "multiple" || Boolean(feedback);
+  $("submit").hidden = !["multiple", "fill"].includes(q.type) || Boolean(feedback);
   $("submit").disabled = busy || !attempt.selected.length;
   $("retry").hidden = !feedback;
   $("retry").disabled = busy;
@@ -199,7 +217,7 @@ function render() {
   $("previous").disabled = busy || state.position === 0;
   $("next").disabled = busy;
   $("next").textContent = state.position === state.queue.length - 1 ? "完成本轮 ✓" : feedback ? "下一题 →" : "跳过 →";
-  $("footer-hint").textContent = q.type === "multiple" ? "多选题需要确认后判分" : "选择后自动判分";
+  $("footer-hint").textContent = q.type === "fill" ? "输入答案后确认判分" : q.type === "multiple" ? "多选题需要确认后判分" : "选择后自动判分";
 }
 async function submitAnswer() {
   if (busy || !state || !state.queue.length || entry().feedback || !entry().selected.length) return;
@@ -212,7 +230,7 @@ async function submitAnswer() {
     try { await updateStats(); } catch { toast("答案已保存，统计暂时无法更新。"); }
   } catch (error) {
     // A failed single-choice submission must remain retryable by clicking again.
-    if (currentQuestion().type !== "multiple") attempt.selected = [];
+    if (["single", "judge"].includes(currentQuestion().type)) attempt.selected = [];
     persist(); toast(error.message);
   } finally { busy = false; render(); }
 }
@@ -255,6 +273,9 @@ document.addEventListener("keydown", event => {
 async function init() {
   try {
     bank = await api("/api/questions"); await updateStats();
+    for (const item of bank.banks || []) {
+      const option = document.createElement("option"); option.value = item.id; option.textContent = `${item.name} · ${item.question_count} 题`; $("bank-filter").append(option);
+    }
     for (const topic of [...new Set(bank.questions.map(q => q.topic))].sort((a,b) => a.localeCompare(b, "zh-CN"))) {
       const option = document.createElement("option"); option.value = topic; option.textContent = topic; $("topic-filter").append(option);
     }

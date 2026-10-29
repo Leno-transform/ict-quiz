@@ -164,6 +164,9 @@ def main():
             if file.is_file() and file.suffix != ".zip":
                 archive.write(file, file.relative_to(exports))
     print(json.dumps(summary, ensure_ascii=False))
+    if (ROOT / "data" / "additional_source_questions.json").exists():
+        from extend_bank import main as extend_bank
+        extend_bank()
 
 
 if __name__ == "__main__":

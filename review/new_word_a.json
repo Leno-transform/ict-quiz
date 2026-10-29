@@ -1,0 +1,730 @@
+[
+  {
+    "source_number": 1,
+    "action": "correct",
+    "reason": "原解析把ISP列为缺省安全区并遗漏Local，自相矛盾。",
+    "explanation": "华为防火墙缺省安全区为Local、Trust、DMZ和Untrust，不包括ISPZone。",
+    "sources": [
+      "https://info.support.huawei.com/network/ptmngsys/Web/tsrev_security/cn/content/security/21_edesk_net_server_access_intarnet_server_failed/edesk_net_server_access_intarnet_server_failed_edesk006.html"
+    ]
+  },
+  {
+    "source_number": 13,
+    "action": "correct",
+    "reason": "原答案D把3DES密钥写成128位；补足三密钥口径，修复粘连数字。",
+    "explanation": "DES有效密钥长56位；三密钥3DES使用3个56位密钥，合计168位，不含校验位。",
+    "sources": [
+      "https://csrc.nist.gov/projects/cryptographic-algorithm-validation-program/details?product=3764"
+    ],
+    "corrected_answer": "A",
+    "corrected_stem": "DES的有效密钥长度和三密钥3DES的有效密钥材料长度分别是多少位？",
+    "corrected_options": {
+      "A": "56 / 168",
+      "B": "64 / 168",
+      "C": "64 / 128",
+      "D": "56 / 128"
+    }
+  },
+  {
+    "source_number": 14,
+    "action": "correct",
+    "reason": "原解析错误展开VGMP名称。",
+    "explanation": "VGMP统一管理多个VRRP备份组，使其状态协调切换；HRP负责热备信息同步。",
+    "sources": [
+      "https://github.com/Leno-transform/ict-quiz/blob/main/网络赛道1500题-数通DCN安全.docx"
+    ]
+  },
+  {
+    "source_number": 19,
+    "action": "correct",
+    "reason": "ESP隧道模式会加密原始IP头；原答案与加密边界相反。",
+    "explanation": "隧道模式加密整个原始IP包及ESP尾部；ESP头中的SPI和序列号不属于加密范围。",
+    "sources": [
+      "https://www.rfc-editor.org/rfc/rfc4303.html"
+    ],
+    "corrected_answer": "A"
+  },
+  {
+    "source_number": 22,
+    "action": "correct",
+    "reason": "原解析未解释IPS旁路部署，且把接入部署误作限制。",
+    "explanation": "IPS可串联部署并实时阻断，也可旁路部署进行检测；不能旁路部署这一说法过于绝对。",
+    "sources": [
+      "https://github.com/Leno-transform/ict-quiz/blob/main/网络赛道1500题-数通DCN安全.docx"
+    ]
+  },
+  {
+    "source_number": 26,
+    "action": "correct",
+    "reason": "原解析把透明模式误写为修改报文头并称不具备高层能力。",
+    "explanation": "透明模式以二层方式接入，路由模式以三层方式接入；部署方式可按网络场景选择。",
+    "sources": [
+      "https://github.com/Leno-transform/ict-quiz/blob/main/网络赛道1500题-数通DCN安全.docx"
+    ]
+  },
+  {
+    "source_number": 27,
+    "action": "correct",
+    "reason": "原解析把ISP列为缺省安全区并遗漏Local，自相矛盾。",
+    "explanation": "华为防火墙缺省安全区为Local、Trust、DMZ和Untrust，不包括ISPZone。",
+    "sources": [
+      "https://info.support.huawei.com/network/ptmngsys/Web/tsrev_security/cn/content/security/21_edesk_net_server_access_intarnet_server_failed/edesk_net_server_access_intarnet_server_failed_edesk006.html"
+    ]
+  },
+  {
+    "source_number": 29,
+    "action": "exclude",
+    "reason": "题目询问安全策略配置命令的含义，但没有给出任何命令或配置。"
+  },
+  {
+    "source_number": 39,
+    "action": "exclude",
+    "reason": "题干称display ike sa的结果如下，但未提供输出结果。"
+  },
+  {
+    "source_number": 42,
+    "action": "correct",
+    "reason": "C和D均错误，原单选不能唯一作答；改为多选。",
+    "explanation": "Syslog严重度数值越小越严重，Emergency为0；Debug为调试信息，正常一般信息对应Informational。",
+    "sources": [
+      "https://www.rfc-editor.org/rfc/rfc5424.html"
+    ],
+    "corrected_answer": "CD",
+    "corrected_stem": "以下对防火墙日志的描述，错误的有哪些项？（多选）"
+  },
+  {
+    "source_number": 47,
+    "action": "correct",
+    "reason": "Web代理面向Web资源，不能覆盖所有TCP端口资源。",
+    "explanation": "端口转发面向TCP端口资源；Web代理只适用于Web访问，网络扩展则可支持更广的IP应用。",
+    "sources": [
+      "https://info.support.huawei.com/info-finder/encyclopedia/zh/detail?action=queryEntityDetail&keyword=SSL+VPN"
+    ],
+    "corrected_answer": "D"
+  },
+  {
+    "source_number": 51,
+    "action": "correct",
+    "reason": "原解析对是否静态永久存在前后矛盾；NAT No-PAT由业务动态产生映射。",
+    "explanation": "NAT No-PAT的Server-map为动态映射；正向表项记录私网到公网映射，后续匹配可复用映射提高转换效率。",
+    "sources": [
+      "https://github.com/Leno-transform/ict-quiz/blob/main/网络赛道1500题-数通DCN安全.docx"
+    ],
+    "corrected_answer": "D",
+    "verification_note": "No-PAT动态Server-map已在华为文档转载中交叉确认；公开官方百科只说明NAT类型，具体表项方向建议按对应USG版本复核。"
+  },
+  {
+    "source_number": 87,
+    "action": "correct",
+    "reason": "原答案B与其自身解析“可能相同”矛盾。",
+    "explanation": "入标签由本机分配，出标签由下游分配，均只在相应标签空间有效，数值可能相同。",
+    "sources": [
+      "https://www.rfc-editor.org/rfc/rfc3031.html"
+    ],
+    "corrected_answer": "C"
+  },
+  {
+    "source_number": 90,
+    "action": "exclude",
+    "reason": "题干引用MPLS VPN配置命令，却未给出任何接口和VPN绑定配置；同类完整题另见341。"
+  },
+  {
+    "source_number": 95,
+    "action": "exclude",
+    "reason": "选项C仅剩“服务器）提供网络接入服务”，主体残缺，不能完整比较。"
+  },
+  {
+    "source_number": 103,
+    "action": "correct",
+    "reason": "原解析误写为选项C，正确答案D无需改变。",
+    "explanation": "园区网络建设从规划与设计开始，再进入实施、运维及优化阶段。",
+    "sources": [
+      "https://github.com/Leno-transform/ict-quiz/blob/main/网络赛道1500题-数通DCN安全.docx"
+    ]
+  },
+  {
+    "source_number": 104,
+    "action": "correct",
+    "reason": "原解析把/30写成32个地址并误指答案A。",
+    "explanation": "/30每个子网有4个地址；200.200.200.200/30范围为.200至.203，因此广播地址为.203。",
+    "sources": [
+      "https://www.rfc-editor.org/rfc/rfc4632.html"
+    ]
+  },
+  {
+    "source_number": 105,
+    "action": "correct",
+    "reason": "原解析混淆选项及私网边界。",
+    "explanation": "私有地址是10/8、172.16/12和192.168/16；172.32.1.1不在这些私网段内。",
+    "sources": [
+      "https://www.rfc-editor.org/rfc/rfc1918.html"
+    ]
+  },
+  {
+    "source_number": 108,
+    "action": "exclude",
+    "reason": "Telnet构造函数不接受用户名和密码，且所有选项的IP字符串均缺引号，无合法的完整登录代码。",
+    "sources": [
+      "https://docs.python.org/3.12/library/telnetlib.html"
+    ]
+  },
+  {
+    "source_number": 114,
+    "action": "correct",
+    "reason": "XML和JSON都是数据表示格式，原单选缺乏唯一性；改为多选。",
+    "explanation": "NETCONF和RESTCONF是网络管理协议；XML与JSON是数据表示格式，不能与协议接口混为一类。",
+    "sources": [
+      "https://www.rfc-editor.org/rfc/rfc6241.html",
+      "https://www.rfc-editor.org/rfc/rfc8040.html"
+    ],
+    "corrected_answer": "AC",
+    "corrected_stem": "下列哪些不属于网络管理协议接口，而是数据表示格式？（多选）"
+  },
+  {
+    "source_number": 122,
+    "action": "correct",
+    "reason": "原解析引用Unrecognized错误，与题目“命令不完整”不符；修复Incomplete拼写。",
+    "explanation": "Incomplete command表示命令缺少必要参数；Unrecognized command表示命令或关键字无法识别。",
+    "sources": [
+      "https://github.com/Leno-transform/ict-quiz/blob/main/网络赛道1500题-数通DCN安全.docx"
+    ],
+    "corrected_options": {
+      "A": "Error：WrongParameter found at '^position",
+      "B": "Error：AmbiguousCommand found at 'position",
+      "C": "Error：Too manyParameters found at 'position",
+      "D": "Error: Incomplete command found at '^' position."
+    }
+  },
+  {
+    "source_number": 155,
+    "action": "correct",
+    "reason": "B与D都正确，原单选不能唯一作答；改为多选。",
+    "explanation": "LACP模式通过LACPDU协商活动成员；所有活动成员均可参与流量转发与负载分担。",
+    "sources": [
+      "https://github.com/Leno-transform/ict-quiz/blob/main/网络赛道1500题-数通DCN安全.docx"
+    ],
+    "corrected_answer": "BD",
+    "corrected_stem": "以下关于LACP模式链路聚合的说法，正确的有哪些项？（多选）"
+  },
+  {
+    "source_number": 162,
+    "action": "exclude",
+    "reason": "方法名已损坏，且read_eager/read_very_eager/read_very_lazy均涉及非阻塞读取，原单选条件不足。",
+    "sources": [
+      "https://docs.python.org/3.12/library/telnetlib.html"
+    ]
+  },
+  {
+    "source_number": 171,
+    "action": "correct",
+    "reason": "原题把VLAN标签长度误写成整个VLAN帧长度。",
+    "explanation": "802.1Q在以太帧中插入4字节标签，由2字节TPID和2字节TCI组成。",
+    "sources": [
+      "https://www.rfc-editor.org/rfc/rfc7348.html"
+    ],
+    "corrected_stem": "IEEE 802.1Q定义的VLAN标签总长度为多少字节？"
+  },
+  {
+    "source_number": 196,
+    "action": "correct",
+    "reason": "SNMP Trap接收端缺省UDP端口是162，不是161。",
+    "explanation": "SNMP代理通常在UDP 161接收管理请求；向网管发送Trap时使用目的UDP端口162。",
+    "sources": [
+      "https://www.rfc-editor.org/rfc/rfc3417.html"
+    ],
+    "corrected_answer": "C"
+  },
+  {
+    "source_number": 200,
+    "action": "correct",
+    "reason": "原选项D缺少IPv6压缩双冒号，导致不存在有效的全球单播答案。",
+    "explanation": "2001:12::1属于全球单播地址；FE80::/10是链路本地，FF00::/8是组播。",
+    "sources": [
+      "https://www.rfc-editor.org/rfc/rfc4291.html"
+    ],
+    "corrected_options": {
+      "A": "FF02：：2E0：FCFF：FEEF：FEC",
+      "B": "FE80：：2E0：FCFF：FEEF：FEC",
+      "C": "FF02：：1",
+      "D": "2001:12::1"
+    }
+  },
+  {
+    "source_number": 213,
+    "action": "exclude",
+    "reason": "常规VRP配置既需创建OSPF进程也需指定区域，B、C均可能是手工步骤；题目未限定配置入口。"
+  },
+  {
+    "source_number": 222,
+    "action": "exclude",
+    "reason": "将完整/24平均划为8份应使用/27，选项缺少255.255.255.224；/28虽可容纳14主机但分为16份。",
+    "sources": [
+      "https://www.rfc-editor.org/rfc/rfc4632.html"
+    ]
+  },
+  {
+    "source_number": 237,
+    "action": "correct",
+    "reason": "原单选有多个正确项，解析为nan；华为官方明确列出客户端/服务器、密钥机制和扩展性三个相似点。",
+    "explanation": "两者都采用客户端/服务器结构、密钥机制并具备扩展性；但RADIUS仅保护密码等字段，HWTACACS可保护报文体。",
+    "sources": [
+      "https://info.support.huawei.com/info-finder/encyclopedia/zh/TACACS.html"
+    ],
+    "corrected_answer": "BCD",
+    "corrected_stem": "以下关于RADIUS和HWTACACS协议的描述，正确的有哪些项？（多选）"
+  },
+  {
+    "source_number": 249,
+    "action": "correct",
+    "reason": "NAS-IP-Address标识接入设备，不能单独标识终端用户。",
+    "explanation": "Calling-Station-Id通常携带终端MAC地址，可识别用户会话；NAS-IP-Address标识的是NAS设备。",
+    "sources": [
+      "https://www.rfc-editor.org/rfc/rfc5176.html",
+      "https://www.rfc-editor.org/rfc/rfc2865.html"
+    ],
+    "corrected_answer": "A"
+  },
+  {
+    "source_number": 251,
+    "action": "correct",
+    "reason": "原解析为nan。",
+    "explanation": "策略路由可重定向到指定下一跳、出接口或虚拟系统，也可选择按路由表转发；“无法转至其他虚拟系统”错误。",
+    "sources": [
+      "https://github.com/Leno-transform/ict-quiz/blob/main/网络赛道1500题-数通DCN安全.docx"
+    ],
+    "corrected_answer": "B",
+    "verification_note": "按原题给定的华为防火墙策略路由能力补全；虚拟系统重定向支持范围需对应产品版本。"
+  },
+  {
+    "source_number": 268,
+    "action": "correct",
+    "reason": "第一个vlan batch命令的VLAN 10和20之间空格丢失。",
+    "explanation": "vlan batch 10 20创建2个VLAN；vlan batch 10 to 20创建10至20共11个VLAN。",
+    "sources": [
+      "https://github.com/Leno-transform/ict-quiz/blob/main/网络赛道1500题-数通DCN安全.docx"
+    ],
+    "corrected_stem": "使用命令“vlan batch 10 20”和“vlan batch 10 to 20”，分别能创建多少个VLAN？"
+  },
+  {
+    "source_number": 278,
+    "action": "correct",
+    "reason": "A与B都可以查看OSPF配置，原单选不能唯一作答。",
+    "explanation": "OSPF视图下display this查看当前视图配置；display current-configuration可查看包括OSPF在内的运行配置。",
+    "sources": [
+      "https://github.com/Leno-transform/ict-quiz/blob/main/网络赛道1500题-数通DCN安全.docx"
+    ],
+    "corrected_answer": "AB",
+    "corrected_stem": "查询设备OSPF协议的配置信息，可以使用下列哪些命令？（多选）"
+  },
+  {
+    "source_number": 307,
+    "action": "correct",
+    "reason": "虚拟系统共用设备系统软件，不能独立升级；原解析把虚拟系统当作独立虚拟机。",
+    "explanation": "Console登录面向根系统管理；虚拟系统管理员不能从Console直接登录其虚拟系统，系统升级也由根系统完成。",
+    "sources": [
+      "https://github.com/Leno-transform/ict-quiz/blob/main/网络赛道1500题-数通DCN安全.docx"
+    ],
+    "corrected_answer": "B",
+    "verification_note": "虚拟系统与独立VM的区分属于明确错误；Console登录限制应按USG型号文档复核。"
+  },
+  {
+    "source_number": 311,
+    "action": "exclude",
+    "reason": "B和C完全相同，A和D也完全相同，导致同一用户名格式对应多个字母。"
+  },
+  {
+    "source_number": 326,
+    "action": "correct",
+    "reason": "原解析为nan。",
+    "explanation": "管理中心负责设备、防护对象和防御策略的集中配置；流量引导由检测/网络设备按方案执行，不是该处的必配项。",
+    "sources": [
+      "https://github.com/Leno-transform/ict-quiz/blob/main/网络赛道1500题-数通DCN安全.docx"
+    ],
+    "corrected_answer": "C",
+    "verification_note": "按原题Anti-DDoS方案口径补充，未独立取得该版本全部部署手册。"
+  },
+  {
+    "source_number": 336,
+    "action": "exclude",
+    "reason": "原解析将DSCP错误展开，C“CS优先级最高”未指定CS编号，D的AF4也残缺，没有可靠唯一答案。",
+    "sources": [
+      "https://www.rfc-editor.org/rfc/rfc2474.html",
+      "https://www.rfc-editor.org/rfc/rfc2597.html"
+    ]
+  },
+  {
+    "source_number": 349,
+    "action": "correct",
+    "reason": "不同下游设备的标签空间互相独立，出标签数值也可能恰好相同。",
+    "explanation": "不同下一跳各自分配标签，标签只在相应设备标签空间内有意义；不同路由的出标签数值仍可能相同。",
+    "sources": [
+      "https://www.rfc-editor.org/rfc/rfc3031.html"
+    ],
+    "corrected_answer": "C"
+  },
+  {
+    "source_number": 370,
+    "action": "exclude",
+    "reason": "B“任意指定AS号替换”及C“Spoke端不可用EBGP”均缺少适用条件，原单选无法稳定唯一判定。",
+    "sources": [
+      "https://www.rfc-editor.org/rfc/rfc4364.html"
+    ]
+  },
+  {
+    "source_number": 388,
+    "action": "correct",
+    "reason": "将死锁检测与死锁预防机制混淆。",
+    "explanation": "PFC死锁检测在持续收到反压后可暂时不响应反压帧以解除死锁；死锁预防则通过调整队列等方式避免环路。",
+    "sources": [
+      "https://info.support.huawei.com/info-finder/encyclopedia/zh/NoF%2B.html"
+    ],
+    "corrected_answer": "B"
+  },
+  {
+    "source_number": 398,
+    "action": "correct",
+    "reason": "原解析为nan。",
+    "explanation": "Felix在主机上编程路由、接口和ACL；集中存储Calico状态的是数据存储后端，不是Felix。",
+    "sources": [
+      "https://docs.tigera.io/calico/latest/reference/architecture/overview"
+    ],
+    "corrected_answer": "A"
+  },
+  {
+    "source_number": 400,
+    "action": "exclude",
+    "reason": "OpenStack控制节点可以运行Cinder API、调度器等管理服务；题目未给部署拓扑，不能断言不包含Cinder。",
+    "sources": [
+      "https://docs.openstack.org/install-guide/overview.html"
+    ]
+  },
+  {
+    "source_number": 405,
+    "action": "exclude",
+    "reason": "Router可连多个Network，但Network也可连接多个Router；原题未限定模型，不能将映射关系普遍断言为1:N。",
+    "sources": [
+      "https://docs.openstack.org/neutron/latest/admin/intro-os-networking.html"
+    ]
+  },
+  {
+    "source_number": 423,
+    "action": "exclude",
+    "reason": "题干引用图示，但Word中无任何媒体图像；缺少DCI拓扑，不能依据缺图可靠判断。"
+  },
+  {
+    "source_number": 443,
+    "action": "correct",
+    "reason": "原解析为nan。",
+    "explanation": "实例访问Internet需要连接提供外部连通性的external网络；再由路由器及相应地址转换等配置接通内外网络。",
+    "sources": [
+      "https://docs.openstack.org/neutron/2026.1/feature_classification/general_feature_support_matrix.html"
+    ],
+    "corrected_answer": "C"
+  },
+  {
+    "source_number": 450,
+    "action": "correct",
+    "reason": "原解析为nan。",
+    "explanation": "源Leaf携带已知源EPG信息转发；目的Leaf执行组间访问控制，没有组间允许策略时按缺省隔离行为丢弃。",
+    "sources": [
+      "https://github.com/Leno-transform/ict-quiz/blob/main/网络赛道1500题-数通DCN安全.docx"
+    ],
+    "corrected_answer": "C",
+    "verification_note": "按原题给定的CloudFabric默认EPG策略口径解释；具体默认动作应与版本配置核对。"
+  },
+  {
+    "source_number": 451,
+    "action": "correct",
+    "reason": "原解析为nan。",
+    "explanation": "NSH业务链可包含NSH-Unaware服务功能，由SFC Proxy代为处理NSH封装，因此SF并非都必须识别NSH。",
+    "sources": [
+      "https://www.rfc-editor.org/rfc/rfc8300.html"
+    ],
+    "corrected_answer": "D"
+  },
+  {
+    "source_number": 452,
+    "action": "correct",
+    "reason": "原解析为nan。",
+    "explanation": "虚拟化管理平台提供统一界面、资源池监控和调度策略管理；Hypervisor主要负责实际运行与隔离虚拟机。",
+    "sources": [
+      "https://www.vmware.com/topics/hypervisor"
+    ],
+    "corrected_answer": "B"
+  },
+  {
+    "source_number": 478,
+    "action": "correct",
+    "reason": "原解析为nan。",
+    "explanation": "目的Leaf缺少目的IP的EPG归属，需在目的端应用未知EPG成员的默认访问控制策略。",
+    "sources": [
+      "https://github.com/Leno-transform/ict-quiz/blob/main/网络赛道1500题-数通DCN安全.docx"
+    ],
+    "corrected_answer": "D",
+    "verification_note": "按原题给定CloudFabric目的端策略执行口径补充；需对应版本确认。"
+  },
+  {
+    "source_number": 493,
+    "action": "correct",
+    "reason": "原解析为nan。",
+    "explanation": "防火墙需具备管理接入、虚拟系统及必要安全策略；是否使用负载分担双机热备取决于冗余设计，不是手工Underlay的必配项。",
+    "sources": [
+      "https://github.com/Leno-transform/ict-quiz/blob/main/网络赛道1500题-数通DCN安全.docx"
+    ],
+    "corrected_answer": "D",
+    "verification_note": "依据题目给定部署方式解释“非必需”，不将所有CloudFabric部署一概限定为此模式。"
+  },
+  {
+    "source_number": 498,
+    "action": "exclude",
+    "reason": "题目只给出1234等顺序编码，却缺少四个步骤的具体内容，无法作答。"
+  },
+  {
+    "source_number": 505,
+    "action": "correct",
+    "reason": "原解析为nan。",
+    "explanation": "Network Policy模式由控制器编排网络侧连通和引流，第三方VAS内部业务由外部管理，适合不能被控制器纳管的设备。",
+    "sources": [
+      "https://github.com/Leno-transform/ict-quiz/blob/main/网络赛道1500题-数通DCN安全.docx"
+    ],
+    "corrected_answer": "B",
+    "verification_note": "按原题给定模式名称解释；公开官方课堂仅核对到第三方VAS纳管与网络编排的总体区分。"
+  },
+  {
+    "source_number": 507,
+    "action": "correct",
+    "reason": "原解析为nan。",
+    "explanation": "两侧防火墙接入不同Service Leaf时，需要各自的互通VRF衔接跨Leaf路径；同Leaf场景不能照搬两个独立互通VRF的结论。",
+    "sources": [
+      "https://github.com/Leno-transform/ict-quiz/blob/main/网络赛道1500题-数通DCN安全.docx"
+    ],
+    "corrected_answer": "A",
+    "verification_note": "该条为原题答案A对应的简明说明，尚未独立取得此版本CloudFabric场景矩阵。"
+  },
+  {
+    "source_number": 520,
+    "action": "correct",
+    "reason": "原解析为nan。",
+    "explanation": "本题的UDP指定流分析不自动下发活跃老化时间；ACL编号及报文封装匹配项可在分析配置中指定。",
+    "sources": [
+      "https://github.com/Leno-transform/ict-quiz/blob/main/网络赛道1500题-数通DCN安全.docx"
+    ],
+    "corrected_answer": "A",
+    "verification_note": "这是产品版本功能限制，依据给定答案说明，未独立取得该版本自动下发支持清单。"
+  },
+  {
+    "source_number": 544,
+    "action": "correct",
+    "reason": "原解析为nan。",
+    "explanation": "SecoManager可对纳管防火墙进行业务自动化配置和下发，不必将所有业务逐项手工配置。",
+    "sources": [
+      "https://info.support.huawei.com/network/ptmngsys/Web/OnlineCourse_CloudFabric/zh/mooc/CloudFabric/cloudfabric_poc_zh.html"
+    ],
+    "corrected_answer": "C"
+  },
+  {
+    "source_number": 553,
+    "action": "correct",
+    "reason": "WRED上下阈值间按计算概率丢弃，配置的50%是最大概率，不能说整个区间恒为50%。",
+    "explanation": "低于下限不主动丢弃；上下限间概率随平均队列长度增大，最高至配置值；高于上限丢弃新到报文。",
+    "sources": [
+      "https://documentation.extremenetworks.com/slxos/sw/20xx/20.4.2/traffic/GUID-88EDF8B8-37EA-487D-93C2-6AB28046F74E.shtml"
+    ],
+    "corrected_answer": "ABC"
+  },
+  {
+    "source_number": 586,
+    "action": "exclude",
+    "reason": "只保留全局dhcp enable，缺少VLANIF100、中继服务器组等所引用配置，无法核对各选项。"
+  },
+  {
+    "source_number": 587,
+    "action": "exclude",
+    "reason": "选项A仅有“$”而原答案排除A，可能缺少“^”；正则锚点丢失会改变匹配结果，不能猜测恢复。"
+  },
+  {
+    "source_number": 590,
+    "action": "exclude",
+    "reason": "未说明整体匹配还是子串匹配，也未给锚点；正则10*在子串匹配下也能匹配11中的1，原答案不唯一。"
+  },
+  {
+    "source_number": 600,
+    "action": "correct",
+    "reason": "原解析明确含开头锚点^，而题干丢失该符号；据解析修复题干。",
+    "explanation": "^限定从AS路径开头匹配，点号匹配任意单个字符；以300开头的两个路径符合^30.。",
+    "sources": [
+      "https://github.com/Leno-transform/ict-quiz/blob/main/网络赛道1500题-数通DCN安全.docx"
+    ],
+    "corrected_stem": "以下哪些项能被AS-Path正则表达式“^30.”成功匹配？（多选）"
+  },
+  {
+    "source_number": 604,
+    "action": "exclude",
+    "reason": "Pipe模式下外层MPLS TTL与内部IP TTL不按A所述直接继承；题干给外层TTL却要推出出站IP TTL，条件不足。",
+    "sources": [
+      "https://www.rfc-editor.org/rfc/rfc3443.html"
+    ]
+  },
+  {
+    "source_number": 615,
+    "action": "correct",
+    "reason": "隐式空标签3不作为内层VPN标签在链路上传送；Egress PE发给普通CE时不带MPLS标签。",
+    "explanation": "普通域内L3VPN中，P节点转发双标签报文，PHP弹出外层标签；出口PE处理VPN标签后向CE发普通IP报文。",
+    "sources": [
+      "https://www.rfc-editor.org/rfc/rfc3031.html",
+      "https://www.rfc-editor.org/rfc/rfc4364.html"
+    ],
+    "corrected_answer": "BCD"
+  },
+  {
+    "source_number": 623,
+    "action": "exclude",
+    "reason": "RT数值和分隔符多处粘连或丢字，B、D中总部与分部的Import/Export不能匹配，无法按原答案BCD可靠恢复。"
+  },
+  {
+    "source_number": 624,
+    "action": "correct",
+    "reason": "Inter-Area-Prefix-LSA虽然表达区域间前缀，但其单条LSA的泛洪范围仍是区域。",
+    "explanation": "NSSA、Intra-Area-Prefix和Inter-Area-Prefix LSA均为区域范围；AS-External LSA才可在AS范围泛洪。",
+    "sources": [
+      "https://www.rfc-editor.org/rfc/rfc5340.html"
+    ],
+    "corrected_answer": "ABD"
+  },
+  {
+    "source_number": 666,
+    "action": "correct",
+    "reason": "原解析为nan，A另有DTLS拼写错误。",
+    "explanation": "心跳检测维护CAPWAP链路；提高管理报文DSCP可改善拥塞下的优先转发，DTLS保护报文完整性。DTLS面向UDP而非TCP。",
+    "sources": [
+      "https://www.rfc-editor.org/rfc/rfc5415.html",
+      "https://www.rfc-editor.org/rfc/rfc6347.html"
+    ],
+    "corrected_answer": "BCD"
+  },
+  {
+    "source_number": 667,
+    "action": "correct",
+    "reason": "原解析已明确B正确，却在答案中漏选B。",
+    "explanation": "单极化全向天线通常采用垂直极化；定向天线适合方向集中或较远的链路，全向天线适合近距离、多方向覆盖。",
+    "sources": [
+      "https://github.com/Leno-transform/ict-quiz/blob/main/网络赛道1500题-数通DCN安全.docx"
+    ],
+    "corrected_answer": "BCD",
+    "verification_note": "B项需按题库指代的室内单极化全向天线产品口径理解，不对任意全向天线的极化方式作绝对化推广。"
+  },
+  {
+    "source_number": 669,
+    "action": "exclude",
+    "reason": "A选项把“蓝牙干扰”和“合法AP间干扰”粘在一起，题干接收方也丢失，无法可靠恢复原选项分组。"
+  },
+  {
+    "source_number": 672,
+    "action": "correct",
+    "reason": "原解析明确认为B正确，但答案漏选。",
+    "explanation": "信道规划应同时考虑仓库平面与立体空间干扰，以及扫码终端支持的信道，避免终端无法使用规划信道。",
+    "sources": [
+      "https://github.com/Leno-transform/ict-quiz/blob/main/网络赛道1500题-数通DCN安全.docx"
+    ],
+    "corrected_answer": "ABC"
+  },
+  {
+    "source_number": 676,
+    "action": "exclude",
+    "reason": "原答案AD与解析中“用户、OU、用户组均同步”矛盾；按OU同步的具体对象受产品配置影响，尚无可靠版本依据。"
+  },
+  {
+    "source_number": 678,
+    "action": "correct",
+    "reason": "WRED上下阈值间按计算概率丢弃，配置的50%是最大概率，不能说整个区间恒为50%。",
+    "explanation": "低于下限不主动丢弃；上下限间概率随平均队列长度增大，最高至配置值；高于上限丢弃新到报文。",
+    "sources": [
+      "https://documentation.extremenetworks.com/slxos/sw/20xx/20.4.2/traffic/GUID-88EDF8B8-37EA-487D-93C2-6AB28046F74E.shtml"
+    ],
+    "corrected_answer": "ABC"
+  },
+  {
+    "source_number": 679,
+    "action": "correct",
+    "reason": "原解析把MAC/IP地址改写与QoS重标记混为一谈；Precedence末尾E又被选项解析器误切为选项E。",
+    "explanation": "QoS重标记修改DSCP、IP Precedence、802.1p或MPLS EXP等优先级信息，不是任意改写MAC或IP地址。",
+    "sources": [
+      "https://info.support.huawei.com/info-finder/encyclopedia/zh/detail?action=queryEntityDetail&keyword=QoS"
+    ],
+    "corrected_answer": "D",
+    "corrected_options": {
+      "A": "MAC Address信息",
+      "B": "报文中的任何信息",
+      "C": "IP源地址、目的地址、EXP信息",
+      "D": "IP DSCP、IP Precedence、802.1p、EXP信息"
+    }
+  },
+  {
+    "source_number": 682,
+    "action": "exclude",
+    "reason": "“组播”和“多播”为同义词，却分成C、D而只选择C，无法按现有选项唯一判分。"
+  },
+  {
+    "source_number": 694,
+    "action": "exclude",
+    "reason": "C将release误写为DHCPREQUEST，原答案BC不成立；D是否发DISCOVER取决于客户端是否已有租约，未给初始状态。",
+    "sources": [
+      "https://www.rfc-editor.org/rfc/rfc2131.html"
+    ]
+  },
+  {
+    "source_number": 695,
+    "action": "correct",
+    "reason": "收到优先级0通告时Backup缩短Master_Down定时器为Skew_Time，并非直接无延迟切主。",
+    "explanation": "Backup监控Master通告并丢弃发往虚拟MAC的业务；收到优先级0通告后等待Skew_Time超时再接管。",
+    "sources": [
+      "https://www.rfc-editor.org/rfc/rfc5798.html"
+    ],
+    "corrected_answer": "AC"
+  },
+  {
+    "source_number": 703,
+    "action": "correct",
+    "reason": "原解析为nan。",
+    "explanation": "Ingress对未标记IP报文按FEC查找转发项，再由NHLFE获得下一跳和出标签，执行Push；ILM用于已有入标签的报文。",
+    "sources": [
+      "https://www.rfc-editor.org/rfc/rfc3031.html"
+    ],
+    "corrected_answer": "CD"
+  },
+  {
+    "source_number": 710,
+    "action": "correct",
+    "reason": "首片同样可进行包过滤，原答案AB漏选D。",
+    "explanation": "包过滤可对非分片、首片及后续分片按可用头部字段检查；后续分片通常不含传输层端口。",
+    "sources": [
+      "https://www.rfc-editor.org/rfc/rfc1858.html"
+    ],
+    "corrected_answer": "ABD"
+  },
+  {
+    "source_number": 715,
+    "action": "exclude",
+    "reason": "题干引用“此台交换机上的配置”，但没有给出所指配置，不能判断VLANIF100和服务器组设置。"
+  },
+  {
+    "source_number": 717,
+    "action": "correct",
+    "reason": "原解析为nan。",
+    "explanation": "安全策略可按源/目的安全区、IP地址及应用等条件匹配；报文长度不是这里的安全策略匹配条件。",
+    "sources": [
+      "https://github.com/Leno-transform/ict-quiz/blob/main/网络赛道1500题-数通DCN安全.docx"
+    ],
+    "corrected_answer": "ACD"
+  },
+  {
+    "source_number": 728,
+    "action": "correct",
+    "reason": "KeepAlive确实用于维护和监测LDP会话存活，原答案漏选C。",
+    "explanation": "Hello发现邻居，Initialization协商会话参数，KeepAlive维护会话存活；标签映射在会话建立后交换。",
+    "sources": [
+      "https://www.rfc-editor.org/rfc/rfc5036.html"
+    ],
+    "corrected_answer": "ABC"
+  }
+]

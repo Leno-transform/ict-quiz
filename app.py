@@ -47,8 +47,8 @@ class Store:
             db.close()
 
     def public_bank(self):
-        return {"version": self.version, "summary": self.bank["summary"], "questions": [
-            {k: q[k] for k in ("id", "stem", "options", "type", "topic", "image")}
+        return {"version": self.version, "summary": self.bank["summary"], "banks": self.bank.get("banks", []), "questions": [
+            {k: q[k] for k in ("id", "stem", "options", "type", "topic", "image", "bank_ids", "source_refs") if k in q}
             for q in self.questions.values()]}
 
     def answer(self, payload):
@@ -61,11 +61,11 @@ class Store:
             raise ValueError("这道题不在可用题库中。")
         q = self.questions[qid]
         if (not isinstance(selected, list) or not selected or
-            not all(isinstance(v, str) and v in q["options"] for v in selected) or
+            not all(isinstance(v, str) and (0 < len(v.strip()) <= 200 if q["type"] == "fill" else v in q["options"]) for v in selected) or
             len(set(selected)) != len(selected) or
             (q["type"] != "multiple" and len(selected) != 1)):
             raise ValueError("请选择有效的答案。")
-        selected = sorted(selected)
+        selected = [selected[0].strip()] if q["type"] == "fill" else sorted(selected)
         correct = selected == sorted(q["answer"])
         feedback = {"question_id": qid, "correct": correct, "selected": selected,
                     "answer": list(q["answer"]), "explanation": q["explanation"],

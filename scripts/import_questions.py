@@ -18,7 +18,7 @@ def normalize(text):
 
 
 def main():
-    source = next(ROOT.glob("*.docx"))
+    source = ROOT / "ICT网络赛道知识题库(1).docx"
     with zipfile.ZipFile(source) as archive:
         xml = ET.fromstring(archive.read("word/document.xml"))
     lines = ["".join(t.text or "" for t in p.findall(".//w:t", NS)).strip()

@@ -50,8 +50,13 @@ class PracticeTests(unittest.TestCase):
         for q in self.store.questions.values():
             self.assertTrue(q["explanation"].strip())
             self.assertTrue(q["sources"])
-            self.assertGreaterEqual(len(q["options"]), 2)
-            self.assertTrue(set(q["answer"]) <= set(q["options"]))
+            if q["type"] == "fill":
+                self.assertEqual(q["options"], {})
+                self.assertIsInstance(q["answer"], list)
+                self.assertTrue(all(isinstance(v, str) and v for v in q["answer"]))
+            else:
+                self.assertGreaterEqual(len(q["options"]), 2)
+                self.assertTrue(set(q["answer"]) <= set(q["options"]))
             if q["image"]:
                 self.assertTrue((ROOT / "web" / q["image"]["src"].lstrip("/")).is_file())
         with self.request("/api/questions") as response:
@@ -73,6 +78,22 @@ class PracticeTests(unittest.TestCase):
             result = self.store.answer({"token": "incorrect-" + kind, "question_id": q["id"], "selected": [wrong]})
             self.assertFalse(result["correct"])
             self.assertIn(q["id"], {r["id"] for r in self.store.stats()["mistakes"]})
+
+    def test_fill_answer_and_provenance(self):
+        q = self.pick("fill")
+        result = self.store.answer({"token": "fill-correct-with-space", "question_id": q["id"], "selected": ["  " + q["answer"][0] + "  "]})
+        self.assertTrue(result["correct"])
+        self.assertEqual(result["answer"], q["answer"])
+        result = self.store.answer({"token": "fill-wrong-value", "question_id": q["id"], "selected": ["an incorrect answer"]})
+        self.assertFalse(result["correct"])
+        for selected in ([" "], ["x" * 201], ["one", "two"]):
+            with self.assertRaises(ValueError):
+                self.store.answer({"token": "fill-invalid-value", "question_id": q["id"], "selected": selected})
+        public = self.store.public_bank()
+        self.assertEqual({b["id"] for b in public["banks"]}, {"legacy", "word1508", "wlan943"})
+        for item in public["questions"]:
+            self.assertTrue(item["bank_ids"])
+            self.assertEqual(set(item["bank_ids"]), {r["bank_id"] for r in item["source_refs"]})
 
     def test_multiselect_exact_match_and_order(self):
         q = next(q for q in self.store.questions.values() if q["type"] == "multiple" and len(q["answer"]) >= 2)

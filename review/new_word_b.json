@@ -1,0 +1,1017 @@
+[
+  {
+    "source_number": 757,
+    "action": "correct",
+    "reason": "原答案ACD正确，但解析末句错误地写成BCD",
+    "explanation": "IPv4分片相关字段为Identification、Flags和Fragment Offset，对应A、C、D；TTL限制报文生存范围。",
+    "sources": [
+      "https://datatracker.ietf.org/doc/html/rfc791"
+    ]
+  },
+  {
+    "source_number": 759,
+    "action": "correct",
+    "reason": "原解析将控制平面误写成控制管理平面",
+    "explanation": "网络设备常按管理平面、控制平面和数据平面划分；业务平面不是这里的基础分类。",
+    "sources": [
+      "https://e.huawei.com/sa/products/network-analysis/imaster-nce-fabric"
+    ]
+  },
+  {
+    "source_number": 761,
+    "action": "correct",
+    "reason": "原答案或解析存在明确错误",
+    "explanation": "虚拟机可分区、相互隔离并与硬件解耦；“共享操作空间并通过命名空间封装”描述的是容器，不能用于解释虚拟机封装。",
+    "sources": [
+      "https://kubernetes.io/docs/concepts/architecture/nodes/"
+    ],
+    "corrected_answer": "ABD"
+  },
+  {
+    "source_number": 766,
+    "action": "correct",
+    "reason": "原答案或解析存在明确错误",
+    "explanation": "STA可从Beacon或Probe Response获取SSID；Probe Request是STA主动发出的扫描请求。",
+    "sources": [
+      "https://e.huawei.com/sa/products/network-analysis/imaster-nce-fabric"
+    ],
+    "corrected_answer": "AC"
+  },
+  {
+    "source_number": 775,
+    "action": "correct",
+    "reason": "原答案AB正确，但原解析结尾写成AD",
+    "explanation": "0x8100表示带802.1Q标签；Trunk和Hybrid可发送带标签帧，普通Access口发送时去除标签。",
+    "sources": [
+      "https://info.support.huawei.com/info-finder/encyclopedia/zh/VXLAN.html"
+    ]
+  },
+  {
+    "source_number": 802,
+    "action": "correct",
+    "reason": "原解析声称ARP报文不用于广播，表述错误",
+    "explanation": "0x0806表示ARP，使用Ethernet II封装；ARP请求可能使用广播目的MAC，源MAC不能是广播地址。",
+    "sources": [
+      "https://info.support.huawei.com/info-finder/encyclopedia/zh/VXLAN.html"
+    ]
+  },
+  {
+    "source_number": 809,
+    "action": "correct",
+    "reason": "原答案或解析存在明确错误",
+    "explanation": "DHCP租约到期后地址可重新分配，还可集中修改参数并减少手工配置导致的地址冲突。",
+    "sources": [
+      "https://datatracker.ietf.org/doc/html/rfc2131"
+    ],
+    "corrected_answer": "ACD"
+  },
+  {
+    "source_number": 819,
+    "action": "correct",
+    "reason": "原答案或解析存在明确错误",
+    "explanation": "同一节点中不同属性的if-match通常为与关系，相同属性可能为或关系，不能一概说所有if-match都是与关系。",
+    "sources": [
+      "https://e.huawei.com/sa/products/network-analysis/imaster-nce-fabric"
+    ],
+    "corrected_answer": "ACD"
+  },
+  {
+    "source_number": 823,
+    "action": "correct",
+    "reason": "原答案或解析存在明确错误",
+    "explanation": "Backup收到优先级0的通告后把Master_Down定时器设为Skew_Time，并非立即变成Master；它监测Master且不承担虚拟MAC流量转发。",
+    "sources": [
+      "https://datatracker.ietf.org/doc/html/rfc5798"
+    ],
+    "corrected_answer": "CD"
+  },
+  {
+    "source_number": 840,
+    "action": "correct",
+    "reason": "原答案或解析存在明确错误",
+    "explanation": "iMaster NCE可提供自动化、开放API和多厂商管理，结合分析能力进行预测性维护；不能将AI运维能力排除。",
+    "sources": [
+      "https://e.huawei.com/br/products/network-analysis/fabricinsight"
+    ],
+    "corrected_answer": "ABCD"
+  },
+  {
+    "source_number": 845,
+    "action": "exclude",
+    "reason": "原题的“授权密钥”和模板绑定术语含混；802.1X中通常由接入设备连认证服务器，给定BC答案与A的共享密钥问题相矛盾，无法可靠按原选项判分。"
+  },
+  {
+    "source_number": 846,
+    "action": "correct",
+    "reason": "原解析混淆server-ip与source-ip，并把端口解释成设备本地端口",
+    "explanation": "server-ip指定Portal服务器，source-ip指定设备通信源地址；URL参数可带SSID，port指定对端Portal服务器端口。",
+    "sources": [
+      "https://e.huawei.com/sa/products/network-analysis/imaster-nce-fabric"
+    ]
+  },
+  {
+    "source_number": 847,
+    "action": "exclude",
+    "reason": "题干从IP地址中间开始，缺少前文和完整RADIUS认证配置，不能据残片可靠核对端口、地址及认证参数。"
+  },
+  {
+    "source_number": 848,
+    "action": "correct",
+    "reason": "补写缺失解析",
+    "explanation": "防火墙策略路由可按应用、源安全区域和源IP等特征选路；源MAC不是本题列出的匹配条件。",
+    "sources": [
+      "https://info.support.huawei.com/info-finder/encyclopedia/zh/NGFW.html",
+      "https://github.com/Leno-transform/ict-quiz/blob/main/网络赛道1500题-数通DCN安全.docx"
+    ]
+  },
+  {
+    "source_number": 855,
+    "action": "correct",
+    "reason": "原答案或解析存在明确错误",
+    "explanation": "地址学习关闭、共享密钥不一致、服务器探测异常或目的端口配置错误，都可能使Portal认证失败。",
+    "sources": [
+      "https://e.huawei.com/sa/products/network-analysis/imaster-nce-fabric"
+    ],
+    "corrected_answer": "ABCD"
+  },
+  {
+    "source_number": 857,
+    "action": "correct",
+    "reason": "原答案或解析存在明确错误",
+    "explanation": "主模式保护身份信息并使用6条消息，野蛮模式使用3条；主模式也支持NAT穿越，身份标识并非一律只能是IP地址。",
+    "sources": [
+      "https://datatracker.ietf.org/doc/html/rfc3947"
+    ],
+    "corrected_answer": "CD"
+  },
+  {
+    "source_number": 861,
+    "action": "correct",
+    "reason": "补写缺失解析",
+    "explanation": "带宽通道不仅可控制上下行带宽和保证带宽，还可配置策略独占及连接数限制。",
+    "sources": [
+      "https://info.support.huawei.com/info-finder/encyclopedia/zh/NGFW.html",
+      "https://github.com/Leno-transform/ict-quiz/blob/main/网络赛道1500题-数通DCN安全.docx"
+    ]
+  },
+  {
+    "source_number": 862,
+    "action": "exclude",
+    "reason": "A选项“可以更的进行访问控制”缺失关键比较词；原解析还出现选项标签错位，无法可靠确认ACD答案的完整依据。"
+  },
+  {
+    "source_number": 863,
+    "action": "correct",
+    "reason": "补写缺失解析",
+    "explanation": "内容过滤按关键字检查传输内容，可用于发帖、搜索以及文件上传下载的合规控制。",
+    "sources": [
+      "https://info.support.huawei.com/info-finder/encyclopedia/zh/NGFW.html",
+      "https://github.com/Leno-transform/ict-quiz/blob/main/网络赛道1500题-数通DCN安全.docx"
+    ]
+  },
+  {
+    "source_number": 864,
+    "action": "correct",
+    "reason": "补写缺失解析",
+    "explanation": "邮件过滤、应用行为控制和URL过滤针对应用或内容安全；带宽限制属于流量管理。",
+    "sources": [
+      "https://info.support.huawei.com/info-finder/encyclopedia/zh/NGFW.html",
+      "https://github.com/Leno-transform/ict-quiz/blob/main/网络赛道1500题-数通DCN安全.docx"
+    ]
+  },
+  {
+    "source_number": 865,
+    "action": "correct",
+    "reason": "原题C将POP3下载与删除绑定，缺少删信条件；建议修正C选项为可下载后删除",
+    "explanation": "POP3常将邮件下载到本地，IMAP支持在服务器端同步管理；POP3是否删信取决于客户端是否发出DELE，不是下载后必然删除。",
+    "sources": [
+      "https://datatracker.ietf.org/doc/html/rfc1939"
+    ],
+    "corrected_options": {
+      "A": "使用POP3，用户直接对服务器上的邮件进行操作，不需要把所有邮件下载到本地再进行各项操作",
+      "B": "使用IMAP，客户端软件会将所有未阅读邮件下载到计算机。并且邮件服务器会删除读邮件",
+      "C": "使用POP3，客户端可将邮件下载到本地，并按设置请求服务器删除已下载邮件",
+      "D": "使用IMAP，用户直接对服务器上的邮件进行操作，不需要把所有邮件下载到本地再遗行各项操作"
+    }
+  },
+  {
+    "source_number": 869,
+    "action": "correct",
+    "reason": "补写缺失解析",
+    "explanation": "检测中心识别攻击，清洗中心过滤攻击流量，管理中心统一配置和监控；防护对象是被保护的业务。",
+    "sources": [
+      "https://info.support.huawei.com/info-finder/encyclopedia/zh/NGFW.html",
+      "https://github.com/Leno-transform/ict-quiz/blob/main/网络赛道1500题-数通DCN安全.docx"
+    ]
+  },
+  {
+    "source_number": 871,
+    "action": "correct",
+    "reason": "补写缺失解析",
+    "explanation": "不同安全需求应使用对应ACL和IPsec策略；两端协议应匹配，若先执行NAT则还需考虑转换后地址，避免选择器重叠。",
+    "sources": [
+      "https://datatracker.ietf.org/doc/html/rfc4301",
+      "https://github.com/Leno-transform/ict-quiz/blob/main/网络赛道1500题-数通DCN安全.docx"
+    ]
+  },
+  {
+    "source_number": 872,
+    "action": "correct",
+    "reason": "原答案BD可保留，但原解析多处选项标签和真假颠倒",
+    "explanation": "升级时应先停止业务再处理心跳，避免双主；备机升级并切换验证后，如业务异常应及时回退。升级后仍需验证双机倒换。",
+    "sources": [
+      "https://info.support.huawei.com/info-finder/encyclopedia/zh/NGFW.html"
+    ]
+  },
+  {
+    "source_number": 875,
+    "action": "correct",
+    "reason": "原答案或解析存在明确错误",
+    "explanation": "AD提供LDAP目录服务，并通过Kerberos的认证服务AS和票据授予服务TGS完成认证；Accounting Server不是这组基础组件。",
+    "sources": [
+      "https://learn.microsoft.com/en-us/windows-server/security/kerberos/kerberos-authentication-overview"
+    ],
+    "corrected_answer": "ACD"
+  },
+  {
+    "source_number": 876,
+    "action": "correct",
+    "reason": "原答案ACD可保留，但原解析错误地说源安全区域和入接口都不能匹配",
+    "explanation": "应用、DSCP和时间段可作为策略条件；源安全区域和入接口也都是匹配维度，但本题设备规则中不能同时指定这两者。",
+    "sources": [
+      "https://info.support.huawei.com/info-finder/encyclopedia/zh/NGFW.html"
+    ]
+  },
+  {
+    "source_number": 879,
+    "action": "correct",
+    "reason": "补写缺失解析",
+    "explanation": "全局选路可按链路优先级主备，以及链路质量、带宽或权重进行负载分担。",
+    "sources": [
+      "https://info.support.huawei.com/info-finder/encyclopedia/zh/NGFW.html",
+      "https://github.com/Leno-transform/ict-quiz/blob/main/网络赛道1500题-数通DCN安全.docx"
+    ]
+  },
+  {
+    "source_number": 880,
+    "action": "correct",
+    "reason": "补写缺失解析",
+    "explanation": "Linux加固需要同时覆盖系统补丁与配置、账号权限、日志审计和服务启动控制。",
+    "sources": [
+      "https://info.support.huawei.com/info-finder/encyclopedia/zh/NGFW.html",
+      "https://github.com/Leno-transform/ict-quiz/blob/main/网络赛道1500题-数通DCN安全.docx"
+    ]
+  },
+  {
+    "source_number": 881,
+    "action": "correct",
+    "reason": "原答案或解析存在明确错误",
+    "explanation": "IPsec SA可手工配置或通过IKE协商；主模式、野蛮模式是IKEv1第一阶段的交换模式，不是这两类建立方式。",
+    "sources": [
+      "https://datatracker.ietf.org/doc/html/rfc2409"
+    ],
+    "corrected_answer": "AC"
+  },
+  {
+    "source_number": 885,
+    "action": "correct",
+    "reason": "补写缺失解析",
+    "explanation": "策略模板通常用于固定地址的中心端接收动态地址分支；适用于一对一动态分支或一对多分支接入。",
+    "sources": [
+      "https://datatracker.ietf.org/doc/html/rfc4301",
+      "https://github.com/Leno-transform/ict-quiz/blob/main/网络赛道1500题-数通DCN安全.docx"
+    ]
+  },
+  {
+    "source_number": 886,
+    "action": "correct",
+    "reason": "原答案BC正确，原解析选项标签写反",
+    "explanation": "对单包攻击通常可告警或丢弃，对应B、C；原解析中B和C的文字标签写反。",
+    "sources": [
+      "https://info.support.huawei.com/info-finder/encyclopedia/zh/NGFW.html"
+    ]
+  },
+  {
+    "source_number": 887,
+    "action": "correct",
+    "reason": "补写缺失解析",
+    "explanation": "手工IPsec必须逐项配置安全参数，且两端入、出方向SA对应匹配；适合小型静态网络，但维护工作量大。",
+    "sources": [
+      "https://datatracker.ietf.org/doc/html/rfc4301",
+      "https://github.com/Leno-transform/ict-quiz/blob/main/网络赛道1500题-数通DCN安全.docx"
+    ]
+  },
+  {
+    "source_number": 916,
+    "action": "correct",
+    "reason": "原答案或解析存在明确错误",
+    "explanation": "双机升级后应检查运行版本、主备角色、会话表和倒换后的业务，四项都属于验证内容。",
+    "sources": [
+      "https://info.support.huawei.com/info-finder/encyclopedia/zh/NGFW.html"
+    ],
+    "corrected_answer": "ABCD"
+  },
+  {
+    "source_number": 922,
+    "action": "correct",
+    "reason": "原解析错误地把Next Header仅解释为是否存在扩展首部",
+    "explanation": "IPv4和IPv6都有版本、源地址及目的地址；IPv6的Next Header用于标识后续扩展首部或上层协议。",
+    "sources": [
+      "https://datatracker.ietf.org/doc/html/rfc6437"
+    ]
+  },
+  {
+    "source_number": 935,
+    "action": "correct",
+    "reason": "补写缺失解析，并补入符合PFC基本机制的C选项",
+    "explanation": "收到PFC暂停帧时先暂停对应队列并启动检测；持续被反压才判定死锁，也可设置反复死锁后关闭PFC的阈值。",
+    "sources": [
+      "https://e.huawei.com/marketingcloud/pep/asset/20000001/Material/b3ff1edc31624e33af497fa5d5df87d0/M2T1A669N875024350755356959/HPC_Lossless_Ethernet_and_AI_Fabric_Network_Technical_White_Paper.pdf",
+      "https://info.support.huawei.com/storage/docs/en-us/dorado-6.1.0/hypermetro-userguide-file/aa_nas_044.html"
+    ],
+    "corrected_answer": "BCD"
+  },
+  {
+    "source_number": 946,
+    "action": "correct",
+    "reason": "补写缺失解析",
+    "explanation": "题设华为VAS提供EIP、SNAT和安全策略等增值服务；安全组属于云平台侧端口级隔离能力。",
+    "sources": [
+      "https://e.huawei.com/en/products/security/secomanager",
+      "https://github.com/Leno-transform/ict-quiz/blob/main/网络赛道1500题-数通DCN安全.docx"
+    ]
+  },
+  {
+    "source_number": 962,
+    "action": "correct",
+    "reason": "补写缺失解析",
+    "explanation": "异常检测先准备并预处理数据，再学习动态基线，最后比较实时指标与基线；异常上报是检测后的输出。",
+    "sources": [
+      "https://e.huawei.com/br/products/network-analysis/fabricinsight",
+      "https://github.com/Leno-transform/ict-quiz/blob/main/网络赛道1500题-数通DCN安全.docx"
+    ]
+  },
+  {
+    "source_number": 971,
+    "action": "correct",
+    "reason": "补写缺失解析",
+    "explanation": "意图验证检查变更后的网络是否符合预期，包括连通性、路由黑洞、配置一致性和租户安全访问。",
+    "sources": [
+      "https://e.huawei.com/br/products/network-analysis/fabricinsight",
+      "https://github.com/Leno-transform/ict-quiz/blob/main/网络赛道1500题-数通DCN安全.docx"
+    ]
+  },
+  {
+    "source_number": 974,
+    "action": "exclude",
+    "reason": "给定答案AD漏掉同一VPC不应按两台VM各建一个路由器的C项；B项又未限定单网卡，模型条件不足，不能唯一确定全部错误项。"
+  },
+  {
+    "source_number": 977,
+    "action": "correct",
+    "reason": "补写缺失解析",
+    "explanation": "容器网络方案从业务协同、网络分析控制、网络服务到计算接入分层，各层共同完成业务编排与转发。",
+    "sources": [
+      "https://e.huawei.com/sa/products/network-analysis/imaster-nce-fabric",
+      "https://github.com/Leno-transform/ict-quiz/blob/main/网络赛道1500题-数通DCN安全.docx"
+    ]
+  },
+  {
+    "source_number": 979,
+    "action": "correct",
+    "reason": "原答案或解析存在明确错误",
+    "explanation": "NETCONF和CLI可配置设备，SNMP也可通过SetRequest写入可写对象；Telemetry主要采集运行数据。",
+    "sources": [
+      "https://datatracker.ietf.org/doc/html/rfc3416"
+    ],
+    "corrected_answer": "ACD"
+  },
+  {
+    "source_number": 980,
+    "action": "correct",
+    "reason": "补写缺失解析",
+    "explanation": "SecoManager与网络控制器协同，将安全策略、IPsec以及SNAT/EIP等安全增值业务编排到防火墙。",
+    "sources": [
+      "https://e.huawei.com/en/products/security/secomanager",
+      "https://github.com/Leno-transform/ict-quiz/blob/main/网络赛道1500题-数通DCN安全.docx"
+    ]
+  },
+  {
+    "source_number": 983,
+    "action": "correct",
+    "reason": "补写缺失解析",
+    "explanation": "本题所列方案组件中，验证准入控制器用于校验，monitor监听资源变化，Calico master负责网络与IPAM；Controller Manager为Kubernetes原生组件。",
+    "sources": [
+      "https://e.huawei.com/sa/products/network-analysis/imaster-nce-fabric",
+      "https://github.com/Leno-transform/ict-quiz/blob/main/网络赛道1500题-数通DCN安全.docx"
+    ]
+  },
+  {
+    "source_number": 984,
+    "action": "correct",
+    "reason": "原答案AD可保留，但原解析错误地称IMET不携带VTEP IP并承认D无误",
+    "explanation": "IMET路由主要携带二层VNI和VTEP信息，不同时通告三层VNI；IRB用于分布式网关的主机IP可达性，不专指访问外网。",
+    "sources": [
+      "https://info.support.huawei.com/info-finder/encyclopedia/zh/VXLAN.html"
+    ]
+  },
+  {
+    "source_number": 989,
+    "action": "correct",
+    "reason": "补写缺失解析",
+    "explanation": "Multi-PoD解决多PoD互联，Multi-Site连接独立数据中心，混合云打通私有云与公有云。",
+    "sources": [
+      "https://e.huawei.com/sa/products/network-analysis/imaster-nce-fabric",
+      "https://github.com/Leno-transform/ict-quiz/blob/main/网络赛道1500题-数通DCN安全.docx"
+    ]
+  },
+  {
+    "source_number": 994,
+    "action": "correct",
+    "reason": "补写缺失解析",
+    "explanation": "按网络通信和访问存储的需求，可区分数据轻量型与网络紧耦合型；后者更依赖低时延、高吞吐互联。",
+    "sources": [
+      "https://e.huawei.com/sa/products/network-analysis/imaster-nce-fabric",
+      "https://github.com/Leno-transform/ict-quiz/blob/main/网络赛道1500题-数通DCN安全.docx"
+    ]
+  },
+  {
+    "source_number": 997,
+    "action": "correct",
+    "reason": "原答案或解析存在明确错误",
+    "explanation": "跨子网需要VBDIF关联三层VNI，同子网需要BD关联二层VNI；同子网主要通告MAC可达性，跨子网则需ARP/IP及IRB主机信息。",
+    "sources": [
+      "https://info.support.huawei.com/info-finder/encyclopedia/zh/VXLAN.html"
+    ],
+    "corrected_answer": "BD"
+  },
+  {
+    "source_number": 999,
+    "action": "exclude",
+    "reason": "Cinder是否部署在计算节点取决于架构，不能笼统声称它必然同时部署在控制节点和计算节点；原解析以假设方式强行支持D。"
+  },
+  {
+    "source_number": 1009,
+    "action": "correct",
+    "reason": "补写缺失解析",
+    "explanation": "将流量依次引向SF节点属于业务链；微分段通过细粒度EPG和组间策略隔离，配置业务链EPG不会自动隔离流量。",
+    "sources": [
+      "https://info.support.huawei.com/info-finder/encyclopedia/en/Microsegmentation.html",
+      "https://github.com/Leno-transform/ict-quiz/blob/main/网络赛道1500题-数通DCN安全.docx"
+    ]
+  },
+  {
+    "source_number": 1010,
+    "action": "correct",
+    "reason": "补写缺失解析",
+    "explanation": "EPG将具有相同安全策略的业务端口归组，一个子网可接入多台VM；EPG和VPC都不必只包含一个子网。",
+    "sources": [
+      "https://info.support.huawei.com/info-finder/encyclopedia/en/Microsegmentation.html",
+      "https://github.com/Leno-transform/ict-quiz/blob/main/网络赛道1500题-数通DCN安全.docx"
+    ]
+  },
+  {
+    "source_number": 1013,
+    "action": "correct",
+    "reason": "补写缺失解析",
+    "explanation": "创建Firewall时需建立VSYS及互联VLAN/IP并配置VSYS默认路由；安全规则需在后续策略对象中单独定义。",
+    "sources": [
+      "https://e.huawei.com/en/products/security/secomanager",
+      "https://github.com/Leno-transform/ict-quiz/blob/main/网络赛道1500题-数通DCN安全.docx"
+    ]
+  },
+  {
+    "source_number": 1016,
+    "action": "correct",
+    "reason": "原解析未区分默认拒绝匹配策略与默认安全组的出向允许规则，保留原题AD口径",
+    "explanation": "端口可绑定多个安全组；规则采用默认拒绝逻辑，但默认组通常自带出向允许规则。不同安全组间的入向访问仍需显式放行。",
+    "sources": [
+      "https://docs.openstack.org/neutron/pike/admin/intro-os-networking.html"
+    ]
+  },
+  {
+    "source_number": 1020,
+    "action": "correct",
+    "reason": "原答案或解析存在明确错误",
+    "explanation": "FC和SAS承载SCSI命令；IDE和SATA主要使用ATA命令。SCSI到ATA转换层不能把SATA接口本身归为SCSI标准。",
+    "sources": [
+      "https://www.t10.org/",
+      "https://www.t13.org/"
+    ],
+    "corrected_answer": "AC"
+  },
+  {
+    "source_number": 1026,
+    "action": "correct",
+    "reason": "补写缺失解析",
+    "explanation": "PBR通过策略路由逐跳引流；NSH通过服务路径标识SPI和服务索引SI指引业务流经过服务功能。",
+    "sources": [
+      "https://datatracker.ietf.org/doc/html/rfc8300",
+      "https://github.com/Leno-transform/ict-quiz/blob/main/网络赛道1500题-数通DCN安全.docx"
+    ]
+  },
+  {
+    "source_number": 1042,
+    "action": "correct",
+    "reason": "补写缺失解析",
+    "explanation": "域控制器负责本域Fabric的设备配置，相关资源池可能承载业务、互联转接、VAS和接入等不同角色。",
+    "sources": [
+      "https://e.huawei.com/sa/products/network-analysis/imaster-nce-fabric",
+      "https://github.com/Leno-transform/ict-quiz/blob/main/网络赛道1500题-数通DCN安全.docx"
+    ]
+  },
+  {
+    "source_number": 1045,
+    "action": "correct",
+    "reason": "补写缺失解析",
+    "explanation": "可直接用安全组、安全策略或微分段限制VM互访，也可用业务链把流量引至防火墙实施隔离。",
+    "sources": [
+      "https://info.support.huawei.com/info-finder/encyclopedia/en/Microsegmentation.html",
+      "https://github.com/Leno-transform/ict-quiz/blob/main/网络赛道1500题-数通DCN安全.docx"
+    ]
+  },
+  {
+    "source_number": 1052,
+    "action": "correct",
+    "reason": "补写缺失解析",
+    "explanation": "PBR应在接口入方向分类引流，可支持透明VAS；受控VAS的回程配置可自动下发，不能一律认为必须手工配置。",
+    "sources": [
+      "https://e.huawei.com/sa/products/network-analysis/imaster-nce-fabric",
+      "https://github.com/Leno-transform/ict-quiz/blob/main/网络赛道1500题-数通DCN安全.docx"
+    ]
+  },
+  {
+    "source_number": 1053,
+    "action": "correct",
+    "reason": "补写缺失解析",
+    "explanation": "题设双栈跨VPC场景需给路由绑定IPv6子网并连接外部网络；EIP和安全策略不属于该路由本身的必绑参数。",
+    "sources": [
+      "https://docs.openstack.org/neutron/pike/admin/intro-os-networking.html",
+      "https://github.com/Leno-transform/ict-quiz/blob/main/网络赛道1500题-数通DCN安全.docx"
+    ]
+  },
+  {
+    "source_number": 1060,
+    "action": "correct",
+    "reason": "补写缺失解析",
+    "explanation": "该云网联动场景需建立VM所属网络及路由，通过浮动IP提供公网映射，并配置安全规则放行业务。",
+    "sources": [
+      "https://docs.openstack.org/neutron/pike/admin/intro-os-networking.html",
+      "https://github.com/Leno-transform/ict-quiz/blob/main/网络赛道1500题-数通DCN安全.docx"
+    ]
+  },
+  {
+    "source_number": 1066,
+    "action": "correct",
+    "reason": "补写缺失解析",
+    "explanation": "源Leaf维护源EPG，目的Leaf维护目的EPG，并在目的侧执行组间策略，实现跨Leaf的安全过滤。",
+    "sources": [
+      "https://info.support.huawei.com/info-finder/encyclopedia/en/Microsegmentation.html",
+      "https://github.com/Leno-transform/ict-quiz/blob/main/网络赛道1500题-数通DCN安全.docx"
+    ]
+  },
+  {
+    "source_number": 1073,
+    "action": "correct",
+    "reason": "补写缺失解析，区分拥塞控制与PFC流控",
+    "explanation": "NPCC和AI ECN用于拥塞控制；PFC属于按优先级暂停发送的流控机制，iNOF用于快速故障通知。",
+    "sources": [
+      "https://info.support.huawei.com/storage/docs/en-us/dorado-6.1.0/hypermetro-userguide-file/aa_nas_044.html"
+    ],
+    "corrected_answer": "AD"
+  },
+  {
+    "source_number": 1092,
+    "action": "correct",
+    "reason": "补写缺失解析",
+    "explanation": "GBP既能控制组间也能控制组内访问；跨设备时VXLAN头携带源EPG标识，目的侧据此查找组间策略。",
+    "sources": [
+      "https://info.support.huawei.com/info-finder/encyclopedia/en/Microsegmentation.html",
+      "https://github.com/Leno-transform/ict-quiz/blob/main/网络赛道1500题-数通DCN安全.docx"
+    ]
+  },
+  {
+    "source_number": 1094,
+    "action": "correct",
+    "reason": "原答案或解析存在明确错误",
+    "explanation": "低于低门限不标记，高于高门限对支持ECN的报文标记；两门限之间采用概率标记，队列越深标记概率越高。",
+    "sources": [
+      "https://datatracker.ietf.org/doc/html/rfc3168"
+    ],
+    "corrected_answer": "BCD"
+  },
+  {
+    "source_number": 1135,
+    "action": "correct",
+    "reason": "原答案或解析存在明确错误",
+    "explanation": "接口认证会覆盖本接口的区域认证配置；对端无论从接口还是区域继承MD5，只要实际认证参数一致即可建立邻接。",
+    "sources": [
+      "https://datatracker.ietf.org/doc/html/rfc2328"
+    ],
+    "corrected_answer": "A"
+  },
+  {
+    "source_number": 1158,
+    "action": "correct",
+    "reason": "补写缺失解析",
+    "explanation": "BFD不主动发现邻居，由静态配置或上层协议提供对端信息，再建立会话检测双向转发路径。",
+    "sources": [
+      "https://info.support.huawei.com/info-finder/encyclopedia/zh/BFD.html",
+      "https://github.com/Leno-transform/ict-quiz/blob/main/网络赛道1500题-数通DCN安全.docx"
+    ]
+  },
+  {
+    "source_number": 1166,
+    "action": "correct",
+    "reason": "原答案或解析存在明确错误",
+    "explanation": "RSTP中非边缘端口进入Forwarding意味着新增可转发路径，会触发拓扑变化处理。",
+    "sources": [
+      "https://info.support.huawei.com/info-finder/encyclopedia/en/RSTP.html"
+    ],
+    "corrected_answer": "A"
+  },
+  {
+    "source_number": 1220,
+    "action": "correct",
+    "reason": "原答案或解析存在明确错误",
+    "explanation": "多跳BGP并不强制指定connect-interface；可使用可达的物理接口地址建立邻居，只有指定源接口等场景才需此命令。",
+    "sources": [
+      "https://e.huawei.com/sa/products/network-analysis/imaster-nce-fabric"
+    ],
+    "corrected_answer": "B"
+  },
+  {
+    "source_number": 1223,
+    "action": "correct",
+    "reason": "原答案或解析存在明确错误",
+    "explanation": "路由表用于控制面的路由选择，转发表FIB用于数据面的实际查找和转发。",
+    "sources": [
+      "https://datatracker.ietf.org/doc/html/rfc3031"
+    ],
+    "corrected_answer": "A"
+  },
+  {
+    "source_number": 1233,
+    "action": "correct",
+    "reason": "原答案或解析存在明确错误",
+    "explanation": "以太网帧使用MAC地址，但PPP、HDLC等点到点数据链路协议不使用以太网MAC地址，不能说一定携带。",
+    "sources": [
+      "https://datatracker.ietf.org/doc/html/rfc1661"
+    ],
+    "corrected_answer": "B"
+  },
+  {
+    "source_number": 1251,
+    "action": "correct",
+    "reason": "原答案或解析存在明确错误",
+    "explanation": "控制平面负责生成标签转发表，转发平面按标签表执行标签交换和报文转发。",
+    "sources": [
+      "https://datatracker.ietf.org/doc/html/rfc3031"
+    ],
+    "corrected_answer": "A"
+  },
+  {
+    "source_number": 1289,
+    "action": "correct",
+    "reason": "原答案或解析存在明确错误",
+    "explanation": "源地址、目的地址和流标签可识别IPv6数据流并辅助一致处理；流标签本身不携带或指定逐跳转发路径。",
+    "sources": [
+      "https://datatracker.ietf.org/doc/html/rfc6437"
+    ],
+    "corrected_answer": "B"
+  },
+  {
+    "source_number": 1314,
+    "action": "exclude",
+    "reason": "地址BCCO含字母O而非合法十六进制0，原解析却按BCC0解释；需回核原地址，不能直接作为有效IPv6缩写判断题。"
+  },
+  {
+    "source_number": 1317,
+    "action": "correct",
+    "reason": "原答案或解析存在明确错误",
+    "explanation": "BSS是802.11网络的基本组成单元，由能够相互通信的一组站点组成；基础设施型BSS包含AP，独立型BSS可不含AP。",
+    "sources": [
+      "https://e.huawei.com/sa/products/network-analysis/imaster-nce-fabric"
+    ],
+    "corrected_answer": "A"
+  },
+  {
+    "source_number": 1333,
+    "action": "correct",
+    "reason": "原答案或解析存在明确错误",
+    "explanation": "Total Error是累计计数，单次发现非零只能说明曾经出错；需比较后续计数增量判断故障是否仍在发生。",
+    "sources": [
+      "https://e.huawei.com/sa/products/network-analysis/imaster-nce-fabric"
+    ],
+    "corrected_answer": "B"
+  },
+  {
+    "source_number": 1343,
+    "action": "correct",
+    "reason": "原答案或解析存在明确错误",
+    "explanation": "GSLB在跨地域服务器或数据中心间选择合适服务节点，结合距离、健康状态和负载优化访问。",
+    "sources": [
+      "https://e.huawei.com/sa/products/network-analysis/imaster-nce-fabric"
+    ],
+    "corrected_answer": "A"
+  },
+  {
+    "source_number": 1372,
+    "action": "correct",
+    "reason": "补写缺失解析",
+    "explanation": "调度器先过滤不满足资源条件的主机，再按权重排序，通常从权重最高的候选主机中选择。",
+    "sources": [
+      "https://docs.openstack.org/nova/latest/admin/scheduling.html",
+      "https://github.com/Leno-transform/ict-quiz/blob/main/网络赛道1500题-数通DCN安全.docx"
+    ]
+  },
+  {
+    "source_number": 1391,
+    "action": "correct",
+    "reason": "补写缺失解析",
+    "explanation": "微分段先按IP、MAC、VM等属性形成EPG，再用组间或组内策略限制东西向访问。",
+    "sources": [
+      "https://info.support.huawei.com/info-finder/encyclopedia/en/Microsegmentation.html",
+      "https://github.com/Leno-transform/ict-quiz/blob/main/网络赛道1500题-数通DCN安全.docx"
+    ]
+  },
+  {
+    "source_number": 1395,
+    "action": "correct",
+    "reason": "原答案或解析存在明确错误",
+    "explanation": "Kubernetes由控制平面和工作节点构成，节点可以是物理机或虚拟机；题目使用的是传统Master/Node称呼。",
+    "sources": [
+      "https://kubernetes.io/docs/concepts/architecture/nodes/"
+    ],
+    "corrected_answer": "A"
+  },
+  {
+    "source_number": 1400,
+    "action": "correct",
+    "reason": "补写缺失解析",
+    "explanation": "分布式端口组集中管理虚拟机网络连接，可统一设置VLAN、负载均衡、流量整形与安全参数。",
+    "sources": [
+      "https://e.huawei.com/sa/products/network-analysis/imaster-nce-fabric",
+      "https://github.com/Leno-transform/ict-quiz/blob/main/网络赛道1500题-数通DCN安全.docx"
+    ]
+  },
+  {
+    "source_number": 1405,
+    "action": "correct",
+    "reason": "修正协议名称拼写",
+    "explanation": "Paramiko用于SSH操作，requests或urllib可构造HTTP请求调用RESTCONF；原文RESTCON应为RESTCONF。",
+    "sources": [
+      "https://e.huawei.com/sa/products/network-analysis/imaster-nce-fabric"
+    ]
+  },
+  {
+    "source_number": 1411,
+    "action": "correct",
+    "reason": "补写缺失解析",
+    "explanation": "Macvlan让容器作为独立二层节点接入现有网络；跨主机通信可直接通过二层网络或正常路由，不必依赖NAT。",
+    "sources": [
+      "https://docs.docker.com/engine/network/drivers/macvlan/"
+    ]
+  },
+  {
+    "source_number": 1414,
+    "action": "correct",
+    "reason": "补写缺失解析",
+    "explanation": "智能运维覆盖日常可视化监控、故障关联定位和网络变更验证，减少人工排障与配置工作。",
+    "sources": [
+      "https://e.huawei.com/br/products/network-analysis/fabricinsight",
+      "https://github.com/Leno-transform/ict-quiz/blob/main/网络赛道1500题-数通DCN安全.docx"
+    ]
+  },
+  {
+    "source_number": 1420,
+    "action": "correct",
+    "reason": "原答案或解析存在明确错误",
+    "explanation": "Incast是多个发送方向一个接收方汇聚的N对1流量；1对N分发通常称为Outcast或扇出。",
+    "sources": [
+      "https://e.huawei.com/marketingcloud/pep/asset/20000001/Material/b3ff1edc31624e33af497fa5d5df87d0/M2T1A669N875024350755356959/HPC_Lossless_Ethernet_and_AI_Fabric_Network_Technical_White_Paper.pdf"
+    ],
+    "corrected_answer": "B"
+  },
+  {
+    "source_number": 1423,
+    "action": "correct",
+    "reason": "原答案或解析存在明确错误",
+    "explanation": "裸金属强调直接使用物理服务器、没有虚拟化层；服务器可以预装或由用户安装操作系统，并非必定没有系统。",
+    "sources": [
+      "https://docs.openstack.org/neutron/pike/admin/intro-os-networking.html"
+    ],
+    "corrected_answer": "B"
+  },
+  {
+    "source_number": 1424,
+    "action": "exclude",
+    "reason": "OVS官方明确支持跨物理服务器的分布式管理，但迁移后策略是否自动保持取决于上层控制器；原题未说明管理环境，简单判B也不可靠。"
+  },
+  {
+    "source_number": 1436,
+    "action": "correct",
+    "reason": "补写缺失解析",
+    "explanation": "默认permit不是“允许未知之间、拒绝未知与已知”的特殊组合；是否隔离仍需查看对应EPG及GBP策略。",
+    "sources": [
+      "https://info.support.huawei.com/info-finder/encyclopedia/en/Microsegmentation.html",
+      "https://github.com/Leno-transform/ict-quiz/blob/main/网络赛道1500题-数通DCN安全.docx"
+    ]
+  },
+  {
+    "source_number": 1437,
+    "action": "correct",
+    "reason": "补写缺失解析",
+    "explanation": "PBR操作对象是数据报文，根据匹配条件指定转发行为；对路由信息做过滤和属性修改的是路由策略。",
+    "sources": [
+      "https://e.huawei.com/sa/products/network-analysis/imaster-nce-fabric",
+      "https://github.com/Leno-transform/ict-quiz/blob/main/网络赛道1500题-数通DCN安全.docx"
+    ]
+  },
+  {
+    "source_number": 1443,
+    "action": "correct",
+    "reason": "补写缺失解析",
+    "explanation": "需要经防火墙的跨VPC互访，还需完成网络控制器和安全控制器侧的业务与安全策略编排，不能只配置OpenStack。",
+    "sources": [
+      "https://e.huawei.com/en/products/security/secomanager",
+      "https://github.com/Leno-transform/ict-quiz/blob/main/网络赛道1500题-数通DCN安全.docx"
+    ]
+  },
+  {
+    "source_number": 1449,
+    "action": "correct",
+    "reason": "补写缺失解析",
+    "explanation": "题设CloudFabric跨Leaf微分段在目的Leaf执行GBP，不是只能在源Leaf执行。",
+    "sources": [
+      "https://info.support.huawei.com/info-finder/encyclopedia/en/Microsegmentation.html",
+      "https://github.com/Leno-transform/ict-quiz/blob/main/网络赛道1500题-数通DCN安全.docx"
+    ]
+  },
+  {
+    "source_number": 1450,
+    "action": "correct",
+    "reason": "补写缺失解析",
+    "explanation": "SPI识别服务路径，SI表示报文在服务路径中的当前位置，转发节点据此选择后续服务功能。",
+    "sources": [
+      "https://datatracker.ietf.org/doc/html/rfc8300",
+      "https://github.com/Leno-transform/ict-quiz/blob/main/网络赛道1500题-数通DCN安全.docx"
+    ]
+  },
+  {
+    "source_number": 1451,
+    "action": "correct",
+    "reason": "补写缺失解析",
+    "explanation": "开启分布式网关后，网关主要维护本地接入主机的ARP；原有网络侧学习的ARP会清理，远端可达性由EVPN路由承载。",
+    "sources": [
+      "https://info.support.huawei.com/info-finder/encyclopedia/zh/VXLAN.html",
+      "https://github.com/Leno-transform/ict-quiz/blob/main/网络赛道1500题-数通DCN安全.docx"
+    ]
+  },
+  {
+    "source_number": 1453,
+    "action": "correct",
+    "reason": "补写缺失解析",
+    "explanation": "死锁恢复阶段暂时忽略PFC反压，解除持续暂停状态；恢复期结束后再恢复正常的反压处理和检测。",
+    "sources": [
+      "https://info.support.huawei.com/storage/docs/en-us/dorado-6.1.0/hypermetro-userguide-file/aa_nas_044.html",
+      "https://github.com/Leno-transform/ict-quiz/blob/main/网络赛道1500题-数通DCN安全.docx"
+    ]
+  },
+  {
+    "source_number": 1455,
+    "action": "correct",
+    "reason": "补写缺失解析",
+    "explanation": "跨Leaf报文携带源EPG标识，目的Leaf匹配源、目的EPG之间的GBP；deny策略在目的侧丢弃流量。",
+    "sources": [
+      "https://info.support.huawei.com/info-finder/encyclopedia/en/Microsegmentation.html",
+      "https://github.com/Leno-transform/ict-quiz/blob/main/网络赛道1500题-数通DCN安全.docx"
+    ]
+  },
+  {
+    "source_number": 1460,
+    "action": "exclude",
+    "reason": "缺失解析，且题目没有说明宿主机vSwitch与二层转发限制；“必须在Leaf配置PVLAN”的绝对结论无法由给定条件唯一推得。"
+  },
+  {
+    "source_number": 1466,
+    "action": "correct",
+    "reason": "原答案B正确，但原解析把UDP源端口说成协商确定",
+    "explanation": "VXLAN外层UDP目的端口通常为4789；源端口一般由内层流特征哈希生成以支持ECMP，不是固定4789，也不靠双方协商。",
+    "sources": [
+      "https://info.support.huawei.com/info-finder/encyclopedia/zh/VXLAN.html"
+    ]
+  },
+  {
+    "source_number": 1467,
+    "action": "correct",
+    "reason": "原答案A可保留，原解析却反向改成多个L2VNI",
+    "explanation": "在本题基本VXLAN映射模型中，一个BD绑定一个L2 VNI；多个不同的BD可以分别绑定不同VNI。",
+    "sources": [
+      "https://info.support.huawei.com/info-finder/encyclopedia/zh/VXLAN.html"
+    ]
+  },
+  {
+    "source_number": 1469,
+    "action": "correct",
+    "reason": "原答案B正确，但原解析错误地将00也解释为没有拥塞",
+    "explanation": "ECN=00表示Not-ECT，即未使用ECN；支持ECN且未拥塞通常为01或10，拥塞经历标记为11。",
+    "sources": [
+      "https://datatracker.ietf.org/doc/html/rfc3168"
+    ]
+  },
+  {
+    "source_number": 1470,
+    "action": "correct",
+    "reason": "原解析前后矛盾，修正为内置DHCP能力说明",
+    "explanation": "iMaster NCE-Fabric可提供内置DHCP能力，不一定需要独立服务器；具体仍依版本与部署方案确定。",
+    "sources": [
+      "https://e.huawei.com/sa/products/network-analysis/imaster-nce-fabric"
+    ]
+  },
+  {
+    "source_number": 1471,
+    "action": "correct",
+    "reason": "保留答案B，修正原解析无条件宣称并行更快",
+    "explanation": "并行总线有多条数据线，但受时钟偏斜和串扰等限制，不能笼统断言速率一定高于串行；现代高速互联广泛采用串行技术。",
+    "sources": [
+      "https://e.huawei.com/sa/products/network-analysis/imaster-nce-fabric"
+    ]
+  },
+  {
+    "source_number": 1475,
+    "action": "correct",
+    "reason": "补写缺失解析",
+    "explanation": "MDC通过RESTful接口协调域控制器，管理员通过HTTPS访问GUI，以加密管理连接。",
+    "sources": [
+      "https://e.huawei.com/sa/products/network-analysis/imaster-nce-fabric",
+      "https://github.com/Leno-transform/ict-quiz/blob/main/网络赛道1500题-数通DCN安全.docx"
+    ]
+  },
+  {
+    "source_number": 1484,
+    "action": "correct",
+    "reason": "原解析错误地称只有业务网络需要无损",
+    "explanation": "并非所有网络都必须无损；RoCE存储与部分HPC、AI计算网络需要无损能力，普通业务网络通常仍可使用TCP/IP有损传输。",
+    "sources": [
+      "https://info.support.huawei.com/storage/docs/en-us/dorado-6.1.0/hypermetro-userguide-file/aa_nas_044.html"
+    ]
+  },
+  {
+    "source_number": 1491,
+    "action": "correct",
+    "reason": "补写缺失解析",
+    "explanation": "端到端VXLAN把多个DC视为统一Overlay域，需协同规划EVPN控制面、VNI及VXLAN参数。",
+    "sources": [
+      "https://info.support.huawei.com/info-finder/encyclopedia/zh/VXLAN.html",
+      "https://github.com/Leno-transform/ict-quiz/blob/main/网络赛道1500题-数通DCN安全.docx"
+    ]
+  },
+  {
+    "source_number": 1498,
+    "action": "correct",
+    "reason": "补写缺失解析",
+    "explanation": "External Network表示可连接外部网络的Neutron网络，通常由路由器外部网关连接租户内部子网。",
+    "sources": [
+      "https://docs.openstack.org/neutron/pike/admin/intro-os-networking.html",
+      "https://github.com/Leno-transform/ict-quiz/blob/main/网络赛道1500题-数通DCN安全.docx"
+    ]
+  },
+  {
+    "source_number": 1500,
+    "action": "exclude",
+    "reason": "题干像条件说明的残片，空格插入位置与答案“激活”不构成完整、明确的填空句。"
+  },
+  {
+    "source_number": 1501,
+    "action": "exclude",
+    "reason": "RADIUS配置中途截断且没有选项，答案“安全考点”是分类标签而非可判分答案。"
+  },
+  {
+    "source_number": 1502,
+    "action": "correct",
+    "reason": "精简解析并去除无关泛化",
+    "explanation": "ERSPAN流分析可观察镜像中的TCP建连、重传等行为，因此此处填TCP。",
+    "sources": [
+      "https://e.huawei.com/br/products/network-analysis/fabricinsight"
+    ]
+  },
+  {
+    "source_number": 1503,
+    "action": "correct",
+    "reason": "精简已有解析",
+    "explanation": "Ansible的Inventory定义受管主机、连接地址及分组，Playbook据此选择执行对象。",
+    "sources": [
+      "https://docs.ansible.com/ansible/latest/inventory_guide/intro_inventory.html"
+    ]
+  },
+  {
+    "source_number": 1505,
+    "action": "correct",
+    "reason": "清除原解析中的明显错误英文释义",
+    "explanation": "题设Multi-PoD方案通常由Spine承担EVPN路由反射器RR角色；原解析中的PodofDicks等英文解释错误。",
+    "sources": [
+      "https://e.huawei.com/sa/products/network-analysis/imaster-nce-fabric"
+    ]
+  }
+]
