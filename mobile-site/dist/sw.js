@@ -1,4 +1,4 @@
-const CACHE = "ict-mobile-5ef4dcbe093b";
+const CACHE = "ict-mobile-f29a1a7c2689";
 const ASSETS = ["./index.html", "./mobile.html", "./mobile-qr.png", "./manifest.webmanifest", "./icon-192.png", "./icon-512.png"];
 self.addEventListener("install", event => event.waitUntil(caches.open(CACHE).then(cache => cache.addAll(ASSETS)).then(() => self.skipWaiting())));
 self.addEventListener("activate", event => event.waitUntil(caches.keys().then(keys => Promise.all(keys.filter(k => k.startsWith("ict-mobile-") && k !== CACHE).map(k => caches.delete(k)))).then(() => self.clients.claim())));
