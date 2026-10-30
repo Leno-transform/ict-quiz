@@ -10,3 +10,5 @@
 .startup-help{margin:20px 0;padding:18px;border:1px solid #b8d6cb;border-radius:10px;background:#edf7f2;color:#214c40;line-height:1.8;overflow-wrap:anywhere}.startup-help h2{font-size:18px;margin:0 0 8px}.startup-help p{font-size:14px;margin:8px 0}.startup-help a{font-size:15px;font-weight:700;text-decoration:underline}
 
 .fill-label{display:block;font-size:14px;color:#526b63}.fill-input{display:block;width:100%;margin-top:10px;padding:14px;border:1px solid #c7d8d0;border-radius:7px;font-size:16px;font-family:inherit;background:#fff;color:#163b33}.fill-input:focus{outline:3px solid #66b9ab;outline-offset:2px}#question-image{max-height:none}
+
+.mobile-edition{display:inline-block;margin:20px 0 0;padding:5px 10px;border-radius:6px;background:#e5f3ed;color:#087d6f;font-size:12px;line-height:1.7}.mobile-edition+.page-heading{margin-top:18px}

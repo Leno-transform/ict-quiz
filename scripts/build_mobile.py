@@ -34,6 +34,13 @@ def main():
     DIST.mkdir(parents=True, exist_ok=True)
     bank = json.loads((ROOT / "data" / "questions.json").read_text(encoding="utf-8"))
     bank["version"] = hashlib.sha256((ROOT / "data" / "questions.json").read_bytes()).hexdigest()[:12]
+    count = len(bank["questions"])
+    release_filename = f"ICT手机独立版-{count}题.html"
+    portal = (ROOT / "web" / "mobile.html").read_text(encoding="utf-8")
+    for key, value in {"QUESTION_COUNT": count, "FIGURE_COUNT": bank["summary"]["image_count"], "BANK_VERSION": bank["version"], "RELEASE_FILENAME": release_filename}.items():
+        portal = portal.replace("{{" + key + "}}", str(value))
+    (DIST / "mobile.html").write_text(portal, encoding="utf-8")
+    (DIST / "mobile-qr.png").write_bytes((ROOT / "mobile-qr.png").read_bytes())
     for q in bank["questions"]:
         if q["image"]:
             path = ROOT / "web" / q["image"]["src"].lstrip("/")
@@ -44,7 +51,8 @@ def main():
     page = page.replace('<link rel="stylesheet" href="/style.css"><script src="/app.js" defer></script>',
                         '<style>' + (ROOT / "web" / "style.css").read_text(encoding="utf-8") + '</style>')
     page = page.replace("本地运行 · 记录自动保存", "手机独立版 · 记录保存在本机")
-    page = page.replace("<title>ICT 练习室</title>", "<title>ICT 练习室 · 手机独立版</title>")
+    page = page.replace("<title>ICT 练习室</title>", f"<title>ICT 练习室 · 手机独立版（{count}题）</title>")
+    page = page.replace('<section class="page-heading">', f'<p class="mobile-edition">手机独立版 · {count} 题 · 解析与图片均已内置</p><section class="page-heading">')
     help_html = '''<div id="mobile-status" class="mobile-status" role="status"></div>
     <button id="mobile-install" class="secondary-button install-button" hidden>安装到主屏幕</button>
     <details class="mobile-help"><summary>手机安装与保存说明</summary><p>iPhone：用 Safari 打开网址，点击分享 → 添加到主屏幕。安卓：使用 Chrome 菜单里的“安装应用”或“添加到主屏幕”。首次打开后，等待上方显示“离线就绪”。</p><p>学习记录保存在这台手机的当前浏览器中，不与电脑版自动同步。清除网站数据会删除记录，建议定期从“导出资料”备份。</p></details>'''
@@ -57,6 +65,8 @@ def main():
         embedded += '<script>' + (ROOT / "web" / name).read_text(encoding="utf-8").replace('</script', '<\\/script') + '</script>'
     page = page.replace('</body>', embedded + '</body>')
     (ROOT / "手机独立版.html").write_text(page, encoding="utf-8")
+    (ROOT / release_filename).write_text(page, encoding="utf-8")
+    (DIST / release_filename).write_text(page, encoding="utf-8")
     metadata = '<meta name="theme-color" content="#142c35"><meta name="apple-mobile-web-app-capable" content="yes"><link rel="manifest" href="./manifest.webmanifest"><link rel="apple-touch-icon" href="./icon-192.png">'
     hosted = page.replace('</head>', metadata + '</head>')
     (DIST / "index.html").write_text(hosted, encoding="utf-8")
@@ -64,27 +74,28 @@ def main():
     (DIST / "manifest.webmanifest").write_text(json.dumps(manifest, ensure_ascii=False, indent=2), encoding="utf-8")
     for size in (192, 512):
         (DIST / f"icon-{size}.png").write_bytes(icon_png(size))
-    version = hashlib.sha256(hosted.encode("utf-8")).hexdigest()[:12]
+    version = hashlib.sha256((hosted + portal).encode("utf-8")).hexdigest()[:12]
     sw = '''const CACHE = "ict-mobile-VERSION";
-const ASSETS = ["./index.html", "./manifest.webmanifest", "./icon-192.png", "./icon-512.png"];
+const ASSETS = ["./index.html", "./mobile.html", "./mobile-qr.png", "./manifest.webmanifest", "./icon-192.png", "./icon-512.png"];
 self.addEventListener("install", event => event.waitUntil(caches.open(CACHE).then(cache => cache.addAll(ASSETS)).then(() => self.skipWaiting())));
 self.addEventListener("activate", event => event.waitUntil(caches.keys().then(keys => Promise.all(keys.filter(k => k.startsWith("ict-mobile-") && k !== CACHE).map(k => caches.delete(k)))).then(() => self.clients.claim())));
 self.addEventListener("fetch", event => {
   const url = new URL(event.request.url);
   if (event.request.method !== "GET" || url.origin !== self.location.origin) return;
   if (event.request.mode === "navigate") {
+    const pageKey = url.pathname === new URL("./mobile.html", self.location.href).pathname ? "./mobile.html" : "./index.html";
     event.respondWith(fetch(event.request).then(response => {
       if (response.ok && response.headers.get("content-type")?.includes("text/html")) {
-        const copy = response.clone(); event.waitUntil(caches.open(CACHE).then(cache => cache.put("./index.html", copy)));
+        const copy = response.clone(); event.waitUntil(caches.open(CACHE).then(cache => cache.put(pageKey, copy)));
       }
       return response;
-    }).catch(() => caches.match("./index.html")));
+    }).catch(() => caches.match(pageKey)));
   } else event.respondWith(caches.match(event.request).then(response => response || fetch(event.request)));
 });
 '''.replace("VERSION", version)
     (DIST / "sw.js").write_text(sw, encoding="utf-8")
     # Root files support GitHub Pages from main / (root), plus the old quiz URL.
-    for filename in ("index.html", "manifest.webmanifest", "sw.js", "icon-192.png", "icon-512.png"):
+    for filename in ("index.html", "mobile.html", "manifest.webmanifest", "sw.js", "icon-192.png", "icon-512.png"):
         (ROOT / filename).write_bytes((DIST / filename).read_bytes())
     (ROOT / "quiz.html").write_bytes((DIST / "index.html").read_bytes())
     (ROOT / ".nojekyll").write_text("", encoding="ascii")

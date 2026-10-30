@@ -51,6 +51,8 @@ python app.py --port 8766
 
 ## 手机独立使用
 
+新增 [手机专用入口](https://leno-transform.github.io/ict-quiz/mobile.html)，也可扫描根目录 `手机扫码入口.png`。进入后点击“立即开始刷题”，等待“离线就绪”后添加到主屏幕。详细步骤见 [手机打开说明](手机打开说明.md)。新入口与原网页沿用同一浏览器中的学习记录。
+
 **手机请用 Safari（iPhone）或 Chrome（安卓）打开网址：[ICT 练习室](https://leno-transform.github.io/ict-quiz/)，本仓库已启用 GitHub Pages。不要在微信、QQ 或“文件”的 HTML 附件预览中刷题。** 附件预览可能不执行 JavaScript，旧版会一直停留在“正在加载题库”。新版会显示打开说明，但仍需切换到完整浏览器才能练习。浏览器内若禁用了 JavaScript，也需先允许执行。
 
 ### 可安装的网页版本
@@ -67,6 +69,8 @@ python app.py --port 8766
 完成缓存后，电脑关机或手机断网也可继续练习。参考 [Service Worker 离线说明](https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers) 和 [Apple 主屏幕网页说明](https://support.apple.com/guide/iphone/iph42ab2f3a7/ios)。
 
 ### 独立 HTML 文件
+
+本次明确标记为 `ICT手机独立版-2670题.html`，原名 `手机独立版.html` 同步保留；页面顶部会显示“2670 题”。
 
 `手机独立版.html` 将网页、题库和图片打包在单个文件中，可在支持脚本与本地存储的浏览器里直接打开，无需 Python。安卓可尝试将文件复制到手机后用浏览器打开；**iPhone 建议使用上面的 HTTPS 网页安装方式**，“文件”应用中的 HTML 预览不等同于完整 Safari 网页环境。
 

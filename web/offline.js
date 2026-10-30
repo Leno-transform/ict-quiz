@@ -97,7 +97,7 @@
     status.textContent = "独立文件版 · 题库与图片已内置，无需电脑或网络。";
   } else if ("serviceWorker" in navigator && window.isSecureContext) {
     status.textContent = "正在准备离线题库，请等待显示“离线就绪”后再断网。";
-    navigator.serviceWorker.register("./sw.js").then(() => navigator.serviceWorker.ready).then(() => {
+    navigator.serviceWorker.register("./sw.js", {updateViaCache: "none"}).then(() => navigator.serviceWorker.ready).then(() => {
       status.textContent = "离线就绪 · 可添加到主屏幕，电脑关机后仍可练习。";
       status.classList.add("mobile-ready");
     }).catch(() => { status.textContent = "当前可独立联网练习；离线准备失败，请联网刷新后重试。"; });
