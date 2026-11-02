@@ -38,7 +38,7 @@
     </section>
     <section class="practice-layout">
       <div class="practice-column">
-        <div class="practice-toolbar"><div><span class="section-dot"></span><strong id="session-label">顺序练习</strong><span class="muted" id="session-progress">尚未启动，请查看上方打开说明</span></div><button id="restart" class="text-button">重新开始 ↻</button></div>
+        <div class="practice-toolbar"><div><span class="section-dot"></span><strong id="session-label">顺序练习</strong><span class="muted" id="session-progress">尚未启动，请查看上方打开说明</span></div><div class="toolbar-actions"><form id="jump-form" class="jump-form" novalidate><label for="jump-input" class="sr-only">跳到题号</label><input id="jump-input" class="jump-input" type="text" inputmode="numeric" autocomplete="off" spellcheck="false" placeholder="题号" aria-describedby="jump-help"><button id="jump-button" class="secondary-button jump-button" type="submit">跳转</button><span id="jump-help" class="sr-only">输入练习序号，例如 128；或按来源原题号输入 #128</span></form><button id="restart" class="text-button">重新开始 ↻</button></div></div>
         <div class="progress-track"><div id="progress-fill"></div></div>
         <article id="question-card" class="question-card" aria-busy="true">
           <div class="question-meta"><div><span class="type-tag" id="question-type">打开提示</span><span class="topic-tag" id="question-topic"></span></div><span id="question-number" class="muted"></span></div>

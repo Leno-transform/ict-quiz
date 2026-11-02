@@ -5,12 +5,12 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 output = ROOT / "ICT练习室.zip"
-included = [ROOT / name for name in ("README.md", "app.py", "启动网站.cmd", "手机独立版.html", "使用说明.md", ".gitignore", ".gitattributes", ".nojekyll", "index.html", "quiz.html", "manifest.webmanifest", "sw.js", "icon-192.png", "icon-512.png")]
+included = [ROOT / name for name in ("README.md", "app.py", "启动网站.cmd", "启动手机版.cmd", "手机独立版.html", "使用说明.md", ".gitignore", ".gitattributes", ".nojekyll", "index.html", "quiz.html", "manifest.webmanifest", "sw.js", "offline.js", "questions.json", "icon-192.png", "icon-512.png")]
 included.extend(ROOT.glob("*.docx"))
 included.extend(ROOT.glob("*.pdf"))
 count = len(json.loads((ROOT / "data" / "questions.json").read_text(encoding="utf-8"))["questions"])
-included.extend(ROOT / name for name in (f"ICT手机独立版-{count}题.html", "mobile.html", "mobile-qr.png", "手机扫码入口.png", "手机打开说明.md"))
-for name in ("web", "exports", "review", "scripts", "tests", "data", "mobile-site/dist"):
+included.extend(ROOT / name for name in (f"ICT手机独立版-{count}题.html", "mobile.html", "mobile-qr.png", "手机扫码入口.png", "手机打开说明.md", "app.js", "style.css", "exports-explanations.md", "exports-cleaning.md"))
+for name in ("web", "assets", "exports", "review", "scripts", "tests", "data", "mobile-site/dist"):
     included.extend(file for file in (ROOT / name).rglob("*")
                     if file.is_file() and "__pycache__" not in file.parts
                     and ".sqlite3" not in file.name and file.suffix != ".pyc")

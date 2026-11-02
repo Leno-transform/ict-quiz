@@ -12,3 +12,13 @@
 .fill-label{display:block;font-size:14px;color:#526b63}.fill-input{display:block;width:100%;margin-top:10px;padding:14px;border:1px solid #c7d8d0;border-radius:7px;font-size:16px;font-family:inherit;background:#fff;color:#163b33}.fill-input:focus{outline:3px solid #66b9ab;outline-offset:2px}#question-image{max-height:none}
 
 .mobile-edition{display:inline-block;margin:20px 0 0;padding:5px 10px;border-radius:6px;background:#e5f3ed;color:#087d6f;font-size:12px;line-height:1.7}.mobile-edition+.page-heading{margin-top:18px}
+
+/* 题号跳转：输入本轮序号或用 #原题号 定位 */
+.toolbar-actions{display:flex;align-items:center;gap:14px}
+.jump-form{display:flex;align-items:center;gap:7px}
+.jump-input{width:104px;border:1px solid var(--line);border-radius:6px;padding:8px 9px;font:12px/1.4 "Segoe UI","Microsoft YaHei",sans-serif;color:#475861;background:#fafbfc;text-align:center}
+.jump-input::placeholder{color:#9ba5ad}
+.jump-input:focus{outline:3px solid #66b9ab;outline-offset:2px;background:#fff}
+.jump-button{padding:9px 13px;font-size:12px;white-space:nowrap}
+@media(max-width:900px){.jump-input{width:88px}}
+@media(max-width:600px){.practice-toolbar{flex-wrap:wrap;row-gap:9px}.toolbar-actions{width:100%;justify-content:space-between}.jump-form{flex:1;gap:6px}.jump-input{flex:1;width:auto;min-width:0;max-width:190px;font-size:16px;padding:9px 8px}.jump-button{min-height:44px;padding:10px 15px}}

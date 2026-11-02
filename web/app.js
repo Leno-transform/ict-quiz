@@ -3,7 +3,7 @@ const $ = (id) => document.getElementById(id);
 const typeNames = {single: "单选题", multiple: "多选题", judge: "判断题", fill: "填空题"};
 const modeNames = {sequential: "顺序练习", random: "随机练习", mistakes: "错题复习"};
 const storageKey = "ict-practice-session-v1";
-let bank, stats, state, busy = false, toastTimer;
+let bank, questionMap, stats, state, busy = false, toastTimer;
 const token = () => {
   if (typeof crypto.randomUUID === "function") return crypto.randomUUID();
   const bytes = crypto.getRandomValues(new Uint8Array(16));
@@ -81,7 +81,7 @@ function newSession(mode = state?.mode || "sequential", filters = null) {
   state = {version: bank.version, mode, filters, queue, position: 0, entries: {}, completed: false};
   persist(); syncSettings(); render();
 }
-function currentQuestion() { return bank.questions.find(q => q.id === state.queue[state.position]); }
+function currentQuestion() { return questionMap.get(state.queue[state.position]); }
 function entry() {
   const key = String(state.position);
   state.entries[key] ||= {token: token(), selected: [], feedback: null};
@@ -110,6 +110,7 @@ function render() {
   const titles = {sequential: "按自己的节奏，逐题掌握。", random: "打乱顺序，检验真正的理解。", mistakes: "把曾经的错题，变成会的题。"};
   $("page-title").textContent = titles[state.mode];
   $("page-subtitle").textContent = state.mode === "mistakes" ? "每个薄弱点，都值得再给自己一次机会。" : "从基础到进阶，每一次选择都有答案，也有解释。";
+  $("jump-input").placeholder = state.queue.length ? `题号 1–${state.queue.length}` : "题号";
   const empty = !state.queue.length || state.completed;
   $("question-card").hidden = empty;
   $("empty-state").hidden = !empty;
@@ -241,7 +242,53 @@ function advance(delta) {
   persist(); render();
   document.querySelector(".practice-layout")?.scrollIntoView({block: "start", behavior: "smooth"});
 }
+function parseJump(raw) {
+  const text = String(raw ?? "").trim();
+  const match = text.match(/^([^\d]*?)[\s#]*(\d+)$/);
+  if (!match) return null;
+  const hint = match[1].replace(/[\s#]+/g, "").toLowerCase();
+  // "128" 直接当本轮序号；"#128" 或 "wlan128" 这类带来源的写法按来源原题号找。
+  return {number: Number(match[2]), hint, bySource: Boolean(hint) || text.startsWith("#")};
+}
+function queuePositionBySource(number, hint) {
+  let fallback = -1;
+  for (let index = 0; index < state.queue.length; index++) {
+    const question = questionMap.get(state.queue[index]);
+    for (const reference of question.source_refs || [{bank_name: "原题库", number: question.id}]) {
+      if (reference.number !== number) continue;
+      const bankText = `${reference.bank_name || ""} ${reference.bank_id || ""}`.toLowerCase();
+      if (!hint || bankText.includes(hint)) return index;
+      if (fallback < 0) fallback = index;
+    }
+  }
+  return fallback;
+}
+function jumpTo(raw) {
+  if (busy) return toast("正在保存这次作答，请稍候。");
+  if (!bank || !questionMap || !state) return toast("题库还在载入，请稍候再跳转。");
+  if (!state.queue.length) return toast("当前没有题目，请先选择练习模式。");
+  const target = parseJump(raw);
+  if (!target) return toast("请输入题号，例如 128；按来源原题号跳转请写成 #128。");
+  const total = state.queue.length;
+  let position = -1;
+  if (target.bySource) position = queuePositionBySource(target.number, target.hint);
+  else if (target.number >= 1 && target.number <= total) position = target.number - 1;
+  else return toast(`练习序号范围是 1–${total}；若想按来源原题号跳转，请输入 #${target.number}。`);
+  if (position < 0) return toast(`本轮练习里没有原题号 ${target.number} 的题目。`);
+  state.completed = false;
+  state.position = position;
+  persist(); render();
+  $("jump-input").value = "";
+  $("jump-input").blur();
+  document.querySelector(".practice-layout")?.scrollIntoView({block: "start", behavior: "smooth"});
+  const reference = (questionMap.get(state.queue[position]).source_refs || [])[0];
+  toast(`已跳到第 ${position + 1} 题${reference ? `（${reference.bank_name} #${reference.number}）` : ""}`);
+}
 $("submit").addEventListener("click", submitAnswer);
+$("jump-form").addEventListener("submit", event => { event.preventDefault(); jumpTo($("jump-input").value); });
+$("jump-input").addEventListener("keydown", event => {
+  if (event.key === "Escape") { $("jump-input").value = ""; $("jump-input").blur(); }
+});
 $("previous").addEventListener("click", () => advance(-1));
 $("next").addEventListener("click", () => advance(1));
 $("retry").addEventListener("click", () => {
@@ -272,7 +319,9 @@ document.addEventListener("keydown", event => {
 });
 async function init() {
   try {
-    bank = await api("/api/questions"); await updateStats();
+    bank = await api("/api/questions");
+    questionMap = new Map(bank.questions.map(q => [q.id, q]));
+    await updateStats();
     for (const item of bank.banks || []) {
       const option = document.createElement("option"); option.value = item.id; option.textContent = `${item.name} · ${item.question_count} 题`; $("bank-filter").append(option);
     }

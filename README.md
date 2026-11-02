@@ -26,6 +26,7 @@
 - 逐题解析：显示你的选择、正确答案和简短解释。
 - 错题复习：答错自动收录，连续两次答对后标记为已掌握。
 - 分类练习：按原题库、数通 / DCN / 安全、WLAN 扫描题库分别筛选，也可按题型和知识点筛选；同一题的多个来源会合并保留。
+- 题号跳转：练习工具栏可直接输入题号跳题。输入 `128` 跳到本轮第 128 题；输入 `#128` 或 `wlan128` 按来源原题号定位。随机练习与错题复习同样可用，范围是本轮队列。
 - 阅读优化：题干加大、选项字号提升，否定词、限制条件和常见协议名加粗。
 - 资料导出：支持导出题库、完整解析、清理报告和个人练习记录。
 
@@ -57,9 +58,9 @@ python app.py --port 8766
 
 ### 可安装的网页版本
 
-仓库根目录的 `index.html`、`manifest.webmanifest`、`sw.js` 和图标组成可安装网页版本（PWA）。题库、解析和图片已内置，无需连接电脑的 Python 服务。
+仓库根目录的 `index.html`、`app.js`、`style.css`、`offline.js`、`questions.json`、`manifest.webmanifest`、`sw.js` 和图标组成可安装网页版本（PWA）。页面本身只有 20 KB 左右，题库走 `questions.json`（约 2.3 MB），197 张配图是 `web/assets/` 下的独立文件，因此不需要连接电脑的 Python 服务，也不会让手机先下载一个 20 MB 的整包。首次打开时 service worker 会把这一整套（10 个页面文件 + 206 张图）缓存到本机，之后断网可练。
 
-本仓库已从 `main` 分支根目录发布。若复制到自己的仓库，**代码推送到 GitHub 不等于网站已经发布**：请在仓库 **Settings → Pages** 中选择 **Deploy from a branch → main → / (root)**，保存后以 GitHub Pages 页面实际给出的地址为准。也可将 `mobile-site/dist/` 发布到其他支持 HTTPS 的静态托管平台。参见 [GitHub Pages 发布说明](https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site)。
+本仓库已从 `main` 分支根目录发布。若复制到自己的仓库，**代码推送到 GitHub 不等于网站已经发布**：请在仓库 **Settings → Pages** 中选择 **Deploy from a branch → main → / (root)**，保存后以 GitHub Pages 页面实际给出的地址为准。也可将 `mobile-site/dist/` 发布到其他支持 HTTPS 的静态托管平台（该目录是自包含的，直接上传即可）。参见 [GitHub Pages 发布说明](https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site)。
 
 首次用手机联网打开网页，等待显示 **“离线就绪”** 后：
 
@@ -70,11 +71,11 @@ python app.py --port 8766
 
 ### 独立 HTML 文件
 
-本次明确标记为 `ICT手机独立版-2670题.html`，原名 `手机独立版.html` 同步保留；页面顶部会显示“2670 题”。
+`ICT手机独立版-2670题.html`（原名 `手机独立版.html` 同步保留）把网页、题库、解析和图片打包在单个文件中，页面顶部会显示“2670 题”。它**只用于手工拷到手机离线用**（USB、微信文件传输、网盘），不再作为网站入口发布：文件约 22 MB，网页上传有大小限制，手机首次打开也要整包下载。
 
-`手机独立版.html` 将网页、题库和图片打包在单个文件中，可在支持脚本与本地存储的浏览器里直接打开，无需 Python。安卓可尝试将文件复制到手机后用浏览器打开；**iPhone 建议使用上面的 HTTPS 网页安装方式**，“文件”应用中的 HTML 预览不等同于完整 Safari 网页环境。
+手机版正路是用上面的 HTTPS 网址 + service worker 缓存。确实要用单文件时，把它复制到手机后用浏览器打开即可，无需 Python；**iPhone 建议使用 HTTPS 网址方式**，“文件”应用中的 HTML 预览不等同于完整 Safari 网页环境。
 
-`quiz.html` 保留为旧入口的兼容地址，内容已更新为当前手机版。
+`quiz.html` 保留为旧入口的兼容地址，内容与 `index.html` 相同。
 
 ## 进度保存和备份
 
@@ -92,19 +93,27 @@ python app.py --port 8766
 ```text
 app.py                       电脑端本地服务与 SQLite 判分记录
 启动网站.cmd                 Windows 启动入口
-index.html / quiz.html       手机与静态网站入口
-手机独立版.html              单文件离线版
+启动手机版.cmd               在局域网里把静态网站给手机临时打开（端口 8876）
+index.html / quiz.html       静态网站入口（约 20 KB，加载下面的题库与图片）
+app.js / style.css           页面交互与样式
+offline.js                   静态版的本地存储、判分与离线提示
+questions.json               静态版题库（含答案与解析，约 2.3 MB）
+web/assets/                  197 张题图，电脑版与静态版共用，发布时无需另传
+exports-explanations.md      静态版可下载的全部题目与解析
+exports-cleaning.md          静态版可下载的清理报告
+手机独立版.html              单文件离线版（约 22 MB，仅用于手工拷到手机）
 manifest.webmanifest / sw.js 安装配置与离线缓存
-web/                         共用页面、样式、交互与手机判分逻辑
-data/questions.json          当前可用题库
+web/                         页面、交互与题图源文件，电脑版直接读取这里
+data/questions.json          当前可用题库（电脑版与所有构建脚本的数据源）
 data/source_questions.json   旧题库原题抽取结果
 data/additional_source_questions.json 新增两套题的来源转录
 data/wlan_source.json        扫描PDF转录、原题号、页码和裁切图索引
 exports/                     题目、答案、解析、图片和清理报告
-scripts/                     导入、清理、生成手机版及打包脚本
+scripts/                     导入、清理、生成静态网站/单文件版及打包脚本
 review/                      逐题审核与去重记录
 tests/                       后端与题库检查
-mobile-site/dist/            可独立托管的静态手机版
+qa/                          浏览器自检脚本（跳转功能、离线缓存）
+mobile-site/dist/            自包含的静态网站，可上传到任意 HTTPS 静态托管
 ```
 
 早期提交中的根目录 `ICT网络赛道题库.json`、`ICT题库-剔除清单.md` 作为历史资料保留；**当前程序使用 `data/questions.json` 和 `exports/` 中的最新版资料**。
@@ -117,11 +126,19 @@ mobile-site/dist/            可独立托管的静态手机版
 python scripts/import_questions.py
 python scripts/import_additions.py
 python scripts/build_bank.py
-python scripts/build_mobile.py
+python scripts/build_site.py      # 多文件静态网站：mobile-site/dist/ + 仓库根目录发布文件
+python scripts/build_mobile.py    # 单文件离线版：手机独立版.html
 python -m unittest discover -s tests -v
 python scripts/package_site.py
 ```
 
-`import_questions.py` 只读取原来的 Word 文件；`import_additions.py` 读取新增 Word 和已保存的 PDF 转录。`build_bank.py` 先重建原题库，再合并新增审核记录，保留旧题 ID，生成完整导出资料；`build_mobile.py` 将最新内容打包为手机独立文件、根目录网站入口与 `mobile-site/dist/`；`package_site.py` 生成不包含个人练习记录的网站压缩包。
+`import_questions.py` 只读取原来的 Word 文件；`import_additions.py` 读取新增 Word 和已保存的 PDF 转录。`build_bank.py` 先重建原题库，再合并新增审核记录，保留旧题 ID，生成完整导出资料；`build_site.py` 生成多文件静态网站（页面 + `questions.json` + 共用的 `web/assets/` 题图 + service worker），并把 GitHub Pages 需要的文件同步到仓库根目录；`build_mobile.py` 生成 22 MB 的单文件离线版；`package_site.py` 生成不包含个人练习记录的网站压缩包。
+
+改完界面或题库后可以用浏览器自检（需要本机 Chrome，脚本通过 DevTools 协议操作真实页面）：
+
+```powershell
+node qa/check_jump.mjs http://127.0.0.1:8765/ 输出前缀      # 电脑版跳转功能
+node qa/check_offline.mjs http://127.0.0.1:8850/ 输出前缀   # 静态版离线缓存（用 build 出的 dist 起一个静态服务）
+```
 
 已完成后端判分、重复提交、错题记录和重启持久化检查，并用浏览器模拟手机尺寸验证断网刷题、图片显示和资料导出。**尚未在真实安卓或 iPhone 设备上实测**。题库包含厂家相关知识，解析以对应适用条件及参考资料为准。
